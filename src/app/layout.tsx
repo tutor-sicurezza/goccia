@@ -4,8 +4,9 @@ import { Inter, Space_Grotesk } from 'next/font/google';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 import { DropletBlob } from '@/components/droplet-blob';
-import JsonLd, { websiteJsonLd, organizationJsonLd } from '@/components/json-ld';
+import JsonLd, { websiteJsonLd, organizationJsonLd, serviceJsonLd } from '@/components/json-ld';
 import { PrivacyNotice } from '@/components/privacy-notice';
+import { StickyCTA } from '@/components/sticky-cta';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -64,11 +65,14 @@ export const metadata: Metadata = {
     canonical: siteUrl,
     types: {
       'application/rss+xml': `${siteUrl}/blog/feed.xml`,
+      'text/plain': `${siteUrl}/llms.txt`,
     },
   },
   other: {
     'ai-content-declaration': 'human-authored',
     'rating': 'general',
+    'llms': `${siteUrl}/llms.txt`,
+    'llms-full': `${siteUrl}/llms-full.txt`,
   },
 };
 
@@ -96,7 +100,9 @@ export default function RootLayout({
         </div>
         <JsonLd data={websiteJsonLd()} />
         <JsonLd data={organizationJsonLd()} />
+        <JsonLd data={serviceJsonLd()} />
         <PrivacyNotice />
+        <StickyCTA />
       </body>
     </html>
   );

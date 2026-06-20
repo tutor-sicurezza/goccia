@@ -200,6 +200,22 @@ export function howToJsonLd(): object {
   };
 }
 
+export function serviceJsonLd(): object {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Analisi acqua del rubinetto in laboratorio qualificato',
+    description:
+      "Analisi chimico-fisica, microbiologica, metalli pesanti e PFAS dell'acqua del rubinetto con metodi validati conformi alle norme tecniche. Kit di prelievo a domicilio e refertazione firmata.",
+    serviceType: 'Water quality testing',
+    provider: { '@id': 'https://123acqua.com#organization' },
+    areaServed: { '@type': 'Country', name: 'Italia' },
+    audience: { '@type': 'Audience', name: 'Famiglie, condomini, gestori idrici, piccole imprese' },
+    url: 'https://123acqua.com',
+    inLanguage: 'it-IT',
+  };
+}
+
 export function articleJsonLd(args: {
   headline: string;
   description: string;
