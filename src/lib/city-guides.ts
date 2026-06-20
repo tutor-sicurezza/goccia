@@ -1886,6 +1886,2463 @@ export const CITY_GUIDES: CityGuide[] = [
     ctaContext:
       "Per analizzare l'acqua del rubinetto a Reggio Emilia — nitrati, durezza e sottoprodotti di disinfezione — con un laboratorio qualificato:",
   },
+  {
+    slug: "cagliari",
+    cityName: "Cagliari",
+    province: "CA",
+    region: "Sardegna",
+    shortTitle: "Acqua del rubinetto a Cagliari: gestore Abbanoa, falda e invasi",
+    metaDescription:
+      "Acqua di Cagliari: gestore Abbanoa, mix di falda e invasi, durezza media, calcare e parametri tipici. Come verificare la qualità del rubinetto.",
+    searchKeywords: [
+      "acqua di cagliari",
+      "acqua rubinetto cagliari",
+      "qualità acqua cagliari",
+      "gestore acqua cagliari",
+      "cagliari acqua dura",
+      "acqua abbanoa cagliari",
+    ],
+    intro:
+      "L'acqua del rubinetto a Cagliari è gestita da Abbanoa e proviene da un mix di invasi superficiali (sistema del Flumendosa-Mulargia-Tirso) e da campi pozzi locali. La qualità complessiva è conforme ai limiti normativi. L'acqua è mediamente dura, con presenza apprezzabile di calcio e magnesio legata alla geologia calcarea della Sardegna meridionale. Trattandosi di un capoluogo costiero alimentato in larga parte da bacini esterni, sono attivi presidi di potabilizzazione su sottoprodotti di disinfezione e parametri di torbidità.",
+    waterUtility: "Abbanoa S.p.A.",
+    geologicalContext:
+      "Cagliari è alimentata da invasi della Sardegna centro-meridionale e da falde locali in contesti calcarei e marnosi tipici del Campidano e del Sulcis. La componente calcarea spiega la durezza media e la presenza di bicarbonati.",
+    typicalParameters: {
+      durezza: "media (tipicamente 20-32 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Cagliari",
+        paragraphs: [
+          "L'acqua di Cagliari arriva in larga parte dal sistema di invasi del Flumendosa-Mulargia, integrato con il sistema Tirso e con pozzi locali. Si tratta di un approvvigionamento complesso che richiede trattamenti di potabilizzazione completi.",
+          "La gestione del servizio idrico integrato è affidata ad Abbanoa, che coordina captazione, potabilizzazione e distribuzione cittadina.",
+        ],
+        bullets: [
+          "Invasi del Flumendosa-Mulargia: contributo principale",
+          "Sistema Tirso: integrazione stagionale",
+          "Campi pozzi locali: contributo minore",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Cagliari",
+        paragraphs: [
+          "Abbanoa esegue autocontrolli su tutta la filiera; ATS Sardegna effettua i controlli ufficiali in distribuzione; ARPAS svolge il monitoraggio ambientale di invasi e falde.",
+          "I dati sintetici per comune sono pubblicati dal gestore con aggiornamento periodico, secondo quanto previsto dal D.Lgs. 18/2023.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Cagliari è bicarbonato-calcica, con durezza media. I parametri più rilevanti riguardano sottoprodotti di disinfezione (legati al trattamento delle acque superficiali) e, in periodi di siccità, gli aspetti organolettici.",
+        ],
+        bullets: [
+          "Durezza: media, 20-32 °F",
+          "Calcio e magnesio: ben rappresentati",
+          "Sottoprodotti di disinfezione: monitorati",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Cagliari",
+        paragraphs: [
+          "Con GoccIA puoi avere una lettura immediata dei parametri principali della tua acqua a partire da pochi dati di base.",
+          "Per chi vuole un quadro completo, soprattutto su durezza e sottoprodotti di disinfezione, un'analisi di laboratorio mirata è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Cagliari è sicura?",
+        a: "Sì, l'acqua distribuita da Abbanoa rispetta i limiti del D.Lgs. 18/2023, con presidi specifici sulle acque trattate dagli invasi.",
+      },
+      {
+        q: "L'acqua di Cagliari è dura?",
+        a: "È classificabile come media: tipicamente 20-32 °F, con buona presenza di calcio.",
+      },
+      {
+        q: "Il sapore dell'acqua può cambiare in estate?",
+        a: "In periodi di siccità prolungata gli aspetti organolettici possono variare leggermente per ragioni stagionali, pur restando entro i limiti.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Cagliari?",
+        a: "Abbanoa pubblica i dati per comune sul proprio sito; ATS Sardegna e ARPAS mettono a disposizione report periodici.",
+      },
+    ],
+    relatedCities: ["sassari", "palermo", "napoli", "roma"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Cagliari — durezza, calcio, sottoprodotti di disinfezione — con un laboratorio qualificato:",
+  },
+  {
+    slug: "ancona",
+    cityName: "Ancona",
+    province: "AN",
+    region: "Marche",
+    shortTitle: "Acqua del rubinetto ad Ancona: gestore Multiservizi e falda dorica",
+    metaDescription:
+      "Acqua di Ancona: gestore Multiservizi, falda dorica, durezza media e parametri tipici. Come verificare la qualità del rubinetto.",
+    searchKeywords: [
+      "acqua di ancona",
+      "acqua rubinetto ancona",
+      "qualità acqua ancona",
+      "gestore acqua ancona",
+      "ancona acqua dura",
+      "acqua multiservizi ancona",
+    ],
+    intro:
+      "L'acqua del rubinetto ad Ancona è gestita da Multiservizi S.p.A. e proviene principalmente da campi pozzi nella conca dorica e da sorgenti dell'entroterra marchigiano. La qualità complessiva rispetta i limiti normativi. L'acqua è mediamente dura, bicarbonato-calcica, in linea con la geologia carbonatica e alluvionale dell'area. Nei centri storici con impianti molto datati può esistere il consueto rischio residuo di piombo, legato però all'impianto privato e non alla rete pubblica.",
+    waterUtility: "Multiservizi S.p.A.",
+    geologicalContext:
+      "Ancona si appoggia su terreni alluvionali e formazioni carbonatiche tipiche del medio Adriatico, con falde che ricevono apporti dalle dorsali appenniniche marchigiane.",
+    typicalParameters: {
+      durezza: "media (tipicamente 20-32 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Ancona",
+        paragraphs: [
+          "L'acqua di Ancona arriva da campi pozzi della conca dorica e da sorgenti collegate al sistema dell'entroterra marchigiano, gestiti da Multiservizi.",
+          "La rete cittadina è alimentata in maniera distribuita e integrata, con tratti di adduzione storica e tratti più recenti.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto ad Ancona",
+        paragraphs: [
+          "Multiservizi esegue autocontrolli lungo la filiera; ASUR Marche effettua i controlli ufficiali in distribuzione; ARPA Marche svolge il monitoraggio ambientale.",
+          "I dati di qualità per comune sono pubblicati dal gestore secondo quanto previsto dalla normativa vigente.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Ancona è bicarbonato-calcica con durezza media. I parametri da tenere d'occhio sono in generale sottoprodotti di disinfezione e indicatori organolettici. Negli edifici storici resta valida la raccomandazione di verificare il piombo a rubinetto quando le tubazioni interne sono molto datate.",
+        ],
+        bullets: [
+          "Durezza: media, 20-32 °F",
+          "Calcio: ben rappresentato",
+          "Piombo: rischio limitato a impianti interni molto datati",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Ancona",
+        paragraphs: [
+          "GoccIA permette una lettura immediata dei parametri principali della tua acqua di casa.",
+          "Per un quadro più approfondito, un'analisi di laboratorio mirata su durezza e parametri sensibili è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto ad Ancona è sicura?",
+        a: "Sì, l'acqua distribuita da Multiservizi rispetta i limiti del D.Lgs. 18/2023, con monitoraggio continuo dei parametri sensibili.",
+      },
+      {
+        q: "L'acqua di Ancona è dura?",
+        a: "È classificabile come media: tipicamente 20-32 °F.",
+      },
+      {
+        q: "Posso bere l'acqua del rubinetto ad Ancona senza filtri?",
+        a: "Sì, è potabile e conforme. I filtri sono una scelta di gusto, non un'esigenza sanitaria.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Ancona?",
+        a: "Multiservizi pubblica i dati per comune sul proprio sito; ASUR Marche e ARPA Marche pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["perugia", "bologna", "rimini", "pescara"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto ad Ancona — durezza, calcio e parametri sensibili — con un laboratorio qualificato:",
+  },
+  {
+    slug: "perugia",
+    cityName: "Perugia",
+    province: "PG",
+    region: "Umbria",
+    shortTitle: "Acqua del rubinetto a Perugia: gestore Umbra Acque e sorgenti tiberine",
+    metaDescription:
+      "Acqua di Perugia: gestore Umbra Acque, sorgenti del bacino tiberino, durezza media, parametri tipici. Come verificare la qualità del rubinetto.",
+    searchKeywords: [
+      "acqua di perugia",
+      "acqua rubinetto perugia",
+      "qualità acqua perugia",
+      "gestore acqua perugia",
+      "perugia acqua dura",
+      "acqua umbra acque",
+    ],
+    intro:
+      "L'acqua del rubinetto a Perugia è gestita da Umbra Acque e arriva da sorgenti del bacino tiberino e da campi pozzi locali. La qualità complessiva è considerata buona e rispetta i limiti normativi. L'acqua perugina è bicarbonato-calcica con durezza media, coerente con la geologia carbonatica appenninica. Nel centro storico l'attenzione si concentra come sempre sull'impiantistica interna degli edifici antichi.",
+    waterUtility: "Umbra Acque S.p.A.",
+    geologicalContext:
+      "Perugia è alimentata da sorgenti e falde del bacino del Tevere, in contesti carbonatici dell'Appennino umbro-marchigiano. L'acqua è naturalmente calcica.",
+    typicalParameters: {
+      durezza: "media (tipicamente 18-30 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Perugia",
+        paragraphs: [
+          "L'acqua di Perugia arriva da sorgenti dell'Appennino umbro e da campi pozzi del bacino tiberino, gestiti da Umbra Acque.",
+          "La rete cittadina alterna tratti storici e tratti più recenti, con una buona articolazione di adduzione dal sistema appenninico.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Perugia",
+        paragraphs: [
+          "Umbra Acque esegue autocontrolli lungo la filiera; AUSL Umbria 1 effettua i controlli ufficiali; ARPA Umbria svolge il monitoraggio ambientale.",
+          "I dati sintetici per comune sono pubblicati sul sito del gestore.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Perugia è bicarbonato-calcica con durezza media. Sono monitorati sottoprodotti di disinfezione e indicatori organolettici. Negli edifici storici del centro vale la raccomandazione di verificare il piombo a rubinetto in presenza di tubazioni interne molto datate.",
+        ],
+        bullets: [
+          "Durezza: media, 18-30 °F",
+          "Calcio: ben rappresentato",
+          "Piombo: rischio limitato a impianti interni molto datati",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Perugia",
+        paragraphs: [
+          "Con GoccIA puoi ottenere una lettura immediata dei parametri chiave della tua acqua a partire da pochi dati di base.",
+          "Per un quadro più approfondito, un'analisi di laboratorio mirata è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Perugia è sicura?",
+        a: "Sì, l'acqua distribuita da Umbra Acque rispetta i limiti del D.Lgs. 18/2023.",
+      },
+      {
+        q: "L'acqua di Perugia è dura?",
+        a: "È classificabile come media: tipicamente 18-30 °F.",
+      },
+      {
+        q: "Posso bere l'acqua del rubinetto a Perugia senza filtri?",
+        a: "Sì, è potabile e conforme. I filtri sono una scelta di gusto.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Perugia?",
+        a: "Umbra Acque pubblica i dati sul proprio sito; AUSL Umbria 1 e ARPA Umbria pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["firenze", "ancona", "roma", "bologna"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Perugia — durezza, calcio e parametri sensibili — con un laboratorio qualificato:",
+  },
+  {
+    slug: "cesena",
+    cityName: "Cesena",
+    province: "FC",
+    region: "Emilia-Romagna",
+    shortTitle: "Acqua del rubinetto a Cesena: gestore Hera e falda romagnola",
+    metaDescription:
+      "Acqua di Cesena: gestore Hera, falda romagnola, durezza media, parametri tipici. Come verificare la qualità del rubinetto.",
+    searchKeywords: [
+      "acqua di cesena",
+      "acqua rubinetto cesena",
+      "qualità acqua cesena",
+      "gestore acqua cesena",
+      "cesena acqua dura",
+      "acqua hera cesena",
+    ],
+    intro:
+      "L'acqua del rubinetto a Cesena è gestita da Hera e proviene principalmente dalla falda romagnola e dalle adduzioni del sistema di Romagna Acque-Società delle Fonti, che integra acque di Ridracoli e campi pozzi locali. La qualità complessiva è conforme ai limiti normativi. L'acqua cesenate è bicarbonato-calcica, con durezza media. Sono attivi presidi specifici su sottoprodotti di disinfezione e nitrati di origine agricola.",
+    waterUtility: "Hera S.p.A.",
+    geologicalContext:
+      "Cesena è alimentata da falde romagnole alluvionali, integrate dall'acquedotto di Ridracoli che porta acqua dell'Appennino tosco-romagnolo.",
+    typicalParameters: {
+      durezza: "media (tipicamente 20-32 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Cesena",
+        paragraphs: [
+          "L'acqua di Cesena arriva da campi pozzi nella pianura romagnola e dall'adduzione del sistema Ridracoli, gestito da Romagna Acque-Società delle Fonti e distribuito da Hera.",
+          "La diversificazione delle fonti consente una buona resilienza in caso di stress idrico estivo.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Cesena",
+        paragraphs: [
+          "Hera esegue autocontrolli lungo la filiera; AUSL Romagna effettua i controlli ufficiali; ARPAE Emilia-Romagna svolge il monitoraggio ambientale.",
+          "I dati di qualità per comune sono pubblicati dal gestore secondo le previsioni del D.Lgs. 18/2023.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Cesena è bicarbonato-calcica con durezza media. I parametri più rilevanti sono nitrati (pressione agricola della pianura) e sottoprodotti di disinfezione, monitorati con continuità.",
+        ],
+        bullets: [
+          "Durezza: media, 20-32 °F",
+          "Nitrati: monitorati, in genere entro i limiti di legge",
+          "Sottoprodotti di disinfezione: monitorati",
+        ],
+      },
+      {
+        heading: "Casi noti e problematiche storiche",
+        paragraphs: [
+          "La pianura romagnola ha una pressione storica di nitrati di origine agricola, monitorata da ARPAE. Sui campi pozzi interessati sono attivi presidi e miscelazioni che mantengono i valori in distribuzione entro i limiti normativi.",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Cesena",
+        paragraphs: [
+          "GoccIA offre una lettura immediata dei parametri principali della tua acqua a partire da pochi dati di base.",
+          "Per chi vive in zone storicamente sensibili ai nitrati, un'analisi di laboratorio mirata è una buona scelta.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Cesena è sicura?",
+        a: "Sì, l'acqua distribuita da Hera rispetta i limiti del D.Lgs. 18/2023, con monitoraggio continuo dei parametri sensibili.",
+      },
+      {
+        q: "I nitrati a Cesena sono un problema?",
+        a: "Sono il parametro più rappresentativo dell'area, ma i valori in distribuzione restano entro i limiti grazie alla gestione attiva delle fonti.",
+      },
+      {
+        q: "L'acqua di Cesena è dura?",
+        a: "È classificabile come media: tipicamente 20-32 °F.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Cesena?",
+        a: "Hera pubblica i dati per comune sul proprio sito; AUSL Romagna e ARPAE pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["forli", "rimini", "bologna", "ravenna"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Cesena — nitrati, durezza e sottoprodotti di disinfezione — con un laboratorio qualificato:",
+  },
+  {
+    slug: "modena",
+    cityName: "Modena",
+    province: "MO",
+    region: "Emilia-Romagna",
+    shortTitle: "Acqua del rubinetto a Modena: gestore Hera, falda padana e nitrati",
+    metaDescription:
+      "Acqua di Modena: gestore Hera, falda padana, durezza media e attenzione ai nitrati di origine agricola. Come verificare la qualità del rubinetto.",
+    searchKeywords: [
+      "acqua di modena",
+      "acqua rubinetto modena",
+      "qualità acqua modena",
+      "gestore acqua modena",
+      "nitrati acqua modena",
+      "acqua hera modena",
+    ],
+    intro:
+      "L'acqua del rubinetto a Modena è gestita da Hera e proviene principalmente da campi pozzi della pianura modenese e da sorgenti dell'Appennino modenese. La qualità complessiva è conforme ai limiti normativi. L'acqua è bicarbonato-calcica e mediamente dura. Il territorio modenese è storicamente caratterizzato da una pressione agricola che rende i nitrati uno dei parametri più presidiati dal gestore.",
+    waterUtility: "Hera S.p.A.",
+    geologicalContext:
+      "Modena è alimentata dalla grande falda di pianura padana, ricca di carbonati, integrata da sorgenti appenniniche. La pianura modenese è soggetta storicamente a pressione da nitrati di origine agricola.",
+    typicalParameters: {
+      durezza: "media (tipicamente 20-35 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Modena",
+        paragraphs: [
+          "L'acqua di Modena arriva da campi pozzi della pianura e da sorgenti appenniniche, integrate quando necessario per garantire continuità nel servizio.",
+          "La distribuzione è in capo a Hera, che gestisce captazione, potabilizzazione e rete cittadina.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Modena",
+        paragraphs: [
+          "Hera esegue autocontrolli sulla filiera; AUSL Modena effettua i controlli ufficiali; ARPAE Emilia-Romagna svolge il monitoraggio ambientale delle falde.",
+          "I dati per comune sono pubblicati dal gestore secondo le previsioni del D.Lgs. 18/2023.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Modena è bicarbonato-calcica con durezza media. I parametri più rilevanti sono i nitrati e i sottoprodotti di disinfezione. Negli edifici storici è opportuno verificare il piombo a rubinetto in presenza di tubazioni private antecedenti agli anni Sessanta.",
+        ],
+        bullets: [
+          "Durezza: media, 20-35 °F",
+          "Nitrati: parametro sensibile in area agricola",
+          "Piombo: rischio limitato a impianti privati molto datati",
+        ],
+      },
+      {
+        heading: "Casi noti e problematiche storiche",
+        paragraphs: [
+          "La pianura modenese ha una pressione storica da nitrati di origine agricola e zootecnica. ARPAE monitora regolarmente la falda; Hera attua miscelazioni e presidi sui campi pozzi interessati per mantenere i valori in distribuzione entro i limiti normativi.",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Modena",
+        paragraphs: [
+          "GoccIA offre una lettura immediata dei parametri principali della tua acqua a partire da pochi dati di base.",
+          "Per chi vive in zone sensibili ai nitrati o in edifici molto datati, un'analisi di laboratorio mirata è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Modena è sicura?",
+        a: "Sì, l'acqua distribuita da Hera rispetta i limiti del D.Lgs. 18/2023, con presidi specifici sui parametri sensibili dell'area.",
+      },
+      {
+        q: "I nitrati a Modena sono un problema?",
+        a: "Sono il parametro più rappresentativo dell'area, ma i valori in distribuzione restano entro i limiti grazie alla gestione attiva delle fonti.",
+      },
+      {
+        q: "L'acqua di Modena è dura?",
+        a: "È classificabile come media: tipicamente 20-35 °F.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Modena?",
+        a: "Hera pubblica i dati per comune sul proprio sito; AUSL Modena e ARPAE pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["bologna", "parma", "reggio-emilia", "cesena"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Modena — nitrati, durezza e sottoprodotti di disinfezione — con un laboratorio qualificato:",
+  },
+  {
+    slug: "salerno",
+    cityName: "Salerno",
+    province: "SA",
+    region: "Campania",
+    shortTitle: "Acqua del rubinetto a Salerno: gestore Salerno Sistemi e sorgenti picentine",
+    metaDescription:
+      "Acqua di Salerno: gestore Salerno Sistemi, sorgenti picentine, durezza media, parametri tipici. Come verificare la qualità del rubinetto.",
+    searchKeywords: [
+      "acqua di salerno",
+      "acqua rubinetto salerno",
+      "qualità acqua salerno",
+      "gestore acqua salerno",
+      "salerno acqua dura",
+      "acqua salerno sistemi",
+    ],
+    intro:
+      "L'acqua del rubinetto a Salerno è gestita da Salerno Sistemi e proviene principalmente da sorgenti dei Monti Picentini, una delle aree sorgentizie più importanti del Sud Italia. La qualità complessiva è considerata buona e conforme ai limiti normativi. L'acqua salernitana è bicarbonato-calcica con durezza media, coerente con la geologia carbonatica picentina. Nei centri storici resta valida la consueta attenzione all'impiantistica interna degli edifici antichi.",
+    waterUtility: "Salerno Sistemi S.p.A.",
+    geologicalContext:
+      "Salerno è alimentata da sorgenti dei Monti Picentini, area carbonatica appenninica di alta qualità sorgentizia, integrate da campi pozzi minori.",
+    typicalParameters: {
+      durezza: "media (tipicamente 18-30 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Salerno",
+        paragraphs: [
+          "L'acqua di Salerno arriva in larga parte da sorgenti dei Monti Picentini, un'area appenninica carbonatica ad alta produttività sorgentizia che alimenta gran parte della Campania centrale.",
+          "La distribuzione cittadina è gestita da Salerno Sistemi.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Salerno",
+        paragraphs: [
+          "Salerno Sistemi esegue autocontrolli sulla filiera; ASL Salerno effettua i controlli ufficiali; ARPA Campania svolge il monitoraggio ambientale.",
+          "I dati di qualità sono pubblicati dal gestore secondo quanto previsto dalla normativa vigente.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Salerno è bicarbonato-calcica con durezza media. La qualità sorgentizia consente in genere trattamenti leggeri. Negli edifici storici è prudente verificare il piombo a rubinetto in presenza di tubazioni private molto datate.",
+        ],
+        bullets: [
+          "Durezza: media, 18-30 °F",
+          "Calcio: ben rappresentato",
+          "Piombo: rischio limitato a impianti interni molto datati",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Salerno",
+        paragraphs: [
+          "GoccIA permette una lettura immediata dei parametri principali della tua acqua di casa.",
+          "Per un quadro più approfondito, un'analisi di laboratorio mirata è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Salerno è sicura?",
+        a: "Sì, l'acqua distribuita da Salerno Sistemi rispetta i limiti del D.Lgs. 18/2023, anche grazie alla qualità delle sorgenti picentine.",
+      },
+      {
+        q: "L'acqua di Salerno è dura?",
+        a: "È classificabile come media: tipicamente 18-30 °F.",
+      },
+      {
+        q: "Posso bere l'acqua del rubinetto a Salerno senza filtri?",
+        a: "Sì, è potabile e conforme. I filtri sono una scelta di gusto.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Salerno?",
+        a: "Salerno Sistemi pubblica i dati sul proprio sito; ASL Salerno e ARPA Campania pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["napoli", "bari", "roma", "catanzaro"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Salerno — durezza, calcio e parametri sensibili — con un laboratorio qualificato:",
+  },
+  {
+    slug: "bergamo",
+    cityName: "Bergamo",
+    province: "BG",
+    region: "Lombardia",
+    shortTitle: "Acqua del rubinetto a Bergamo: gestore Uniacque e falda prealpina",
+    metaDescription:
+      "Acqua di Bergamo: gestore Uniacque, falda prealpina, durezza alta, parametri tipici e attenzione agli impianti storici della Città Alta.",
+    searchKeywords: [
+      "acqua di bergamo",
+      "acqua rubinetto bergamo",
+      "qualità acqua bergamo",
+      "gestore acqua bergamo",
+      "bergamo acqua dura",
+      "acqua uniacque",
+    ],
+    intro:
+      "L'acqua del rubinetto a Bergamo è gestita da Uniacque e proviene da sorgenti prealpine e campi pozzi della pianura bergamasca. La qualità complessiva è buona e conforme ai limiti normativi. L'acqua bergamasca è marcatamente bicarbonato-calcica e mediamente dura, coerente con i contesti carbonatici prealpini. In Città Alta e nei nuclei storici l'attenzione si concentra sull'impiantistica privata degli edifici antichi, dove possono persistere tratti di tubazioni datate.",
+    waterUtility: "Uniacque S.p.A.",
+    geologicalContext:
+      "Bergamo è alimentata da sorgenti carbonatiche prealpine e da falde della pianura bergamasca, in contesti ricchi di carbonati che determinano una durezza medio-alta.",
+    typicalParameters: {
+      durezza: "alta (tipicamente 25-40 °F)",
+      piombo: "potenziale negli edifici storici della Città Alta con tubazioni interne molto datate",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Bergamo",
+        paragraphs: [
+          "L'acqua di Bergamo arriva da sorgenti prealpine e da campi pozzi della pianura, gestiti da Uniacque.",
+          "La rete cittadina alterna tratti storici (in particolare nella Città Alta) e tratti più recenti nelle aree di espansione.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Bergamo",
+        paragraphs: [
+          "Uniacque esegue autocontrolli sulla filiera; ATS Bergamo effettua i controlli ufficiali; ARPA Lombardia svolge il monitoraggio ambientale.",
+          "I dati sintetici sono pubblicati dal gestore sul proprio sito.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Bergamo è bicarbonato-calcica con durezza alta. I parametri più rilevanti sono indicatori di pressione antropica della pianura (nitrati, organoalogenati) e, negli edifici storici della Città Alta, l'eventuale presenza di piombo a rubinetto da tubazioni interne molto datate.",
+        ],
+        bullets: [
+          "Durezza: alta, 25-40 °F",
+          "Nitrati e organoalogenati: monitorati sui campi pozzi di pianura",
+          "Piombo: rischio limitato a impianti privati molto datati",
+        ],
+      },
+      {
+        heading: "Casi noti e problematiche storiche",
+        paragraphs: [
+          "La pianura lombarda ha una pressione storica per nitrati e composti di origine industriale, monitorati da ARPA Lombardia. Sui campi pozzi interessati sono attivi presidi e trattamenti specifici.",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Bergamo",
+        paragraphs: [
+          "Con GoccIA puoi ottenere una lettura immediata dei parametri chiave della tua acqua di casa.",
+          "Se vivi in Città Alta o in un edificio molto datato, un'analisi di laboratorio mirata su piombo e durezza è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Bergamo è sicura?",
+        a: "Sì, l'acqua distribuita da Uniacque rispetta i limiti del D.Lgs. 18/2023.",
+      },
+      {
+        q: "L'acqua di Bergamo è dura?",
+        a: "È classificabile come alta: tipicamente 25-40 °F, soprattutto nelle aree alimentate da sorgenti carbonatiche.",
+      },
+      {
+        q: "L'impianto di casa in Città Alta può influire sulla qualità?",
+        a: "Sì, negli edifici antichi le tubazioni interne possono pesare più della rete pubblica: l'unica verifica affidabile è un'analisi al rubinetto.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Bergamo?",
+        a: "Uniacque pubblica i dati sul proprio sito; ATS Bergamo e ARPA Lombardia pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["brescia", "milano", "verona", "vicenza"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Bergamo — durezza, eventuali tracce di piombo in Città Alta, parametri di pianura — con un laboratorio qualificato:",
+  },
+  {
+    slug: "vicenza",
+    cityName: "Vicenza",
+    province: "VI",
+    region: "Veneto",
+    shortTitle: "Acqua del rubinetto a Vicenza: gestore Viacqua e contesto PFAS",
+    metaDescription:
+      "Acqua di Vicenza: gestore Viacqua, falda veneta, durezza media e contesto storico PFAS dell'area Miteni. Come verificare la qualità del rubinetto.",
+    searchKeywords: [
+      "acqua di vicenza",
+      "acqua rubinetto vicenza",
+      "qualità acqua vicenza",
+      "gestore acqua vicenza",
+      "pfas vicenza",
+      "acqua viacqua",
+    ],
+    intro:
+      "L'acqua del rubinetto a Vicenza è gestita da Viacqua e proviene da campi pozzi della pianura vicentina e da sorgenti pedemontane. La qualità in distribuzione è conforme ai limiti normativi. L'area è però uno dei contesti italiani più noti per il tema PFAS, emerso pubblicamente intorno al 2013 in relazione allo stabilimento Miteni di Trissino e alla contaminazione di una porzione di falda veneta. Sui campi pozzi interessati sono stati installati filtri a carboni attivi e gli interventi proseguono con monitoraggi pubblici periodici.",
+    waterUtility: "Viacqua S.p.A.",
+    geologicalContext:
+      "Vicenza è alimentata da falde alluvionali pedemontane vicentine, alimentate dagli apporti delle Prealpi venete. La parte ovest della provincia è stata interessata da una contaminazione storica da PFAS.",
+    typicalParameters: {
+      durezza: "media (tipicamente 20-30 °F)",
+      pfas: "monitoraggio attivo a livello regionale, con trattamenti su carboni attivi sui campi pozzi interessati",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Vicenza",
+        paragraphs: [
+          "L'acqua di Vicenza arriva da campi pozzi della pianura vicentina e da sorgenti pedemontane, gestiti da Viacqua.",
+          "Sui campi pozzi interessati dalla contaminazione PFAS sono attivi sistemi di filtrazione su carboni attivi.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Vicenza",
+        paragraphs: [
+          "Viacqua esegue autocontrolli sulla filiera; ULSS 8 Berica effettua i controlli ufficiali; ARPAV svolge il monitoraggio ambientale, con un piano specifico sui PFAS che integra i dati del gestore.",
+          "I dati sintetici per comune e i monitoraggi PFAS sono pubblicati dal gestore e da Regione Veneto.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Vicenza è bicarbonato-calcica con durezza media. Il parametro più sensibile per il territorio resta quello dei PFAS, sul quale insistono sia presidi sui campi pozzi sia monitoraggi pubblici dedicati.",
+        ],
+        bullets: [
+          "Durezza: media, 20-30 °F",
+          "PFAS: tema storico dell'area, trattamenti attivi",
+          "Sottoprodotti di disinfezione: monitorati",
+        ],
+      },
+      {
+        heading: "Casi noti e problematiche storiche",
+        paragraphs: [
+          "La contaminazione PFAS della falda veneta è emersa pubblicamente intorno al 2013, in relazione allo stabilimento Miteni di Trissino. Da allora sono stati installati filtri a carboni attivi sui campi pozzi interessati e Regione Veneto, ARPAV e gestori hanno attivato monitoraggi pubblici dedicati.",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Vicenza",
+        paragraphs: [
+          "Con GoccIA puoi ottenere una lettura immediata dei parametri chiave della tua acqua di casa.",
+          "Per chi vive nelle aree storicamente interessate dai PFAS, un'analisi di laboratorio mirata su PFAS è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Vicenza è sicura?",
+        a: "Sì, l'acqua in distribuzione rispetta i limiti del D.Lgs. 18/2023. Sui campi pozzi storicamente interessati da PFAS sono attivi trattamenti di abbattimento.",
+      },
+      {
+        q: "Cos'è il caso PFAS di Vicenza?",
+        a: "È la contaminazione di una porzione della falda veneta, emersa pubblicamente intorno al 2013, legata storicamente allo stabilimento Miteni di Trissino. Da allora sono in atto interventi di filtrazione e monitoraggio.",
+      },
+      {
+        q: "L'acqua di Vicenza è dura?",
+        a: "È classificabile come media: tipicamente 20-30 °F.",
+      },
+      {
+        q: "Dove trovo i referti pubblici sui PFAS a Vicenza?",
+        a: "Viacqua e Regione Veneto pubblicano i dati di monitoraggio; ARPAV pubblica report tecnici periodici.",
+      },
+    ],
+    relatedCities: ["padova", "verona", "venezia", "bergamo"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Vicenza — PFAS, durezza, sottoprodotti di disinfezione — con un laboratorio qualificato:",
+  },
+  {
+    slug: "foggia",
+    cityName: "Foggia",
+    province: "FG",
+    region: "Puglia",
+    shortTitle: "Acqua del rubinetto a Foggia: gestore AQP e acqua trasportata",
+    metaDescription:
+      "Acqua di Foggia: gestore Acquedotto Pugliese, acqua trasportata da bacini esterni, durezza media e parametri tipici. Come verificarla.",
+    searchKeywords: [
+      "acqua di foggia",
+      "acqua rubinetto foggia",
+      "qualità acqua foggia",
+      "gestore acqua foggia",
+      "foggia acqua dura",
+      "acqua aqp foggia",
+    ],
+    intro:
+      "L'acqua del rubinetto a Foggia è gestita da Acquedotto Pugliese (AQP) e proviene in larga parte da bacini esterni, principalmente lucani, trasportati attraverso il sistema acquedottistico pugliese. La qualità in distribuzione è conforme ai limiti normativi. L'acqua foggiana è bicarbonato-calcica con durezza media. Trattandosi di acqua di adduzione lunga, sono attivi presidi specifici su sottoprodotti di disinfezione.",
+    waterUtility: "Acquedotto Pugliese S.p.A. (AQP)",
+    geologicalContext:
+      "Foggia non ha grandi risorse idriche locali utilizzabili per acqua potabile: l'approvvigionamento dipende in larga parte dal grande acquedotto pugliese che porta acqua da invasi e sorgenti della Basilicata.",
+    typicalParameters: {
+      durezza: "media (tipicamente 20-32 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Foggia",
+        paragraphs: [
+          "L'acqua di Foggia arriva principalmente da bacini lucani attraverso il sistema dell'Acquedotto Pugliese, uno dei più estesi schemi acquedottistici d'Europa.",
+          "Il trasporto a lunga distanza richiede una gestione attenta dei tempi di permanenza in rete e dei sottoprodotti di disinfezione.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Foggia",
+        paragraphs: [
+          "AQP esegue autocontrolli su tutta la filiera; ASL Foggia effettua i controlli ufficiali; ARPA Puglia svolge il monitoraggio ambientale.",
+          "I dati di qualità per comune sono pubblicati dal gestore sul proprio sito.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Foggia è bicarbonato-calcica con durezza media. I parametri più rilevanti sono i sottoprodotti di disinfezione, tipici di reti lunghe, e indicatori organolettici.",
+        ],
+        bullets: [
+          "Durezza: media, 20-32 °F",
+          "Sottoprodotti di disinfezione: monitorati",
+          "Indicatori organolettici: monitorati",
+        ],
+      },
+      {
+        heading: "Casi noti e problematiche storiche",
+        paragraphs: [
+          "Il territorio della Capitanata ha una pressione agricola significativa, monitorata da ARPA Puglia per i parametri di interesse. L'approvvigionamento da bacini esterni mitiga il rischio per la rete potabile cittadina.",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Foggia",
+        paragraphs: [
+          "Con GoccIA puoi avere una lettura immediata dei parametri chiave della tua acqua a partire da pochi dati di base.",
+          "Per un quadro più completo, un'analisi di laboratorio mirata su durezza e sottoprodotti di disinfezione è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Foggia è sicura?",
+        a: "Sì, l'acqua distribuita da AQP rispetta i limiti del D.Lgs. 18/2023.",
+      },
+      {
+        q: "L'acqua di Foggia è dura?",
+        a: "È classificabile come media: tipicamente 20-32 °F.",
+      },
+      {
+        q: "Da dove arriva l'acqua di Foggia?",
+        a: "In larga parte da bacini lucani attraverso l'Acquedotto Pugliese.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Foggia?",
+        a: "AQP pubblica i dati per comune sul proprio sito; ASL Foggia e ARPA Puglia pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["bari", "lecce", "taranto", "potenza"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Foggia — durezza e sottoprodotti di disinfezione — con un laboratorio qualificato:",
+  },
+  {
+    slug: "latina",
+    cityName: "Latina",
+    province: "LT",
+    region: "Lazio",
+    shortTitle: "Acqua del rubinetto a Latina: gestore Acqualatina e falda costiera",
+    metaDescription:
+      "Acqua di Latina: gestore Acqualatina, falda costiera pontina, durezza media e attenzione a intrusione salina. Come verificare la qualità.",
+    searchKeywords: [
+      "acqua di latina",
+      "acqua rubinetto latina",
+      "qualità acqua latina",
+      "gestore acqua latina",
+      "latina acqua dura",
+      "acqua acqualatina",
+    ],
+    intro:
+      "L'acqua del rubinetto a Latina è gestita da Acqualatina e proviene da campi pozzi della pianura pontina e da sorgenti dei Monti Lepini. La qualità in distribuzione è conforme ai limiti normativi. L'acqua è bicarbonato-calcica con durezza media. Nelle aree più vicine alla costa il gestore presidia con attenzione l'eventuale intrusione salina, fenomeno tipico delle falde costiere mediterranee.",
+    waterUtility: "Acqualatina S.p.A.",
+    geologicalContext:
+      "Latina si appoggia sulla pianura pontina, alimentata da sorgenti dei Monti Lepini e da falde alluvionali costiere soggette storicamente al rischio di intrusione salina.",
+    typicalParameters: {
+      durezza: "media (tipicamente 20-32 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Latina",
+        paragraphs: [
+          "L'acqua di Latina arriva da sorgenti dei Monti Lepini e da campi pozzi della pianura pontina, gestiti da Acqualatina.",
+          "Nelle aree costiere il prelievo è regolato anche in funzione del rischio di intrusione salina.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Latina",
+        paragraphs: [
+          "Acqualatina esegue autocontrolli sulla filiera; ASL Latina effettua i controlli ufficiali; ARPA Lazio svolge il monitoraggio ambientale.",
+          "I dati sintetici per comune sono pubblicati sul sito del gestore.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Latina è bicarbonato-calcica con durezza media. I parametri sensibili nelle aree costiere sono cloruri e sodio, monitorati in funzione dell'eventuale intrusione salina, oltre ai sottoprodotti di disinfezione.",
+        ],
+        bullets: [
+          "Durezza: media, 20-32 °F",
+          "Cloruri e sodio: monitorati in aree costiere",
+          "Sottoprodotti di disinfezione: monitorati",
+        ],
+      },
+      {
+        heading: "Casi noti e problematiche storiche",
+        paragraphs: [
+          "La pianura pontina ha una vulnerabilità storica alle intrusioni saline e a pressioni agricole. Sono attivi presidi specifici sui campi pozzi e monitoraggi pubblici di ARPA Lazio.",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Latina",
+        paragraphs: [
+          "GoccIA permette una lettura immediata dei parametri principali della tua acqua a partire da pochi dati di base.",
+          "Per chi vive vicino alla costa, un'analisi di laboratorio mirata su cloruri, sodio e durezza è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Latina è sicura?",
+        a: "Sì, l'acqua distribuita da Acqualatina rispetta i limiti del D.Lgs. 18/2023.",
+      },
+      {
+        q: "L'intrusione salina è un problema a Latina?",
+        a: "È un rischio storico delle falde costiere pontine, monitorato dal gestore e da ARPA Lazio. In distribuzione i valori restano entro i limiti grazie alla gestione delle fonti.",
+      },
+      {
+        q: "L'acqua di Latina è dura?",
+        a: "È classificabile come media: tipicamente 20-32 °F.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Latina?",
+        a: "Acqualatina pubblica i dati sul proprio sito; ASL Latina e ARPA Lazio pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["roma", "napoli", "salerno", "pescara"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Latina — durezza, cloruri, sodio nelle aree costiere — con un laboratorio qualificato:",
+  },
+  {
+    slug: "pescara",
+    cityName: "Pescara",
+    province: "PE",
+    region: "Abruzzo",
+    shortTitle: "Acqua del rubinetto a Pescara: gestore ACA e falda adriatica",
+    metaDescription:
+      "Acqua di Pescara: gestore ACA, sorgenti del Gran Sasso e falda adriatica, durezza media e parametri tipici. Come verificare la qualità.",
+    searchKeywords: [
+      "acqua di pescara",
+      "acqua rubinetto pescara",
+      "qualità acqua pescara",
+      "gestore acqua pescara",
+      "pescara acqua dura",
+      "acqua aca pescara",
+    ],
+    intro:
+      "L'acqua del rubinetto a Pescara è gestita da ACA (Azienda Comprensoriale Acquedottistica) e proviene principalmente da sorgenti dell'area del Gran Sasso e da campi pozzi della pianura adriatica. La qualità in distribuzione è conforme ai limiti normativi. L'acqua è bicarbonato-calcica con durezza media. Nelle aree costiere si presta attenzione alla salvaguardia della falda da pressioni antropiche.",
+    waterUtility: "ACA S.p.A.",
+    geologicalContext:
+      "Pescara è alimentata da sorgenti carbonatiche del massiccio del Gran Sasso e da falde alluvionali della costa adriatica abruzzese.",
+    typicalParameters: {
+      durezza: "media (tipicamente 20-32 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Pescara",
+        paragraphs: [
+          "L'acqua di Pescara arriva in gran parte da sorgenti del Gran Sasso e da campi pozzi della pianura adriatica, gestiti da ACA.",
+          "La diversificazione tra acqua sorgentizia e acqua di falda consente una buona resilienza nei periodi di stress idrico estivo.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Pescara",
+        paragraphs: [
+          "ACA esegue autocontrolli sulla filiera; ASL Pescara effettua i controlli ufficiali; ARTA Abruzzo svolge il monitoraggio ambientale.",
+          "I dati di qualità per comune sono pubblicati dal gestore.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Pescara è bicarbonato-calcica con durezza media. Sono monitorati i sottoprodotti di disinfezione e gli indicatori organolettici. Nelle aree costiere si monitora la pressione antropica sulla falda.",
+        ],
+        bullets: [
+          "Durezza: media, 20-32 °F",
+          "Calcio: ben rappresentato",
+          "Sottoprodotti di disinfezione: monitorati",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Pescara",
+        paragraphs: [
+          "Con GoccIA puoi avere una lettura immediata dei parametri chiave della tua acqua a partire da pochi dati di base.",
+          "Per un quadro più approfondito, un'analisi di laboratorio mirata è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Pescara è sicura?",
+        a: "Sì, l'acqua distribuita da ACA rispetta i limiti del D.Lgs. 18/2023.",
+      },
+      {
+        q: "L'acqua di Pescara è dura?",
+        a: "È classificabile come media: tipicamente 20-32 °F.",
+      },
+      {
+        q: "Posso bere l'acqua del rubinetto a Pescara senza filtri?",
+        a: "Sì, è potabile e conforme. I filtri sono una scelta di gusto.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Pescara?",
+        a: "ACA pubblica i dati sul proprio sito; ASL Pescara e ARTA Abruzzo pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["ancona", "campobasso", "roma", "rimini"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Pescara — durezza, calcio e parametri sensibili — con un laboratorio qualificato:",
+  },
+  {
+    slug: "rimini",
+    cityName: "Rimini",
+    province: "RN",
+    region: "Emilia-Romagna",
+    shortTitle: "Acqua del rubinetto a Rimini: gestore Hera, falda romagnola e costa",
+    metaDescription:
+      "Acqua di Rimini: gestore Hera, sistema Ridracoli e falda romagnola, durezza media e parametri tipici della costa. Come verificare la qualità.",
+    searchKeywords: [
+      "acqua di rimini",
+      "acqua rubinetto rimini",
+      "qualità acqua rimini",
+      "gestore acqua rimini",
+      "rimini acqua dura",
+      "acqua hera rimini",
+    ],
+    intro:
+      "L'acqua del rubinetto a Rimini è gestita da Hera e proviene da un mix di fonti: l'acquedotto di Ridracoli (Romagna Acque-Società delle Fonti), campi pozzi della pianura romagnola e fonti integrate. La qualità in distribuzione è conforme ai limiti normativi. L'acqua riminese è bicarbonato-calcica con durezza media. Trattandosi di un capoluogo costiero, sono attivi presidi specifici su nitrati di origine agricola e sottoprodotti di disinfezione.",
+    waterUtility: "Hera S.p.A.",
+    geologicalContext:
+      "Rimini è alimentata dall'acquedotto di Ridracoli (acqua dell'Appennino) e da falde romagnole costiere, in contesti alluvionali ricchi di carbonati.",
+    typicalParameters: {
+      durezza: "media (tipicamente 20-32 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Rimini",
+        paragraphs: [
+          "L'acqua di Rimini arriva principalmente dall'invaso di Ridracoli, integrato con campi pozzi della pianura romagnola. La diversificazione delle fonti è gestita da Romagna Acque-Società delle Fonti, con distribuzione cittadina di Hera.",
+          "Nei mesi estivi la domanda turistica è elevata e la gestione delle fonti viene tarata di conseguenza.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Rimini",
+        paragraphs: [
+          "Hera esegue autocontrolli sulla filiera; AUSL Romagna effettua i controlli ufficiali; ARPAE svolge il monitoraggio ambientale.",
+          "I dati di qualità per comune sono pubblicati dal gestore.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Rimini è bicarbonato-calcica con durezza media. I parametri più sensibili dell'area sono nitrati (pressione agricola in pianura) e sottoprodotti di disinfezione.",
+        ],
+        bullets: [
+          "Durezza: media, 20-32 °F",
+          "Nitrati: monitorati",
+          "Sottoprodotti di disinfezione: monitorati",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Rimini",
+        paragraphs: [
+          "Con GoccIA puoi avere una lettura immediata dei parametri chiave della tua acqua a partire da pochi dati di base.",
+          "Per un quadro più approfondito su nitrati o durezza, un'analisi di laboratorio mirata è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Rimini è sicura?",
+        a: "Sì, l'acqua distribuita da Hera rispetta i limiti del D.Lgs. 18/2023.",
+      },
+      {
+        q: "L'acqua di Rimini è dura?",
+        a: "È classificabile come media: tipicamente 20-32 °F.",
+      },
+      {
+        q: "I nitrati a Rimini sono un problema?",
+        a: "Sono il parametro più rappresentativo della pianura romagnola, ma i valori in distribuzione restano entro i limiti grazie alla gestione attiva delle fonti.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Rimini?",
+        a: "Hera pubblica i dati per comune sul proprio sito; AUSL Romagna e ARPAE pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["cesena", "forli", "ravenna", "bologna"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Rimini — nitrati, durezza e sottoprodotti di disinfezione — con un laboratorio qualificato:",
+  },
+  {
+    slug: "lecce",
+    cityName: "Lecce",
+    province: "LE",
+    region: "Puglia",
+    shortTitle: "Acqua del rubinetto a Lecce: gestore AQP e calcare salentino",
+    metaDescription:
+      "Acqua di Lecce: gestore Acquedotto Pugliese, acqua trasportata e calcare salentino, durezza alta e parametri tipici. Come verificarla.",
+    searchKeywords: [
+      "acqua di lecce",
+      "acqua rubinetto lecce",
+      "qualità acqua lecce",
+      "gestore acqua lecce",
+      "lecce acqua dura",
+      "acqua aqp lecce",
+    ],
+    intro:
+      "L'acqua del rubinetto a Lecce è gestita da Acquedotto Pugliese (AQP) e proviene in larga parte da bacini esterni trasportati attraverso il grande schema acquedottistico pugliese. La qualità in distribuzione è conforme ai limiti normativi. L'acqua salentina è bicarbonato-calcica con durezza tendenzialmente alta, coerente con la geologia calcarea del Salento. Sui tratti più lunghi di rete sono attivi presidi specifici sui sottoprodotti di disinfezione.",
+    waterUtility: "Acquedotto Pugliese S.p.A. (AQP)",
+    geologicalContext:
+      "Il Salento è caratterizzato da un substrato carbonatico-calcareo con falde profonde soggette al rischio di intrusione salina; storicamente Lecce è alimentata in larga parte da risorse trasportate da fuori regione.",
+    typicalParameters: {
+      durezza: "alta (tipicamente 25-40 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Lecce",
+        paragraphs: [
+          "L'acqua di Lecce arriva principalmente da bacini lucani attraverso il sistema dell'Acquedotto Pugliese, integrata da risorse locali quando disponibili.",
+          "Il trasporto a lunga distanza richiede gestione attenta dei tempi di permanenza in rete e dei sottoprodotti di disinfezione.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Lecce",
+        paragraphs: [
+          "AQP esegue autocontrolli sulla filiera; ASL Lecce effettua i controlli ufficiali; ARPA Puglia svolge il monitoraggio ambientale.",
+          "I dati di qualità per comune sono pubblicati dal gestore.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Lecce è bicarbonato-calcica con durezza alta, coerente con la geologia calcarea del Salento. I parametri più rilevanti sono i sottoprodotti di disinfezione e, nelle aree costiere, cloruri e sodio per il rischio storico di intrusione salina sulle falde locali.",
+        ],
+        bullets: [
+          "Durezza: alta, 25-40 °F",
+          "Sottoprodotti di disinfezione: monitorati",
+          "Cloruri e sodio: monitorati in aree costiere",
+        ],
+      },
+      {
+        heading: "Casi noti e problematiche storiche",
+        paragraphs: [
+          "Il Salento ha una vulnerabilità storica delle falde profonde al fenomeno dell'intrusione salina, ragione per cui l'approvvigionamento principale è da bacini esterni. ARPA Puglia monitora la falda salentina con report periodici.",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Lecce",
+        paragraphs: [
+          "Con GoccIA puoi avere una lettura immediata dei parametri chiave della tua acqua a partire da pochi dati di base.",
+          "Per un quadro più approfondito su durezza e sottoprodotti, un'analisi di laboratorio mirata è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Lecce è sicura?",
+        a: "Sì, l'acqua distribuita da AQP rispetta i limiti del D.Lgs. 18/2023.",
+      },
+      {
+        q: "L'acqua di Lecce è dura?",
+        a: "È classificabile come alta: tipicamente 25-40 °F, in coerenza con la geologia calcarea del Salento.",
+      },
+      {
+        q: "Da dove arriva l'acqua di Lecce?",
+        a: "In larga parte da bacini lucani attraverso l'Acquedotto Pugliese.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Lecce?",
+        a: "AQP pubblica i dati per comune sul proprio sito; ASL Lecce e ARPA Puglia pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["bari", "taranto", "foggia", "catania"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Lecce — durezza, sottoprodotti di disinfezione, cloruri e sodio nelle aree costiere — con un laboratorio qualificato:",
+  },
+  {
+    slug: "forli",
+    cityName: "Forlì",
+    province: "FC",
+    region: "Emilia-Romagna",
+    shortTitle: "Acqua del rubinetto a Forlì: gestore Hera, Ridracoli e falda padana",
+    metaDescription:
+      "Acqua di Forlì: gestore Hera, sistema Ridracoli e falda romagnola, durezza media e parametri tipici. Come verificare la qualità del rubinetto.",
+    searchKeywords: [
+      "acqua di forli",
+      "acqua rubinetto forli",
+      "qualità acqua forli",
+      "gestore acqua forli",
+      "forli acqua dura",
+      "acqua hera forli",
+    ],
+    intro:
+      "L'acqua del rubinetto a Forlì è gestita da Hera e proviene da un mix di adduzione dal sistema Ridracoli e campi pozzi della pianura romagnola. La qualità in distribuzione è conforme ai limiti normativi. L'acqua è bicarbonato-calcica con durezza media. Il territorio forlivese, come tutta la pianura romagnola, è interessato storicamente da una pressione agricola che rende i nitrati uno dei parametri più presidiati.",
+    waterUtility: "Hera S.p.A.",
+    geologicalContext:
+      "Forlì è alimentata da falde romagnole alluvionali, integrate dall'adduzione dell'acquedotto di Ridracoli dall'Appennino tosco-romagnolo.",
+    typicalParameters: {
+      durezza: "media (tipicamente 20-32 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Forlì",
+        paragraphs: [
+          "L'acqua di Forlì arriva da campi pozzi della pianura romagnola e dall'adduzione del sistema Ridracoli, gestito da Romagna Acque-Società delle Fonti e distribuito da Hera.",
+          "La diversificazione delle fonti consente buona resilienza in caso di stress idrico estivo.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Forlì",
+        paragraphs: [
+          "Hera esegue autocontrolli sulla filiera; AUSL Romagna effettua i controlli ufficiali; ARPAE svolge il monitoraggio ambientale.",
+          "I dati di qualità per comune sono pubblicati dal gestore.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Forlì è bicarbonato-calcica con durezza media. I parametri più sensibili sono nitrati (pressione agricola) e sottoprodotti di disinfezione.",
+        ],
+        bullets: [
+          "Durezza: media, 20-32 °F",
+          "Nitrati: monitorati",
+          "Sottoprodotti di disinfezione: monitorati",
+        ],
+      },
+      {
+        heading: "Casi noti e problematiche storiche",
+        paragraphs: [
+          "La pianura romagnola ha una pressione storica da nitrati di origine agricola, monitorata da ARPAE. Sui campi pozzi interessati sono attivi presidi e miscelazioni che mantengono i valori in distribuzione entro i limiti normativi.",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Forlì",
+        paragraphs: [
+          "GoccIA offre una lettura immediata dei parametri principali della tua acqua a partire da pochi dati di base.",
+          "Per chi vive in zone storicamente sensibili ai nitrati, un'analisi di laboratorio mirata è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Forlì è sicura?",
+        a: "Sì, l'acqua distribuita da Hera rispetta i limiti del D.Lgs. 18/2023.",
+      },
+      {
+        q: "I nitrati a Forlì sono un problema?",
+        a: "Sono il parametro più rappresentativo dell'area, ma i valori in distribuzione restano entro i limiti grazie alla gestione attiva delle fonti.",
+      },
+      {
+        q: "L'acqua di Forlì è dura?",
+        a: "È classificabile come media: tipicamente 20-32 °F.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Forlì?",
+        a: "Hera pubblica i dati sul proprio sito; AUSL Romagna e ARPAE pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["cesena", "rimini", "bologna", "ravenna"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Forlì — nitrati, durezza e sottoprodotti di disinfezione — con un laboratorio qualificato:",
+  },
+  {
+    slug: "udine",
+    cityName: "Udine",
+    province: "UD",
+    region: "Friuli-Venezia Giulia",
+    shortTitle: "Acqua del rubinetto a Udine: gestore CAFC e sorgenti friulane",
+    metaDescription:
+      "Acqua di Udine: gestore CAFC, sorgenti friulane e falda della pianura, durezza media e parametri tipici. Come verificare la qualità.",
+    searchKeywords: [
+      "acqua di udine",
+      "acqua rubinetto udine",
+      "qualità acqua udine",
+      "gestore acqua udine",
+      "udine acqua dura",
+      "acqua cafc",
+    ],
+    intro:
+      "L'acqua del rubinetto a Udine è gestita da CAFC S.p.A. e proviene da sorgenti friulane e da campi pozzi della pianura friulana. La qualità complessiva è considerata buona e conforme ai limiti normativi. L'acqua è bicarbonato-calcica con durezza media, in linea con la geologia carbonatica delle Prealpi Giulie. La diversificazione delle fonti è ben rappresentata e consente una buona resilienza idrica.",
+    waterUtility: "CAFC S.p.A.",
+    geologicalContext:
+      "Udine è alimentata da sorgenti carbonatiche delle Prealpi Giulie e da falde della pianura friulana, in contesti ad alta ricarica naturale.",
+    typicalParameters: {
+      durezza: "media (tipicamente 20-30 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Udine",
+        paragraphs: [
+          "L'acqua di Udine arriva da sorgenti friulane e da campi pozzi della pianura, gestiti da CAFC.",
+          "La rete è alimentata in maniera distribuita, con tratti recenti e tratti storici nei nuclei più antichi.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Udine",
+        paragraphs: [
+          "CAFC esegue autocontrolli sulla filiera; AAS friulana effettua i controlli ufficiali; ARPA FVG svolge il monitoraggio ambientale.",
+          "I dati sintetici per comune sono pubblicati dal gestore sul proprio sito.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Udine è bicarbonato-calcica con durezza media. Sono monitorati sottoprodotti di disinfezione e indicatori organolettici. Nei nuclei storici vale la consueta attenzione all'impiantistica privata degli edifici antichi.",
+        ],
+        bullets: [
+          "Durezza: media, 20-30 °F",
+          "Calcio: ben rappresentato",
+          "Sottoprodotti di disinfezione: monitorati",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Udine",
+        paragraphs: [
+          "Con GoccIA puoi avere una lettura immediata dei parametri chiave della tua acqua a partire da pochi dati di base.",
+          "Per un quadro più approfondito, un'analisi di laboratorio mirata è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Udine è sicura?",
+        a: "Sì, l'acqua distribuita da CAFC rispetta i limiti del D.Lgs. 18/2023.",
+      },
+      {
+        q: "L'acqua di Udine è dura?",
+        a: "È classificabile come media: tipicamente 20-30 °F.",
+      },
+      {
+        q: "Posso bere l'acqua del rubinetto a Udine senza filtri?",
+        a: "Sì, è potabile e conforme. I filtri sono una scelta di gusto.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Udine?",
+        a: "CAFC pubblica i dati sul proprio sito; AAS e ARPA FVG pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["trieste", "venezia", "vicenza", "padova"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Udine — durezza, calcio e parametri sensibili — con un laboratorio qualificato:",
+  },
+  {
+    slug: "ravenna",
+    cityName: "Ravenna",
+    province: "RA",
+    region: "Emilia-Romagna",
+    shortTitle: "Acqua del rubinetto a Ravenna: gestore Hera e salinizzazione costiera",
+    metaDescription:
+      "Acqua di Ravenna: gestore Hera, falda costiera, durezza media e attenzione alla salinizzazione. Come verificare la qualità del rubinetto.",
+    searchKeywords: [
+      "acqua di ravenna",
+      "acqua rubinetto ravenna",
+      "qualità acqua ravenna",
+      "gestore acqua ravenna",
+      "ravenna acqua dura",
+      "acqua hera ravenna",
+    ],
+    intro:
+      "L'acqua del rubinetto a Ravenna è gestita da Hera e proviene principalmente dall'adduzione dell'acquedotto di Ridracoli e da campi pozzi della pianura romagnola. La qualità in distribuzione è conforme ai limiti normativi. L'acqua è bicarbonato-calcica con durezza media. Il territorio ravennate ha una vulnerabilità storica delle falde costiere alla salinizzazione, ragione per cui l'adduzione da Ridracoli rappresenta una garanzia sulla qualità in distribuzione.",
+    waterUtility: "Hera S.p.A.",
+    geologicalContext:
+      "Ravenna si appoggia su falde costiere alluvionali soggette al rischio di salinizzazione (subsidenza e ingressione marina); l'apporto dell'acquedotto di Ridracoli è strategico per la qualità della distribuzione.",
+    typicalParameters: {
+      durezza: "media (tipicamente 20-32 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Ravenna",
+        paragraphs: [
+          "L'acqua di Ravenna arriva principalmente dall'invaso di Ridracoli, gestito da Romagna Acque-Società delle Fonti, integrato da campi pozzi della pianura romagnola.",
+          "La distribuzione cittadina è gestita da Hera.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Ravenna",
+        paragraphs: [
+          "Hera esegue autocontrolli sulla filiera; AUSL Romagna effettua i controlli ufficiali; ARPAE svolge il monitoraggio ambientale e dei fenomeni di salinizzazione costiera.",
+          "I dati di qualità per comune sono pubblicati dal gestore.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Ravenna è bicarbonato-calcica con durezza media. I parametri più sensibili sono nitrati (pianura), cloruri/sodio in funzione del rischio di salinizzazione costiera, e sottoprodotti di disinfezione.",
+        ],
+        bullets: [
+          "Durezza: media, 20-32 °F",
+          "Cloruri e sodio: monitorati in relazione al rischio di salinizzazione costiera",
+          "Nitrati: monitorati",
+        ],
+      },
+      {
+        heading: "Casi noti e problematiche storiche",
+        paragraphs: [
+          "La costa ravennate ha una vulnerabilità storica delle falde alla salinizzazione, dovuta a subsidenza e ingressione marina, monitorata da ARPAE. Nel centro storico, come in altre città d'arte, l'attenzione resta sull'impiantistica privata degli edifici molto datati.",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Ravenna",
+        paragraphs: [
+          "GoccIA permette una lettura immediata dei parametri principali della tua acqua a partire da pochi dati di base.",
+          "Per chi vive vicino alla costa, un'analisi di laboratorio mirata su cloruri, sodio e durezza è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Ravenna è sicura?",
+        a: "Sì, l'acqua distribuita da Hera rispetta i limiti del D.Lgs. 18/2023.",
+      },
+      {
+        q: "La salinizzazione costiera è un problema a Ravenna?",
+        a: "È un rischio storico delle falde costiere romagnole, monitorato da ARPAE; l'adduzione da Ridracoli garantisce qualità in distribuzione.",
+      },
+      {
+        q: "L'acqua di Ravenna è dura?",
+        a: "È classificabile come media: tipicamente 20-32 °F.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Ravenna?",
+        a: "Hera pubblica i dati sul proprio sito; AUSL Romagna e ARPAE pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["cesena", "forli", "rimini", "bologna"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Ravenna — durezza, cloruri, sodio e nitrati — con un laboratorio qualificato:",
+  },
+  {
+    slug: "cuneo",
+    cityName: "Cuneo",
+    province: "CN",
+    region: "Piemonte",
+    shortTitle: "Acqua del rubinetto a Cuneo: gestore Acda e acqua alpina",
+    metaDescription:
+      "Acqua di Cuneo: gestore Acda, sorgenti alpine e falda pedemontana, durezza bassa e qualità organolettica elevata. Come verificare la qualità.",
+    searchKeywords: [
+      "acqua di cuneo",
+      "acqua rubinetto cuneo",
+      "qualità acqua cuneo",
+      "gestore acqua cuneo",
+      "cuneo acqua dolce",
+      "acqua acda",
+    ],
+    intro:
+      "L'acqua del rubinetto a Cuneo è gestita da Acda (Azienda Cuneese dell'Acqua) e proviene da sorgenti alpine e pedemontane di alta qualità. La qualità complessiva è considerata molto buona e conforme ai limiti normativi. L'acqua cuneese è una delle più leggere d'Italia: durezza bassa, ottimi indicatori organolettici e in genere trattamenti minimi. La diversificazione delle fonti rende il servizio resiliente anche nei periodi di stress idrico.",
+    waterUtility: "Acda S.p.A.",
+    geologicalContext:
+      "Cuneo è alimentata da sorgenti alpine e pedemontane delle Alpi Marittime e Cozie, in contesti carbonatici e cristallini ad alta ricarica naturale.",
+    typicalParameters: {
+      durezza: "bassa (tipicamente 8-18 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Cuneo",
+        paragraphs: [
+          "L'acqua di Cuneo arriva da sorgenti alpine e pedemontane, gestite da Acda.",
+          "La qualità sorgentizia consente in genere disinfezione minima e una resa organolettica elevata.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Cuneo",
+        paragraphs: [
+          "Acda esegue autocontrolli sulla filiera; ASL CN1 effettua i controlli ufficiali; ARPA Piemonte svolge il monitoraggio ambientale.",
+          "I dati di qualità per comune sono pubblicati sul sito del gestore.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Cuneo è leggera, con durezza bassa e ottimi indicatori organolettici. Sono monitorati i parametri standard previsti dalla normativa, in genere con valori ampiamente entro i limiti.",
+        ],
+        bullets: [
+          "Durezza: bassa, 8-18 °F",
+          "Indicatori organolettici: tipicamente molto buoni",
+          "Sottoprodotti di disinfezione: monitorati",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Cuneo",
+        paragraphs: [
+          "Con GoccIA puoi avere una lettura immediata dei parametri chiave della tua acqua a partire da pochi dati di base.",
+          "Per chi vuole un quadro più approfondito, un'analisi di laboratorio mirata è una scelta valida, soprattutto in presenza di impianti interni datati.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Cuneo è sicura?",
+        a: "Sì, l'acqua distribuita da Acda rispetta i limiti del D.Lgs. 18/2023, con qualità sorgentizia molto buona.",
+      },
+      {
+        q: "L'acqua di Cuneo è dura?",
+        a: "No, è una delle più leggere d'Italia: tipicamente 8-18 °F.",
+      },
+      {
+        q: "Posso bere l'acqua del rubinetto a Cuneo senza filtri?",
+        a: "Sì, è potabile e conforme; per molti la qualità è equiparabile a un'acqua minerale leggera.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Cuneo?",
+        a: "Acda pubblica i dati sul proprio sito; ASL CN1 e ARPA Piemonte pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["torino", "genova", "aosta", "la-spezia"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Cuneo — durezza, calcio e parametri sensibili — con un laboratorio qualificato:",
+  },
+  {
+    slug: "sassari",
+    cityName: "Sassari",
+    province: "SS",
+    region: "Sardegna",
+    shortTitle: "Acqua del rubinetto a Sassari: gestore Abbanoa e calcare",
+    metaDescription:
+      "Acqua di Sassari: gestore Abbanoa, invasi e sorgenti, durezza media-alta e parametri tipici. Come verificare la qualità del rubinetto.",
+    searchKeywords: [
+      "acqua di sassari",
+      "acqua rubinetto sassari",
+      "qualità acqua sassari",
+      "gestore acqua sassari",
+      "sassari acqua dura",
+      "acqua abbanoa sassari",
+    ],
+    intro:
+      "L'acqua del rubinetto a Sassari è gestita da Abbanoa e proviene da un mix di invasi superficiali (Coghinas e altri) e da campi pozzi locali. La qualità in distribuzione è conforme ai limiti normativi. L'acqua sassarese è bicarbonato-calcica con durezza media-alta, in linea con la geologia carbonatica della Sardegna settentrionale. Sono attivi presidi specifici su sottoprodotti di disinfezione e indicatori organolettici, tipici di reti alimentate da bacini superficiali.",
+    waterUtility: "Abbanoa S.p.A.",
+    geologicalContext:
+      "Sassari si appoggia su contesti calcarei e calcarenitici della Sardegna nord-occidentale, alimentati da invasi e falde locali.",
+    typicalParameters: {
+      durezza: "media-alta (tipicamente 22-35 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Sassari",
+        paragraphs: [
+          "L'acqua di Sassari arriva principalmente dal sistema Coghinas e da invasi della Sardegna nord-occidentale, integrati con pozzi locali.",
+          "Il trattamento di potabilizzazione completo è necessario per gestire acque superficiali.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Sassari",
+        paragraphs: [
+          "Abbanoa esegue autocontrolli sulla filiera; ATS Sardegna effettua i controlli ufficiali; ARPAS svolge il monitoraggio ambientale.",
+          "I dati di qualità per comune sono pubblicati dal gestore.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Sassari è bicarbonato-calcica con durezza media-alta. I parametri più rilevanti sono sottoprodotti di disinfezione e indicatori organolettici, tipici di reti alimentate da acque superficiali.",
+        ],
+        bullets: [
+          "Durezza: media-alta, 22-35 °F",
+          "Calcio: ben rappresentato",
+          "Sottoprodotti di disinfezione: monitorati",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Sassari",
+        paragraphs: [
+          "GoccIA permette una lettura immediata dei parametri principali della tua acqua a partire da pochi dati di base.",
+          "Per un quadro più approfondito, un'analisi di laboratorio mirata su durezza e sottoprodotti di disinfezione è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Sassari è sicura?",
+        a: "Sì, l'acqua distribuita da Abbanoa rispetta i limiti del D.Lgs. 18/2023.",
+      },
+      {
+        q: "L'acqua di Sassari è dura?",
+        a: "È classificabile come media-alta: tipicamente 22-35 °F.",
+      },
+      {
+        q: "Il sapore dell'acqua può variare in estate?",
+        a: "In periodi di siccità prolungata gli aspetti organolettici possono variare leggermente per ragioni stagionali, pur restando entro i limiti.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Sassari?",
+        a: "Abbanoa pubblica i dati sul proprio sito; ATS Sardegna e ARPAS pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["cagliari", "palermo", "catania", "trapani"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Sassari — durezza, calcio, sottoprodotti di disinfezione — con un laboratorio qualificato:",
+  },
+  {
+    slug: "siracusa",
+    cityName: "Siracusa",
+    province: "SR",
+    region: "Sicilia",
+    shortTitle: "Acqua del rubinetto a Siracusa: gestore SAI8 e calcare ibleo",
+    metaDescription:
+      "Acqua di Siracusa: gestore SAI8, sorgenti iblee e falda calcarea, durezza media-alta e parametri tipici. Come verificare la qualità.",
+    searchKeywords: [
+      "acqua di siracusa",
+      "acqua rubinetto siracusa",
+      "qualità acqua siracusa",
+      "gestore acqua siracusa",
+      "siracusa acqua dura",
+    ],
+    intro:
+      "L'acqua del rubinetto a Siracusa è gestita da SAI8 e proviene da sorgenti e campi pozzi del comprensorio ibleo. La qualità in distribuzione è conforme ai limiti normativi. L'acqua siracusana è bicarbonato-calcica con durezza media-alta, coerente con la geologia calcarea dell'area iblea. Sono attivi presidi specifici sui parametri organolettici, soprattutto nei periodi di maggior carico estivo.",
+    waterUtility: "SAI8 S.c.p.A.",
+    geologicalContext:
+      "Siracusa si appoggia su un substrato calcareo ibleo, con falde profonde di buona produttività integrate da sorgenti locali.",
+    typicalParameters: {
+      durezza: "media-alta (tipicamente 22-35 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Siracusa",
+        paragraphs: [
+          "L'acqua di Siracusa arriva da sorgenti e campi pozzi del comprensorio ibleo, gestiti da SAI8.",
+          "La rete è alimentata in maniera distribuita, con tratti storici nel centro e tratti più recenti nelle aree di espansione.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Siracusa",
+        paragraphs: [
+          "SAI8 esegue autocontrolli sulla filiera; ASP Siracusa effettua i controlli ufficiali; ARPA Sicilia svolge il monitoraggio ambientale.",
+          "I dati di qualità per comune sono pubblicati dal gestore.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Siracusa è bicarbonato-calcica con durezza media-alta. Sono monitorati sottoprodotti di disinfezione e indicatori organolettici, in coerenza con la natura calcarea della falda.",
+        ],
+        bullets: [
+          "Durezza: media-alta, 22-35 °F",
+          "Calcio: ben rappresentato",
+          "Sottoprodotti di disinfezione: monitorati",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Siracusa",
+        paragraphs: [
+          "GoccIA permette una lettura immediata dei parametri principali della tua acqua a partire da pochi dati di base.",
+          "Per un quadro più approfondito, un'analisi di laboratorio mirata è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Siracusa è sicura?",
+        a: "Sì, l'acqua distribuita da SAI8 rispetta i limiti del D.Lgs. 18/2023.",
+      },
+      {
+        q: "L'acqua di Siracusa è dura?",
+        a: "È classificabile come media-alta: tipicamente 22-35 °F.",
+      },
+      {
+        q: "Posso bere l'acqua del rubinetto a Siracusa senza filtri?",
+        a: "Sì, è potabile e conforme. I filtri sono una scelta di gusto.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Siracusa?",
+        a: "SAI8 pubblica i dati sul proprio sito; ASP Siracusa e ARPA Sicilia pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["catania", "messina", "palermo", "trapani"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Siracusa — durezza, calcio e parametri sensibili — con un laboratorio qualificato:",
+  },
+  {
+    slug: "campobasso",
+    cityName: "Campobasso",
+    province: "CB",
+    region: "Molise",
+    shortTitle: "Acqua del rubinetto a Campobasso: gestore GAM e sorgenti appenniniche",
+    metaDescription:
+      "Acqua di Campobasso: gestore GAM, sorgenti appenniniche molisane, durezza media e parametri tipici. Come verificare la qualità del rubinetto.",
+    searchKeywords: [
+      "acqua di campobasso",
+      "acqua rubinetto campobasso",
+      "qualità acqua campobasso",
+      "gestore acqua campobasso",
+      "campobasso acqua dura",
+    ],
+    intro:
+      "L'acqua del rubinetto a Campobasso è gestita da GAM (Gestione Acqua Molise) e proviene da sorgenti dell'Appennino molisano, in particolare dal sistema del Matese. La qualità complessiva è considerata buona e conforme ai limiti normativi. L'acqua è bicarbonato-calcica con durezza media, in linea con la geologia carbonatica appenninica. Le caratteristiche sorgentizie consentono in genere trattamenti leggeri.",
+    waterUtility: "GAM S.p.A.",
+    geologicalContext:
+      "Campobasso è alimentata da sorgenti appenniniche del Matese e del Molise centrale, in contesti carbonatici ad alta produttività sorgentizia.",
+    typicalParameters: {
+      durezza: "media (tipicamente 18-30 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Campobasso",
+        paragraphs: [
+          "L'acqua di Campobasso arriva principalmente da sorgenti del Matese e dell'Appennino molisano, gestite da GAM.",
+          "La qualità sorgentizia consente in genere disinfezione leggera e una resa organolettica buona.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Campobasso",
+        paragraphs: [
+          "GAM esegue autocontrolli sulla filiera; ASReM effettua i controlli ufficiali; ARPA Molise svolge il monitoraggio ambientale.",
+          "I dati di qualità per comune sono pubblicati dal gestore.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Campobasso è bicarbonato-calcica con durezza media. Sono monitorati sottoprodotti di disinfezione e indicatori organolettici. Nei nuclei storici vale l'attenzione consueta all'impiantistica interna degli edifici molto datati.",
+        ],
+        bullets: [
+          "Durezza: media, 18-30 °F",
+          "Calcio: ben rappresentato",
+          "Sottoprodotti di disinfezione: monitorati",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Campobasso",
+        paragraphs: [
+          "Con GoccIA puoi avere una lettura immediata dei parametri chiave della tua acqua a partire da pochi dati di base.",
+          "Per un quadro più approfondito, un'analisi di laboratorio mirata è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Campobasso è sicura?",
+        a: "Sì, l'acqua distribuita da GAM rispetta i limiti del D.Lgs. 18/2023.",
+      },
+      {
+        q: "L'acqua di Campobasso è dura?",
+        a: "È classificabile come media: tipicamente 18-30 °F.",
+      },
+      {
+        q: "Posso bere l'acqua del rubinetto a Campobasso senza filtri?",
+        a: "Sì, è potabile e conforme. I filtri sono una scelta di gusto.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Campobasso?",
+        a: "GAM pubblica i dati sul proprio sito; ASReM e ARPA Molise pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["pescara", "potenza", "napoli", "salerno"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Campobasso — durezza, calcio e parametri sensibili — con un laboratorio qualificato:",
+  },
+  {
+    slug: "potenza",
+    cityName: "Potenza",
+    province: "PZ",
+    region: "Basilicata",
+    shortTitle: "Acqua del rubinetto a Potenza: Acquedotto Lucano e sorgenti",
+    metaDescription:
+      "Acqua di Potenza: gestore Acquedotto Lucano, sorgenti e bacini lucani, durezza media e parametri tipici. Come verificare la qualità del rubinetto.",
+    searchKeywords: [
+      "acqua di potenza",
+      "acqua rubinetto potenza",
+      "qualità acqua potenza",
+      "gestore acqua potenza",
+      "potenza acqua dura",
+      "acquedotto lucano",
+    ],
+    intro:
+      "L'acqua del rubinetto a Potenza è gestita da Acquedotto Lucano e proviene da sorgenti dell'Appennino lucano e da invasi regionali. La qualità in distribuzione è conforme ai limiti normativi. L'acqua è bicarbonato-calcica con durezza media. La Basilicata è la principale regione esportatrice di acqua del Sud Italia: parte delle stesse risorse che alimentano Puglia e altre aree vengono utilizzate per il capoluogo lucano con trattamenti dedicati.",
+    waterUtility: "Acquedotto Lucano S.p.A.",
+    geologicalContext:
+      "Potenza è alimentata da sorgenti carbonatiche dell'Appennino lucano e da invasi regionali, in contesti geologici differenziati che richiedono trattamenti modulati.",
+    typicalParameters: {
+      durezza: "media (tipicamente 18-30 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Potenza",
+        paragraphs: [
+          "L'acqua di Potenza arriva da sorgenti appenniniche e da invasi regionali, gestiti da Acquedotto Lucano.",
+          "La diversificazione delle fonti consente buona resilienza nei periodi di stress idrico estivo.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Potenza",
+        paragraphs: [
+          "Acquedotto Lucano esegue autocontrolli sulla filiera; ASP Potenza effettua i controlli ufficiali; ARPAB svolge il monitoraggio ambientale.",
+          "I dati di qualità per comune sono pubblicati dal gestore.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Potenza è bicarbonato-calcica con durezza media. I parametri più rilevanti sono sottoprodotti di disinfezione e indicatori organolettici.",
+        ],
+        bullets: [
+          "Durezza: media, 18-30 °F",
+          "Calcio: ben rappresentato",
+          "Sottoprodotti di disinfezione: monitorati",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Potenza",
+        paragraphs: [
+          "GoccIA permette una lettura immediata dei parametri principali della tua acqua a partire da pochi dati di base.",
+          "Per un quadro più approfondito, un'analisi di laboratorio mirata è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Potenza è sicura?",
+        a: "Sì, l'acqua distribuita da Acquedotto Lucano rispetta i limiti del D.Lgs. 18/2023.",
+      },
+      {
+        q: "L'acqua di Potenza è dura?",
+        a: "È classificabile come media: tipicamente 18-30 °F.",
+      },
+      {
+        q: "Posso bere l'acqua del rubinetto a Potenza senza filtri?",
+        a: "Sì, è potabile e conforme. I filtri sono una scelta di gusto.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Potenza?",
+        a: "Acquedotto Lucano pubblica i dati sul proprio sito; ASP Potenza e ARPAB pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["bari", "foggia", "napoli", "campobasso"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Potenza — durezza, calcio e parametri sensibili — con un laboratorio qualificato:",
+  },
+  {
+    slug: "catanzaro",
+    cityName: "Catanzaro",
+    province: "CZ",
+    region: "Calabria",
+    shortTitle: "Acqua del rubinetto a Catanzaro: gestore Sorical e sorgenti silane",
+    metaDescription:
+      "Acqua di Catanzaro: Sorical e gestione comunale, sorgenti silane, durezza media e parametri tipici. Come verificare la qualità del rubinetto.",
+    searchKeywords: [
+      "acqua di catanzaro",
+      "acqua rubinetto catanzaro",
+      "qualità acqua catanzaro",
+      "gestore acqua catanzaro",
+      "catanzaro acqua dura",
+      "sorical",
+    ],
+    intro:
+      "L'acqua del rubinetto a Catanzaro è alimentata dal sistema di adduzione di Sorical, con distribuzione finale a livello comunale. Le fonti principali sono sorgenti dell'altopiano silano, area di grande importanza idrica per la Calabria. La qualità in distribuzione è conforme ai limiti normativi. L'acqua è bicarbonato-calcica con durezza media, in linea con la geologia silana.",
+    waterUtility: "Sorical S.p.A. (adduzione) e gestione comunale (distribuzione)",
+    geologicalContext:
+      "Catanzaro è alimentata da sorgenti dell'altopiano della Sila, area cristallina e carbonatica ad alta produttività idrica della Calabria centro-settentrionale.",
+    typicalParameters: {
+      durezza: "media (tipicamente 15-28 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Catanzaro",
+        paragraphs: [
+          "L'acqua di Catanzaro arriva principalmente da sorgenti silane, attraverso le adduzioni gestite da Sorical.",
+          "La distribuzione finale è curata a livello comunale.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Catanzaro",
+        paragraphs: [
+          "Sorical e il gestore comunale eseguono autocontrolli; ASP Catanzaro effettua i controlli ufficiali; ARPACAL svolge il monitoraggio ambientale.",
+          "I dati di qualità sono pubblicati dai gestori secondo quanto previsto dalla normativa.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Catanzaro è bicarbonato-calcica con durezza media. I parametri più sensibili sono sottoprodotti di disinfezione e indicatori organolettici.",
+        ],
+        bullets: [
+          "Durezza: media, 15-28 °F",
+          "Calcio: ben rappresentato",
+          "Sottoprodotti di disinfezione: monitorati",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Catanzaro",
+        paragraphs: [
+          "GoccIA permette una lettura immediata dei parametri principali della tua acqua a partire da pochi dati di base.",
+          "Per un quadro più approfondito, un'analisi di laboratorio mirata è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Catanzaro è sicura?",
+        a: "Sì, l'acqua in distribuzione rispetta i limiti del D.Lgs. 18/2023.",
+      },
+      {
+        q: "L'acqua di Catanzaro è dura?",
+        a: "È classificabile come media: tipicamente 15-28 °F.",
+      },
+      {
+        q: "Posso bere l'acqua del rubinetto a Catanzaro senza filtri?",
+        a: "Sì, è potabile e conforme. I filtri sono una scelta di gusto.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Catanzaro?",
+        a: "Sorical e il gestore comunale pubblicano dati sui propri canali; ASP Catanzaro e ARPACAL pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["reggio-calabria", "crotone", "potenza", "salerno"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Catanzaro — durezza, calcio e parametri sensibili — con un laboratorio qualificato:",
+  },
+  {
+    slug: "reggio-calabria",
+    cityName: "Reggio Calabria",
+    province: "RC",
+    region: "Calabria",
+    shortTitle: "Acqua del rubinetto a Reggio Calabria: Sorical e Peloritani",
+    metaDescription:
+      "Acqua di Reggio Calabria: Sorical e gestione comunale, sorgenti peloritane e aspromontane, durezza media. Come verificare la qualità.",
+    searchKeywords: [
+      "acqua di reggio calabria",
+      "acqua rubinetto reggio calabria",
+      "qualità acqua reggio calabria",
+      "gestore acqua reggio calabria",
+      "reggio calabria acqua dura",
+    ],
+    intro:
+      "L'acqua del rubinetto a Reggio Calabria è alimentata dal sistema di adduzione di Sorical, con distribuzione finale a livello comunale. Le fonti principali sono sorgenti dell'Aspromonte e dei rilievi peloritani-aspromontani. La qualità in distribuzione è conforme ai limiti normativi. L'acqua è bicarbonato-calcica con durezza media.",
+    waterUtility: "Sorical S.p.A. (adduzione) e gestione comunale (distribuzione)",
+    geologicalContext:
+      "Reggio Calabria è alimentata da sorgenti dell'Aspromonte, in contesti cristallini e carbonatici della Calabria meridionale.",
+    typicalParameters: {
+      durezza: "media (tipicamente 15-28 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Reggio Calabria",
+        paragraphs: [
+          "L'acqua di Reggio Calabria arriva da sorgenti aspromontane attraverso le adduzioni gestite da Sorical.",
+          "La distribuzione finale è curata a livello comunale.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Reggio Calabria",
+        paragraphs: [
+          "Sorical e il gestore comunale eseguono autocontrolli; ASP Reggio Calabria effettua i controlli ufficiali; ARPACAL svolge il monitoraggio ambientale.",
+          "I dati sono pubblicati dai gestori secondo quanto previsto dalla normativa.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Reggio Calabria è bicarbonato-calcica con durezza media. Sono monitorati sottoprodotti di disinfezione e indicatori organolettici.",
+        ],
+        bullets: [
+          "Durezza: media, 15-28 °F",
+          "Calcio: ben rappresentato",
+          "Sottoprodotti di disinfezione: monitorati",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Reggio Calabria",
+        paragraphs: [
+          "GoccIA permette una lettura immediata dei parametri principali della tua acqua a partire da pochi dati di base.",
+          "Per un quadro più approfondito, un'analisi di laboratorio mirata è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Reggio Calabria è sicura?",
+        a: "Sì, l'acqua in distribuzione rispetta i limiti del D.Lgs. 18/2023.",
+      },
+      {
+        q: "L'acqua di Reggio Calabria è dura?",
+        a: "È classificabile come media: tipicamente 15-28 °F.",
+      },
+      {
+        q: "Posso bere l'acqua del rubinetto a Reggio Calabria senza filtri?",
+        a: "Sì, è potabile e conforme. I filtri sono una scelta di gusto.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Reggio Calabria?",
+        a: "Sorical e il gestore comunale pubblicano dati sui propri canali; ASP Reggio Calabria e ARPACAL pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["catanzaro", "messina", "crotone", "palermo"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Reggio Calabria — durezza, calcio e parametri sensibili — con un laboratorio qualificato:",
+  },
+  {
+    slug: "trento",
+    cityName: "Trento",
+    province: "TN",
+    region: "Trentino-Alto Adige",
+    shortTitle: "Acqua del rubinetto a Trento: gestore Novareti e sorgenti alpine",
+    metaDescription:
+      "Acqua di Trento: gestore Novareti, sorgenti alpine dolomitiche, durezza bassa-media e qualità organolettica elevata. Come verificare la qualità.",
+    searchKeywords: [
+      "acqua di trento",
+      "acqua rubinetto trento",
+      "qualità acqua trento",
+      "gestore acqua trento",
+      "trento acqua",
+      "acqua novareti",
+    ],
+    intro:
+      "L'acqua del rubinetto a Trento è gestita da Novareti S.p.A. (gruppo Dolomiti Energia) e proviene da sorgenti alpine e dolomitiche di altissima qualità. La qualità complessiva è considerata eccellente e conforme ai limiti normativi. L'acqua trentina è leggera, con durezza bassa-media e ottimi indicatori organolettici. La disinfezione è generalmente minima e in molti casi non necessaria sulle fonti più protette.",
+    waterUtility: "Novareti S.p.A.",
+    geologicalContext:
+      "Trento è alimentata da sorgenti carbonatiche delle Dolomiti e delle Prealpi trentine, in contesti ad alta ricarica naturale e ottima protezione idrogeologica.",
+    typicalParameters: {
+      durezza: "bassa-media (tipicamente 12-22 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Trento",
+        paragraphs: [
+          "L'acqua di Trento arriva da sorgenti alpine e dolomitiche, gestite da Novareti.",
+          "La qualità sorgentizia consente in genere disinfezione molto leggera o assente sulle fonti più protette.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Trento",
+        paragraphs: [
+          "Novareti esegue autocontrolli sulla filiera; APSS Trento effettua i controlli ufficiali; APPA Trento svolge il monitoraggio ambientale.",
+          "I dati di qualità per zona sono pubblicati dal gestore.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Trento è leggera, bicarbonato-calcica, con ottimi indicatori organolettici. Sono monitorati i parametri standard, in genere con valori ampiamente entro i limiti.",
+        ],
+        bullets: [
+          "Durezza: bassa-media, 12-22 °F",
+          "Indicatori organolettici: molto buoni",
+          "Sottoprodotti di disinfezione: bassi",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Trento",
+        paragraphs: [
+          "Con GoccIA puoi avere una lettura immediata dei parametri chiave della tua acqua a partire da pochi dati di base.",
+          "Per un quadro più approfondito, un'analisi di laboratorio mirata è una scelta valida, soprattutto in edifici con impianti molto datati.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Trento è sicura?",
+        a: "Sì, l'acqua distribuita da Novareti rispetta i limiti del D.Lgs. 18/2023, con qualità sorgentizia molto buona.",
+      },
+      {
+        q: "L'acqua di Trento è dura?",
+        a: "No, è leggera: tipicamente 12-22 °F.",
+      },
+      {
+        q: "Posso bere l'acqua del rubinetto a Trento senza filtri?",
+        a: "Sì, è potabile e conforme; per molti la qualità è equiparabile a un'acqua minerale leggera.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Trento?",
+        a: "Novareti pubblica i dati sul proprio sito; APSS e APPA Trento pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["bolzano", "verona", "venezia", "udine"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Trento — durezza, calcio e parametri sensibili — con un laboratorio qualificato:",
+  },
+  {
+    slug: "bolzano",
+    cityName: "Bolzano",
+    province: "BZ",
+    region: "Trentino-Alto Adige",
+    shortTitle: "Acqua del rubinetto a Bolzano: gestore SEAB e sorgenti alpine",
+    metaDescription:
+      "Acqua di Bolzano: gestore SEAB, sorgenti alpine dolomitiche, durezza bassa-media e qualità organolettica elevata. Come verificare la qualità.",
+    searchKeywords: [
+      "acqua di bolzano",
+      "acqua rubinetto bolzano",
+      "qualità acqua bolzano",
+      "gestore acqua bolzano",
+      "bolzano acqua",
+      "acqua seab",
+    ],
+    intro:
+      "L'acqua del rubinetto a Bolzano è gestita da SEAB S.p.A. e proviene da sorgenti alpine e dolomitiche di alta qualità. La qualità complessiva è considerata eccellente e conforme ai limiti normativi. L'acqua bolzanina è leggera, con durezza bassa-media e ottimi indicatori organolettici. La protezione idrogeologica delle aree sorgentizie consente trattamenti minimi.",
+    waterUtility: "SEAB S.p.A.",
+    geologicalContext:
+      "Bolzano è alimentata da sorgenti carbonatiche delle Dolomiti e dei rilievi alpini altoatesini, in contesti ad alta ricarica naturale.",
+    typicalParameters: {
+      durezza: "bassa-media (tipicamente 12-22 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Bolzano",
+        paragraphs: [
+          "L'acqua di Bolzano arriva da sorgenti alpine e dolomitiche, gestite da SEAB.",
+          "La qualità sorgentizia consente in genere disinfezione molto leggera.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Bolzano",
+        paragraphs: [
+          "SEAB esegue autocontrolli sulla filiera; l'Azienda Sanitaria dell'Alto Adige effettua i controlli ufficiali; APPA Bolzano svolge il monitoraggio ambientale.",
+          "I dati di qualità per zona sono pubblicati dal gestore.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Bolzano è leggera, bicarbonato-calcica, con ottimi indicatori organolettici. Sono monitorati i parametri standard, in genere con valori ampiamente entro i limiti.",
+        ],
+        bullets: [
+          "Durezza: bassa-media, 12-22 °F",
+          "Indicatori organolettici: molto buoni",
+          "Sottoprodotti di disinfezione: bassi",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Bolzano",
+        paragraphs: [
+          "Con GoccIA puoi avere una lettura immediata dei parametri chiave della tua acqua a partire da pochi dati di base.",
+          "Per un quadro più approfondito, un'analisi di laboratorio mirata è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Bolzano è sicura?",
+        a: "Sì, l'acqua distribuita da SEAB rispetta i limiti del D.Lgs. 18/2023, con qualità sorgentizia molto buona.",
+      },
+      {
+        q: "L'acqua di Bolzano è dura?",
+        a: "No, è leggera: tipicamente 12-22 °F.",
+      },
+      {
+        q: "Posso bere l'acqua del rubinetto a Bolzano senza filtri?",
+        a: "Sì, è potabile e conforme. I filtri sono una scelta di gusto.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Bolzano?",
+        a: "SEAB pubblica i dati sul proprio sito; l'Azienda Sanitaria dell'Alto Adige e APPA Bolzano pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["trento", "verona", "udine", "venezia"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Bolzano — durezza, calcio e parametri sensibili — con un laboratorio qualificato:",
+  },
+  {
+    slug: "trapani",
+    cityName: "Trapani",
+    province: "TP",
+    region: "Sicilia",
+    shortTitle: "Acqua del rubinetto a Trapani: gestione locale e calcare",
+    metaDescription:
+      "Acqua di Trapani: gestione comunale con adduzioni Siciliacque, calcare e durezza media-alta, parametri tipici. Come verificare la qualità.",
+    searchKeywords: [
+      "acqua di trapani",
+      "acqua rubinetto trapani",
+      "qualità acqua trapani",
+      "gestore acqua trapani",
+      "trapani acqua dura",
+    ],
+    intro:
+      "L'acqua del rubinetto a Trapani è alimentata dal sistema di adduzione di Siciliacque e da fonti locali, con distribuzione finale a livello comunale. La qualità in distribuzione è conforme ai limiti normativi. L'acqua è bicarbonato-calcica con durezza media-alta, coerente con la geologia calcarea della Sicilia occidentale. Sono attivi presidi specifici sui parametri organolettici.",
+    waterUtility: "Siciliacque S.p.A. (adduzione) e gestione comunale (distribuzione)",
+    geologicalContext:
+      "Trapani si appoggia su contesti calcarei della Sicilia occidentale, con falde locali integrate da adduzioni regionali.",
+    typicalParameters: {
+      durezza: "media-alta (tipicamente 22-35 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Trapani",
+        paragraphs: [
+          "L'acqua di Trapani arriva da fonti locali e dal sistema di adduzione regionale di Siciliacque.",
+          "La distribuzione finale è curata a livello comunale.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Trapani",
+        paragraphs: [
+          "Il gestore comunale e Siciliacque eseguono autocontrolli; ASP Trapani effettua i controlli ufficiali; ARPA Sicilia svolge il monitoraggio ambientale.",
+          "I dati di qualità sono pubblicati dai gestori secondo quanto previsto dalla normativa.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Trapani è bicarbonato-calcica con durezza media-alta. Sono monitorati sottoprodotti di disinfezione e indicatori organolettici.",
+        ],
+        bullets: [
+          "Durezza: media-alta, 22-35 °F",
+          "Calcio: ben rappresentato",
+          "Sottoprodotti di disinfezione: monitorati",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Trapani",
+        paragraphs: [
+          "GoccIA permette una lettura immediata dei parametri principali della tua acqua a partire da pochi dati di base.",
+          "Per un quadro più approfondito, un'analisi di laboratorio mirata è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Trapani è sicura?",
+        a: "Sì, l'acqua in distribuzione rispetta i limiti del D.Lgs. 18/2023.",
+      },
+      {
+        q: "L'acqua di Trapani è dura?",
+        a: "È classificabile come media-alta: tipicamente 22-35 °F.",
+      },
+      {
+        q: "Posso bere l'acqua del rubinetto a Trapani senza filtri?",
+        a: "Sì, è potabile e conforme. I filtri sono una scelta di gusto.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Trapani?",
+        a: "Il gestore comunale e Siciliacque pubblicano i dati sui propri canali; ASP Trapani e ARPA Sicilia pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["palermo", "siracusa", "catania", "messina"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Trapani — durezza, calcio e parametri sensibili — con un laboratorio qualificato:",
+  },
+  {
+    slug: "crotone",
+    cityName: "Crotone",
+    province: "KR",
+    region: "Calabria",
+    shortTitle: "Acqua del rubinetto a Crotone: Sorical e gestione locale",
+    metaDescription:
+      "Acqua di Crotone: adduzione Sorical e gestione locale (AKR), durezza media e parametri tipici. Come verificare la qualità del rubinetto.",
+    searchKeywords: [
+      "acqua di crotone",
+      "acqua rubinetto crotone",
+      "qualità acqua crotone",
+      "gestore acqua crotone",
+      "crotone acqua dura",
+    ],
+    intro:
+      "L'acqua del rubinetto a Crotone è alimentata dal sistema di adduzione di Sorical, con distribuzione locale gestita storicamente attraverso AKR. La qualità in distribuzione è conforme ai limiti normativi. L'acqua è bicarbonato-calcica con durezza media. Sui tratti di rete più lunghi sono attivi presidi specifici su sottoprodotti di disinfezione.",
+    waterUtility: "Sorical S.p.A. (adduzione) e gestione locale (distribuzione)",
+    geologicalContext:
+      "Crotone è alimentata da sorgenti silane e da invasi calabresi, con adduzione attraverso il sistema regionale gestito da Sorical.",
+    typicalParameters: {
+      durezza: "media (tipicamente 18-30 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Crotone",
+        paragraphs: [
+          "L'acqua di Crotone arriva principalmente dal sistema di adduzione di Sorical, con fonti silane e calabresi.",
+          "La distribuzione finale è curata a livello locale.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Crotone",
+        paragraphs: [
+          "Sorical e il gestore locale eseguono autocontrolli; ASP Crotone effettua i controlli ufficiali; ARPACAL svolge il monitoraggio ambientale.",
+          "I dati di qualità sono pubblicati secondo quanto previsto dalla normativa.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Crotone è bicarbonato-calcica con durezza media. Sono monitorati sottoprodotti di disinfezione e indicatori organolettici.",
+        ],
+        bullets: [
+          "Durezza: media, 18-30 °F",
+          "Calcio: ben rappresentato",
+          "Sottoprodotti di disinfezione: monitorati",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Crotone",
+        paragraphs: [
+          "GoccIA permette una lettura immediata dei parametri principali della tua acqua a partire da pochi dati di base.",
+          "Per un quadro più approfondito, un'analisi di laboratorio mirata è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Crotone è sicura?",
+        a: "Sì, l'acqua in distribuzione rispetta i limiti del D.Lgs. 18/2023.",
+      },
+      {
+        q: "L'acqua di Crotone è dura?",
+        a: "È classificabile come media: tipicamente 18-30 °F.",
+      },
+      {
+        q: "Posso bere l'acqua del rubinetto a Crotone senza filtri?",
+        a: "Sì, è potabile e conforme. I filtri sono una scelta di gusto.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Crotone?",
+        a: "Sorical e il gestore locale pubblicano dati sui propri canali; ASP Crotone e ARPACAL pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["catanzaro", "reggio-calabria", "taranto", "potenza"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Crotone — durezza, calcio e parametri sensibili — con un laboratorio qualificato:",
+  },
+  {
+    slug: "aosta",
+    cityName: "Aosta",
+    province: "AO",
+    region: "Valle d'Aosta",
+    shortTitle: "Acqua del rubinetto ad Aosta: gestione locale e acqua alpina pura",
+    metaDescription:
+      "Acqua di Aosta: gestione comunale con SE Valdostane, sorgenti alpine, durezza bassa e qualità organolettica elevata. Come verificare la qualità.",
+    searchKeywords: [
+      "acqua di aosta",
+      "acqua rubinetto aosta",
+      "qualità acqua aosta",
+      "gestore acqua aosta",
+      "aosta acqua",
+      "acqua valle d'aosta",
+    ],
+    intro:
+      "L'acqua del rubinetto ad Aosta è di origine sorgentizia alpina, gestita attraverso strutture comunali e regionali. La qualità complessiva è considerata eccellente e conforme ai limiti normativi. L'acqua valdostana è una delle più leggere e organoletticamente apprezzate d'Italia: durezza bassa, indicatori molto buoni e trattamenti generalmente minimi. La protezione idrogeologica delle aree di alta quota è elevata.",
+    waterUtility: "Gestione comunale (con SE Valdostane per parte dell'adduzione)",
+    geologicalContext:
+      "Aosta è alimentata da sorgenti alpine valdostane, in contesti cristallini e carbonatici di alta quota, con ottima protezione idrogeologica.",
+    typicalParameters: {
+      durezza: "bassa (tipicamente 8-18 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Aosta",
+        paragraphs: [
+          "L'acqua di Aosta arriva da sorgenti alpine valdostane, gestite a livello comunale con il supporto di strutture regionali.",
+          "La qualità sorgentizia consente trattamenti molto leggeri.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto ad Aosta",
+        paragraphs: [
+          "Il gestore esegue autocontrolli sulla filiera; l'Azienda USL della Valle d'Aosta effettua i controlli ufficiali; ARPA Valle d'Aosta svolge il monitoraggio ambientale.",
+          "I dati di qualità sono pubblicati secondo quanto previsto dalla normativa.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Aosta è leggera, con durezza bassa e ottimi indicatori organolettici. Sono monitorati i parametri standard, in genere con valori ampiamente entro i limiti.",
+        ],
+        bullets: [
+          "Durezza: bassa, 8-18 °F",
+          "Indicatori organolettici: molto buoni",
+          "Sottoprodotti di disinfezione: bassi",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Aosta",
+        paragraphs: [
+          "Con GoccIA puoi avere una lettura immediata dei parametri chiave della tua acqua a partire da pochi dati di base.",
+          "Per un quadro più approfondito, un'analisi di laboratorio mirata è una scelta valida, soprattutto in edifici con impianti molto datati.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto ad Aosta è sicura?",
+        a: "Sì, l'acqua in distribuzione rispetta i limiti del D.Lgs. 18/2023, con qualità sorgentizia molto buona.",
+      },
+      {
+        q: "L'acqua di Aosta è dura?",
+        a: "No, è leggera: tipicamente 8-18 °F.",
+      },
+      {
+        q: "Posso bere l'acqua del rubinetto ad Aosta senza filtri?",
+        a: "Sì, è potabile e conforme; per molti la qualità è equiparabile a un'acqua minerale leggera.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Aosta?",
+        a: "Il gestore pubblica i dati sul proprio sito; l'Azienda USL Valle d'Aosta e ARPA VdA pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["torino", "cuneo", "trento", "genova"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto ad Aosta — durezza, calcio e parametri sensibili — con un laboratorio qualificato:",
+  },
+  {
+    slug: "la-spezia",
+    cityName: "La Spezia",
+    province: "SP",
+    region: "Liguria",
+    shortTitle: "Acqua del rubinetto a La Spezia: gestore ACAM e fonti liguri",
+    metaDescription:
+      "Acqua di La Spezia: gestore ACAM (gruppo Iren), sorgenti dell'entroterra ligure, durezza media e parametri tipici. Come verificare la qualità.",
+    searchKeywords: [
+      "acqua di la spezia",
+      "acqua rubinetto la spezia",
+      "qualità acqua la spezia",
+      "gestore acqua la spezia",
+      "la spezia acqua dura",
+      "acqua acam",
+    ],
+    intro:
+      "L'acqua del rubinetto a La Spezia è gestita da ACAM Acque (gruppo Iren) e proviene da sorgenti e campi pozzi dell'entroterra ligure orientale. La qualità in distribuzione è conforme ai limiti normativi. L'acqua è bicarbonato-calcica con durezza media. Sono attivi presidi specifici su sottoprodotti di disinfezione e indicatori organolettici.",
+    waterUtility: "ACAM Acque S.p.A. (gruppo Iren)",
+    geologicalContext:
+      "La Spezia è alimentata da sorgenti e falde dell'entroterra ligure orientale, in contesti carbonatici e marnosi.",
+    typicalParameters: {
+      durezza: "media (tipicamente 18-30 °F)",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di La Spezia",
+        paragraphs: [
+          "L'acqua di La Spezia arriva da sorgenti e campi pozzi dell'entroterra ligure orientale, gestiti da ACAM Acque.",
+          "La rete cittadina è alimentata con tratti recenti e tratti più storici.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a La Spezia",
+        paragraphs: [
+          "ACAM Acque esegue autocontrolli sulla filiera; ASL 5 Spezzino effettua i controlli ufficiali; ARPAL svolge il monitoraggio ambientale.",
+          "I dati di qualità per comune sono pubblicati dal gestore.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di La Spezia è bicarbonato-calcica con durezza media. Sono monitorati sottoprodotti di disinfezione e indicatori organolettici.",
+        ],
+        bullets: [
+          "Durezza: media, 18-30 °F",
+          "Calcio: ben rappresentato",
+          "Sottoprodotti di disinfezione: monitorati",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di La Spezia",
+        paragraphs: [
+          "Con GoccIA puoi avere una lettura immediata dei parametri chiave della tua acqua a partire da pochi dati di base.",
+          "Per un quadro più approfondito, un'analisi di laboratorio mirata è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a La Spezia è sicura?",
+        a: "Sì, l'acqua distribuita da ACAM Acque rispetta i limiti del D.Lgs. 18/2023.",
+      },
+      {
+        q: "L'acqua di La Spezia è dura?",
+        a: "È classificabile come media: tipicamente 18-30 °F.",
+      },
+      {
+        q: "Posso bere l'acqua del rubinetto a La Spezia senza filtri?",
+        a: "Sì, è potabile e conforme. I filtri sono una scelta di gusto.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di La Spezia?",
+        a: "ACAM Acque pubblica i dati sul proprio sito; ASL 5 Spezzino e ARPAL pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["genova", "lucca", "parma", "cuneo"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a La Spezia — durezza, calcio e parametri sensibili — con un laboratorio qualificato:",
+  },
+  {
+    slug: "lucca",
+    cityName: "Lucca",
+    province: "LU",
+    region: "Toscana",
+    shortTitle: "Acqua del rubinetto a Lucca: gestore Geal e falda lucchese",
+    metaDescription:
+      "Acqua di Lucca: gestore Geal, falda della piana lucchese, durezza media e parametri tipici. Come verificare la qualità del rubinetto.",
+    searchKeywords: [
+      "acqua di lucca",
+      "acqua rubinetto lucca",
+      "qualità acqua lucca",
+      "gestore acqua lucca",
+      "lucca acqua dura",
+      "acqua geal",
+    ],
+    intro:
+      "L'acqua del rubinetto a Lucca è gestita da Geal S.p.A. e proviene principalmente da campi pozzi della piana lucchese. La qualità in distribuzione è conforme ai limiti normativi. L'acqua è bicarbonato-calcica con durezza media. Nel centro storico, all'interno delle mura, parte delle tubazioni è di vecchia generazione e merita la consueta attenzione all'impiantistica privata.",
+    waterUtility: "Geal S.p.A.",
+    geologicalContext:
+      "Lucca si appoggia su falde della piana lucchese, in terreni alluvionali ricchi di carbonati e con apporti dalle Alpi Apuane e dall'Appennino tosco-emiliano.",
+    typicalParameters: {
+      durezza: "media (tipicamente 20-32 °F)",
+      piombo: "potenziale negli edifici storici dentro le mura con tubazioni interne molto datate",
+    },
+    sections: [
+      {
+        heading: "Da dove arriva l'acqua di Lucca",
+        paragraphs: [
+          "L'acqua di Lucca arriva da campi pozzi della piana lucchese, gestiti da Geal.",
+          "La rete cittadina alterna tratti storici, in particolare dentro le mura, e tratti più recenti nelle aree di espansione.",
+        ],
+      },
+      {
+        heading: "I controlli sull'acqua del rubinetto a Lucca",
+        paragraphs: [
+          "Geal esegue autocontrolli sulla filiera; AUSL Toscana Nord-Ovest effettua i controlli ufficiali; ARPAT svolge il monitoraggio ambientale.",
+          "I dati di qualità per comune sono pubblicati dal gestore.",
+        ],
+      },
+      {
+        heading: "Composizione tipica e parametri da tenere d'occhio",
+        paragraphs: [
+          "L'acqua di Lucca è bicarbonato-calcica con durezza media. Sono monitorati sottoprodotti di disinfezione e indicatori organolettici. Nel centro storico, dentro le mura, vale la raccomandazione di verificare il piombo a rubinetto in presenza di tubazioni interne molto datate.",
+        ],
+        bullets: [
+          "Durezza: media, 20-32 °F",
+          "Calcio: ben rappresentato",
+          "Piombo: rischio limitato a impianti interni molto datati dentro le mura",
+        ],
+      },
+      {
+        heading: "Cosa fare se vuoi verificare la TUA acqua di Lucca",
+        paragraphs: [
+          "GoccIA permette una lettura immediata dei parametri principali della tua acqua a partire da pochi dati di base.",
+          "Se vivi dentro le mura in un edificio molto datato, un'analisi di laboratorio mirata su piombo e durezza è una scelta valida.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "L'acqua del rubinetto a Lucca è sicura?",
+        a: "Sì, l'acqua distribuita da Geal rispetta i limiti del D.Lgs. 18/2023.",
+      },
+      {
+        q: "L'acqua di Lucca è dura?",
+        a: "È classificabile come media: tipicamente 20-32 °F.",
+      },
+      {
+        q: "L'impianto di casa dentro le mura può influire sulla qualità?",
+        a: "Sì, negli edifici antichi le tubazioni interne possono pesare più della rete pubblica: l'unica verifica affidabile è un'analisi al rubinetto.",
+      },
+      {
+        q: "Dove trovo i referti pubblici dell'acqua di Lucca?",
+        a: "Geal pubblica i dati sul proprio sito; AUSL Toscana Nord-Ovest e ARPAT pubblicano report periodici.",
+      },
+    ],
+    relatedCities: ["firenze", "prato", "la-spezia", "parma"],
+    ctaContext:
+      "Per analizzare l'acqua del rubinetto a Lucca — durezza, eventuali tracce di piombo dentro le mura, parametri sensibili — con un laboratorio qualificato:",
+  },
 ];
 
 const CITY_GUIDE_MAP: Map<string, CityGuide> = new Map(

@@ -4,6 +4,7 @@ import { CITY_GUIDES } from '@/lib/city-guides';
 import { TREATMENT_GUIDES } from '@/lib/treatment-guides';
 import { TOPIC_GUIDES } from '@/lib/topic-guides';
 import { BLOG_POSTS } from '@/lib/blog-posts';
+import { SECTOR_GUIDES } from '@/lib/sector-guides';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://goccia.org').replace(
@@ -42,6 +43,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'yearly' as const,
     priority: 0.7,
   }));
+  const sectorUrls: MetadataRoute.Sitemap = SECTOR_GUIDES.map((g) => ({
+    url: `${base}/uso/${g.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
+  }));
 
   return [
     {
@@ -74,11 +81,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.85,
     },
+    {
+      url: `${base}/uso`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${base}/idratazione-quanto-bere`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
     ...parameterUrls,
     ...cityUrls,
     ...treatmentUrls,
     ...topicUrls,
     ...blogUrls,
+    ...sectorUrls,
     {
       url: `${base}/`,
       lastModified: now,
