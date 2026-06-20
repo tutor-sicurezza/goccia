@@ -38,11 +38,42 @@ export function webApplicationJsonLd(): object {
       price: '0',
       priceCurrency: 'EUR',
     },
-    provider: {
-      '@type': 'Organization',
-      name: '123Acqua',
-      url: 'https://123acqua.com',
-    },
+    provider: organizationJsonLd(),
+  };
+}
+
+export function organizationJsonLd(): object {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': 'https://123acqua.com#organization',
+    name: '123Acqua',
+    legalName: 'Labservice Analytica S.r.l.',
+    url: 'https://123acqua.com',
+    logo: 'https://123acqua.com/logo.png',
+    sameAs: [
+      'https://goccia.org',
+      'https://123acqua.com',
+      'https://www.linkedin.com/company/labservice-analytica',
+      'https://www.facebook.com/123acqua',
+      'https://www.instagram.com/123acqua',
+    ],
+    description:
+      'Laboratorio qualificato di analisi delle acque potabili con metodi validati conformi a norme tecniche.',
+    areaServed: 'IT',
+  };
+}
+
+export function websiteJsonLd(): object {
+  const url = siteUrl();
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${url}#website`,
+    url,
+    name: 'GoccIA',
+    inLanguage: 'it-IT',
+    publisher: { '@id': 'https://123acqua.com#organization' },
   };
 }
 

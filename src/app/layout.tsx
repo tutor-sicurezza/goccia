@@ -4,6 +4,7 @@ import { Inter, Space_Grotesk } from 'next/font/google';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 import { DropletBlob } from '@/components/droplet-blob';
+import JsonLd, { websiteJsonLd, organizationJsonLd } from '@/components/json-ld';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -52,6 +53,13 @@ export const metadata: Metadata = {
       "Scopri in 30 secondi quanto è buona l'acqua del tuo rubinetto.",
   },
   robots: { index: true, follow: true },
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION,
+    other: process.env.BING_SITE_VERIFICATION
+      ? { 'msvalidate.01': process.env.BING_SITE_VERIFICATION }
+      : undefined,
+  },
+  alternates: { canonical: siteUrl },
 };
 
 export default function RootLayout({
@@ -76,6 +84,8 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <SiteFooter />
         </div>
+        <JsonLd data={websiteJsonLd()} />
+        <JsonLd data={organizationJsonLd()} />
       </body>
     </html>
   );
