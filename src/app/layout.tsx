@@ -5,6 +5,7 @@ import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 import { DropletBlob } from '@/components/droplet-blob';
 import JsonLd, { websiteJsonLd, organizationJsonLd } from '@/components/json-ld';
+import { PrivacyNotice } from '@/components/privacy-notice';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -86,6 +87,7 @@ export default function RootLayout({
         </div>
         <JsonLd data={websiteJsonLd()} />
         <JsonLd data={organizationJsonLd()} />
+        <PrivacyNotice />
       </body>
     </html>
   );

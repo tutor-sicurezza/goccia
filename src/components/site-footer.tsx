@@ -37,6 +37,11 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
+                <Link href="/cookie-policy" className="hover:text-slate-100">
+                  Cookie
+                </Link>
+              </li>
+              <li>
                 <Link
                   href="/come-funziona"
                   className="hover:text-slate-100"

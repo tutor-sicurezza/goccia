@@ -8,6 +8,7 @@ interface EmailSaveFormProps {
 
 export function EmailSaveForm({ submissionId }: EmailSaveFormProps) {
   const [email, setEmail] = useState('');
+  const [consent, setConsent] = useState(false);
   const [status, setStatus] = useState<'idle' | 'loading' | 'ok' | 'error'>(
     'idle',
   );
@@ -18,6 +19,10 @@ export function EmailSaveForm({ submissionId }: EmailSaveFormProps) {
     setErrorMsg(null);
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setErrorMsg('Inserisci un indirizzo email valido.');
+      return;
+    }
+    if (!consent) {
+      setErrorMsg('Devi acconsentire al trattamento dell\'email per ricevere il risultato.');
       return;
     }
     setStatus('loading');
@@ -88,6 +93,21 @@ export function EmailSaveForm({ submissionId }: EmailSaveFormProps) {
           {status === 'loading' ? 'Invio…' : 'Salva risultato'}
         </button>
       </div>
+      <label className="mt-3 flex items-start gap-2 text-xs text-slate-300">
+        <input
+          type="checkbox"
+          required
+          checked={consent}
+          onChange={(e) => setConsent(e.target.checked)}
+          className="mt-0.5 h-4 w-4 shrink-0 rounded border-white/20 bg-black/40 text-violet-500 focus:ring-violet-400"
+        />
+        <span>
+          Acconsento al trattamento dell'email per il solo scopo di conservare e/o
+          ricevere il risultato. Base giuridica: art. 6(1)(a) GDPR. Posso revocare
+          il consenso scrivendo a privacy@goccia.org. Dettagli nell'
+          <a href="/privacy" className="font-semibold text-sky-300 underline-offset-2 hover:underline">informativa</a>.
+        </span>
+      </label>
       {errorMsg ? (
         <p className="mt-3 text-xs text-rose-200" role="alert">
           {errorMsg}
