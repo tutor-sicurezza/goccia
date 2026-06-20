@@ -6,6 +6,7 @@ import { TOPIC_GUIDES } from '@/lib/topic-guides';
 import { BLOG_POSTS } from '@/lib/blog-posts';
 import { SECTOR_GUIDES } from '@/lib/sector-guides';
 import { REGIONAL_COMPARISONS } from '@/lib/regional-comparisons';
+import { NEIGHBORHOOD_GUIDES } from '@/lib/neighborhood-guides';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://goccia.org').replace(
@@ -55,6 +56,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.85,
+  }));
+  const neighborhoodUrls: MetadataRoute.Sitemap = NEIGHBORHOOD_GUIDES.map((n) => ({
+    url: `${base}/quartieri/${n.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.75,
   }));
 
   return [
@@ -118,6 +125,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.85,
     },
+    {
+      url: `${base}/quartieri`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${base}/osmosi-inversa-confronto`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${base}/dashboard`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 0.85,
+    },
     ...parameterUrls,
     ...cityUrls,
     ...treatmentUrls,
@@ -125,6 +150,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...blogUrls,
     ...sectorUrls,
     ...comparisonUrls,
+    ...neighborhoodUrls,
     {
       url: `${base}/`,
       lastModified: now,

@@ -3,6 +3,7 @@ import { Quiz } from '@/components/quiz';
 import { LeadCTA } from '@/components/lead-cta';
 import { NewsletterSignup } from '@/components/newsletter-signup';
 import JsonLd, { articleJsonLd, breadcrumbJsonLd } from '@/components/json-ld';
+import { QUIZ_QUESTIONS } from '@/lib/quiz-questions';
 
 const URL = 'https://goccia.org/quiz';
 
@@ -29,6 +30,27 @@ export default function QuizPage() {
           { name: 'Home', url: 'https://goccia.org/' },
           { name: 'Quiz', url: URL },
         ])}
+      />
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'Quiz',
+          name: "Quiz acqua del rubinetto: quanto ne sai?",
+          inLanguage: 'it-IT',
+          about: { '@type': 'Thing', name: "Qualità dell'acqua potabile in Italia" },
+          educationalAlignment: { '@type': 'AlignmentObject', alignmentType: 'educationalSubject', targetName: 'Salute e ambiente' },
+          numberOfQuestions: QUIZ_QUESTIONS.length,
+          provider: { '@id': 'https://123acqua.com#organization' },
+          url: URL,
+          hasPart: QUIZ_QUESTIONS.slice(0, 5).map((q) => ({
+            '@type': 'Question',
+            name: q.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: q.options.find((o) => o.correct)?.explanation ?? q.options.find((o) => o.correct)?.text ?? '',
+            },
+          })),
+        }}
       />
       <div className="noise pointer-events-none absolute inset-0 -z-10" aria-hidden />
 
