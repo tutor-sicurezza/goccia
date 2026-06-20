@@ -1,5 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { PARAMETER_GUIDES } from '@/lib/parameter-guides';
+import { CITY_GUIDES } from '@/lib/city-guides';
+import { TREATMENT_GUIDES } from '@/lib/treatment-guides';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://goccia.org').replace(
@@ -14,6 +16,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }));
+  const cityUrls: MetadataRoute.Sitemap = CITY_GUIDES.map((g) => ({
+    url: `${base}/acqua-di-${g.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+  const treatmentUrls: MetadataRoute.Sitemap = TREATMENT_GUIDES.map((g) => ({
+    url: `${base}/trattamenti/${g.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
 
   return [
     {
@@ -22,7 +36,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    {
+      url: `${base}/acqua`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${base}/trattamenti`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
     ...parameterUrls,
+    ...cityUrls,
+    ...treatmentUrls,
     {
       url: `${base}/`,
       lastModified: now,
