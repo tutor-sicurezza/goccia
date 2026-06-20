@@ -2621,7 +2621,1953 @@ export const NEIGHBORHOOD_GUIDES: NeighborhoodGuide[] = [
     ],
     ctaVariant: "kit-analisi",
     ctaContext: "Analisi acqua del rubinetto a Barona (Milano) con un laboratorio qualificato: durezza, microbiologica, e — nei palazzi antichi — verifica metalli (piombo, rame, nichel).",
-  }
+  },
+  {
+    slug: "torino-centro",
+    citySlug: "torino",
+    cityName: "Torino",
+    neighborhoodName: "Centro",
+    district: "Circoscrizione 1",
+    shortTitle: "Acqua del rubinetto in Centro a Torino: cosa controllare",
+    metaDescription: "Acqua del rubinetto in Centro a Torino: tubazioni storiche, durezza, controlli SMAT e quando ha senso un'analisi al rubinetto.",
+    searchKeywords: ["acqua centro torino", "acqua rubinetto torino centro", "tubazioni piombo torino centro", "qualità acqua smat centro", "analisi acqua torino centro"],
+    intro: "Il Centro di Torino (Circoscrizione 1) raccoglie il cuore storico della città, con palazzi sabaudi e ottocenteschi spesso ristrutturati ma con impianti interni stratificati. La rete pubblica gestita da SMAT distribuisce acqua di buona qualità, prevalentemente di origine alpina e di falda profonda. Nei palazzi storici il punto debole resta l'impianto interno: colonne montanti, raccordi e diramazioni possono risalire a epoche in cui il piombo era ancora ammesso negli usi idropotabili.",
+    buildingAge: "storico-pre1900",
+    typicalRisks: [
+      "Piombo da tubazioni interne pre-1960 in palazzi storici",
+      "Stagnazione in immobili a uso discontinuo (uffici, B&B)",
+      "Durezza variabile, mediamente medio-bassa in centro",
+    ],
+    sections: [
+      {
+        heading: "L'acqua in Centro a Torino: contesto urbano e tubazioni",
+        paragraphs: [
+          "Il servizio idrico integrato del Comune di Torino è gestito da SMAT S.p.A. (Società Metropolitana Acque Torino), che cura captazione, potabilizzazione e distribuzione. La rete cittadina è alimentata principalmente da pozzi di falda profonda, sorgenti alpine e quote di acque superficiali trattate (Sangone, Stura).",
+          "In Centro convivono edifici sabaudi, palazzi ottocenteschi e qualche inserimento novecentesco: gli impianti interni sono stati rifatti in fasi successive, ma non sempre integralmente. È plausibile la presenza di tratti vetusti in tubazioni private."
+        ],
+        bullets: ["Edifici prevalentemente pre-1900", "Tubazioni pubbliche rinnovate da SMAT", "Possibili residui di linee in piombo nei tratti privati"],
+      },
+      {
+        heading: "Rischi specifici del Centro",
+        paragraphs: [
+          "Il rischio principale in Centro è il rilascio di piombo da tubazioni interne ai palazzi storici, soprattutto in presenza di stagnazione notturna. Un secondo fronte è rappresentato dagli immobili a uso discontinuo (uffici, B&B, seconde case) dove l'acqua resta ferma a lungo nelle condutture.",
+        ],
+        bullets: ["Piombo a rubinetto in palazzi pre-1960", "Stagnazione in immobili a uso turistico", "Cloro residuo variabile"],
+      },
+      {
+        heading: "Cosa controllare a casa in Centro",
+        paragraphs: [
+          "Per chi vive in un palazzo storico del Centro di Torino, il pacchetto più informativo combina metalli (piombo, rame, nichel) con una microbiologica di base. Vale la pena valutare anche durezza e cloro residuo per inquadrare il profilo dell'acqua al rubinetto.",
+          "Il prelievo va eseguito con metodi validati conformi a norme tecniche, da un laboratorio qualificato."
+        ],
+        bullets: ["Piombo (priorità alta nei palazzi pre-1960)", "Rame e nichel da rubinetterie", "Microbiologica di base", "Durezza, cloro residuo, pH"],
+      },
+      {
+        heading: "Quando fare un'analisi in Centro",
+        paragraphs: [
+          "Situazioni concrete in cui un'analisi è utile: presenza di neonati, gravidanza, ristrutturazione recente, acquisto di un appartamento storico, cambiamento avvertito di sapore o colore, riavvio dell'utenza dopo un'assenza prolungata."
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Centro?", a: "Nella rete pubblica SMAT il piombo è stato sostituito da tempo. Negli impianti interni dei palazzi storici del Centro possono permanere tratti antecedenti alle normative restrittive: per saperlo con certezza serve un'analisi al rubinetto." },
+      { q: "L'acqua di Centro è dura?", a: "In Centro la durezza è generalmente medio-bassa (intorno ai 20-30 gradi francesi), grazie all'origine alpina e di falda profonda dell'acqua SMAT." },
+      { q: "Posso bere l'acqua del rubinetto a Centro?", a: "Sì, l'acqua distribuita da SMAT è potabile e controllata secondo il D.Lgs. 18/2023. Nei palazzi storici è buona pratica far scorrere l'acqua qualche secondo al mattino." },
+      { q: "Dove trovo i referti del gestore?", a: "SMAT pubblica i dati di qualità dell'acqua sul proprio sito istituzionale, suddivisi per zona di distribuzione. ARPA Piemonte e ASL Città di Torino curano controlli ambientali e sanitari." },
+    ],
+    ctaVariant: "kit-analisi",
+    ctaContext: "Analisi acqua del rubinetto in Centro a Torino: priorità ai metalli (piombo, rame, nichel) nei palazzi storici, microbiologica e durezza.",
+    relatedNeighborhoods: ["torino-crocetta", "torino-quadrilatero-romano", "torino-san-salvario"],
+  },
+  {
+    slug: "torino-crocetta",
+    citySlug: "torino",
+    cityName: "Torino",
+    neighborhoodName: "Crocetta",
+    district: "Circoscrizione 1",
+    shortTitle: "Acqua del rubinetto in Crocetta (Torino): cosa sapere",
+    metaDescription: "Acqua del rubinetto in Crocetta a Torino: palazzi Liberty e primi '900, controlli SMAT, durezza e quando fare un'analisi al rubinetto.",
+    searchKeywords: ["acqua crocetta torino", "acqua rubinetto crocetta", "qualità acqua smat crocetta", "tubazioni crocetta torino", "analisi acqua torino crocetta"],
+    intro: "La Crocetta è un quartiere residenziale e prestigioso della Circoscrizione 1, caratterizzato da palazzi Liberty e di primo Novecento. La rete SMAT distribuisce qui acqua di buona qualità, ma gli impianti interni di edifici di un secolo possono presentare tratti datati. Il tema principale è la verifica dei materiali a valle del contatore, in particolare nei condomini dove non sono mai stati eseguiti rifacimenti integrali.",
+    buildingAge: "primo-novecento",
+    typicalRisks: [
+      "Piombo o ottone con piombo in raccordi pre-1960",
+      "Stagnazione in appartamenti a uso saltuario",
+      "Durezza medio-bassa tipica della rete torinese",
+    ],
+    sections: [
+      {
+        heading: "L'acqua in Crocetta: contesto e tubazioni",
+        paragraphs: [
+          "Il gestore SMAT alimenta la Crocetta con acqua di origine prevalentemente alpina e di falda profonda, con conducibilità medio-bassa e fluoruri contenuti. Gli stabili Liberty e primo Novecento del quartiere sono in larga parte ben mantenuti, ma le colonne montanti originali, ove non sostituite, possono contenere tratti misti.",
+        ],
+        bullets: ["Edifici primo Novecento ben conservati", "Rete pubblica SMAT moderna", "Possibili colonne montanti non rinnovate"],
+      },
+      {
+        heading: "Rischi specifici in Crocetta",
+        paragraphs: ["Il rischio dominante è il rilascio di piombo da tubazioni interne non sostituite. Aggiungiamo il consueto tema della stagnazione e una possibile variabilità del cloro residuo."],
+        bullets: ["Piombo in raccordi pre-1960", "Stagnazione in seconde case", "Rame/nichel da rubinetterie"],
+      },
+      {
+        heading: "Cosa controllare a casa in Crocetta",
+        paragraphs: ["Pacchetto consigliato: piombo, rame, nichel, microbiologica di base, durezza e cloro residuo. Prelievo con metodi validati conformi a norme tecniche, da laboratorio qualificato."],
+        bullets: ["Piombo (priorità in palazzi pre-1960)", "Rame e nichel", "Microbiologica di base", "Durezza, cloro, pH"],
+      },
+      {
+        heading: "Quando fare un'analisi in Crocetta",
+        paragraphs: ["Trigger tipici: neonati, gravidanza, ristrutturazione, acquisto immobile storico, cambiamento di sapore o colore."],
+      },
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Crocetta?", a: "Nella rete pubblica SMAT no. Negli impianti interni di stabili Liberty o primi '900 possono permanere tratti non sostituiti: l'unica verifica certa è l'analisi al rubinetto." },
+      { q: "L'acqua di Crocetta è dura?", a: "La durezza è generalmente medio-bassa, intorno ai 20-30 gradi francesi, in linea con il profilo SMAT della zona centrale." },
+      { q: "Posso bere l'acqua del rubinetto a Crocetta?", a: "Sì, è potabile e controllata da SMAT secondo il D.Lgs. 18/2023." },
+      { q: "Dove trovo i referti del gestore?", a: "Sul sito SMAT, con dettaglio per zona di distribuzione. ARPA Piemonte e ASL Città di Torino integrano con controlli ambientali e sanitari." },
+    ],
+    ctaVariant: "kit-analisi",
+    ctaContext: "Analisi acqua del rubinetto in Crocetta a Torino: verifica metalli nei palazzi Liberty, microbiologica e durezza con laboratorio qualificato.",
+    relatedNeighborhoods: ["torino-centro", "torino-san-salvario", "torino-cit-turin"],
+  },
+  {
+    slug: "torino-san-salvario",
+    citySlug: "torino",
+    cityName: "Torino",
+    neighborhoodName: "San Salvario",
+    district: "Circoscrizione 8",
+    shortTitle: "Acqua del rubinetto in San Salvario (Torino): guida",
+    metaDescription: "Acqua del rubinetto in San Salvario a Torino: edifici storici riqualificati, controlli SMAT e quando fare un'analisi al rubinetto.",
+    searchKeywords: ["acqua san salvario torino", "acqua rubinetto san salvario", "qualità acqua smat san salvario", "tubazioni san salvario", "analisi acqua torino san salvario"],
+    intro: "San Salvario, alle spalle della stazione di Porta Nuova, è un quartiere popolare riqualificato della Circoscrizione 8, con un patrimonio edilizio in larga parte ottocentesco e primo Novecento. La rete SMAT garantisce un'acqua di buona qualità all'ingresso degli stabili; il punto critico, come spesso nei quartieri storici, è l'impianto interno dei palazzi non ristrutturati.",
+    buildingAge: "storico-pre1900",
+    typicalRisks: [
+      "Piombo in tubazioni private pre-1960",
+      "Stagnazione in immobili affittati a breve termine",
+      "Variazioni di cloro residuo in zona distale",
+    ],
+    sections: [
+      {
+        heading: "L'acqua in San Salvario: contesto e tubazioni",
+        paragraphs: ["SMAT alimenta San Salvario con la consueta miscela di acque di falda profonda e sorgenti alpine. Gli stabili del quartiere alternano palazzi storici a interventi di ristrutturazione recente, con un mosaico di impianti."],
+        bullets: ["Edifici prevalentemente storici riqualificati", "Rete SMAT moderna", "Impianti privati eterogenei"],
+      },
+      {
+        heading: "Rischi specifici in San Salvario",
+        paragraphs: ["Piombo e stagnazione sono i due fronti principali, accentuati dalla forte presenza di immobili in affitto a uso turistico e da appartamenti a uso discontinuo."],
+        bullets: ["Piombo a rubinetto in palazzi pre-1960", "Stagnazione in B&B e affitti brevi", "Microbiologia residua in punti poco utilizzati"],
+      },
+      {
+        heading: "Cosa controllare a casa in San Salvario",
+        paragraphs: ["Pacchetto consigliato: piombo, rame, nichel, microbiologica di base, durezza e cloro residuo. Il prelievo segue metodi validati conformi a norme tecniche."],
+        bullets: ["Piombo (priorità)", "Rame e nichel", "Microbiologica di base", "Durezza, cloro, pH"],
+      },
+      {
+        heading: "Quando fare un'analisi in San Salvario",
+        paragraphs: ["Trigger tipici: ingresso in un appartamento storico, neonati o gravidanza, riavvio dopo una lunga assenza, cambiamento di sapore o colore dopo le prime erogazioni del mattino."],
+      },
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a San Salvario?", a: "Nella rete pubblica SMAT no. Negli impianti privati di palazzi storici è possibile la presenza di tratti datati: l'analisi al rubinetto è l'unico modo per verificarlo." },
+      { q: "L'acqua di San Salvario è dura?", a: "La durezza è generalmente medio-bassa, intorno ai 20-30 gradi francesi." },
+      { q: "Posso bere l'acqua del rubinetto a San Salvario?", a: "Sì, l'acqua distribuita da SMAT è potabile e controllata secondo il D.Lgs. 18/2023." },
+      { q: "Dove trovo i referti del gestore?", a: "Sul sito di SMAT, con dettaglio per zona. ARPA Piemonte e ASL Città di Torino curano i controlli ambientali e sanitari." },
+    ],
+    ctaVariant: "kit-analisi",
+    ctaContext: "Analisi acqua del rubinetto in San Salvario a Torino: priorità metalli nei palazzi storici riqualificati, microbiologica e durezza.",
+    relatedNeighborhoods: ["torino-centro", "torino-crocetta", "torino-borgo-po"],
+  },
+  {
+    slug: "torino-vanchiglia",
+    citySlug: "torino",
+    cityName: "Torino",
+    neighborhoodName: "Vanchiglia",
+    district: "Circoscrizione 7",
+    shortTitle: "Acqua del rubinetto a Vanchiglia (Torino): cosa controllare",
+    metaDescription: "Acqua del rubinetto a Vanchiglia a Torino: quartiere alternativo, controlli SMAT e quando fare un'analisi al rubinetto.",
+    searchKeywords: ["acqua vanchiglia torino", "acqua rubinetto vanchiglia", "qualità acqua smat vanchiglia", "tubazioni vanchiglia", "analisi acqua torino vanchiglia"],
+    intro: "Vanchiglia, nella Circoscrizione 7, è un quartiere dal carattere alternativo, con un patrimonio edilizio misto che spazia dal primo Novecento agli inserimenti più recenti. La rete SMAT garantisce un'acqua di buona qualità; le verifiche al rubinetto restano utili per gli stabili più datati e per chi entra in un nuovo appartamento.",
+    buildingAge: "misto",
+    typicalRisks: [
+      "Piombo in tubazioni private in palazzi più antichi",
+      "Stagnazione in appartamenti a uso discontinuo",
+      "Durezza medio-bassa tipica della rete torinese",
+    ],
+    sections: [
+      {
+        heading: "L'acqua a Vanchiglia: contesto e tubazioni",
+        paragraphs: ["SMAT distribuisce a Vanchiglia acqua di origine alpina e di falda profonda. Il patrimonio edilizio misto richiede verifiche caso per caso: la rete pubblica è moderna, ma gli impianti privati seguono storie diverse."],
+        bullets: ["Edificato misto", "Rete pubblica SMAT moderna", "Impianti interni eterogenei"],
+      },
+      {
+        heading: "Rischi specifici a Vanchiglia",
+        paragraphs: ["Nei palazzi più antichi del quartiere il piombo nelle linee private resta il rischio rilevante. Nelle costruzioni recenti il tema è invece più legato a rubinetterie e biofilm in caso di stagnazione."],
+        bullets: ["Piombo nei palazzi pre-1960", "Rame/nichel da rubinetterie", "Microbiologia in punti poco utilizzati"],
+      },
+      {
+        heading: "Cosa controllare a casa a Vanchiglia",
+        paragraphs: ["Pacchetto consigliato: metalli (piombo, rame, nichel), microbiologica di base, durezza e cloro residuo. Prelievo con metodi validati conformi a norme tecniche."],
+        bullets: ["Piombo", "Rame e nichel", "Microbiologica di base", "Durezza, cloro, pH"],
+      },
+      {
+        heading: "Quando fare un'analisi a Vanchiglia",
+        paragraphs: ["Trigger tipici: ristrutturazione, ingresso in un nuovo appartamento, neonati, gravidanza, cambiamento di sapore o colore dell'acqua."],
+      },
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Vanchiglia?", a: "Nella rete pubblica SMAT no. Nei palazzi più antichi del quartiere è possibile, ma non sistematico: l'unica verifica certa è un'analisi al rubinetto." },
+      { q: "L'acqua di Vanchiglia è dura?", a: "La durezza è generalmente medio-bassa (20-30 gradi francesi), in linea con il profilo SMAT della zona." },
+      { q: "Posso bere l'acqua del rubinetto a Vanchiglia?", a: "Sì, è potabile e controllata da SMAT secondo il D.Lgs. 18/2023." },
+      { q: "Dove trovo i referti del gestore?", a: "Sul sito di SMAT, con dettaglio per zona. ARPA Piemonte e ASL Città di Torino integrano con controlli ambientali e sanitari." },
+    ],
+    ctaVariant: "kit-analisi",
+    ctaContext: "Analisi acqua del rubinetto a Vanchiglia a Torino: verifiche su misura tra palazzi storici e nuove costruzioni.",
+    relatedNeighborhoods: ["torino-aurora", "torino-centro", "torino-borgo-po"],
+  },
+  {
+    slug: "torino-borgo-po",
+    citySlug: "torino",
+    cityName: "Torino",
+    neighborhoodName: "Borgo Po",
+    district: "Circoscrizione 8",
+    shortTitle: "Acqua del rubinetto in Borgo Po (Torino): guida",
+    metaDescription: "Acqua del rubinetto in Borgo Po a Torino: collina, ville di primo Novecento, controlli SMAT e analisi consigliate al rubinetto.",
+    searchKeywords: ["acqua borgo po torino", "acqua rubinetto borgo po", "qualità acqua smat borgo po", "tubazioni borgo po", "analisi acqua torino borgo po"],
+    intro: "Borgo Po, nella Circoscrizione 8, si arrampica sulla collina torinese con ville e palazzine di primo Novecento. La rete SMAT serve l'area con acqua di origine alpina e di falda profonda. Negli edifici storici della zona collinare il tema rilevante è la verifica delle tubazioni interne e dei materiali a valle del contatore.",
+    buildingAge: "primo-novecento",
+    typicalRisks: [
+      "Piombo in tubazioni private in palazzine d'epoca",
+      "Stagnazione in seconde case e residenze collinari a uso discontinuo",
+      "Pressioni variabili lungo la collina",
+    ],
+    sections: [
+      {
+        heading: "L'acqua in Borgo Po: contesto e tubazioni",
+        paragraphs: ["SMAT alimenta Borgo Po con acqua di origine alpina e falda profonda, gestendo anche le pressioni in zona collinare. Il patrimonio edilizio è in larga parte primo Novecento."],
+        bullets: ["Ville e palazzine primo '900", "Rete SMAT con gestione pressioni in collina", "Impianti interni stratificati"],
+      },
+      {
+        heading: "Rischi specifici in Borgo Po",
+        paragraphs: ["Il piombo da tubazioni private resta il rischio principale, accompagnato da una possibile stagnazione in residenze a uso saltuario o discontinuo."],
+        bullets: ["Piombo a rubinetto in palazzine pre-1960", "Stagnazione in seconde case", "Rame/nichel da rubinetterie"],
+      },
+      {
+        heading: "Cosa controllare a casa in Borgo Po",
+        paragraphs: ["Pacchetto consigliato: metalli (piombo, rame, nichel), microbiologica di base, durezza e cloro residuo. Prelievo con metodi validati conformi a norme tecniche, da laboratorio qualificato."],
+        bullets: ["Piombo", "Rame e nichel", "Microbiologica di base", "Durezza, cloro, pH"],
+      },
+      {
+        heading: "Quando fare un'analisi in Borgo Po",
+        paragraphs: ["Trigger tipici: acquisto di una villa storica, ristrutturazione, neonati o gravidanza, riavvio dopo lunga assenza, variazioni di pressione percepite."],
+      },
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Borgo Po?", a: "Nella rete pubblica SMAT no. In ville e palazzine primo '900 possono permanere tratti privati datati: l'analisi al rubinetto è l'unico modo per accertarlo." },
+      { q: "L'acqua di Borgo Po è dura?", a: "La durezza è generalmente medio-bassa, intorno ai 20-30 gradi francesi." },
+      { q: "Posso bere l'acqua del rubinetto a Borgo Po?", a: "Sì, è potabile e controllata da SMAT secondo il D.Lgs. 18/2023." },
+      { q: "Dove trovo i referti del gestore?", a: "Sul sito di SMAT, con dettaglio per zona. ARPA Piemonte e ASL Città di Torino curano i controlli ambientali e sanitari." },
+    ],
+    ctaVariant: "kit-analisi",
+    ctaContext: "Analisi acqua del rubinetto in Borgo Po a Torino: verifica metalli in ville e palazzine primo '900, microbiologica e durezza.",
+    relatedNeighborhoods: ["torino-san-salvario", "torino-centro", "torino-nizza-millefonti"],
+  },
+  {
+    slug: "torino-aurora",
+    citySlug: "torino",
+    cityName: "Torino",
+    neighborhoodName: "Aurora",
+    district: "Circoscrizione 7",
+    shortTitle: "Acqua del rubinetto ad Aurora (Torino): cosa sapere",
+    metaDescription: "Acqua del rubinetto ad Aurora a Torino: quartiere multiculturale a nord, controlli SMAT, parametri di interesse e analisi al rubinetto.",
+    searchKeywords: ["acqua aurora torino", "acqua rubinetto aurora", "qualità acqua smat aurora", "tubazioni aurora torino", "analisi acqua torino aurora"],
+    intro: "Aurora, nella Circoscrizione 7, è un quartiere popolare e multiculturale del nord di Torino, con un edificato misto che alterna fabbricati primo Novecento e ricostruzioni del dopoguerra. La rete SMAT garantisce un'acqua di buona qualità all'ingresso degli stabili. Trattandosi di una zona settentrionale, può essere prudente includere nell'analisi anche la verifica di indicatori specifici dell'area nord torinese.",
+    buildingAge: "misto",
+    typicalRisks: [
+      "Piombo in tubazioni private negli stabili più antichi",
+      "Cromo VI storico falda Torino nord — verifica controlli SMAT",
+      "Stagnazione in alloggi a uso discontinuo",
+    ],
+    sections: [
+      {
+        heading: "L'acqua ad Aurora: contesto e tubazioni",
+        paragraphs: ["SMAT distribuisce ad Aurora acqua di origine prevalentemente alpina e di falda profonda. Il patrimonio edilizio misto del quartiere richiede verifiche caso per caso a valle del contatore."],
+        bullets: ["Edificato misto primo '900 e dopoguerra", "Rete SMAT moderna", "Storia di presenza di cromo VI in falda nella zona nord (controlli SMAT attivi)"],
+      },
+      {
+        heading: "Rischi specifici ad Aurora",
+        paragraphs: [
+          "Il rischio principale è il piombo in impianti privati datati. In quanto quartiere nord di Torino, è documentata pubblicamente una storia di concentrazioni di cromo esavalente in falda in alcune aree della cintura torinese: SMAT applica trattamenti specifici e controlli, ma può essere prudente includere il parametro in un'analisi mirata.",
+        ],
+        bullets: ["Piombo nelle linee private pre-1960", "Cromo VI: verifica controlli SMAT zona nord", "Microbiologia in punti poco utilizzati"],
+      },
+      {
+        heading: "Cosa controllare a casa ad Aurora",
+        paragraphs: ["Pacchetto consigliato: piombo, rame, nichel, microbiologica di base, durezza, cloro residuo; eventualmente anche cromo totale e cromo VI in funzione del contesto."],
+        bullets: ["Piombo, rame, nichel", "Cromo totale e cromo VI (su richiesta)", "Microbiologica di base", "Durezza, cloro, pH"],
+      },
+      {
+        heading: "Quando fare un'analisi ad Aurora",
+        paragraphs: ["Trigger tipici: neonati, gravidanza, ingresso in un nuovo appartamento, riavvio dopo un'assenza prolungata, variazioni di sapore o colore."],
+      },
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti ad Aurora?", a: "Nella rete pubblica SMAT no. Negli impianti privati dei palazzi più antichi del quartiere è possibile: l'analisi al rubinetto è l'unica verifica certa." },
+      { q: "L'acqua di Aurora è dura?", a: "La durezza in periferia può essere variabile; SMAT pubblica i dati per zona. In Aurora si attesta su valori in linea con il profilo della rete torinese." },
+      { q: "Posso bere l'acqua del rubinetto ad Aurora?", a: "Sì, è potabile e controllata da SMAT secondo il D.Lgs. 18/2023, con controlli aggiuntivi nelle aree con storico di presenza di cromo VI in falda." },
+      { q: "Dove trovo i referti del gestore?", a: "Sul sito di SMAT, con dettaglio per zona di distribuzione. ARPA Piemonte cura il monitoraggio ambientale, ASL Città di Torino i controlli sanitari." },
+    ],
+    ctaVariant: "metalli-pesanti",
+    ctaContext: "Analisi acqua del rubinetto ad Aurora a Torino: pacchetto metalli (incluso cromo) e microbiologica, utile nei quartieri nord serviti da SMAT.",
+    relatedNeighborhoods: ["torino-barriera-di-milano", "torino-vanchiglia", "torino-borgo-vittoria"],
+  },
+  {
+    slug: "torino-barriera-di-milano",
+    citySlug: "torino",
+    cityName: "Torino",
+    neighborhoodName: "Barriera di Milano",
+    district: "Circoscrizione 6",
+    shortTitle: "Acqua del rubinetto a Barriera di Milano (Torino): guida",
+    metaDescription: "Acqua del rubinetto a Barriera di Milano a Torino: quartiere popolare nord, controlli SMAT, cromo VI storico in falda e analisi consigliate.",
+    searchKeywords: ["acqua barriera di milano torino", "acqua rubinetto barriera di milano", "qualità acqua smat barriera", "tubazioni barriera milano torino", "analisi acqua torino barriera"],
+    intro: "Barriera di Milano, nella Circoscrizione 6, è un quartiere popolare del nord di Torino, con un patrimonio edilizio in larga parte del dopoguerra. La rete SMAT serve la zona con acqua di origine alpina e di falda profonda, integrata da trattamenti specifici. La zona rientra nell'area nord della cintura torinese in cui è documentata pubblicamente una storia di presenza di cromo esavalente in falda.",
+    buildingAge: "dopoguerra",
+    typicalRisks: [
+      "Cromo VI storico falda Torino nord — verifica controlli SMAT",
+      "Rame e nichel da rubinetterie domestiche",
+      "Stagnazione in alloggi a uso discontinuo",
+    ],
+    sections: [
+      {
+        heading: "L'acqua a Barriera di Milano: contesto e tubazioni",
+        paragraphs: ["SMAT alimenta Barriera di Milano con acqua prevalentemente alpina e di falda, con trattamenti aggiuntivi a tutela delle aree nord interessate dalla storia di presenza di cromo VI."],
+        bullets: ["Edifici prevalentemente dopoguerra", "Rete SMAT con trattamenti dedicati", "Storia di cromo VI in falda nord (controlli attivi)"],
+      },
+      {
+        heading: "Rischi specifici a Barriera di Milano",
+        paragraphs: ["Il tema più caratteristico della zona è la verifica dei controlli SMAT sulla presenza storica di cromo VI nella falda. I rischi domestici classici (rame, nichel, stagnazione) restano sullo sfondo."],
+        bullets: ["Cromo VI: verifica controlli SMAT", "Rame/nichel da rubinetterie", "Microbiologia in stagnazione"],
+      },
+      {
+        heading: "Cosa controllare a casa a Barriera di Milano",
+        paragraphs: ["Pacchetto consigliato: cromo totale e cromo VI, piombo, rame, nichel, microbiologica di base, durezza e cloro residuo."],
+        bullets: ["Cromo totale e cromo VI", "Piombo, rame, nichel", "Microbiologica di base", "Durezza, cloro, pH"],
+      },
+      {
+        heading: "Quando fare un'analisi a Barriera di Milano",
+        paragraphs: ["Trigger tipici: neonati, gravidanza, ingresso in un nuovo appartamento, dubbi sulla zona di residenza nord, riavvio dopo assenza."],
+      },
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Barriera di Milano?", a: "Negli edifici dopoguerra del quartiere il piombo nelle linee principali è raro. Possibile invece in raccordi o rubinetterie datate." },
+      { q: "L'acqua di Barriera di Milano è dura?", a: "In periferia la durezza può variare; nella zona è in genere medio-bassa, in linea con il profilo SMAT." },
+      { q: "Posso bere l'acqua del rubinetto a Barriera di Milano?", a: "Sì, è potabile e controllata da SMAT secondo il D.Lgs. 18/2023, con trattamenti specifici nelle aree storicamente interessate da cromo VI." },
+      { q: "Dove trovo i referti del gestore?", a: "Sul sito di SMAT, con dettaglio per zona. ARPA Piemonte cura il monitoraggio ambientale, ASL Città di Torino i controlli sanitari." },
+    ],
+    ctaVariant: "metalli-pesanti",
+    ctaContext: "Analisi acqua del rubinetto a Barriera di Milano: pacchetto metalli inclusivo di cromo, utile nei quartieri nord serviti da SMAT.",
+    relatedNeighborhoods: ["torino-aurora", "torino-falchera", "torino-borgo-vittoria"],
+  },
+  {
+    slug: "torino-borgo-vittoria",
+    citySlug: "torino",
+    cityName: "Torino",
+    neighborhoodName: "Borgo Vittoria",
+    district: "Circoscrizione 5",
+    shortTitle: "Acqua del rubinetto a Borgo Vittoria (Torino): guida",
+    metaDescription: "Acqua del rubinetto a Borgo Vittoria a Torino: quartiere nord, controlli SMAT, cromo VI storico in falda e analisi al rubinetto.",
+    searchKeywords: ["acqua borgo vittoria torino", "acqua rubinetto borgo vittoria", "qualità acqua smat borgo vittoria", "tubazioni borgo vittoria", "analisi acqua torino borgo vittoria"],
+    intro: "Borgo Vittoria, nella Circoscrizione 5, è un quartiere a nord di Torino, con un edificato misto che alterna primo Novecento e ricostruzioni successive. La rete SMAT distribuisce acqua di origine alpina e di falda, con trattamenti aggiuntivi nelle aree settentrionali della cintura, dove è documentata pubblicamente una storia di concentrazioni di cromo esavalente in falda.",
+    buildingAge: "misto",
+    typicalRisks: [
+      "Cromo VI storico falda Torino nord — verifica controlli SMAT",
+      "Piombo in tubazioni private degli stabili più antichi",
+      "Stagnazione in alloggi a uso discontinuo",
+    ],
+    sections: [
+      {
+        heading: "L'acqua a Borgo Vittoria: contesto e tubazioni",
+        paragraphs: ["SMAT alimenta Borgo Vittoria con la consueta miscela di acque alpine e di falda profonda. Trattamenti dedicati e controlli sono attivi per la storica presenza di cromo VI in falda nord."],
+        bullets: ["Edificato misto", "Rete SMAT con trattamenti dedicati nelle aree nord", "Impianti interni eterogenei"],
+      },
+      {
+        heading: "Rischi specifici a Borgo Vittoria",
+        paragraphs: ["La presenza storica di cromo VI in falda nord richiede attenzione, e si affianca ai rischi domestici classici (piombo nei palazzi più antichi, rame/nichel, stagnazione)."],
+        bullets: ["Cromo VI: verifica controlli SMAT", "Piombo in linee private pre-1960", "Rame/nichel da rubinetterie"],
+      },
+      {
+        heading: "Cosa controllare a casa a Borgo Vittoria",
+        paragraphs: ["Pacchetto consigliato: cromo totale e cromo VI, piombo, rame, nichel, microbiologica di base, durezza e cloro residuo."],
+        bullets: ["Cromo totale e cromo VI", "Piombo, rame, nichel", "Microbiologica di base", "Durezza, cloro, pH"],
+      },
+      {
+        heading: "Quando fare un'analisi a Borgo Vittoria",
+        paragraphs: ["Trigger tipici: famiglie con neonati, gravidanza, ingresso in un nuovo appartamento, dubbi sull'origine dell'acqua in zona nord, variazione di sapore o colore."],
+      },
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Borgo Vittoria?", a: "Nei palazzi più antichi del quartiere è possibile; negli edifici più recenti è raro. L'analisi al rubinetto consente di verificare con certezza." },
+      { q: "L'acqua di Borgo Vittoria è dura?", a: "In periferia la durezza è variabile; SMAT pubblica i dati per zona. Nella zona è in genere medio-bassa." },
+      { q: "Posso bere l'acqua del rubinetto a Borgo Vittoria?", a: "Sì, è potabile e controllata da SMAT secondo il D.Lgs. 18/2023, con trattamenti specifici nelle aree storicamente interessate dal cromo VI." },
+      { q: "Dove trovo i referti del gestore?", a: "Sul sito di SMAT, con dettaglio per zona. ARPA Piemonte e ASL Città di Torino integrano con monitoraggi ambientali e sanitari." },
+    ],
+    ctaVariant: "metalli-pesanti",
+    ctaContext: "Analisi acqua del rubinetto a Borgo Vittoria: pacchetto metalli inclusivo di cromo nelle zone nord servite da SMAT.",
+    relatedNeighborhoods: ["torino-madonna-di-campagna", "torino-barriera-di-milano", "torino-borgata-vittoria"],
+  },
+  {
+    slug: "torino-falchera",
+    citySlug: "torino",
+    cityName: "Torino",
+    neighborhoodName: "Falchera",
+    district: "Circoscrizione 6",
+    shortTitle: "Acqua del rubinetto a Falchera (Torino): cosa sapere",
+    metaDescription: "Acqua del rubinetto a Falchera a Torino: quartiere periferico nord, controlli SMAT, cromo VI storico in falda e analisi consigliate.",
+    searchKeywords: ["acqua falchera torino", "acqua rubinetto falchera", "qualità acqua smat falchera", "tubazioni falchera", "analisi acqua torino falchera"],
+    intro: "Falchera, nella Circoscrizione 6, è un quartiere periferico nord di Torino, costruito in larga parte nel dopoguerra. La rete SMAT serve la zona con acqua di origine alpina e di falda, con trattamenti aggiuntivi nelle aree settentrionali della cintura, dove è documentata pubblicamente una storia di presenza di cromo esavalente in falda.",
+    buildingAge: "dopoguerra",
+    typicalRisks: [
+      "Cromo VI storico falda Torino nord — verifica controlli SMAT",
+      "Rame e nichel da rubinetterie domestiche",
+      "Stagnazione in alloggi a uso discontinuo",
+    ],
+    sections: [
+      {
+        heading: "L'acqua a Falchera: contesto e tubazioni",
+        paragraphs: ["SMAT alimenta Falchera con acque alpine e di falda, applicando trattamenti dedicati nella zona nord della rete cittadina. Il patrimonio edilizio è prevalentemente dopoguerra, con condomini popolari."],
+        bullets: ["Edifici dopoguerra", "Rete SMAT con trattamenti dedicati nord Torino", "Impianti interni di pari epoca"],
+      },
+      {
+        heading: "Rischi specifici a Falchera",
+        paragraphs: ["Il tema caratteristico è la presenza storica di cromo VI in falda nord, sotto controllo attivo SMAT. I rischi domestici si limitano in genere a rame/nichel e stagnazione."],
+        bullets: ["Cromo VI: verifica controlli SMAT", "Rame/nichel da rubinetterie", "Microbiologia in stagnazione"],
+      },
+      {
+        heading: "Cosa controllare a casa a Falchera",
+        paragraphs: ["Pacchetto consigliato: cromo totale e cromo VI, piombo (per sicurezza), rame, nichel, microbiologica di base, durezza e cloro residuo."],
+        bullets: ["Cromo totale e cromo VI", "Piombo, rame, nichel", "Microbiologica di base", "Durezza, cloro, pH"],
+      },
+      {
+        heading: "Quando fare un'analisi a Falchera",
+        paragraphs: ["Trigger tipici: neonati, gravidanza, ingresso in un nuovo appartamento, riavvio dopo assenza, variazioni di sapore o colore."],
+      },
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Falchera?", a: "Negli edifici dopoguerra il piombo nelle linee principali è raro; possibili tracce in raccordi o rubinetterie datate." },
+      { q: "L'acqua di Falchera è dura?", a: "In periferia la durezza è variabile; nella zona è in genere medio-bassa, in linea con il profilo SMAT." },
+      { q: "Posso bere l'acqua del rubinetto a Falchera?", a: "Sì, è potabile e controllata da SMAT secondo il D.Lgs. 18/2023, con trattamenti specifici nelle aree storicamente interessate dal cromo VI." },
+      { q: "Dove trovo i referti del gestore?", a: "Sul sito di SMAT, con dettaglio per zona. ARPA Piemonte e ASL Città di Torino curano i controlli ambientali e sanitari." },
+    ],
+    ctaVariant: "metalli-pesanti",
+    ctaContext: "Analisi acqua del rubinetto a Falchera: pacchetto metalli inclusivo di cromo nelle zone periferiche nord servite da SMAT.",
+    relatedNeighborhoods: ["torino-barriera-di-milano", "torino-borgo-vittoria", "torino-madonna-di-campagna"],
+  },
+  {
+    slug: "torino-pozzo-strada",
+    citySlug: "torino",
+    cityName: "Torino",
+    neighborhoodName: "Pozzo Strada",
+    district: "Circoscrizione 3",
+    shortTitle: "Acqua del rubinetto a Pozzo Strada (Torino): guida",
+    metaDescription: "Acqua del rubinetto a Pozzo Strada a Torino: quartiere residenziale ovest, controlli SMAT e analisi al rubinetto consigliate.",
+    searchKeywords: ["acqua pozzo strada torino", "acqua rubinetto pozzo strada", "qualità acqua smat pozzo strada", "tubazioni pozzo strada", "analisi acqua torino pozzo strada"],
+    intro: "Pozzo Strada, nella Circoscrizione 3, è un quartiere residenziale dell'ovest di Torino, costruito in larga parte nel dopoguerra. La rete SMAT distribuisce qui acqua di buona qualità, con un profilo minerale simile al resto della città. Il tema principale resta la verifica dei materiali domestici a valle del contatore.",
+    buildingAge: "dopoguerra",
+    typicalRisks: [
+      "Rame e nichel da rubinetterie",
+      "Stagnazione in alloggi a uso discontinuo",
+      "Eventuali raccordi datati in stabili anni '50-'60",
+    ],
+    sections: [
+      {
+        heading: "L'acqua a Pozzo Strada: contesto e tubazioni",
+        paragraphs: ["SMAT alimenta Pozzo Strada con acqua di origine alpina e di falda profonda. Il patrimonio edilizio dopoguerra ha impianti interni omogenei per epoca."],
+        bullets: ["Edifici dopoguerra", "Rete pubblica SMAT moderna", "Impianti interni anni '50-'70"],
+      },
+      {
+        heading: "Rischi specifici a Pozzo Strada",
+        paragraphs: ["Negli edifici dopoguerra il rischio piombo è marginale rispetto al centro storico. Restano la possibilità di stagnazione in alloggi a uso discontinuo e il rilascio di rame/nichel da rubinetterie."],
+        bullets: ["Rame/nichel da rubinetterie", "Stagnazione in alloggi a uso saltuario", "Eventuali raccordi datati"],
+      },
+      {
+        heading: "Cosa controllare a casa a Pozzo Strada",
+        paragraphs: ["Pacchetto consigliato: rame, nichel, microbiologica di base, durezza e cloro residuo, con piombo per sicurezza. Prelievo con metodi validati conformi a norme tecniche."],
+        bullets: ["Piombo, rame, nichel", "Microbiologica di base", "Durezza, cloro, pH"],
+      },
+      {
+        heading: "Quando fare un'analisi a Pozzo Strada",
+        paragraphs: ["Trigger tipici: neonati, gravidanza, ingresso in un appartamento mai analizzato, ristrutturazione, variazione di sapore o colore."],
+      },
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Pozzo Strada?", a: "Negli edifici dopoguerra del quartiere le linee in piombo sono rare. Possibile invece presenza in raccordi o rubinetterie datate." },
+      { q: "L'acqua di Pozzo Strada è dura?", a: "In periferia la durezza può variare; in zona ovest è in genere medio-bassa, in linea con il profilo SMAT." },
+      { q: "Posso bere l'acqua del rubinetto a Pozzo Strada?", a: "Sì, è potabile e controllata da SMAT secondo il D.Lgs. 18/2023." },
+      { q: "Dove trovo i referti del gestore?", a: "Sul sito di SMAT, con dettaglio per zona. ARPA Piemonte e ASL Città di Torino integrano con controlli ambientali e sanitari." },
+    ],
+    ctaVariant: "kit-analisi",
+    ctaContext: "Analisi acqua del rubinetto a Pozzo Strada a Torino: pacchetto base con metalli, microbiologica e durezza.",
+    relatedNeighborhoods: ["torino-parella", "torino-cit-turin", "torino-mirafiori-nord"],
+  },
+  {
+    slug: "torino-borgata-vittoria",
+    citySlug: "torino",
+    cityName: "Torino",
+    neighborhoodName: "Borgata Vittoria",
+    district: "Circoscrizione 5",
+    shortTitle: "Acqua del rubinetto a Borgata Vittoria (Torino): guida",
+    metaDescription: "Acqua del rubinetto a Borgata Vittoria a Torino: zona nord, controlli SMAT, cromo VI storico in falda e analisi consigliate.",
+    searchKeywords: ["acqua borgata vittoria torino", "acqua rubinetto borgata vittoria", "qualità acqua smat borgata vittoria", "tubazioni borgata vittoria", "analisi acqua torino borgata vittoria"],
+    intro: "Borgata Vittoria, nella Circoscrizione 5, è una zona del nord di Torino con un edificato misto tra primo Novecento e dopoguerra. La rete SMAT serve la zona con acqua di origine alpina e di falda, con trattamenti dedicati nelle aree settentrionali della cintura interessate storicamente dalla presenza di cromo esavalente in falda.",
+    buildingAge: "misto",
+    typicalRisks: [
+      "Cromo VI storico falda Torino nord — verifica controlli SMAT",
+      "Piombo in tubazioni private negli stabili più antichi",
+      "Stagnazione in alloggi a uso discontinuo",
+    ],
+    sections: [
+      {
+        heading: "L'acqua a Borgata Vittoria: contesto e tubazioni",
+        paragraphs: ["SMAT alimenta Borgata Vittoria con la consueta miscela di acque alpine e di falda profonda, con controlli e trattamenti dedicati nella zona nord della rete cittadina."],
+        bullets: ["Edificato misto", "Rete SMAT con trattamenti aree nord", "Impianti interni eterogenei"],
+      },
+      {
+        heading: "Rischi specifici a Borgata Vittoria",
+        paragraphs: ["La presenza storica di cromo VI in falda nord richiede attenzione e si affianca al piombo nelle linee private dei palazzi più antichi e alla stagnazione."],
+        bullets: ["Cromo VI: verifica controlli SMAT", "Piombo nelle linee pre-1960", "Rame/nichel da rubinetterie"],
+      },
+      {
+        heading: "Cosa controllare a casa a Borgata Vittoria",
+        paragraphs: ["Pacchetto consigliato: cromo totale e cromo VI, piombo, rame, nichel, microbiologica di base, durezza e cloro residuo."],
+        bullets: ["Cromo totale e cromo VI", "Piombo, rame, nichel", "Microbiologica di base", "Durezza, cloro, pH"],
+      },
+      {
+        heading: "Quando fare un'analisi a Borgata Vittoria",
+        paragraphs: ["Trigger tipici: neonati, gravidanza, ingresso in un nuovo appartamento, dubbi sull'origine dell'acqua in zona nord."],
+      },
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Borgata Vittoria?", a: "Negli stabili più antichi è possibile; negli edifici dopoguerra il rischio è minore. L'analisi al rubinetto consente la verifica certa." },
+      { q: "L'acqua di Borgata Vittoria è dura?", a: "In periferia la durezza è variabile; nella zona è in genere medio-bassa, in linea con il profilo SMAT." },
+      { q: "Posso bere l'acqua del rubinetto a Borgata Vittoria?", a: "Sì, è potabile e controllata da SMAT secondo il D.Lgs. 18/2023, con trattamenti specifici nelle aree storicamente interessate dal cromo VI." },
+      { q: "Dove trovo i referti del gestore?", a: "Sul sito di SMAT, con dettaglio per zona. ARPA Piemonte e ASL Città di Torino integrano con monitoraggi ambientali e sanitari." },
+    ],
+    ctaVariant: "metalli-pesanti",
+    ctaContext: "Analisi acqua del rubinetto a Borgata Vittoria: pacchetto metalli inclusivo di cromo, utile nelle zone nord servite da SMAT.",
+    relatedNeighborhoods: ["torino-borgo-vittoria", "torino-madonna-di-campagna", "torino-barriera-di-milano"],
+  },
+  {
+    slug: "torino-mirafiori-sud",
+    citySlug: "torino",
+    cityName: "Torino",
+    neighborhoodName: "Mirafiori Sud",
+    district: "Circoscrizione 10",
+    shortTitle: "Acqua del rubinetto a Mirafiori Sud (Torino): guida",
+    metaDescription: "Acqua del rubinetto a Mirafiori Sud a Torino: ex zona FIAT, controlli SMAT, parametri di interesse e analisi consigliate al rubinetto.",
+    searchKeywords: ["acqua mirafiori sud torino", "acqua rubinetto mirafiori sud", "qualità acqua smat mirafiori", "tubazioni mirafiori sud", "analisi acqua torino mirafiori sud"],
+    intro: "Mirafiori Sud, nella Circoscrizione 10, è il quartiere simbolo dell'ex polo industriale FIAT di Torino, costruito in larga parte nel dopoguerra. La rete SMAT distribuisce qui acqua di buona qualità. Il quartiere, in quanto ex zona industriale, può beneficiare di analisi che includano alcuni metalli e indicatori di interesse, pur trattandosi di acqua pubblica regolarmente controllata.",
+    buildingAge: "dopoguerra",
+    typicalRisks: [
+      "Rame e nichel da rubinetterie",
+      "Stagnazione in alloggi a uso discontinuo",
+      "Eventuali raccordi datati in stabili anni '50-'60",
+    ],
+    sections: [
+      {
+        heading: "L'acqua a Mirafiori Sud: contesto e tubazioni",
+        paragraphs: ["SMAT alimenta Mirafiori Sud con acqua di origine alpina e di falda profonda. Il patrimonio edilizio è in larga parte dopoguerra, con grandi condomini popolari e palazzine."],
+        bullets: ["Edifici dopoguerra", "Rete pubblica SMAT moderna", "Impianti interni anni '50-'70"],
+      },
+      {
+        heading: "Rischi specifici a Mirafiori Sud",
+        paragraphs: ["Negli edifici dopoguerra il piombo nelle linee principali è raro. Permangono i rischi domestici classici: stagnazione, rilascio da rubinetterie, eventuali raccordi datati."],
+        bullets: ["Rame/nichel da rubinetterie", "Stagnazione", "Eventuali raccordi datati"],
+      },
+      {
+        heading: "Cosa controllare a casa a Mirafiori Sud",
+        paragraphs: ["Pacchetto consigliato: piombo (per sicurezza), rame, nichel, microbiologica di base, durezza e cloro residuo."],
+        bullets: ["Piombo, rame, nichel", "Microbiologica di base", "Durezza, cloro, pH"],
+      },
+      {
+        heading: "Quando fare un'analisi a Mirafiori Sud",
+        paragraphs: ["Trigger tipici: neonati, gravidanza, ingresso in un nuovo appartamento, ristrutturazione, variazione di sapore o colore."],
+      },
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Mirafiori Sud?", a: "Negli edifici dopoguerra le linee in piombo sono rare; possibili residui in raccordi o rubinetterie datate." },
+      { q: "L'acqua di Mirafiori Sud è dura?", a: "In periferia la durezza è variabile; in zona sud è in genere medio-bassa, in linea con il profilo SMAT." },
+      { q: "Posso bere l'acqua del rubinetto a Mirafiori Sud?", a: "Sì, è potabile e controllata da SMAT secondo il D.Lgs. 18/2023." },
+      { q: "Dove trovo i referti del gestore?", a: "Sul sito di SMAT, con dettaglio per zona. ARPA Piemonte e ASL Città di Torino curano i controlli ambientali e sanitari." },
+    ],
+    ctaVariant: "kit-analisi",
+    ctaContext: "Analisi acqua del rubinetto a Mirafiori Sud a Torino: pacchetto base con metalli, microbiologica e durezza.",
+    relatedNeighborhoods: ["torino-mirafiori-nord", "torino-santa-rita", "torino-lingotto"],
+  },
+  {
+    slug: "torino-mirafiori-nord",
+    citySlug: "torino",
+    cityName: "Torino",
+    neighborhoodName: "Mirafiori Nord",
+    district: "Circoscrizione 2",
+    shortTitle: "Acqua del rubinetto a Mirafiori Nord (Torino): guida",
+    metaDescription: "Acqua del rubinetto a Mirafiori Nord a Torino: quartiere residenziale, controlli SMAT e analisi al rubinetto consigliate.",
+    searchKeywords: ["acqua mirafiori nord torino", "acqua rubinetto mirafiori nord", "qualità acqua smat mirafiori nord", "tubazioni mirafiori nord", "analisi acqua torino mirafiori nord"],
+    intro: "Mirafiori Nord, nella Circoscrizione 2, è un quartiere residenziale di Torino costruito in larga parte nel dopoguerra. La rete SMAT distribuisce qui acqua di buona qualità. Il tema principale è la verifica dei materiali domestici a valle del contatore.",
+    buildingAge: "dopoguerra",
+    typicalRisks: ["Rame e nichel da rubinetterie", "Stagnazione in alloggi a uso discontinuo", "Eventuali raccordi datati"],
+    sections: [
+      {
+        heading: "L'acqua a Mirafiori Nord: contesto e tubazioni",
+        paragraphs: ["SMAT alimenta Mirafiori Nord con acqua di origine alpina e di falda profonda. Il patrimonio edilizio dopoguerra ha impianti interni omogenei per epoca."],
+        bullets: ["Edifici dopoguerra", "Rete pubblica SMAT moderna", "Impianti interni anni '50-'70"],
+      },
+      {
+        heading: "Rischi specifici a Mirafiori Nord",
+        paragraphs: ["Negli edifici dopoguerra il piombo nelle linee principali è raro. Restano i rischi classici di stagnazione e rilascio da rubinetterie."],
+        bullets: ["Rame/nichel da rubinetterie", "Stagnazione", "Eventuali raccordi datati"],
+      },
+      {
+        heading: "Cosa controllare a casa a Mirafiori Nord",
+        paragraphs: ["Pacchetto consigliato: piombo (per sicurezza), rame, nichel, microbiologica di base, durezza e cloro residuo."],
+        bullets: ["Piombo, rame, nichel", "Microbiologica di base", "Durezza, cloro, pH"],
+      },
+      {
+        heading: "Quando fare un'analisi a Mirafiori Nord",
+        paragraphs: ["Trigger tipici: neonati, gravidanza, ingresso in un nuovo appartamento, ristrutturazione, variazione di sapore o colore."],
+      },
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Mirafiori Nord?", a: "Negli edifici dopoguerra le linee in piombo sono rare; possibili residui in raccordi o rubinetterie datate." },
+      { q: "L'acqua di Mirafiori Nord è dura?", a: "In periferia la durezza è variabile; nella zona è in genere medio-bassa, in linea con il profilo SMAT." },
+      { q: "Posso bere l'acqua del rubinetto a Mirafiori Nord?", a: "Sì, è potabile e controllata da SMAT secondo il D.Lgs. 18/2023." },
+      { q: "Dove trovo i referti del gestore?", a: "Sul sito di SMAT, con dettaglio per zona. ARPA Piemonte e ASL Città di Torino integrano con controlli ambientali e sanitari." },
+    ],
+    ctaVariant: "kit-analisi",
+    ctaContext: "Analisi acqua del rubinetto a Mirafiori Nord a Torino: pacchetto base con metalli, microbiologica e durezza.",
+    relatedNeighborhoods: ["torino-mirafiori-sud", "torino-santa-rita", "torino-pozzo-strada"],
+  },
+  {
+    slug: "torino-cit-turin",
+    citySlug: "torino",
+    cityName: "Torino",
+    neighborhoodName: "Cit Turin",
+    district: "Circoscrizione 4",
+    shortTitle: "Acqua del rubinetto in Cit Turin (Torino): guida",
+    metaDescription: "Acqua del rubinetto in Cit Turin a Torino: quartiere Liberty, controlli SMAT e analisi al rubinetto consigliate.",
+    searchKeywords: ["acqua cit turin torino", "acqua rubinetto cit turin", "qualità acqua smat cit turin", "tubazioni cit turin", "analisi acqua torino cit turin"],
+    intro: "Cit Turin, nella Circoscrizione 4, è un quartiere Liberty di Torino, con un patrimonio edilizio di primo Novecento spesso ben conservato. La rete SMAT distribuisce qui acqua di buona qualità. Nei palazzi storici il tema rilevante è la verifica delle tubazioni interne, in particolare delle colonne montanti originarie.",
+    buildingAge: "primo-novecento",
+    typicalRisks: ["Piombo in tubazioni private pre-1960", "Stagnazione in immobili a uso saltuario", "Rame/nichel da rubinetterie"],
+    sections: [
+      {
+        heading: "L'acqua in Cit Turin: contesto e tubazioni",
+        paragraphs: ["SMAT alimenta Cit Turin con acqua di origine alpina e di falda profonda. I palazzi Liberty del quartiere conservano spesso colonne montanti originali, da verificare in funzione delle ristrutturazioni interne."],
+        bullets: ["Palazzi Liberty primo '900", "Rete pubblica SMAT moderna", "Possibili colonne montanti non rinnovate"],
+      },
+      {
+        heading: "Rischi specifici in Cit Turin",
+        paragraphs: ["Il rischio principale è il piombo da tubazioni private non sostituite. Aggiungiamo il tema della stagnazione e una possibile variabilità di rame/nichel."],
+        bullets: ["Piombo a rubinetto in palazzi pre-1960", "Stagnazione in seconde case", "Rame/nichel da rubinetterie"],
+      },
+      {
+        heading: "Cosa controllare a casa in Cit Turin",
+        paragraphs: ["Pacchetto consigliato: piombo, rame, nichel, microbiologica di base, durezza e cloro residuo."],
+        bullets: ["Piombo", "Rame e nichel", "Microbiologica di base", "Durezza, cloro, pH"],
+      },
+      {
+        heading: "Quando fare un'analisi in Cit Turin",
+        paragraphs: ["Trigger tipici: neonati, gravidanza, ristrutturazione, acquisto immobile storico, cambiamento di sapore o colore."],
+      },
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Cit Turin?", a: "Nella rete pubblica SMAT no. Nei palazzi Liberty possono permanere tratti privati datati: l'analisi al rubinetto è l'unica verifica certa." },
+      { q: "L'acqua di Cit Turin è dura?", a: "La durezza è generalmente medio-bassa, intorno ai 20-30 gradi francesi, in linea con il profilo SMAT." },
+      { q: "Posso bere l'acqua del rubinetto a Cit Turin?", a: "Sì, è potabile e controllata da SMAT secondo il D.Lgs. 18/2023." },
+      { q: "Dove trovo i referti del gestore?", a: "Sul sito di SMAT, con dettaglio per zona. ARPA Piemonte e ASL Città di Torino integrano con controlli ambientali e sanitari." },
+    ],
+    ctaVariant: "kit-analisi",
+    ctaContext: "Analisi acqua del rubinetto in Cit Turin a Torino: priorità metalli nei palazzi Liberty, microbiologica e durezza.",
+    relatedNeighborhoods: ["torino-crocetta", "torino-parella", "torino-pozzo-strada"],
+  },
+  {
+    slug: "torino-parella",
+    citySlug: "torino",
+    cityName: "Torino",
+    neighborhoodName: "Parella",
+    district: "Circoscrizione 4",
+    shortTitle: "Acqua del rubinetto a Parella (Torino): cosa sapere",
+    metaDescription: "Acqua del rubinetto a Parella a Torino: quartiere residenziale ovest, controlli SMAT e analisi al rubinetto consigliate.",
+    searchKeywords: ["acqua parella torino", "acqua rubinetto parella", "qualità acqua smat parella", "tubazioni parella", "analisi acqua torino parella"],
+    intro: "Parella, nella Circoscrizione 4, è un quartiere residenziale dell'ovest di Torino, costruito in larga parte nel dopoguerra. La rete SMAT distribuisce qui acqua di buona qualità. Il tema principale è la verifica dei materiali domestici a valle del contatore.",
+    buildingAge: "dopoguerra",
+    typicalRisks: ["Rame e nichel da rubinetterie", "Stagnazione in alloggi a uso discontinuo", "Eventuali raccordi datati"],
+    sections: [
+      {
+        heading: "L'acqua a Parella: contesto e tubazioni",
+        paragraphs: ["SMAT alimenta Parella con acqua di origine alpina e di falda profonda. Il patrimonio edilizio è in larga parte dopoguerra, con condomini omogenei per epoca."],
+        bullets: ["Edifici dopoguerra", "Rete pubblica SMAT moderna", "Impianti interni anni '50-'70"],
+      },
+      {
+        heading: "Rischi specifici a Parella",
+        paragraphs: ["Negli edifici dopoguerra il piombo nelle linee principali è raro. Restano i rischi domestici di stagnazione e rilascio da rubinetterie."],
+        bullets: ["Rame/nichel da rubinetterie", "Stagnazione", "Eventuali raccordi datati"],
+      },
+      {
+        heading: "Cosa controllare a casa a Parella",
+        paragraphs: ["Pacchetto consigliato: piombo (per sicurezza), rame, nichel, microbiologica di base, durezza e cloro residuo."],
+        bullets: ["Piombo, rame, nichel", "Microbiologica di base", "Durezza, cloro, pH"],
+      },
+      {
+        heading: "Quando fare un'analisi a Parella",
+        paragraphs: ["Trigger tipici: neonati, gravidanza, ingresso in un nuovo appartamento, ristrutturazione, variazione di sapore o colore."],
+      },
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Parella?", a: "Negli edifici dopoguerra le linee in piombo sono rare; possibili residui in raccordi o rubinetterie datate." },
+      { q: "L'acqua di Parella è dura?", a: "In periferia la durezza è variabile; in zona ovest è in genere medio-bassa, in linea con il profilo SMAT." },
+      { q: "Posso bere l'acqua del rubinetto a Parella?", a: "Sì, è potabile e controllata da SMAT secondo il D.Lgs. 18/2023." },
+      { q: "Dove trovo i referti del gestore?", a: "Sul sito di SMAT, con dettaglio per zona. ARPA Piemonte e ASL Città di Torino integrano con controlli ambientali e sanitari." },
+    ],
+    ctaVariant: "kit-analisi",
+    ctaContext: "Analisi acqua del rubinetto a Parella a Torino: pacchetto base con metalli, microbiologica e durezza.",
+    relatedNeighborhoods: ["torino-pozzo-strada", "torino-cit-turin", "torino-mirafiori-nord"],
+  },
+  {
+    slug: "torino-madonna-di-campagna",
+    citySlug: "torino",
+    cityName: "Torino",
+    neighborhoodName: "Madonna di Campagna",
+    district: "Circoscrizione 5",
+    shortTitle: "Acqua del rubinetto a Madonna di Campagna (Torino): guida",
+    metaDescription: "Acqua del rubinetto a Madonna di Campagna a Torino: zona nord, controlli SMAT, cromo VI storico in falda e analisi consigliate.",
+    searchKeywords: ["acqua madonna di campagna torino", "acqua rubinetto madonna di campagna", "qualità acqua smat madonna di campagna", "tubazioni madonna di campagna", "analisi acqua torino madonna di campagna"],
+    intro: "Madonna di Campagna, nella Circoscrizione 5, è una zona nord-ovest di Torino, con edificato prevalentemente dopoguerra. La rete SMAT serve la zona con acqua di origine alpina e di falda, con trattamenti aggiuntivi nelle aree settentrionali della cintura, dove è documentata pubblicamente una storia di concentrazioni di cromo esavalente in falda (caso noto della cintura nord torinese).",
+    buildingAge: "dopoguerra",
+    typicalRisks: [
+      "Cromo VI storico falda Torino nord — verifica controlli SMAT",
+      "Rame e nichel da rubinetterie domestiche",
+      "Stagnazione in alloggi a uso discontinuo",
+    ],
+    sections: [
+      {
+        heading: "L'acqua a Madonna di Campagna: contesto e tubazioni",
+        paragraphs: ["SMAT alimenta Madonna di Campagna con acque alpine e di falda profonda, applicando trattamenti specifici nelle aree nord della rete dove è documentata pubblicamente una storia di presenza di cromo VI in falda."],
+        bullets: ["Edifici dopoguerra", "Rete SMAT con trattamenti dedicati", "Storia di cromo VI in falda nord (controlli attivi)"],
+      },
+      {
+        heading: "Rischi specifici a Madonna di Campagna",
+        paragraphs: ["Il tema più caratteristico è la verifica dei controlli SMAT sulla presenza storica di cromo VI nella falda nord. Si affiancano i consueti rischi domestici (rame/nichel, stagnazione)."],
+        bullets: ["Cromo VI: verifica controlli SMAT", "Rame/nichel da rubinetterie", "Microbiologia in stagnazione"],
+      },
+      {
+        heading: "Cosa controllare a casa a Madonna di Campagna",
+        paragraphs: ["Pacchetto consigliato: cromo totale e cromo VI, piombo, rame, nichel, microbiologica di base, durezza e cloro residuo."],
+        bullets: ["Cromo totale e cromo VI", "Piombo, rame, nichel", "Microbiologica di base", "Durezza, cloro, pH"],
+      },
+      {
+        heading: "Quando fare un'analisi a Madonna di Campagna",
+        paragraphs: ["Trigger tipici: neonati, gravidanza, ingresso in un nuovo appartamento, dubbi sull'origine dell'acqua in zona nord, riavvio dopo assenza."],
+      },
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Madonna di Campagna?", a: "Negli edifici dopoguerra le linee in piombo sono rare; possibili residui in raccordi o rubinetterie datate." },
+      { q: "L'acqua di Madonna di Campagna è dura?", a: "In periferia la durezza è variabile; nella zona è in genere medio-bassa, in linea con il profilo SMAT." },
+      { q: "Posso bere l'acqua del rubinetto a Madonna di Campagna?", a: "Sì, è potabile e controllata da SMAT secondo il D.Lgs. 18/2023, con trattamenti specifici nelle aree storicamente interessate dal cromo VI." },
+      { q: "Dove trovo i referti del gestore?", a: "Sul sito di SMAT, con dettaglio per zona. ARPA Piemonte cura il monitoraggio ambientale, ASL Città di Torino i controlli sanitari." },
+    ],
+    ctaVariant: "metalli-pesanti",
+    ctaContext: "Analisi acqua del rubinetto a Madonna di Campagna: pacchetto metalli inclusivo di cromo, utile nelle zone nord servite da SMAT.",
+    relatedNeighborhoods: ["torino-borgo-vittoria", "torino-borgata-vittoria", "torino-falchera"],
+  },
+  {
+    slug: "torino-lingotto",
+    citySlug: "torino",
+    cityName: "Torino",
+    neighborhoodName: "Lingotto",
+    district: "Circoscrizione 9",
+    shortTitle: "Acqua del rubinetto al Lingotto (Torino): guida",
+    metaDescription: "Acqua del rubinetto al Lingotto a Torino: ex zona industriale FIAT riqualificata, controlli SMAT e analisi al rubinetto consigliate.",
+    searchKeywords: ["acqua lingotto torino", "acqua rubinetto lingotto", "qualità acqua smat lingotto", "tubazioni lingotto", "analisi acqua torino lingotto"],
+    intro: "Il Lingotto, nella Circoscrizione 9, è il quartiere simbolo della riqualificazione dell'ex polo industriale FIAT, con edifici che spaziano dal dopoguerra a interventi recenti. La rete SMAT distribuisce qui acqua di buona qualità. Trattandosi di un'area un tempo industriale ma oggi residenziale e commerciale, è prudente includere alcuni metalli e indicatori di interesse in un'analisi al rubinetto.",
+    buildingAge: "misto",
+    typicalRisks: ["Rame e nichel da rubinetterie", "Stagnazione in uffici e nuove costruzioni a uso discontinuo", "Eventuali raccordi datati negli stabili più anziani"],
+    sections: [
+      {
+        heading: "L'acqua al Lingotto: contesto e tubazioni",
+        paragraphs: ["SMAT alimenta il Lingotto con acqua di origine alpina e di falda profonda. L'edificato è misto: condomini dopoguerra e interventi recenti di riqualificazione."],
+        bullets: ["Edificato misto post-FIAT", "Rete pubblica SMAT moderna", "Impianti interni eterogenei"],
+      },
+      {
+        heading: "Rischi specifici al Lingotto",
+        paragraphs: ["Nelle costruzioni più recenti i rischi domestici si limitano a rame/nichel e stagnazione. Negli stabili dopoguerra restano possibili raccordi datati."],
+        bullets: ["Rame/nichel da rubinetterie", "Stagnazione in uffici", "Eventuali raccordi datati"],
+      },
+      {
+        heading: "Cosa controllare a casa al Lingotto",
+        paragraphs: ["Pacchetto consigliato: piombo (per sicurezza), rame, nichel, microbiologica di base, durezza e cloro residuo."],
+        bullets: ["Piombo, rame, nichel", "Microbiologica di base", "Durezza, cloro, pH"],
+      },
+      {
+        heading: "Quando fare un'analisi al Lingotto",
+        paragraphs: ["Trigger tipici: neonati, gravidanza, ingresso in un nuovo appartamento, ristrutturazione, variazione di sapore o colore."],
+      },
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti al Lingotto?", a: "Negli edifici dopoguerra le linee in piombo sono rare; nelle nuove costruzioni assenti. Possibili residui solo in raccordi o rubinetterie datate." },
+      { q: "L'acqua del Lingotto è dura?", a: "In periferia la durezza è variabile; in zona sud è in genere medio-bassa, in linea con il profilo SMAT." },
+      { q: "Posso bere l'acqua del rubinetto al Lingotto?", a: "Sì, è potabile e controllata da SMAT secondo il D.Lgs. 18/2023." },
+      { q: "Dove trovo i referti del gestore?", a: "Sul sito di SMAT, con dettaglio per zona. ARPA Piemonte e ASL Città di Torino integrano con controlli ambientali e sanitari." },
+    ],
+    ctaVariant: "kit-analisi",
+    ctaContext: "Analisi acqua del rubinetto al Lingotto a Torino: pacchetto base con metalli, microbiologica e durezza.",
+    relatedNeighborhoods: ["torino-nizza-millefonti", "torino-santa-rita", "torino-mirafiori-sud"],
+  },
+  {
+    slug: "torino-santa-rita",
+    citySlug: "torino",
+    cityName: "Torino",
+    neighborhoodName: "Santa Rita",
+    district: "Circoscrizione 2",
+    shortTitle: "Acqua del rubinetto a Santa Rita (Torino): guida",
+    metaDescription: "Acqua del rubinetto a Santa Rita a Torino: quartiere residenziale, controlli SMAT e analisi al rubinetto consigliate.",
+    searchKeywords: ["acqua santa rita torino", "acqua rubinetto santa rita", "qualità acqua smat santa rita", "tubazioni santa rita", "analisi acqua torino santa rita"],
+    intro: "Santa Rita, nella Circoscrizione 2, è un quartiere residenziale di Torino costruito in larga parte nel dopoguerra. La rete SMAT distribuisce qui acqua di buona qualità. Il tema principale è la verifica dei materiali domestici a valle del contatore.",
+    buildingAge: "dopoguerra",
+    typicalRisks: ["Rame e nichel da rubinetterie", "Stagnazione in alloggi a uso discontinuo", "Eventuali raccordi datati"],
+    sections: [
+      {
+        heading: "L'acqua a Santa Rita: contesto e tubazioni",
+        paragraphs: ["SMAT alimenta Santa Rita con acqua di origine alpina e di falda profonda. Il patrimonio edilizio è in larga parte dopoguerra."],
+        bullets: ["Edifici dopoguerra", "Rete pubblica SMAT moderna", "Impianti interni anni '50-'70"],
+      },
+      {
+        heading: "Rischi specifici a Santa Rita",
+        paragraphs: ["Negli edifici dopoguerra il piombo nelle linee principali è raro. Restano i rischi domestici di stagnazione e rilascio da rubinetterie."],
+        bullets: ["Rame/nichel da rubinetterie", "Stagnazione", "Eventuali raccordi datati"],
+      },
+      {
+        heading: "Cosa controllare a casa a Santa Rita",
+        paragraphs: ["Pacchetto consigliato: piombo (per sicurezza), rame, nichel, microbiologica di base, durezza e cloro residuo."],
+        bullets: ["Piombo, rame, nichel", "Microbiologica di base", "Durezza, cloro, pH"],
+      },
+      {
+        heading: "Quando fare un'analisi a Santa Rita",
+        paragraphs: ["Trigger tipici: neonati, gravidanza, ingresso in un nuovo appartamento, ristrutturazione, variazione di sapore o colore."],
+      },
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Santa Rita?", a: "Negli edifici dopoguerra le linee in piombo sono rare; possibili residui in raccordi o rubinetterie datate." },
+      { q: "L'acqua di Santa Rita è dura?", a: "In periferia la durezza è variabile; nella zona è in genere medio-bassa, in linea con il profilo SMAT." },
+      { q: "Posso bere l'acqua del rubinetto a Santa Rita?", a: "Sì, è potabile e controllata da SMAT secondo il D.Lgs. 18/2023." },
+      { q: "Dove trovo i referti del gestore?", a: "Sul sito di SMAT, con dettaglio per zona. ARPA Piemonte e ASL Città di Torino integrano con controlli ambientali e sanitari." },
+    ],
+    ctaVariant: "kit-analisi",
+    ctaContext: "Analisi acqua del rubinetto a Santa Rita a Torino: pacchetto base con metalli, microbiologica e durezza.",
+    relatedNeighborhoods: ["torino-mirafiori-nord", "torino-lingotto", "torino-nizza-millefonti"],
+  },
+  {
+    slug: "torino-nizza-millefonti",
+    citySlug: "torino",
+    cityName: "Torino",
+    neighborhoodName: "Nizza Millefonti",
+    district: "Circoscrizione 8",
+    shortTitle: "Acqua del rubinetto a Nizza Millefonti (Torino): guida",
+    metaDescription: "Acqua del rubinetto a Nizza Millefonti a Torino: quartiere sud, controlli SMAT e analisi al rubinetto consigliate.",
+    searchKeywords: ["acqua nizza millefonti torino", "acqua rubinetto nizza millefonti", "qualità acqua smat nizza millefonti", "tubazioni nizza millefonti", "analisi acqua torino nizza millefonti"],
+    intro: "Nizza Millefonti, nella Circoscrizione 8, è un quartiere a sud di Torino, costruito in larga parte nel dopoguerra. La rete SMAT distribuisce qui acqua di buona qualità. Il tema principale resta la verifica dei materiali domestici a valle del contatore.",
+    buildingAge: "dopoguerra",
+    typicalRisks: ["Rame e nichel da rubinetterie", "Stagnazione in alloggi a uso discontinuo", "Eventuali raccordi datati"],
+    sections: [
+      {
+        heading: "L'acqua a Nizza Millefonti: contesto e tubazioni",
+        paragraphs: ["SMAT alimenta Nizza Millefonti con acqua di origine alpina e di falda profonda. Il patrimonio edilizio è in larga parte dopoguerra, con condomini omogenei per epoca."],
+        bullets: ["Edifici dopoguerra", "Rete pubblica SMAT moderna", "Impianti interni anni '50-'70"],
+      },
+      {
+        heading: "Rischi specifici a Nizza Millefonti",
+        paragraphs: ["Negli edifici dopoguerra il piombo nelle linee principali è raro. Restano i rischi domestici di stagnazione e rilascio da rubinetterie."],
+        bullets: ["Rame/nichel da rubinetterie", "Stagnazione", "Eventuali raccordi datati"],
+      },
+      {
+        heading: "Cosa controllare a casa a Nizza Millefonti",
+        paragraphs: ["Pacchetto consigliato: piombo (per sicurezza), rame, nichel, microbiologica di base, durezza e cloro residuo."],
+        bullets: ["Piombo, rame, nichel", "Microbiologica di base", "Durezza, cloro, pH"],
+      },
+      {
+        heading: "Quando fare un'analisi a Nizza Millefonti",
+        paragraphs: ["Trigger tipici: neonati, gravidanza, ingresso in un nuovo appartamento, ristrutturazione, variazione di sapore o colore."],
+      },
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Nizza Millefonti?", a: "Negli edifici dopoguerra le linee in piombo sono rare; possibili residui in raccordi o rubinetterie datate." },
+      { q: "L'acqua di Nizza Millefonti è dura?", a: "In periferia la durezza è variabile; nella zona è in genere medio-bassa, in linea con il profilo SMAT." },
+      { q: "Posso bere l'acqua del rubinetto a Nizza Millefonti?", a: "Sì, è potabile e controllata da SMAT secondo il D.Lgs. 18/2023." },
+      { q: "Dove trovo i referti del gestore?", a: "Sul sito di SMAT, con dettaglio per zona. ARPA Piemonte e ASL Città di Torino integrano con controlli ambientali e sanitari." },
+    ],
+    ctaVariant: "kit-analisi",
+    ctaContext: "Analisi acqua del rubinetto a Nizza Millefonti a Torino: pacchetto base con metalli, microbiologica e durezza.",
+    relatedNeighborhoods: ["torino-lingotto", "torino-san-salvario", "torino-borgo-po"],
+  },
+  {
+    slug: "torino-quadrilatero-romano",
+    citySlug: "torino",
+    cityName: "Torino",
+    neighborhoodName: "Quadrilatero Romano",
+    district: "Circoscrizione 1",
+    shortTitle: "Acqua del rubinetto nel Quadrilatero Romano (Torino): guida",
+    metaDescription: "Acqua del rubinetto nel Quadrilatero Romano a Torino: area movida e ristrutturazioni recenti, controlli SMAT e analisi consigliate.",
+    searchKeywords: ["acqua quadrilatero romano torino", "acqua rubinetto quadrilatero torino", "qualità acqua smat quadrilatero", "tubazioni quadrilatero torino", "analisi acqua torino quadrilatero"],
+    intro: "Il Quadrilatero Romano, nella Circoscrizione 1, è il cuore antico di Torino, area di movida e di intense ristrutturazioni recenti. La rete SMAT distribuisce qui acqua di buona qualità. Tra palazzi storici e interventi recenti convive un patchwork di impianti: il tema rilevante resta la verifica dei materiali a valle del contatore, palazzo per palazzo.",
+    buildingAge: "storico-pre1900",
+    typicalRisks: ["Piombo in tubazioni private pre-1960", "Stagnazione in immobili a uso turistico", "Rame/nichel da rubinetterie post-ristrutturazione"],
+    sections: [
+      {
+        heading: "L'acqua nel Quadrilatero Romano: contesto e tubazioni",
+        paragraphs: ["SMAT alimenta il Quadrilatero Romano con acqua di origine alpina e di falda profonda. Le ristrutturazioni recenti hanno spesso aggiornato gli impianti interni, ma in alcuni palazzi storici restano tratti privati datati."],
+        bullets: ["Edifici prevalentemente pre-1900", "Rete SMAT moderna", "Forte presenza di ristrutturazioni recenti"],
+      },
+      {
+        heading: "Rischi specifici nel Quadrilatero Romano",
+        paragraphs: ["Il piombo da tubazioni private non sostituite resta il rischio principale nei palazzi non ristrutturati. La forte presenza di affitti brevi e attività di ristorazione introduce il tema della stagnazione."],
+        bullets: ["Piombo a rubinetto in palazzi pre-1960", "Stagnazione in B&B e affitti brevi", "Rame/nichel da rubinetterie nuove"],
+      },
+      {
+        heading: "Cosa controllare a casa nel Quadrilatero Romano",
+        paragraphs: ["Pacchetto consigliato: piombo, rame, nichel, microbiologica di base, durezza e cloro residuo. Prelievo con metodi validati conformi a norme tecniche."],
+        bullets: ["Piombo (priorità nei palazzi pre-1960)", "Rame e nichel", "Microbiologica di base", "Durezza, cloro, pH"],
+      },
+      {
+        heading: "Quando fare un'analisi nel Quadrilatero Romano",
+        paragraphs: ["Trigger tipici: ingresso in un appartamento storico, neonati o gravidanza, riavvio dopo lunga assenza, ristrutturazione completata di recente, variazione di sapore o colore."],
+      },
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti nel Quadrilatero Romano?", a: "Nella rete pubblica SMAT no. Nei palazzi storici non integralmente ristrutturati possono permanere tratti privati datati: l'analisi al rubinetto è l'unica verifica certa." },
+      { q: "L'acqua del Quadrilatero Romano è dura?", a: "La durezza in centro è generalmente medio-bassa, intorno ai 20-30 gradi francesi, in linea con il profilo SMAT della zona centrale." },
+      { q: "Posso bere l'acqua del rubinetto nel Quadrilatero Romano?", a: "Sì, è potabile e controllata da SMAT secondo il D.Lgs. 18/2023." },
+      { q: "Dove trovo i referti del gestore?", a: "Sul sito di SMAT, con dettaglio per zona. ARPA Piemonte e ASL Città di Torino integrano con controlli ambientali e sanitari." },
+    ],
+    ctaVariant: "kit-analisi",
+    ctaContext: "Analisi acqua del rubinetto nel Quadrilatero Romano a Torino: priorità metalli nei palazzi storici, microbiologica e durezza, utile in zone di movida e affitti brevi.",
+    relatedNeighborhoods: ["torino-centro", "torino-san-salvario", "torino-crocetta"],
+  },
+  {
+    slug: "napoli-centro-storico",
+    citySlug: "napoli",
+    cityName: "Napoli",
+    neighborhoodName: "Centro Storico",
+    district: "Municipalità 4",
+    shortTitle: "Acqua del rubinetto a Centro Storico (Napoli): piombo nei palazzi antichi",
+    metaDescription: "Acqua del rubinetto nel Centro Storico di Napoli (Municipalità 4): gestore ABC Napoli, fonti Serino-Cassano, rischio piombo nelle tubazioni vetuste dei palazzi antichi.",
+    searchKeywords: ["acqua centro storico napoli", "acqua rubinetto centro storico", "qualita acqua napoli centro storico", "tubazioni piombo centro storico", "durezza acqua centro storico napoli"],
+    intro: "Il Centro Storico di Napoli, parte della Municipalità 4 e Patrimonio UNESCO, racchiude un tessuto edilizio in larga parte pre-novecentesco, con palazzi nobiliari, case a corte e fondaci che convivono in un reticolo viario di origine greco-romana. L'acqua del rubinetto distribuita da ABC Napoli — Acqua Bene Comune Napoli S.p.A. arriva qui prevalentemente dalle sorgenti appenniniche di Serino e Cassano Irpino attraverso l'Acquedotto della Campania: si tratta di acqua di origine sorgentizia, con durezza tipicamente medio-bassa (intorno ai 15-25 °F) e profilo minerale leggero. Il punto sensibile in Centro Storico non è la rete pubblica ma le tubazioni interne dei palazzi antichi, dove possono persistere tratti residui in piombo o materiali datati.",
+    buildingAge: "storico-pre1900",
+    typicalRisks: ["Piombo da tubazioni interne pre-1960 in palazzi antichi", "Stagnazione in appartamenti a uso turistico o saltuario", "Tubazioni condominiali stratificate nei secoli"],
+    sections: [
+      {
+        heading: "L'acqua a Centro Storico: contesto urbano e tubazioni",
+        paragraphs: [
+          "Il gestore del servizio idrico integrato di Napoli è ABC Napoli (Acqua Bene Comune Napoli S.p.A.), che cura captazione, adduzione e distribuzione dell'acqua potabile in città. La rete partenopea è alimentata principalmente dalle sorgenti appenniniche di Serino e Cassano Irpino, integrate da altre fonti dell'Acquedotto della Campania: ne deriva un'acqua di origine sorgentizia con durezza medio-bassa e conducibilità contenuta.",
+          "Nel Centro Storico, parte della Municipalità 4, la rete si innesta su edifici stratificati nei secoli: palazzi pre-ottocenteschi, case a corte, fondaci. Anche dove la rete condominiale è stata rifatta, possono permanere tratti intermedi (colonne montanti, raccordi, allacci al contatore) realizzati prima dei divieti sull'uso del piombo nelle reti idropotabili."
+        ]
+      },
+      {
+        heading: "Rischi specifici a Centro Storico",
+        paragraphs: [
+          "La priorità in questa zona è il piombo nelle tubazioni interne. Non si tratta di un problema della rete ABC Napoli, ma dei tratti privati di palazzi molto antichi: dopo stagnazioni notturne o nei periodi di chiusura di appartamenti a uso turistico, il primo getto d'acqua può contenere tracce di metalli rilasciati dalle pareti delle vecchie linee. È buona pratica far scorrere alcuni litri prima dell'uso alimentare.",
+          "Un secondo rischio è la stagnazione legata alla forte presenza di B&B e appartamenti turistici: l'acqua ferma a lungo aumenta il contatto con eventuali materiali rilascianti e la carica microbiologica residua."
+        ]
+      },
+      {
+        heading: "Cosa controllare a casa a Centro Storico",
+        paragraphs: [
+          "Per chi vive o gestisce immobili in Centro Storico consigliamo come pannello minimo: piombo, rame, nichel, durezza totale, conducibilità, cloro residuo e microbiologica di base (E. coli, coliformi, enterococchi). Il prelievo va eseguito con metodi validati conformi a norme tecniche, possibilmente da personale di un laboratorio qualificato, includendo un campione di primo getto e uno dopo flussaggio per misurare l'effetto stagnazione.",
+          "Per famiglie con neonati o donne in gravidanza è utile aggiungere nitrati e arsenico al pacchetto."
+        ]
+      },
+      {
+        heading: "Quando fare un'analisi a Centro Storico",
+        paragraphs: [
+          "Trigger tipici: acquisto o ristrutturazione di un appartamento in palazzo storico, arrivo di un neonato, gestione di una struttura ricettiva, cambio nel sapore o nel colore dell'acqua, dubbi sull'età delle colonne montanti condominiali."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Centro Storico?", a: "In edifici pre-1960 del Centro Storico è plausibile trovare tratti residui in piombo nei collegamenti privati interni. Nei palazzi successivi il piombo è raro, sostituito da rame, acciaio o materiali plastici idonei." },
+      { q: "L'acqua di Centro Storico è dura?", a: "No, l'acqua del rubinetto a Napoli è generalmente leggera, con durezza medio-bassa (circa 15-25 °F), perché di origine sorgentizia appenninica. È meno dura di quella di Roma o Milano." },
+      { q: "Devo bollire l'acqua del rubinetto a Centro Storico?", a: "No, in condizioni ordinarie l'acqua di ABC Napoli è potabile e controllata. Bollire elimina la microbiologia ma concentra eventuali metalli o sali per evaporazione, quindi non è una buona strategia preventiva contro contaminazioni chimiche." },
+      { q: "Dove trovo i referti del gestore?", a: "ABC Napoli pubblica i dati di qualità dell'acqua sul proprio sito istituzionale, suddivisi per zona di distribuzione. ARPA Campania (ARPAC) e ASL Napoli pubblicano i controlli ambientali e sanitari." }
+    ],
+    ctaVariant: "metalli-pesanti",
+    ctaContext: "Analisi acqua del rubinetto in Centro Storico (Napoli) con un laboratorio qualificato: piombo, rame e nichel nei palazzi antichi, durezza, microbiologica.",
+    relatedNeighborhoods: ["napoli-spaccanapoli", "napoli-quartieri-spagnoli", "napoli-toledo"],
+  },
+  {
+    slug: "napoli-spaccanapoli",
+    citySlug: "napoli",
+    cityName: "Napoli",
+    neighborhoodName: "Spaccanapoli",
+    district: "Municipalità 4/2",
+    shortTitle: "Acqua del rubinetto a Spaccanapoli (Napoli): tubazioni storiche e piombo",
+    metaDescription: "Acqua del rubinetto a Spaccanapoli (Napoli, Municipalità 4/2): gestore ABC Napoli, fonti Serino-Cassano, attenzione al piombo nelle tubazioni dei palazzi antichi.",
+    searchKeywords: ["acqua spaccanapoli napoli", "acqua rubinetto spaccanapoli", "qualita acqua napoli spaccanapoli", "tubazioni piombo spaccanapoli", "durezza acqua spaccanapoli napoli"],
+    intro: "Spaccanapoli è il decumano inferiore della città antica, il cuore della vecchia Napoli a cavallo tra Municipalità 4 e 2. Gli edifici sono prevalentemente pre-novecenteschi, con stratificazioni che vanno dall'epoca medievale al barocco. L'acqua del rubinetto distribuita da ABC Napoli proviene dalle sorgenti appenniniche di Serino e Cassano Irpino: profilo leggero, durezza medio-bassa (15-25 °F), conducibilità contenuta. Il tema centrale a Spaccanapoli è il tratto interno ai palazzi: nei collegamenti privati molto datati possono persistere tubazioni in piombo, e la stagnazione in immobili a uso turistico è un fattore che merita attenzione.",
+    buildingAge: "storico-pre1900",
+    typicalRisks: ["Piombo possibile in palazzi pre-1960", "Stagnazione in appartamenti turistici", "Colonne montanti d'epoca poco manutenute"],
+    sections: [
+      {
+        heading: "L'acqua a Spaccanapoli: contesto urbano e tubazioni",
+        paragraphs: [
+          "ABC Napoli (Acqua Bene Comune Napoli S.p.A.) gestisce il servizio idrico integrato in città: la rete è alimentata in prevalenza dalle sorgenti appenniniche di Serino e Cassano Irpino e da altre fonti dell'Acquedotto della Campania. Ne risulta un'acqua sorgentizia con durezza medio-bassa e profilo minerale leggero, decisamente meno mineralizzato di quello romano o milanese.",
+          "A Spaccanapoli, lungo il decumano inferiore tra Municipalità 4 e 2, i palazzi sono in gran parte pre-1900: la rete pubblica arriva al piede dei fabbricati con buoni standard, ma gli impianti interni — colonne montanti, allacci al contatore, raccordi — sono spesso stratificazioni di interventi successivi."
+        ]
+      },
+      {
+        heading: "Rischi specifici a Spaccanapoli",
+        paragraphs: [
+          "Il rischio principale è il piombo nelle tubazioni interne dei palazzi antichi: dopo stagnazioni prolungate (notte, weekend, periodi di chiusura) il primo getto può rilasciare tracce di metalli. Far scorrere alcuni litri prima del consumo è una buona pratica.",
+          "La forte vocazione turistica della zona, con molti B&B e case vacanza, accentua il problema della stagnazione: appartamenti chiusi per settimane lasciano l'acqua ferma nelle tubazioni interne."
+        ]
+      },
+      {
+        heading: "Cosa controllare a casa a Spaccanapoli",
+        paragraphs: [
+          "Pannello minimo consigliato a Spaccanapoli: piombo, rame, nichel, durezza, conducibilità, cloro residuo, microbiologica di base. Il prelievo va eseguito con metodi validati conformi a norme tecniche, da personale di un laboratorio qualificato. Per cogliere l'effetto stagnazione conviene prelevare un campione di primo getto e uno dopo flussaggio.",
+          "In presenza di neonati o donne in gravidanza si aggiungono nitrati e arsenico."
+        ]
+      },
+      {
+        heading: "Quando fare un'analisi a Spaccanapoli",
+        paragraphs: [
+          "Trigger tipici: ristrutturazione di un appartamento, riapertura di un immobile chiuso da tempo, gestione di una struttura ricettiva, cambio di sapore o colore dell'acqua, dubbi sull'età degli impianti condominiali."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Spaccanapoli?", a: "Sì, è plausibile trovare tratti residui in piombo nei collegamenti privati di palazzi pre-1960, specie nelle colonne montanti antiche. La rete pubblica di ABC Napoli è invece priva di piombo nei tratti rinnovati." },
+      { q: "L'acqua di Spaccanapoli è dura?", a: "No, è un'acqua leggera, con durezza medio-bassa (15-25 °F): le sorgenti appenniniche di Serino e Cassano Irpino conferiscono un profilo poco mineralizzato, ben diverso da quello romano o milanese." },
+      { q: "Devo bollire l'acqua del rubinetto a Spaccanapoli?", a: "No, l'acqua di ABC Napoli è potabile e controllata. Bollire serve solo a eliminare la microbiologia, ma concentra eventuali metalli per evaporazione, quindi non è una strategia preventiva utile contro contaminazioni chimiche." },
+      { q: "Dove trovo i referti del gestore?", a: "I dati di qualità sono pubblicati da ABC Napoli sul proprio sito; ARPAC e ASL Napoli pubblicano i controlli ambientali e sanitari sui propri portali." }
+    ],
+    ctaVariant: "metalli-pesanti",
+    ctaContext: "Analisi acqua del rubinetto a Spaccanapoli (Napoli) con un laboratorio qualificato: piombo, rame, nichel nei palazzi antichi, microbiologica e parametri di base.",
+    relatedNeighborhoods: ["napoli-centro-storico", "napoli-quartieri-spagnoli", "napoli-toledo"],
+  },
+  {
+    slug: "napoli-quartieri-spagnoli",
+    citySlug: "napoli",
+    cityName: "Napoli",
+    neighborhoodName: "Quartieri Spagnoli",
+    district: "Municipalità 2",
+    shortTitle: "Acqua del rubinetto ai Quartieri Spagnoli (Napoli): vecchie tubazioni",
+    metaDescription: "Acqua del rubinetto ai Quartieri Spagnoli di Napoli (Municipalità 2): gestore ABC Napoli, fonti appenniniche, attenzione a piombo e densità abitativa storica.",
+    searchKeywords: ["acqua quartieri spagnoli napoli", "acqua rubinetto quartieri spagnoli", "qualita acqua napoli quartieri spagnoli", "tubazioni piombo quartieri spagnoli", "durezza acqua quartieri spagnoli napoli"],
+    intro: "I Quartieri Spagnoli, parte della Municipalità 2, sono uno dei quartieri più densamente abitati d'Europa, con un reticolo di vicoli stretti tracciato nel Cinquecento. Gli edifici sono in larghissima parte pre-novecenteschi, con bassi al piano strada e case di ringhiera in alto. L'acqua del rubinetto distribuita da ABC Napoli arriva qui dalle sorgenti appenniniche di Serino e Cassano Irpino: profilo leggero, durezza medio-bassa (15-25 °F). La densità abitativa e l'età degli impianti rendono prioritaria l'attenzione alle tubazioni interne e alla stagnazione, soprattutto nei bassi e nei vani con poco ricambio.",
+    buildingAge: "storico-pre1900",
+    typicalRisks: ["Piombo in palazzi pre-1960", "Tubazioni condominiali datate e stratificate", "Stagnazione in bassi e appartamenti turistici"],
+    sections: [
+      {
+        heading: "L'acqua a Quartieri Spagnoli: contesto urbano e tubazioni",
+        paragraphs: [
+          "ABC Napoli gestisce captazione, adduzione e distribuzione dell'acqua potabile in città: le sorgenti appenniniche di Serino e Cassano Irpino, insieme alle altre fonti dell'Acquedotto della Campania, garantiscono un'acqua di origine sorgentizia con durezza medio-bassa e profilo minerale leggero.",
+          "Ai Quartieri Spagnoli, Municipalità 2, gli edifici risalgono in larghissima parte a prima del Novecento. I tratti pubblici di ABC Napoli arrivano al piede dei fabbricati con buoni standard, ma le linee interne — spesso stratificate da interventi non coordinati — possono includere tratti datati."
+        ]
+      },
+      {
+        heading: "Rischi specifici ai Quartieri Spagnoli",
+        paragraphs: [
+          "Il rischio principale è il piombo residuo in tratti privati di palazzi pre-1960, plausibile in molte colonne montanti dei vicoli. La densità abitativa e la conformazione dei bassi favoriscono inoltre la stagnazione in alcuni punti della rete interna.",
+          "Per le strutture ricettive, sempre più diffuse in zona, vale l'invito a far scorrere l'acqua dopo periodi di chiusura prima dell'uso alimentare."
+        ]
+      },
+      {
+        heading: "Cosa controllare a casa ai Quartieri Spagnoli",
+        paragraphs: [
+          "Pannello consigliato: piombo, rame, nichel, durezza, conducibilità, cloro residuo, microbiologica di base. Per cogliere l'effetto stagnazione è utile prelevare un campione di primo getto e uno dopo flussaggio. Il prelievo va eseguito con metodi validati conformi a norme tecniche, da personale di un laboratorio qualificato.",
+          "In presenza di bambini piccoli o donne in gravidanza si aggiungono nitrati e arsenico."
+        ]
+      },
+      {
+        heading: "Quando fare un'analisi ai Quartieri Spagnoli",
+        paragraphs: [
+          "Trigger tipici: acquisto di un appartamento, ristrutturazione, apertura o riapertura di una struttura ricettiva, dubbi sull'età delle colonne montanti, cambio di sapore o colore dell'acqua."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti ai Quartieri Spagnoli?", a: "Sì, è plausibile incontrare tratti residui in piombo nei collegamenti privati di palazzi pre-1960. Le linee pubbliche di ABC Napoli sono invece prive di piombo nei tratti rinnovati." },
+      { q: "L'acqua dei Quartieri Spagnoli è dura?", a: "No, è un'acqua leggera, con durezza medio-bassa (15-25 °F), tipica delle sorgenti appenniniche che alimentano Napoli." },
+      { q: "Devo bollire l'acqua del rubinetto ai Quartieri Spagnoli?", a: "No, l'acqua di ABC Napoli è potabile e controllata. Bollire abbatte la microbiologia ma concentra eventuali metalli per evaporazione." },
+      { q: "Dove trovo i referti del gestore?", a: "ABC Napoli pubblica i dati di qualità dell'acqua sul proprio sito; ARPAC e ASL Napoli pubblicano i rispettivi controlli." }
+    ],
+    ctaVariant: "metalli-pesanti",
+    ctaContext: "Analisi acqua del rubinetto ai Quartieri Spagnoli (Napoli) con un laboratorio qualificato: piombo, rame, nichel, microbiologica e parametri di base nei palazzi antichi.",
+    relatedNeighborhoods: ["napoli-toledo", "napoli-centro-storico", "napoli-chiaia"],
+  },
+  {
+    slug: "napoli-toledo",
+    citySlug: "napoli",
+    cityName: "Napoli",
+    neighborhoodName: "Toledo",
+    district: "Municipalità 2",
+    shortTitle: "Acqua del rubinetto a Toledo (Napoli): edifici storici e tubazioni",
+    metaDescription: "Acqua del rubinetto a Toledo, Napoli (Municipalità 2): gestore ABC Napoli, fonti Serino-Cassano, attenzione a piombo e stagnazione nei palazzi storici della via.",
+    searchKeywords: ["acqua toledo napoli", "acqua rubinetto toledo", "qualita acqua napoli toledo", "tubazioni piombo toledo", "durezza acqua toledo napoli"],
+    intro: "Toledo è l'asse storico-commerciale di Napoli, parte della Municipalità 2, con palazzi prevalentemente sei-ottocenteschi che si affacciano su via Toledo e si estendono nelle traverse verso i Quartieri Spagnoli e il porto. L'acqua del rubinetto distribuita da ABC Napoli proviene dalle sorgenti appenniniche di Serino e Cassano Irpino: durezza medio-bassa (15-25 °F), profilo leggero. Nei palazzi storici di Toledo il punto chiave è lo stato delle colonne montanti e dei raccordi privati: dove gli edifici sono pre-1960 può ancora essere presente piombo in tratti residui, e la stagnazione in immobili poco utilizzati va monitorata.",
+    buildingAge: "storico-pre1900",
+    typicalRisks: ["Piombo possibile in colonne montanti d'epoca", "Stagnazione in uffici e immobili chiusi nel weekend", "Tubazioni stratificate in palazzi storici"],
+    sections: [
+      {
+        heading: "L'acqua a Toledo: contesto urbano e tubazioni",
+        paragraphs: [
+          "ABC Napoli (Acqua Bene Comune Napoli S.p.A.) gestisce il servizio idrico integrato: la rete è alimentata principalmente dalle sorgenti appenniniche di Serino e Cassano Irpino attraverso l'Acquedotto della Campania, con acqua di origine sorgentizia, durezza medio-bassa e profilo minerale leggero.",
+          "Lungo Toledo, Municipalità 2, i palazzi sono per la maggior parte storici. La rete pubblica arriva con buoni standard, ma gli impianti interni — colonne, allacci ai contatori — possono includere tratti realizzati prima dei divieti sull'uso del piombo nelle reti idropotabili."
+        ]
+      },
+      {
+        heading: "Rischi specifici a Toledo",
+        paragraphs: [
+          "Il rischio principale è il piombo in tratti privati di palazzi pre-1960. Dopo stagnazioni notturne o nei weekend, il primo getto può contenere tracce: far scorrere alcuni litri prima dell'uso alimentare è una pratica raccomandata.",
+          "La presenza di uffici e attività commerciali rende il tema della stagnazione rilevante: ambienti chiusi nel weekend lasciano l'acqua ferma a lungo nei tratti interni."
+        ]
+      },
+      {
+        heading: "Cosa controllare a casa a Toledo",
+        paragraphs: [
+          "Pannello consigliato: piombo, rame, nichel, durezza, conducibilità, cloro residuo, microbiologica di base. Il prelievo va eseguito con metodi validati conformi a norme tecniche, da personale di un laboratorio qualificato, con campione di primo getto e uno dopo flussaggio.",
+          "Per famiglie con neonati o donne in gravidanza si aggiungono nitrati e arsenico."
+        ]
+      },
+      {
+        heading: "Quando fare un'analisi a Toledo",
+        paragraphs: [
+          "Trigger tipici: acquisto di un appartamento in palazzo storico, ristrutturazione, gestione di uffici o B&B chiusi nei weekend, cambio di sapore o colore dell'acqua, dubbi sulle colonne montanti condominiali."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Toledo?", a: "Negli edifici pre-1960 è plausibile trovare tratti residui in piombo nei collegamenti privati interni. La rete pubblica di ABC Napoli è invece priva di piombo nei tratti rinnovati." },
+      { q: "L'acqua di Toledo è dura?", a: "No, è un'acqua leggera, con durezza medio-bassa (15-25 °F), grazie all'origine sorgentizia appenninica." },
+      { q: "Devo bollire l'acqua del rubinetto a Toledo?", a: "No, in condizioni ordinarie l'acqua di ABC Napoli è potabile e controllata. Bollire abbatte la microbiologia ma concentra eventuali metalli per evaporazione." },
+      { q: "Dove trovo i referti del gestore?", a: "ABC Napoli pubblica i dati di qualità sul proprio sito; ARPAC e ASL Napoli pubblicano i controlli ambientali e sanitari." }
+    ],
+    ctaVariant: "metalli-pesanti",
+    ctaContext: "Analisi acqua del rubinetto a Toledo (Napoli) con un laboratorio qualificato: piombo, rame, nichel, durezza e microbiologica nei palazzi storici della via.",
+    relatedNeighborhoods: ["napoli-quartieri-spagnoli", "napoli-centro-storico", "napoli-chiaia"],
+  },
+  {
+    slug: "napoli-chiaia",
+    citySlug: "napoli",
+    cityName: "Napoli",
+    neighborhoodName: "Chiaia",
+    district: "Municipalità 1",
+    shortTitle: "Acqua del rubinetto a Chiaia (Napoli): residenziale storico e controlli",
+    metaDescription: "Acqua del rubinetto a Chiaia, Napoli (Municipalità 1): gestore ABC Napoli, fonti Serino-Cassano, qualità tipica e cosa controllare nei palazzi residenziali storici.",
+    searchKeywords: ["acqua chiaia napoli", "acqua rubinetto chiaia", "qualita acqua napoli chiaia", "tubazioni piombo chiaia", "durezza acqua chiaia napoli"],
+    intro: "Chiaia è uno dei quartieri residenziali storici di Napoli, parte della Municipalità 1, con palazzi prevalentemente del tardo Ottocento e del primo Novecento affacciati sul lungomare e nelle vie interne tra Riviera, Mergellina e Vomero basso. L'acqua del rubinetto distribuita da ABC Napoli proviene dalle sorgenti appenniniche di Serino e Cassano Irpino, con durezza medio-bassa (15-25 °F) e profilo leggero. A Chiaia il fattore principale per la qualità a rubinetto è lo stato degli impianti condominiali, in molti casi rinnovati ma con possibili tratti residui in edifici più antichi.",
+    buildingAge: "primo-novecento",
+    typicalRisks: ["Possibili tratti in piombo in palazzi pre-1960", "Manutenzione delle colonne montanti condominiali", "Stagnazione in seconde case e uffici"],
+    sections: [
+      {
+        heading: "L'acqua a Chiaia: contesto urbano e tubazioni",
+        paragraphs: [
+          "ABC Napoli gestisce il servizio idrico integrato della città. La rete è alimentata principalmente dalle sorgenti appenniniche di Serino e Cassano Irpino e da altre fonti dell'Acquedotto della Campania, con acqua sorgentizia, durezza medio-bassa e profilo minerale leggero.",
+          "A Chiaia, Municipalità 1, prevalgono edifici del primo Novecento, in molti casi con impianti idrici rinnovati. Nei palazzi più antichi o non ristrutturati possono sopravvivere tratti datati nelle colonne montanti."
+        ]
+      },
+      {
+        heading: "Rischi specifici a Chiaia",
+        paragraphs: [
+          "Il rischio più rilevante è la possibile presenza di piombo nei tratti privati interni di palazzi pre-1960, specie nelle colonne montanti non sostituite. In edifici primi-novecenteschi ben manutenuti il rischio è basso.",
+          "Va considerata la stagnazione in seconde case e uffici poco utilizzati: dopo lunghe chiusure è opportuno far scorrere l'acqua prima dell'uso alimentare."
+        ]
+      },
+      {
+        heading: "Cosa controllare a casa a Chiaia",
+        paragraphs: [
+          "Pannello consigliato a Chiaia: durezza, conducibilità, cloro residuo, microbiologica di base; nei palazzi pre-1980 anche piombo, rame e nichel. Il prelievo va eseguito con metodi validati conformi a norme tecniche, da personale di un laboratorio qualificato.",
+          "Per famiglie con neonati o gravidanze, aggiungere nitrati e arsenico al pacchetto."
+        ]
+      },
+      {
+        heading: "Quando fare un'analisi a Chiaia",
+        paragraphs: [
+          "Trigger tipici: acquisto di un appartamento, ristrutturazione del bagno o della cucina con sostituzione tubazioni, arrivo di un neonato in casa, dubbi sull'età degli impianti condominiali, riapertura di una seconda casa chiusa da tempo."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Chiaia?", a: "Negli edifici pre-1960 non ristrutturati è plausibile trovare tratti residui di piombo in colonne montanti private. Nei palazzi rinnovati il rischio è basso." },
+      { q: "L'acqua di Chiaia è dura?", a: "No, è un'acqua leggera, con durezza medio-bassa (15-25 °F), tipica delle sorgenti appenniniche che alimentano Napoli." },
+      { q: "Devo bollire l'acqua del rubinetto a Chiaia?", a: "No, l'acqua di ABC Napoli è potabile e controllata. Bollire abbatte la microbiologia ma concentra eventuali metalli per evaporazione." },
+      { q: "Dove trovo i referti del gestore?", a: "ABC Napoli pubblica i dati di qualità dell'acqua sul proprio sito; ARPAC e ASL Napoli pubblicano i rispettivi controlli." }
+    ],
+    ctaVariant: "completa",
+    ctaContext: "Analisi acqua del rubinetto a Chiaia (Napoli) con un laboratorio qualificato: durezza, microbiologica, metalli (piombo, rame, nichel) nei palazzi pre-1980.",
+    relatedNeighborhoods: ["napoli-mergellina", "napoli-posillipo", "napoli-toledo"],
+  },
+  {
+    slug: "napoli-vomero",
+    citySlug: "napoli",
+    cityName: "Napoli",
+    neighborhoodName: "Vomero",
+    district: "Municipalità 5",
+    shortTitle: "Acqua del rubinetto al Vomero (Napoli): residenziale collinare",
+    metaDescription: "Acqua del rubinetto al Vomero, Napoli (Municipalità 5): gestore ABC Napoli, fonti appenniniche, profilo leggero e cosa controllare nei condomini del quartiere.",
+    searchKeywords: ["acqua vomero napoli", "acqua rubinetto vomero", "qualita acqua napoli vomero", "tubazioni piombo vomero", "durezza acqua vomero napoli"],
+    intro: "Il Vomero è un quartiere residenziale collinare di Napoli, parte della Municipalità 5, con un patrimonio edilizio prevalentemente del primo Novecento e degli anni '20-'40, integrato da palazzine del dopoguerra. L'acqua del rubinetto distribuita da ABC Napoli arriva qui dalle sorgenti appenniniche di Serino e Cassano Irpino attraverso reti di adduzione che servono la collina: durezza medio-bassa (15-25 °F), profilo leggero. Per i residenti del Vomero il tema principale è lo stato delle colonne condominiali, in molti edifici dei primi del Novecento ancora con impianti originari o solo parzialmente rinnovati.",
+    buildingAge: "primo-novecento",
+    typicalRisks: ["Possibili tratti residui in piombo in palazzine anteguerra", "Manutenzione delle colonne montanti", "Variazioni di pressione in zona collinare"],
+    sections: [
+      {
+        heading: "L'acqua al Vomero: contesto urbano e tubazioni",
+        paragraphs: [
+          "ABC Napoli (Acqua Bene Comune Napoli S.p.A.) cura captazione, adduzione e distribuzione: la rete è alimentata principalmente dalle sorgenti appenniniche di Serino e Cassano Irpino, integrate dalle altre fonti dell'Acquedotto della Campania. Ne risulta un'acqua sorgentizia, leggera, con durezza medio-bassa.",
+          "Al Vomero, Municipalità 5, prevalgono palazzine di inizio Novecento ed edifici del dopoguerra. La quota collinare comporta reti di adduzione dedicate; i tratti privati nei condomini più antichi possono includere ancora qualche linea storica."
+        ]
+      },
+      {
+        heading: "Rischi specifici al Vomero",
+        paragraphs: [
+          "Il rischio principale è la presenza di tratti residui di piombo nelle colonne montanti di edifici pre-1960 non ristrutturati. Nei palazzi del dopoguerra il piombo è raro.",
+          "Da considerare la manutenzione delle colonne nei condomini storici e la possibilità di variazioni di pressione in zona collinare, che possono mettere in evidenza punti deboli dell'impianto interno."
+        ]
+      },
+      {
+        heading: "Cosa controllare a casa al Vomero",
+        paragraphs: [
+          "Pannello consigliato: durezza, conducibilità, cloro residuo, microbiologica di base; nei palazzi pre-1980 anche piombo, rame e nichel. Il prelievo va eseguito con metodi validati conformi a norme tecniche, da personale di un laboratorio qualificato.",
+          "Per famiglie con neonati o gravidanze, si aggiungono nitrati e arsenico."
+        ]
+      },
+      {
+        heading: "Quando fare un'analisi al Vomero",
+        paragraphs: [
+          "Trigger tipici: acquisto di un appartamento, ristrutturazione, arrivo di un neonato, dubbi sull'età degli impianti condominiali, cambio di sapore o colore dell'acqua."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti al Vomero?", a: "Negli edifici pre-1960 non ristrutturati è plausibile trovare tratti residui in piombo nelle colonne montanti private. Negli edifici del dopoguerra è raro." },
+      { q: "L'acqua del Vomero è dura?", a: "No, è un'acqua leggera, con durezza medio-bassa (15-25 °F), grazie alle sorgenti appenniniche che alimentano Napoli." },
+      { q: "Devo bollire l'acqua del rubinetto al Vomero?", a: "No, l'acqua di ABC Napoli è potabile e controllata. Bollire elimina la microbiologia ma concentra eventuali metalli per evaporazione." },
+      { q: "Dove trovo i referti del gestore?", a: "ABC Napoli pubblica i dati di qualità dell'acqua sul proprio sito; ARPAC e ASL Napoli pubblicano i rispettivi controlli." }
+    ],
+    ctaVariant: "completa",
+    ctaContext: "Analisi acqua del rubinetto al Vomero (Napoli) con un laboratorio qualificato: durezza, microbiologica e metalli (piombo, rame, nichel) nei palazzi pre-1980.",
+    relatedNeighborhoods: ["napoli-arenella", "napoli-chiaia", "napoli-posillipo"],
+  },
+  {
+    slug: "napoli-arenella",
+    citySlug: "napoli",
+    cityName: "Napoli",
+    neighborhoodName: "Arenella",
+    district: "Municipalità 5",
+    shortTitle: "Acqua del rubinetto all'Arenella (Napoli): condomini del dopoguerra",
+    metaDescription: "Acqua del rubinetto all'Arenella, Napoli (Municipalità 5): gestore ABC Napoli, fonti appenniniche e cosa controllare nei condomini del dopoguerra.",
+    searchKeywords: ["acqua arenella napoli", "acqua rubinetto arenella", "qualita acqua napoli arenella", "tubazioni piombo arenella", "durezza acqua arenella napoli"],
+    intro: "L'Arenella è un quartiere residenziale collinare di Napoli, parte della Municipalità 5, sviluppatosi soprattutto nel dopoguerra con palazzine degli anni '50-'70 affiancate a porzioni precedenti. L'acqua del rubinetto distribuita da ABC Napoli arriva dalle sorgenti appenniniche di Serino e Cassano Irpino: durezza medio-bassa (15-25 °F), profilo leggero. All'Arenella il tema principale per la qualità a rubinetto non è tanto il piombo — più raro in edifici del dopoguerra — quanto la manutenzione delle colonne montanti condominiali, soprattutto nei palazzi degli anni '50-'60 in cui sono stati spesso usati materiali non più di prima scelta.",
+    buildingAge: "dopoguerra",
+    typicalRisks: ["Manutenzione delle colonne condominiali anni '50-'70", "Stagnazione in appartamenti poco usati", "Variazioni di pressione in zona collinare"],
+    sections: [
+      {
+        heading: "L'acqua all'Arenella: contesto urbano e tubazioni",
+        paragraphs: [
+          "ABC Napoli gestisce il servizio idrico integrato: la rete è alimentata principalmente dalle sorgenti appenniniche di Serino e Cassano Irpino, con acqua sorgentizia, durezza medio-bassa e profilo leggero.",
+          "All'Arenella, Municipalità 5, prevalgono palazzine del dopoguerra. La rete pubblica arriva al piede dei fabbricati con buoni standard; gli impianti interni dipendono dalle scelte fatte in fase di costruzione e dalle manutenzioni successive."
+        ]
+      },
+      {
+        heading: "Rischi specifici all'Arenella",
+        paragraphs: [
+          "Negli edifici del dopoguerra il piombo è raro: i materiali usati sono spesso acciaio zincato, rame o materiali plastici. Il rischio principale è il deterioramento delle colonne montanti e dei tratti orizzontali condominiali nei palazzi degli anni '50-'60, dove l'acciaio zincato può rilasciare ferro e zinco e produrre piccoli intorbidamenti.",
+          "Da valutare anche la stagnazione in appartamenti poco utilizzati e l'effetto delle variazioni di pressione tipiche delle reti collinari."
+        ]
+      },
+      {
+        heading: "Cosa controllare a casa all'Arenella",
+        paragraphs: [
+          "Pannello consigliato: durezza, conducibilità, cloro residuo, microbiologica di base, ferro, zinco. Per edifici primi anni '60 con dubbi sull'impianto si possono aggiungere piombo e rame. Il prelievo va eseguito con metodi validati conformi a norme tecniche, da personale di un laboratorio qualificato.",
+          "In presenza di neonati o gravidanze, aggiungere nitrati e arsenico."
+        ]
+      },
+      {
+        heading: "Quando fare un'analisi all'Arenella",
+        paragraphs: [
+          "Trigger tipici: acquisto di un appartamento, ristrutturazione, comparsa di intorbidamenti o sapori metallici, arrivo di un neonato in casa, riapertura di un'abitazione chiusa a lungo."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti all'Arenella?", a: "Negli edifici del dopoguerra il piombo è raro. Il rischio principale per i metalli a rubinetto è il ferro o lo zinco rilasciati da tubazioni in acciaio zincato deteriorate." },
+      { q: "L'acqua dell'Arenella è dura?", a: "No, è un'acqua leggera, con durezza medio-bassa (15-25 °F), come tutta la rete napoletana alimentata dalle sorgenti appenniniche." },
+      { q: "Devo bollire l'acqua del rubinetto all'Arenella?", a: "No, l'acqua di ABC Napoli è potabile e controllata. Bollire elimina la microbiologia ma concentra eventuali metalli per evaporazione." },
+      { q: "Dove trovo i referti del gestore?", a: "ABC Napoli pubblica i dati di qualità sul proprio sito; ARPAC e ASL Napoli pubblicano i controlli ambientali e sanitari." }
+    ],
+    ctaVariant: "completa",
+    ctaContext: "Analisi acqua del rubinetto all'Arenella (Napoli) con un laboratorio qualificato: durezza, microbiologica, ferro, zinco nelle colonne condominiali del dopoguerra.",
+    relatedNeighborhoods: ["napoli-vomero", "napoli-capodimonte", "napoli-soccavo"],
+  },
+  {
+    slug: "napoli-posillipo",
+    citySlug: "napoli",
+    cityName: "Napoli",
+    neighborhoodName: "Posillipo",
+    district: "Municipalità 1",
+    shortTitle: "Acqua del rubinetto a Posillipo (Napoli): costa collinare e impianti misti",
+    metaDescription: "Acqua del rubinetto a Posillipo, Napoli (Municipalità 1): gestore ABC Napoli, fonti appenniniche, impianti misti tra ville storiche e palazzine moderne.",
+    searchKeywords: ["acqua posillipo napoli", "acqua rubinetto posillipo", "qualita acqua napoli posillipo", "tubazioni piombo posillipo", "durezza acqua posillipo napoli"],
+    intro: "Posillipo è il quartiere costiero collinare di Napoli, parte della Municipalità 1, con un patrimonio edilizio misto: ville storiche di fine Ottocento e primo Novecento, palazzine del dopoguerra e interventi più recenti. L'acqua del rubinetto distribuita da ABC Napoli proviene dalle sorgenti appenniniche di Serino e Cassano Irpino: durezza medio-bassa (15-25 °F), profilo leggero. A Posillipo il quadro impiantistico è eterogeneo: nelle ville e palazzine d'epoca possono persistere tratti datati, mentre negli edifici recenti le tubazioni sono in materiali idonei.",
+    buildingAge: "misto",
+    typicalRisks: ["Impianti misti tra edifici storici e recenti", "Possibili tratti in piombo in ville pre-1960", "Stagnazione in seconde case e ville chiuse"],
+    sections: [
+      {
+        heading: "L'acqua a Posillipo: contesto urbano e tubazioni",
+        paragraphs: [
+          "ABC Napoli (Acqua Bene Comune Napoli S.p.A.) cura captazione, adduzione e distribuzione dell'acqua potabile in città: la rete è alimentata principalmente dalle sorgenti appenniniche di Serino e Cassano Irpino, con acqua sorgentizia di durezza medio-bassa e profilo leggero.",
+          "A Posillipo, Municipalità 1, il patrimonio edilizio è misto: ville e palazzine storiche convivono con interventi più recenti. La rete pubblica arriva ai fabbricati con buoni standard; i tratti privati riflettono l'età dell'immobile."
+        ]
+      },
+      {
+        heading: "Rischi specifici a Posillipo",
+        paragraphs: [
+          "Nelle ville e palazzine pre-1960 non ristrutturate è plausibile trovare tratti residui in piombo nelle colonne private. Negli edifici più recenti il rischio è basso.",
+          "Da considerare la stagnazione in seconde case affacciate sulla costa, talvolta chiuse per lunghi periodi: prima dell'uso alimentare conviene flussare la rete interna."
+        ]
+      },
+      {
+        heading: "Cosa controllare a casa a Posillipo",
+        paragraphs: [
+          "Pannello consigliato: durezza, conducibilità, cloro residuo, microbiologica di base; nei palazzi e nelle ville pre-1980 anche piombo, rame e nichel. Il prelievo va eseguito con metodi validati conformi a norme tecniche, da personale di un laboratorio qualificato.",
+          "In presenza di neonati o gravidanze si aggiungono nitrati e arsenico."
+        ]
+      },
+      {
+        heading: "Quando fare un'analisi a Posillipo",
+        paragraphs: [
+          "Trigger tipici: acquisto di una villa o appartamento, ristrutturazione, riapertura di una seconda casa, dubbi sull'età delle colonne interne, cambio di sapore o colore dell'acqua."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Posillipo?", a: "Nelle ville e palazzine pre-1960 non ristrutturate è plausibile trovare tratti residui di piombo nei collegamenti privati. Negli edifici recenti è raro." },
+      { q: "L'acqua di Posillipo è dura?", a: "No, è un'acqua leggera, con durezza medio-bassa (15-25 °F), grazie alle sorgenti appenniniche che alimentano Napoli." },
+      { q: "Devo bollire l'acqua del rubinetto a Posillipo?", a: "No, l'acqua di ABC Napoli è potabile e controllata. Bollire abbatte la microbiologia ma concentra eventuali metalli per evaporazione." },
+      { q: "Dove trovo i referti del gestore?", a: "ABC Napoli pubblica i dati di qualità dell'acqua sul proprio sito; ARPAC e ASL Napoli pubblicano i rispettivi controlli." }
+    ],
+    ctaVariant: "completa",
+    ctaContext: "Analisi acqua del rubinetto a Posillipo (Napoli) con un laboratorio qualificato: durezza, microbiologica, metalli (piombo, rame, nichel) nelle ville e palazzine pre-1980.",
+    relatedNeighborhoods: ["napoli-chiaia", "napoli-mergellina", "napoli-fuorigrotta"],
+  },
+  {
+    slug: "napoli-fuorigrotta",
+    citySlug: "napoli",
+    cityName: "Napoli",
+    neighborhoodName: "Fuorigrotta",
+    district: "Municipalità 10",
+    shortTitle: "Acqua del rubinetto a Fuorigrotta (Napoli): dopoguerra e bonifica vicina",
+    metaDescription: "Acqua del rubinetto a Fuorigrotta, Napoli (Municipalità 10): gestore ABC Napoli, edifici dopoguerra, prossimità alla bonifica di Bagnoli e cosa controllare.",
+    searchKeywords: ["acqua fuorigrotta napoli", "acqua rubinetto fuorigrotta", "qualita acqua napoli fuorigrotta", "tubazioni acqua fuorigrotta", "durezza acqua fuorigrotta napoli"],
+    intro: "Fuorigrotta è un quartiere a ovest di Napoli, parte della Municipalità 10, con il polo dello stadio Maradona e della Mostra d'Oltremare. Il patrimonio edilizio è in larga parte del dopoguerra (anni '50-'70), con interventi successivi. L'acqua del rubinetto distribuita da ABC Napoli proviene dalle sorgenti appenniniche di Serino e Cassano Irpino: durezza medio-bassa (15-25 °F), profilo leggero. A Fuorigrotta il tema principale per la qualità a rubinetto è la manutenzione degli impianti condominiali del dopoguerra. La prossimità con Bagnoli, area SIN in bonifica, richiama attenzione sui controlli ambientali condotti da ARPAC nell'area ovest, anche se la rete idropotabile distribuita resta sotto controllo del gestore e delle ASL.",
+    buildingAge: "dopoguerra",
+    typicalRisks: ["Manutenzione colonne condominiali anni '50-'70", "Acciaio zincato che può rilasciare ferro/zinco", "Prossimità area SIN di Bagnoli in bonifica (controlli ambientali ARPAC)"],
+    sections: [
+      {
+        heading: "L'acqua a Fuorigrotta: contesto urbano e tubazioni",
+        paragraphs: [
+          "ABC Napoli gestisce captazione, adduzione e distribuzione dell'acqua potabile: la rete è alimentata principalmente dalle sorgenti appenniniche di Serino e Cassano Irpino e dalle altre fonti dell'Acquedotto della Campania. L'acqua è di origine sorgentizia, leggera, con durezza medio-bassa.",
+          "A Fuorigrotta, Municipalità 10, prevalgono palazzine del dopoguerra. La rete pubblica arriva con buoni standard al piede degli edifici; gli impianti interni risentono dello stato di manutenzione dei singoli condomini."
+        ]
+      },
+      {
+        heading: "Rischi specifici a Fuorigrotta",
+        paragraphs: [
+          "Negli edifici del dopoguerra il piombo è raro: il rischio principale è il deterioramento di tratti in acciaio zincato nelle colonne condominiali, con possibile rilascio di ferro e zinco. Nei palazzi degli anni '80 in poi i materiali sono in genere più stabili.",
+          "Il quartiere confina con Bagnoli, area dichiarata SIN (Sito di Interesse Nazionale) e oggetto di un percorso di bonifica per la presenza di contaminazioni nei suoli e nelle acque sotterranee legate all'ex acciaieria Italsider. La rete idropotabile distribuita da ABC Napoli è una filiera separata, controllata dal gestore e dalle ASL, e i monitoraggi ambientali nell'area sono curati da ARPA Campania (ARPAC)."
+        ]
+      },
+      {
+        heading: "Cosa controllare a casa a Fuorigrotta",
+        paragraphs: [
+          "Pannello consigliato: durezza, conducibilità, cloro residuo, microbiologica di base, ferro, zinco. Per chi desidera un quadro più completo si possono aggiungere metalli pesanti (piombo, rame, nichel) e parametri legati al monitoraggio ambientale dell'area ovest, da valutare caso per caso. Il prelievo va eseguito con metodi validati conformi a norme tecniche, da personale di un laboratorio qualificato.",
+          "In presenza di neonati o gravidanze, includere nitrati e arsenico."
+        ]
+      },
+      {
+        heading: "Quando fare un'analisi a Fuorigrotta",
+        paragraphs: [
+          "Trigger tipici: acquisto o ristrutturazione di un appartamento, comparsa di intorbidamenti o sapori metallici, arrivo di un neonato, esigenza di un quadro di riferimento personale dato il contesto ambientale della vicina area di Bagnoli."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Fuorigrotta?", a: "Negli edifici del dopoguerra il piombo è raro. Il rischio principale per i metalli a rubinetto è il rilascio di ferro o zinco da vecchie tubazioni in acciaio zincato." },
+      { q: "L'acqua di Fuorigrotta è dura?", a: "No, è un'acqua leggera, con durezza medio-bassa (15-25 °F), come tutta la rete napoletana alimentata dalle sorgenti appenniniche." },
+      { q: "Devo bollire l'acqua del rubinetto a Fuorigrotta?", a: "No, l'acqua di ABC Napoli è potabile e controllata. Bollire abbatte la microbiologia ma concentra eventuali metalli per evaporazione, quindi non protegge da contaminazioni chimiche." },
+      { q: "Dove trovo i referti del gestore?", a: "ABC Napoli pubblica i dati di qualità dell'acqua sul proprio sito; ARPA Campania (ARPAC) pubblica i monitoraggi ambientali dell'area ovest, incluso il SIN di Bagnoli; ASL Napoli pubblica i controlli sanitari." }
+    ],
+    ctaVariant: "completa",
+    ctaContext: "Analisi acqua del rubinetto a Fuorigrotta (Napoli) con un laboratorio qualificato: durezza, microbiologica, ferro, zinco e — su richiesta — metalli pesanti, anche in considerazione del contesto ambientale dell'area ovest.",
+    relatedNeighborhoods: ["napoli-bagnoli", "napoli-soccavo", "napoli-pianura"],
+  },
+  {
+    slug: "napoli-bagnoli",
+    citySlug: "napoli",
+    cityName: "Napoli",
+    neighborhoodName: "Bagnoli",
+    district: "Municipalità 10",
+    shortTitle: "Acqua del rubinetto a Bagnoli (Napoli): area SIN in bonifica",
+    metaDescription: "Acqua del rubinetto a Bagnoli, Napoli (Municipalità 10): gestore ABC Napoli, area ex Italsider classificata SIN in bonifica, ruolo dei controlli ARPAC.",
+    searchKeywords: ["acqua bagnoli napoli", "acqua rubinetto bagnoli", "qualita acqua napoli bagnoli", "bonifica bagnoli acqua", "durezza acqua bagnoli napoli"],
+    intro: "Bagnoli è il quartiere a ovest di Napoli, parte della Municipalità 10, segnato dalla storia industriale dell'ex acciaieria Italsider e oggi caratterizzato da un'area dichiarata Sito di Interesse Nazionale (SIN) in bonifica. Il patrimonio edilizio è misto, con porzioni storiche e palazzine del dopoguerra. L'acqua del rubinetto distribuita da ABC Napoli proviene dalle sorgenti appenniniche di Serino e Cassano Irpino: durezza medio-bassa (15-25 °F), profilo leggero. La rete idropotabile distribuita è una filiera distinta dalle matrici ambientali (suoli e acque sotterranee) oggetto della bonifica, ed è controllata dal gestore e dalle ASL; il monitoraggio ambientale dell'area è invece curato da ARPA Campania (ARPAC).",
+    buildingAge: "misto",
+    typicalRisks: ["Area SIN ex Italsider in bonifica (controlli ambientali ARPAC su suoli e acque sotterranee)", "Manutenzione condominiale impianti dopoguerra", "Stagnazione in immobili poco utilizzati"],
+    sections: [
+      {
+        heading: "L'acqua a Bagnoli: contesto urbano e tubazioni",
+        paragraphs: [
+          "ABC Napoli (Acqua Bene Comune Napoli S.p.A.) gestisce il servizio idrico integrato in città. La rete è alimentata principalmente dalle sorgenti appenniniche di Serino e Cassano Irpino e dalle altre fonti dell'Acquedotto della Campania, con acqua sorgentizia, durezza medio-bassa e profilo leggero.",
+          "A Bagnoli, Municipalità 10, l'edificato è misto: zone storiche, palazzine del dopoguerra e aree in trasformazione legate alla bonifica e ai progetti di riqualificazione. I tratti pubblici a monte del contatore sono soggetti a manutenzione periodica."
+        ]
+      },
+      {
+        heading: "Rischi specifici a Bagnoli",
+        paragraphs: [
+          "Bagnoli è dichiarata Sito di Interesse Nazionale (SIN) per la contaminazione dei suoli e delle acque sotterranee legata all'attività dell'ex acciaieria Italsider e di altri stabilimenti industriali dismessi. L'area è oggetto di un percorso di bonifica e i controlli ambientali sui suoli, sulle acque di falda e sulle acque marine costiere sono di competenza di ARPA Campania (ARPAC).",
+          "La rete idropotabile distribuita da ABC Napoli costituisce una filiera separata rispetto alle matrici ambientali oggetto della bonifica: i parametri di qualità dell'acqua al rubinetto sono regolati dal D.Lgs. 18/2023 e verificati dal gestore e dalle ASL. Per i singoli condomini il tema principale resta lo stato degli impianti interni: acciaio zincato in palazzine del dopoguerra può rilasciare ferro o zinco."
+        ]
+      },
+      {
+        heading: "Cosa controllare a casa a Bagnoli",
+        paragraphs: [
+          "Pannello consigliato: durezza, conducibilità, cloro residuo, microbiologica di base, ferro, zinco. Per chi vuole un quadro più ampio, dato il contesto dell'area, è ragionevole aggiungere metalli pesanti (piombo, rame, nichel) e — su valutazione caso per caso — parametri specifici legati al monitoraggio ambientale dell'area. Il prelievo va eseguito con metodi validati conformi a norme tecniche, da personale di un laboratorio qualificato.",
+          "In presenza di neonati o gravidanze, includere nitrati e arsenico."
+        ]
+      },
+      {
+        heading: "Quando fare un'analisi a Bagnoli",
+        paragraphs: [
+          "Trigger tipici: acquisto o ristrutturazione di un appartamento, esigenza di un quadro di riferimento personale data la storia ambientale dell'area, comparsa di intorbidamenti, arrivo di un neonato in casa."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Bagnoli?", a: "Negli edifici del dopoguerra il piombo è raro. Nei palazzi misti e nelle porzioni più antiche è plausibile trovare qualche tratto residuo nei collegamenti privati: il pannello con metalli pesanti lo evidenzia." },
+      { q: "L'acqua di Bagnoli è dura?", a: "No, è un'acqua leggera, con durezza medio-bassa (15-25 °F), come tutta la rete napoletana alimentata dalle sorgenti appenniniche." },
+      { q: "Devo bollire l'acqua del rubinetto a Bagnoli?", a: "No, l'acqua di ABC Napoli è potabile e controllata. Bollire abbatte la microbiologia ma concentra eventuali metalli o sali per evaporazione, quindi non è una strategia preventiva utile contro contaminazioni chimiche." },
+      { q: "Dove trovo i referti del gestore?", a: "ABC Napoli pubblica i dati di qualità dell'acqua sul proprio sito; ARPAC pubblica i monitoraggi ambientali del SIN di Bagnoli (suoli, falda, acque marine); ASL Napoli pubblica i controlli sanitari." }
+    ],
+    ctaVariant: "metalli-pesanti",
+    ctaContext: "Analisi acqua del rubinetto a Bagnoli (Napoli) con un laboratorio qualificato: durezza, microbiologica, metalli pesanti (piombo, rame, nichel, ferro, zinco) per un quadro di riferimento personale nell'area in bonifica.",
+    relatedNeighborhoods: ["napoli-fuorigrotta", "napoli-pianura", "napoli-soccavo"],
+  },
+  {
+    slug: "napoli-pianura",
+    citySlug: "napoli",
+    cityName: "Napoli",
+    neighborhoodName: "Pianura",
+    district: "Municipalità 9",
+    shortTitle: "Acqua del rubinetto a Pianura (Napoli): edifici dopoguerra e controlli",
+    metaDescription: "Acqua del rubinetto a Pianura, Napoli (Municipalità 9): gestore ABC Napoli, fonti appenniniche, edifici dopoguerra e cosa controllare nei condomini.",
+    searchKeywords: ["acqua pianura napoli", "acqua rubinetto pianura", "qualita acqua napoli pianura", "tubazioni acqua pianura", "durezza acqua pianura napoli"],
+    intro: "Pianura è un quartiere periferico nordovest di Napoli, parte della Municipalità 9, sviluppatosi prevalentemente nel dopoguerra con palazzine degli anni '60-'80. L'acqua del rubinetto distribuita da ABC Napoli proviene dalle sorgenti appenniniche di Serino e Cassano Irpino: durezza medio-bassa (15-25 °F), profilo leggero. A Pianura il tema principale per la qualità a rubinetto è lo stato di manutenzione degli impianti condominiali, soprattutto nei palazzi degli anni '60-'70 in cui sono frequenti colonne in acciaio zincato.",
+    buildingAge: "dopoguerra",
+    typicalRisks: ["Manutenzione colonne condominiali del dopoguerra", "Acciaio zincato deteriorato (ferro, zinco)", "Stagnazione in appartamenti poco utilizzati"],
+    sections: [
+      {
+        heading: "L'acqua a Pianura: contesto urbano e tubazioni",
+        paragraphs: [
+          "ABC Napoli cura captazione, adduzione e distribuzione dell'acqua potabile: la rete è alimentata principalmente dalle sorgenti appenniniche di Serino e Cassano Irpino, con acqua di origine sorgentizia, durezza medio-bassa e profilo leggero.",
+          "A Pianura, Municipalità 9, prevalgono palazzine del dopoguerra. La rete pubblica arriva con buoni standard al piede degli edifici; gli impianti interni dipendono dalle scelte costruttive e dalle manutenzioni dei singoli condomini."
+        ]
+      },
+      {
+        heading: "Rischi specifici a Pianura",
+        paragraphs: [
+          "Negli edifici del dopoguerra il piombo è raro. Il rischio principale per i metalli al rubinetto è il deterioramento di colonne in acciaio zincato, con possibile rilascio di ferro e zinco. Nei palazzi più recenti i materiali sono in genere più stabili.",
+          "Da valutare anche la stagnazione in appartamenti poco utilizzati: dopo periodi di chiusura conviene far scorrere l'acqua prima dell'uso alimentare."
+        ]
+      },
+      {
+        heading: "Cosa controllare a casa a Pianura",
+        paragraphs: [
+          "Pannello consigliato: durezza, conducibilità, cloro residuo, microbiologica di base, ferro, zinco. Nei palazzi degli anni '60 con dubbi sull'impianto si possono aggiungere piombo e rame. Il prelievo va eseguito con metodi validati conformi a norme tecniche, da personale di un laboratorio qualificato.",
+          "In presenza di neonati o gravidanze, aggiungere nitrati e arsenico."
+        ]
+      },
+      {
+        heading: "Quando fare un'analisi a Pianura",
+        paragraphs: [
+          "Trigger tipici: acquisto o ristrutturazione di un appartamento, comparsa di intorbidamenti o sapori metallici, arrivo di un neonato in casa, riapertura di un'abitazione chiusa a lungo."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Pianura?", a: "Negli edifici del dopoguerra il piombo è raro. Il rischio principale per i metalli a rubinetto è il rilascio di ferro o zinco da vecchie tubazioni in acciaio zincato." },
+      { q: "L'acqua di Pianura è dura?", a: "No, è un'acqua leggera, con durezza medio-bassa (15-25 °F), come tutta la rete napoletana alimentata dalle sorgenti appenniniche." },
+      { q: "Devo bollire l'acqua del rubinetto a Pianura?", a: "No, l'acqua di ABC Napoli è potabile e controllata. Bollire abbatte la microbiologia ma concentra eventuali metalli per evaporazione." },
+      { q: "Dove trovo i referti del gestore?", a: "ABC Napoli pubblica i dati di qualità sul proprio sito; ARPAC e ASL Napoli pubblicano i rispettivi controlli ambientali e sanitari." }
+    ],
+    ctaVariant: "completa",
+    ctaContext: "Analisi acqua del rubinetto a Pianura (Napoli) con un laboratorio qualificato: durezza, microbiologica, ferro, zinco nelle colonne dei palazzi del dopoguerra.",
+    relatedNeighborhoods: ["napoli-soccavo", "napoli-fuorigrotta", "napoli-bagnoli"],
+  },
+  {
+    slug: "napoli-soccavo",
+    citySlug: "napoli",
+    cityName: "Napoli",
+    neighborhoodName: "Soccavo",
+    district: "Municipalità 9",
+    shortTitle: "Acqua del rubinetto a Soccavo (Napoli): condomini dopoguerra e impianti",
+    metaDescription: "Acqua del rubinetto a Soccavo, Napoli (Municipalità 9): gestore ABC Napoli, fonti appenniniche, condomini dopoguerra e cosa controllare in casa.",
+    searchKeywords: ["acqua soccavo napoli", "acqua rubinetto soccavo", "qualita acqua napoli soccavo", "tubazioni acqua soccavo", "durezza acqua soccavo napoli"],
+    intro: "Soccavo è un quartiere a ovest di Napoli, parte della Municipalità 9, sviluppatosi soprattutto nel dopoguerra con grandi complessi residenziali degli anni '60-'80. L'acqua del rubinetto distribuita da ABC Napoli proviene dalle sorgenti appenniniche di Serino e Cassano Irpino: durezza medio-bassa (15-25 °F), profilo leggero. A Soccavo il tema centrale per la qualità a rubinetto è la manutenzione degli impianti condominiali nei grandi edifici del dopoguerra, dove sono frequenti colonne in acciaio zincato.",
+    buildingAge: "dopoguerra",
+    typicalRisks: ["Manutenzione colonne condominiali grandi complessi", "Acciaio zincato deteriorato (ferro, zinco)", "Stagnazione nei tratti interni di grandi edifici"],
+    sections: [
+      {
+        heading: "L'acqua a Soccavo: contesto urbano e tubazioni",
+        paragraphs: [
+          "ABC Napoli gestisce il servizio idrico integrato di Napoli: la rete è alimentata principalmente dalle sorgenti appenniniche di Serino e Cassano Irpino, con acqua sorgentizia, durezza medio-bassa e profilo leggero.",
+          "A Soccavo, Municipalità 9, prevalgono grandi complessi residenziali del dopoguerra. La rete pubblica arriva con buoni standard al piede dei fabbricati; gli impianti interni dipendono dalle scelte costruttive e dalle manutenzioni condominiali."
+        ]
+      },
+      {
+        heading: "Rischi specifici a Soccavo",
+        paragraphs: [
+          "Negli edifici del dopoguerra il piombo è raro. Il rischio principale per i metalli a rubinetto è il rilascio di ferro e zinco da colonne in acciaio zincato deteriorate, specie nei grandi complessi non oggetto di rifacimenti recenti.",
+          "La conformazione dei grandi edifici, con lunghi tratti interni di tubazione, accentua il tema della stagnazione: appartamenti poco usati lasciano l'acqua ferma a lungo nei propri tratti interni."
+        ]
+      },
+      {
+        heading: "Cosa controllare a casa a Soccavo",
+        paragraphs: [
+          "Pannello consigliato: durezza, conducibilità, cloro residuo, microbiologica di base, ferro, zinco. Per edifici di inizio anni '60 con impianti originari si possono aggiungere piombo e rame. Il prelievo va eseguito con metodi validati conformi a norme tecniche, da personale di un laboratorio qualificato.",
+          "In presenza di neonati o gravidanze, aggiungere nitrati e arsenico."
+        ]
+      },
+      {
+        heading: "Quando fare un'analisi a Soccavo",
+        paragraphs: [
+          "Trigger tipici: acquisto o ristrutturazione, comparsa di intorbidamenti o sapori metallici, arrivo di un neonato in casa, riapertura di un'abitazione chiusa a lungo."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Soccavo?", a: "Negli edifici del dopoguerra il piombo è raro. Il rischio principale per i metalli a rubinetto è il rilascio di ferro o zinco da vecchie tubazioni in acciaio zincato." },
+      { q: "L'acqua di Soccavo è dura?", a: "No, è un'acqua leggera, con durezza medio-bassa (15-25 °F), come tutta la rete napoletana alimentata dalle sorgenti appenniniche." },
+      { q: "Devo bollire l'acqua del rubinetto a Soccavo?", a: "No, l'acqua di ABC Napoli è potabile e controllata. Bollire abbatte la microbiologia ma concentra eventuali metalli per evaporazione." },
+      { q: "Dove trovo i referti del gestore?", a: "ABC Napoli pubblica i dati di qualità sul proprio sito; ARPAC e ASL Napoli pubblicano i rispettivi controlli." }
+    ],
+    ctaVariant: "completa",
+    ctaContext: "Analisi acqua del rubinetto a Soccavo (Napoli) con un laboratorio qualificato: durezza, microbiologica, ferro, zinco nelle colonne dei grandi complessi del dopoguerra.",
+    relatedNeighborhoods: ["napoli-pianura", "napoli-fuorigrotta", "napoli-arenella"],
+  },
+  {
+    slug: "napoli-secondigliano",
+    citySlug: "napoli",
+    cityName: "Napoli",
+    neighborhoodName: "Secondigliano",
+    district: "Municipalità 7",
+    shortTitle: "Acqua del rubinetto a Secondigliano (Napoli): edilizia popolare nord",
+    metaDescription: "Acqua del rubinetto a Secondigliano, Napoli (Municipalità 7): gestore ABC Napoli, fonti appenniniche, edilizia popolare del dopoguerra e cosa controllare.",
+    searchKeywords: ["acqua secondigliano napoli", "acqua rubinetto secondigliano", "qualita acqua napoli secondigliano", "tubazioni acqua secondigliano", "durezza acqua secondigliano napoli"],
+    intro: "Secondigliano è un quartiere popolare a nord di Napoli, parte della Municipalità 7, segnato da un'intensa edilizia pubblica e residenziale del dopoguerra. L'acqua del rubinetto distribuita da ABC Napoli proviene dalle sorgenti appenniniche di Serino e Cassano Irpino: durezza medio-bassa (15-25 °F), profilo leggero. A Secondigliano il tema principale per la qualità a rubinetto è lo stato di manutenzione degli impianti condominiali nei grandi complessi popolari, dove sono frequenti colonne in acciaio zincato e dove le manutenzioni straordinarie hanno coperto realtà condominiali molto diverse.",
+    buildingAge: "dopoguerra",
+    typicalRisks: ["Manutenzione condominiale grandi complessi popolari", "Acciaio zincato deteriorato (ferro, zinco)", "Stagnazione nei tratti interni"],
+    sections: [
+      {
+        heading: "L'acqua a Secondigliano: contesto urbano e tubazioni",
+        paragraphs: [
+          "ABC Napoli (Acqua Bene Comune Napoli S.p.A.) gestisce il servizio idrico integrato della città: la rete è alimentata principalmente dalle sorgenti appenniniche di Serino e Cassano Irpino, con acqua sorgentizia, durezza medio-bassa e profilo leggero.",
+          "A Secondigliano, Municipalità 7, prevalgono complessi residenziali popolari del dopoguerra. La rete pubblica arriva con buoni standard al piede dei fabbricati; gli impianti interni dipendono dallo stato di manutenzione dei singoli edifici."
+        ]
+      },
+      {
+        heading: "Rischi specifici a Secondigliano",
+        paragraphs: [
+          "Negli edifici del dopoguerra il piombo è raro. Il rischio principale per i metalli a rubinetto è il rilascio di ferro e zinco da colonne in acciaio zincato deteriorate, specie nei complessi più datati.",
+          "La grande dimensione di alcuni edifici, con lunghi tratti interni di tubazione, può favorire stagnazione: nei punti più distali dell'impianto conviene far scorrere l'acqua prima dell'uso alimentare."
+        ]
+      },
+      {
+        heading: "Cosa controllare a casa a Secondigliano",
+        paragraphs: [
+          "Pannello consigliato: durezza, conducibilità, cloro residuo, microbiologica di base, ferro, zinco. Per edifici di inizio anni '60 con impianti originari si possono aggiungere piombo e rame. Il prelievo va eseguito con metodi validati conformi a norme tecniche, da personale di un laboratorio qualificato.",
+          "In presenza di neonati o gravidanze, aggiungere nitrati e arsenico."
+        ]
+      },
+      {
+        heading: "Quando fare un'analisi a Secondigliano",
+        paragraphs: [
+          "Trigger tipici: acquisto o ristrutturazione, comparsa di intorbidamenti o sapori metallici, arrivo di un neonato in casa, riapertura di un'abitazione chiusa a lungo."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Secondigliano?", a: "Negli edifici del dopoguerra il piombo è raro. Il rischio principale per i metalli a rubinetto è il rilascio di ferro o zinco da vecchie tubazioni in acciaio zincato." },
+      { q: "L'acqua di Secondigliano è dura?", a: "No, è un'acqua leggera, con durezza medio-bassa (15-25 °F), come tutta la rete napoletana alimentata dalle sorgenti appenniniche." },
+      { q: "Devo bollire l'acqua del rubinetto a Secondigliano?", a: "No, l'acqua di ABC Napoli è potabile e controllata. Bollire abbatte la microbiologia ma concentra eventuali metalli per evaporazione." },
+      { q: "Dove trovo i referti del gestore?", a: "ABC Napoli pubblica i dati di qualità sul proprio sito; ARPAC e ASL Napoli pubblicano i rispettivi controlli." }
+    ],
+    ctaVariant: "completa",
+    ctaContext: "Analisi acqua del rubinetto a Secondigliano (Napoli) con un laboratorio qualificato: durezza, microbiologica, ferro, zinco nei grandi complessi popolari del dopoguerra.",
+    relatedNeighborhoods: ["napoli-scampia", "napoli-capodimonte", "napoli-arenella"],
+  },
+  {
+    slug: "napoli-scampia",
+    citySlug: "napoli",
+    cityName: "Napoli",
+    neighborhoodName: "Scampia",
+    district: "Municipalità 8",
+    shortTitle: "Acqua del rubinetto a Scampia (Napoli): edilizia popolare e impianti",
+    metaDescription: "Acqua del rubinetto a Scampia, Napoli (Municipalità 8): gestore ABC Napoli, fonti appenniniche, edilizia popolare del dopoguerra e cosa controllare in casa.",
+    searchKeywords: ["acqua scampia napoli", "acqua rubinetto scampia", "qualita acqua napoli scampia", "tubazioni acqua scampia", "durezza acqua scampia napoli"],
+    intro: "Scampia è un quartiere popolare a nord di Napoli, parte della Municipalità 8, sviluppatosi dagli anni '60-'70 con grandi interventi di edilizia pubblica. L'acqua del rubinetto distribuita da ABC Napoli proviene dalle sorgenti appenniniche di Serino e Cassano Irpino: durezza medio-bassa (15-25 °F), profilo leggero. A Scampia il tema principale per la qualità a rubinetto è lo stato degli impianti condominiali nei grandi complessi del dopoguerra, dove le manutenzioni straordinarie e i programmi di riqualificazione hanno interessato solo parte del patrimonio edilizio.",
+    buildingAge: "dopoguerra",
+    typicalRisks: ["Manutenzione condominiale grandi complessi popolari", "Acciaio zincato deteriorato (ferro, zinco)", "Stagnazione nei lunghi tratti interni"],
+    sections: [
+      {
+        heading: "L'acqua a Scampia: contesto urbano e tubazioni",
+        paragraphs: [
+          "ABC Napoli gestisce il servizio idrico integrato della città: la rete è alimentata principalmente dalle sorgenti appenniniche di Serino e Cassano Irpino, con acqua sorgentizia, durezza medio-bassa e profilo leggero.",
+          "A Scampia, Municipalità 8, prevalgono grandi complessi popolari del dopoguerra. La rete pubblica arriva al piede dei fabbricati con buoni standard; gli impianti interni dipendono dallo stato di manutenzione e dai programmi di riqualificazione dei singoli edifici."
+        ]
+      },
+      {
+        heading: "Rischi specifici a Scampia",
+        paragraphs: [
+          "Negli edifici del dopoguerra il piombo è raro. Il rischio principale per i metalli a rubinetto è il rilascio di ferro e zinco da colonne in acciaio zincato deteriorate.",
+          "La grande dimensione di alcuni complessi, con lunghi tratti interni di tubazione, può favorire stagnazione: nei punti più distali dell'impianto conviene far scorrere l'acqua prima dell'uso alimentare."
+        ]
+      },
+      {
+        heading: "Cosa controllare a casa a Scampia",
+        paragraphs: [
+          "Pannello consigliato: durezza, conducibilità, cloro residuo, microbiologica di base, ferro, zinco. Per edifici di inizio anni '60 con impianti originari si possono aggiungere piombo e rame. Il prelievo va eseguito con metodi validati conformi a norme tecniche, da personale di un laboratorio qualificato.",
+          "In presenza di neonati o gravidanze, aggiungere nitrati e arsenico."
+        ]
+      },
+      {
+        heading: "Quando fare un'analisi a Scampia",
+        paragraphs: [
+          "Trigger tipici: acquisto o ristrutturazione, comparsa di intorbidamenti o sapori metallici, arrivo di un neonato in casa, riapertura di un'abitazione chiusa a lungo."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Scampia?", a: "Negli edifici del dopoguerra il piombo è raro. Il rischio principale per i metalli a rubinetto è il rilascio di ferro o zinco da vecchie tubazioni in acciaio zincato." },
+      { q: "L'acqua di Scampia è dura?", a: "No, è un'acqua leggera, con durezza medio-bassa (15-25 °F), come tutta la rete napoletana alimentata dalle sorgenti appenniniche." },
+      { q: "Devo bollire l'acqua del rubinetto a Scampia?", a: "No, l'acqua di ABC Napoli è potabile e controllata. Bollire abbatte la microbiologia ma concentra eventuali metalli per evaporazione." },
+      { q: "Dove trovo i referti del gestore?", a: "ABC Napoli pubblica i dati di qualità sul proprio sito; ARPAC e ASL Napoli pubblicano i rispettivi controlli." }
+    ],
+    ctaVariant: "completa",
+    ctaContext: "Analisi acqua del rubinetto a Scampia (Napoli) con un laboratorio qualificato: durezza, microbiologica, ferro, zinco nei grandi complessi popolari del dopoguerra.",
+    relatedNeighborhoods: ["napoli-secondigliano", "napoli-capodimonte", "napoli-soccavo"],
+  },
+  {
+    slug: "napoli-poggioreale",
+    citySlug: "napoli",
+    cityName: "Napoli",
+    neighborhoodName: "Poggioreale",
+    district: "Municipalità 4",
+    shortTitle: "Acqua del rubinetto a Poggioreale (Napoli): area mista e controlli",
+    metaDescription: "Acqua del rubinetto a Poggioreale, Napoli (Municipalità 4): gestore ABC Napoli, area cimiteri/industriale, edilizia mista e cosa controllare in casa.",
+    searchKeywords: ["acqua poggioreale napoli", "acqua rubinetto poggioreale", "qualita acqua napoli poggioreale", "tubazioni acqua poggioreale", "durezza acqua poggioreale napoli"],
+    intro: "Poggioreale è un quartiere a est del centro di Napoli, parte della Municipalità 4, caratterizzato dalla presenza dei grandi cimiteri, di aree artigianali e industriali e di un edificato residenziale eterogeneo che spazia dal primo Novecento agli interventi del dopoguerra. L'acqua del rubinetto distribuita da ABC Napoli proviene dalle sorgenti appenniniche di Serino e Cassano Irpino: durezza medio-bassa (15-25 °F), profilo leggero. A Poggioreale il tema principale per la qualità a rubinetto è la convivenza tra edifici di età diverse, con impianti interni di tipologia mista.",
+    buildingAge: "misto",
+    typicalRisks: ["Impianti misti tra edifici storici e dopoguerra", "Possibile piombo in palazzi pre-1960", "Stagnazione in uffici e attività chiuse nei weekend"],
+    sections: [
+      {
+        heading: "L'acqua a Poggioreale: contesto urbano e tubazioni",
+        paragraphs: [
+          "ABC Napoli (Acqua Bene Comune Napoli S.p.A.) cura captazione, adduzione e distribuzione: la rete è alimentata principalmente dalle sorgenti appenniniche di Serino e Cassano Irpino, con acqua sorgentizia, durezza medio-bassa e profilo leggero.",
+          "A Poggioreale, Municipalità 4, gli edifici sono eterogenei: palazzine primi-novecentesche, edifici del dopoguerra e interventi residenziali più recenti. I tratti pubblici a monte del contatore sono soggetti a manutenzione periodica."
+        ]
+      },
+      {
+        heading: "Rischi specifici a Poggioreale",
+        paragraphs: [
+          "Nei palazzi pre-1960 è plausibile la presenza di tratti residui in piombo nei collegamenti privati. Negli edifici del dopoguerra il piombo è raro, ma può comparire ferro o zinco da acciaio zincato deteriorato.",
+          "La presenza di uffici, attività artigianali e magazzini rende rilevante il tema della stagnazione: ambienti chiusi nei weekend lasciano l'acqua ferma a lungo nei tratti interni."
+        ]
+      },
+      {
+        heading: "Cosa controllare a casa a Poggioreale",
+        paragraphs: [
+          "Pannello consigliato: durezza, conducibilità, cloro residuo, microbiologica di base; nei palazzi pre-1980 anche piombo, rame e nichel; nei palazzi del dopoguerra ferro e zinco. Il prelievo va eseguito con metodi validati conformi a norme tecniche, da personale di un laboratorio qualificato.",
+          "In presenza di neonati o gravidanze, aggiungere nitrati e arsenico."
+        ]
+      },
+      {
+        heading: "Quando fare un'analisi a Poggioreale",
+        paragraphs: [
+          "Trigger tipici: acquisto o ristrutturazione, gestione di uffici o attività chiuse nei weekend, dubbi sull'età degli impianti condominiali, cambio di sapore o colore dell'acqua."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Poggioreale?", a: "Nei palazzi pre-1960 è plausibile trovare tratti residui in piombo. Negli edifici del dopoguerra il piombo è raro." },
+      { q: "L'acqua di Poggioreale è dura?", a: "No, è un'acqua leggera, con durezza medio-bassa (15-25 °F), come tutta la rete napoletana alimentata dalle sorgenti appenniniche." },
+      { q: "Devo bollire l'acqua del rubinetto a Poggioreale?", a: "No, l'acqua di ABC Napoli è potabile e controllata. Bollire abbatte la microbiologia ma concentra eventuali metalli per evaporazione." },
+      { q: "Dove trovo i referti del gestore?", a: "ABC Napoli pubblica i dati di qualità sul proprio sito; ARPAC e ASL Napoli pubblicano i rispettivi controlli." }
+    ],
+    ctaVariant: "completa",
+    ctaContext: "Analisi acqua del rubinetto a Poggioreale (Napoli) con un laboratorio qualificato: durezza, microbiologica, metalli (piombo, rame, ferro, zinco) negli impianti misti del quartiere.",
+    relatedNeighborhoods: ["napoli-centro-storico", "napoli-san-giovanni-a-teduccio", "napoli-barra"],
+  },
+  {
+    slug: "napoli-san-giovanni-a-teduccio",
+    citySlug: "napoli",
+    cityName: "Napoli",
+    neighborhoodName: "San Giovanni a Teduccio",
+    district: "Municipalità 6",
+    shortTitle: "Acqua del rubinetto a San Giovanni a Teduccio (Napoli): ex industriale",
+    metaDescription: "Acqua del rubinetto a San Giovanni a Teduccio, Napoli (Municipalità 6): gestore ABC Napoli, ex zona industriale orientale, edilizia mista e controlli.",
+    searchKeywords: ["acqua san giovanni a teduccio napoli", "acqua rubinetto san giovanni a teduccio", "qualita acqua napoli san giovanni a teduccio", "tubazioni acqua san giovanni a teduccio", "durezza acqua san giovanni a teduccio napoli"],
+    intro: "San Giovanni a Teduccio è un quartiere della zona orientale di Napoli, parte della Municipalità 6, con un passato industriale importante e un patrimonio edilizio misto tra edifici di primo Novecento, palazzine del dopoguerra e progetti di riqualificazione urbana. L'acqua del rubinetto distribuita da ABC Napoli proviene dalle sorgenti appenniniche di Serino e Cassano Irpino: durezza medio-bassa (15-25 °F), profilo leggero. A San Giovanni a Teduccio il tema principale per la qualità a rubinetto è lo stato degli impianti condominiali in un contesto edilizio misto e in trasformazione.",
+    buildingAge: "misto",
+    typicalRisks: ["Impianti misti tra edifici storici e dopoguerra", "Possibile piombo in palazzi pre-1960", "Acciaio zincato deteriorato (ferro, zinco) in edifici del dopoguerra"],
+    sections: [
+      {
+        heading: "L'acqua a San Giovanni a Teduccio: contesto urbano e tubazioni",
+        paragraphs: [
+          "ABC Napoli gestisce il servizio idrico integrato in città: la rete è alimentata principalmente dalle sorgenti appenniniche di Serino e Cassano Irpino, con acqua sorgentizia, durezza medio-bassa e profilo leggero.",
+          "A San Giovanni a Teduccio, Municipalità 6, gli edifici sono eterogenei: palazzine primi-novecentesche, complessi del dopoguerra e nuovi interventi di riqualificazione. I tratti pubblici a monte del contatore sono soggetti a manutenzione periodica."
+        ]
+      },
+      {
+        heading: "Rischi specifici a San Giovanni a Teduccio",
+        paragraphs: [
+          "Nei palazzi pre-1960 è plausibile trovare tratti residui in piombo nei collegamenti privati. Negli edifici del dopoguerra il rischio piombo è basso, ma può comparire ferro o zinco da acciaio zincato deteriorato.",
+          "Il passato industriale del quartiere riguarda principalmente lo stato di suoli e acque sotterranee in specifiche aree dismesse, oggetto di monitoraggi ambientali da parte di ARPA Campania (ARPAC). La rete idropotabile distribuita resta una filiera separata, controllata da ABC Napoli e dalle ASL."
+        ]
+      },
+      {
+        heading: "Cosa controllare a casa a San Giovanni a Teduccio",
+        paragraphs: [
+          "Pannello consigliato: durezza, conducibilità, cloro residuo, microbiologica di base; nei palazzi pre-1980 anche piombo, rame e nichel; nei palazzi del dopoguerra ferro e zinco. Il prelievo va eseguito con metodi validati conformi a norme tecniche, da personale di un laboratorio qualificato.",
+          "In presenza di neonati o gravidanze, aggiungere nitrati e arsenico."
+        ]
+      },
+      {
+        heading: "Quando fare un'analisi a San Giovanni a Teduccio",
+        paragraphs: [
+          "Trigger tipici: acquisto o ristrutturazione di un appartamento, comparsa di intorbidamenti o sapori metallici, arrivo di un neonato in casa, dubbi sull'età degli impianti condominiali."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a San Giovanni a Teduccio?", a: "Nei palazzi pre-1960 è plausibile trovare tratti residui in piombo. Negli edifici del dopoguerra il piombo è raro." },
+      { q: "L'acqua di San Giovanni a Teduccio è dura?", a: "No, è un'acqua leggera, con durezza medio-bassa (15-25 °F), come tutta la rete napoletana alimentata dalle sorgenti appenniniche." },
+      { q: "Devo bollire l'acqua del rubinetto a San Giovanni a Teduccio?", a: "No, l'acqua di ABC Napoli è potabile e controllata. Bollire abbatte la microbiologia ma concentra eventuali metalli per evaporazione." },
+      { q: "Dove trovo i referti del gestore?", a: "ABC Napoli pubblica i dati di qualità sul proprio sito; ARPAC e ASL Napoli pubblicano i rispettivi controlli ambientali e sanitari." }
+    ],
+    ctaVariant: "completa",
+    ctaContext: "Analisi acqua del rubinetto a San Giovanni a Teduccio (Napoli) con un laboratorio qualificato: durezza, microbiologica, metalli (piombo, rame, ferro, zinco) nel contesto edilizio misto del quartiere orientale.",
+    relatedNeighborhoods: ["napoli-barra", "napoli-ponticelli", "napoli-poggioreale"],
+  },
+  {
+    slug: "napoli-barra",
+    citySlug: "napoli",
+    cityName: "Napoli",
+    neighborhoodName: "Barra",
+    district: "Municipalità 6",
+    shortTitle: "Acqua del rubinetto a Barra (Napoli): zona orientale ed edilizia mista",
+    metaDescription: "Acqua del rubinetto a Barra, Napoli (Municipalità 6): gestore ABC Napoli, zona orientale, edilizia mista e cosa controllare nei condomini.",
+    searchKeywords: ["acqua barra napoli", "acqua rubinetto barra", "qualita acqua napoli barra", "tubazioni acqua barra", "durezza acqua barra napoli"],
+    intro: "Barra è un quartiere della zona orientale di Napoli, parte della Municipalità 6, con un patrimonio edilizio misto fatto di nuclei storici, palazzine del dopoguerra e zone artigianali. L'acqua del rubinetto distribuita da ABC Napoli proviene dalle sorgenti appenniniche di Serino e Cassano Irpino: durezza medio-bassa (15-25 °F), profilo leggero. A Barra il tema principale per la qualità a rubinetto è lo stato degli impianti condominiali in un edificato eterogeneo per epoca e tipologia.",
+    buildingAge: "misto",
+    typicalRisks: ["Impianti misti tra nuclei storici e dopoguerra", "Possibile piombo in palazzi pre-1960", "Acciaio zincato deteriorato (ferro, zinco) in edifici dopoguerra"],
+    sections: [
+      {
+        heading: "L'acqua a Barra: contesto urbano e tubazioni",
+        paragraphs: [
+          "ABC Napoli gestisce captazione, adduzione e distribuzione dell'acqua potabile: la rete è alimentata principalmente dalle sorgenti appenniniche di Serino e Cassano Irpino, con acqua sorgentizia, durezza medio-bassa e profilo leggero.",
+          "A Barra, Municipalità 6, l'edificato è misto. I tratti pubblici a monte del contatore sono soggetti a manutenzione periodica; gli impianti interni riflettono l'età e lo stato di manutenzione dei singoli condomini."
+        ]
+      },
+      {
+        heading: "Rischi specifici a Barra",
+        paragraphs: [
+          "Nei palazzi pre-1960 è plausibile trovare tratti residui in piombo nei collegamenti privati. Negli edifici del dopoguerra il rischio piombo è basso, ma può comparire ferro o zinco da acciaio zincato deteriorato.",
+          "Per le attività artigianali presenti in zona vale l'invito a far scorrere l'acqua dopo periodi di chiusura prima dell'uso alimentare."
+        ]
+      },
+      {
+        heading: "Cosa controllare a casa a Barra",
+        paragraphs: [
+          "Pannello consigliato: durezza, conducibilità, cloro residuo, microbiologica di base; nei palazzi pre-1980 anche piombo, rame e nichel; nei palazzi del dopoguerra ferro e zinco. Il prelievo va eseguito con metodi validati conformi a norme tecniche, da personale di un laboratorio qualificato.",
+          "In presenza di neonati o gravidanze, aggiungere nitrati e arsenico."
+        ]
+      },
+      {
+        heading: "Quando fare un'analisi a Barra",
+        paragraphs: [
+          "Trigger tipici: acquisto o ristrutturazione di un appartamento, comparsa di intorbidamenti, arrivo di un neonato in casa, dubbi sull'età degli impianti condominiali."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Barra?", a: "Nei palazzi pre-1960 è plausibile trovare tratti residui in piombo. Negli edifici del dopoguerra il piombo è raro." },
+      { q: "L'acqua di Barra è dura?", a: "No, è un'acqua leggera, con durezza medio-bassa (15-25 °F), come tutta la rete napoletana alimentata dalle sorgenti appenniniche." },
+      { q: "Devo bollire l'acqua del rubinetto a Barra?", a: "No, l'acqua di ABC Napoli è potabile e controllata. Bollire abbatte la microbiologia ma concentra eventuali metalli per evaporazione." },
+      { q: "Dove trovo i referti del gestore?", a: "ABC Napoli pubblica i dati di qualità sul proprio sito; ARPAC e ASL Napoli pubblicano i rispettivi controlli." }
+    ],
+    ctaVariant: "completa",
+    ctaContext: "Analisi acqua del rubinetto a Barra (Napoli) con un laboratorio qualificato: durezza, microbiologica, metalli (piombo, rame, ferro, zinco) nel contesto edilizio misto del quartiere orientale.",
+    relatedNeighborhoods: ["napoli-san-giovanni-a-teduccio", "napoli-ponticelli", "napoli-poggioreale"],
+  },
+  {
+    slug: "napoli-ponticelli",
+    citySlug: "napoli",
+    cityName: "Napoli",
+    neighborhoodName: "Ponticelli",
+    district: "Municipalità 6",
+    shortTitle: "Acqua del rubinetto a Ponticelli (Napoli): popolare orientale",
+    metaDescription: "Acqua del rubinetto a Ponticelli, Napoli (Municipalità 6): gestore ABC Napoli, edilizia popolare orientale del dopoguerra e cosa controllare in casa.",
+    searchKeywords: ["acqua ponticelli napoli", "acqua rubinetto ponticelli", "qualita acqua napoli ponticelli", "tubazioni acqua ponticelli", "durezza acqua ponticelli napoli"],
+    intro: "Ponticelli è un quartiere popolare della zona orientale di Napoli, parte della Municipalità 6, con un patrimonio edilizio in larga parte del dopoguerra e degli interventi post-terremoto del 1980. L'acqua del rubinetto distribuita da ABC Napoli proviene dalle sorgenti appenniniche di Serino e Cassano Irpino: durezza medio-bassa (15-25 °F), profilo leggero. A Ponticelli il tema principale per la qualità a rubinetto è lo stato di manutenzione delle colonne condominiali nei complessi residenziali popolari.",
+    buildingAge: "dopoguerra",
+    typicalRisks: ["Manutenzione condominiale complessi popolari", "Acciaio zincato deteriorato (ferro, zinco)", "Stagnazione nei tratti interni"],
+    sections: [
+      {
+        heading: "L'acqua a Ponticelli: contesto urbano e tubazioni",
+        paragraphs: [
+          "ABC Napoli gestisce il servizio idrico integrato di Napoli: la rete è alimentata principalmente dalle sorgenti appenniniche di Serino e Cassano Irpino, con acqua sorgentizia, durezza medio-bassa e profilo leggero.",
+          "A Ponticelli, Municipalità 6, prevalgono complessi residenziali del dopoguerra e degli interventi post-terremoto. La rete pubblica arriva con buoni standard al piede dei fabbricati; gli impianti interni dipendono dallo stato di manutenzione dei singoli condomini."
+        ]
+      },
+      {
+        heading: "Rischi specifici a Ponticelli",
+        paragraphs: [
+          "Negli edifici del dopoguerra il piombo è raro. Il rischio principale per i metalli a rubinetto è il rilascio di ferro e zinco da colonne in acciaio zincato deteriorate.",
+          "Da considerare la stagnazione in appartamenti poco utilizzati e nei punti più distali degli impianti dei grandi complessi."
+        ]
+      },
+      {
+        heading: "Cosa controllare a casa a Ponticelli",
+        paragraphs: [
+          "Pannello consigliato: durezza, conducibilità, cloro residuo, microbiologica di base, ferro, zinco. Per edifici di inizio anni '60 si possono aggiungere piombo e rame. Il prelievo va eseguito con metodi validati conformi a norme tecniche, da personale di un laboratorio qualificato.",
+          "In presenza di neonati o gravidanze, aggiungere nitrati e arsenico."
+        ]
+      },
+      {
+        heading: "Quando fare un'analisi a Ponticelli",
+        paragraphs: [
+          "Trigger tipici: acquisto o ristrutturazione, comparsa di intorbidamenti o sapori metallici, arrivo di un neonato in casa, riapertura di un'abitazione chiusa a lungo."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Ponticelli?", a: "Negli edifici del dopoguerra il piombo è raro. Il rischio principale per i metalli a rubinetto è il rilascio di ferro o zinco da vecchie tubazioni in acciaio zincato." },
+      { q: "L'acqua di Ponticelli è dura?", a: "No, è un'acqua leggera, con durezza medio-bassa (15-25 °F), come tutta la rete napoletana alimentata dalle sorgenti appenniniche." },
+      { q: "Devo bollire l'acqua del rubinetto a Ponticelli?", a: "No, l'acqua di ABC Napoli è potabile e controllata. Bollire abbatte la microbiologia ma concentra eventuali metalli per evaporazione." },
+      { q: "Dove trovo i referti del gestore?", a: "ABC Napoli pubblica i dati di qualità sul proprio sito; ARPAC e ASL Napoli pubblicano i rispettivi controlli." }
+    ],
+    ctaVariant: "completa",
+    ctaContext: "Analisi acqua del rubinetto a Ponticelli (Napoli) con un laboratorio qualificato: durezza, microbiologica, ferro, zinco nelle colonne condominiali dei complessi popolari orientali.",
+    relatedNeighborhoods: ["napoli-barra", "napoli-san-giovanni-a-teduccio", "napoli-poggioreale"],
+  },
+  {
+    slug: "napoli-mergellina",
+    citySlug: "napoli",
+    cityName: "Napoli",
+    neighborhoodName: "Mergellina",
+    district: "Municipalità 1",
+    shortTitle: "Acqua del rubinetto a Mergellina (Napoli): lungomare e palazzi storici",
+    metaDescription: "Acqua del rubinetto a Mergellina, Napoli (Municipalità 1): gestore ABC Napoli, edifici primo Novecento, lungomare e cosa controllare in casa.",
+    searchKeywords: ["acqua mergellina napoli", "acqua rubinetto mergellina", "qualita acqua napoli mergellina", "tubazioni piombo mergellina", "durezza acqua mergellina napoli"],
+    intro: "Mergellina è il tratto di lungomare di Napoli a ovest di Chiaia, parte della Municipalità 1, con un patrimonio edilizio prevalentemente del primo Novecento e degli anni '20-'40, integrato da palazzine successive. L'acqua del rubinetto distribuita da ABC Napoli proviene dalle sorgenti appenniniche di Serino e Cassano Irpino: durezza medio-bassa (15-25 °F), profilo leggero. A Mergellina il tema principale per la qualità a rubinetto è lo stato degli impianti condominiali nei palazzi primi-novecenteschi e la stagnazione in appartamenti affacciati sul lungomare a uso non continuativo.",
+    buildingAge: "primo-novecento",
+    typicalRisks: ["Possibili tratti in piombo in palazzine pre-1960", "Manutenzione delle colonne condominiali", "Stagnazione in seconde case affacciate sul lungomare"],
+    sections: [
+      {
+        heading: "L'acqua a Mergellina: contesto urbano e tubazioni",
+        paragraphs: [
+          "ABC Napoli gestisce il servizio idrico integrato della città: la rete è alimentata principalmente dalle sorgenti appenniniche di Serino e Cassano Irpino, con acqua sorgentizia, durezza medio-bassa e profilo leggero.",
+          "A Mergellina, Municipalità 1, prevalgono edifici del primo Novecento e degli anni '20-'40. La rete pubblica arriva con buoni standard ai fabbricati; gli impianti interni riflettono lo stato di manutenzione dei singoli condomini."
+        ]
+      },
+      {
+        heading: "Rischi specifici a Mergellina",
+        paragraphs: [
+          "Nelle palazzine pre-1960 non ristrutturate è plausibile trovare tratti residui di piombo nelle colonne montanti private. Nei palazzi successivi il piombo è raro.",
+          "Da considerare la stagnazione in seconde case affacciate sul lungomare, talvolta chiuse per lunghi periodi: prima dell'uso alimentare conviene flussare la rete interna."
+        ]
+      },
+      {
+        heading: "Cosa controllare a casa a Mergellina",
+        paragraphs: [
+          "Pannello consigliato: durezza, conducibilità, cloro residuo, microbiologica di base; nei palazzi pre-1980 anche piombo, rame e nichel. Il prelievo va eseguito con metodi validati conformi a norme tecniche, da personale di un laboratorio qualificato.",
+          "In presenza di neonati o gravidanze, aggiungere nitrati e arsenico."
+        ]
+      },
+      {
+        heading: "Quando fare un'analisi a Mergellina",
+        paragraphs: [
+          "Trigger tipici: acquisto di un appartamento, ristrutturazione, riapertura di una seconda casa, dubbi sull'età delle colonne interne, cambio di sapore o colore dell'acqua."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Mergellina?", a: "Nelle palazzine pre-1960 non ristrutturate è plausibile trovare tratti residui di piombo nei collegamenti privati. Nei palazzi successivi è raro." },
+      { q: "L'acqua di Mergellina è dura?", a: "No, è un'acqua leggera, con durezza medio-bassa (15-25 °F), come tutta la rete napoletana alimentata dalle sorgenti appenniniche." },
+      { q: "Devo bollire l'acqua del rubinetto a Mergellina?", a: "No, l'acqua di ABC Napoli è potabile e controllata. Bollire abbatte la microbiologia ma concentra eventuali metalli per evaporazione." },
+      { q: "Dove trovo i referti del gestore?", a: "ABC Napoli pubblica i dati di qualità sul proprio sito; ARPAC e ASL Napoli pubblicano i rispettivi controlli." }
+    ],
+    ctaVariant: "completa",
+    ctaContext: "Analisi acqua del rubinetto a Mergellina (Napoli) con un laboratorio qualificato: durezza, microbiologica, metalli (piombo, rame, nichel) nelle palazzine del lungomare.",
+    relatedNeighborhoods: ["napoli-chiaia", "napoli-posillipo", "napoli-toledo"],
+  },
+  {
+    slug: "napoli-capodimonte",
+    citySlug: "napoli",
+    cityName: "Napoli",
+    neighborhoodName: "Capodimonte",
+    district: "Municipalità 3",
+    shortTitle: "Acqua del rubinetto a Capodimonte (Napoli): collinare nord e impianti misti",
+    metaDescription: "Acqua del rubinetto a Capodimonte, Napoli (Municipalità 3): gestore ABC Napoli, collina nord, edilizia mista e cosa controllare nei condomini.",
+    searchKeywords: ["acqua capodimonte napoli", "acqua rubinetto capodimonte", "qualita acqua napoli capodimonte", "tubazioni acqua capodimonte", "durezza acqua capodimonte napoli"],
+    intro: "Capodimonte è un quartiere collinare a nord di Napoli, parte della Municipalità 3, noto per la Reggia e il Parco e con un patrimonio edilizio misto: ville e palazzi storici, palazzine del dopoguerra e interventi più recenti. L'acqua del rubinetto distribuita da ABC Napoli proviene dalle sorgenti appenniniche di Serino e Cassano Irpino: durezza medio-bassa (15-25 °F), profilo leggero. A Capodimonte il tema principale per la qualità a rubinetto è lo stato degli impianti condominiali in un edificato eterogeneo e la possibile variabilità di pressione in zona collinare.",
+    buildingAge: "misto",
+    typicalRisks: ["Impianti misti tra edifici storici e dopoguerra", "Possibile piombo in palazzi pre-1960", "Variazioni di pressione in zona collinare"],
+    sections: [
+      {
+        heading: "L'acqua a Capodimonte: contesto urbano e tubazioni",
+        paragraphs: [
+          "ABC Napoli gestisce captazione, adduzione e distribuzione dell'acqua potabile: la rete è alimentata principalmente dalle sorgenti appenniniche di Serino e Cassano Irpino, con acqua sorgentizia, durezza medio-bassa e profilo leggero.",
+          "A Capodimonte, Municipalità 3, l'edificato è misto: edifici storici, palazzine del dopoguerra, interventi più recenti. La rete pubblica arriva con buoni standard ai fabbricati; gli impianti interni riflettono l'età e lo stato di manutenzione dei singoli condomini."
+        ]
+      },
+      {
+        heading: "Rischi specifici a Capodimonte",
+        paragraphs: [
+          "Nei palazzi pre-1960 è plausibile trovare tratti residui in piombo nei collegamenti privati. Negli edifici del dopoguerra il piombo è raro, ma può comparire ferro o zinco da acciaio zincato deteriorato.",
+          "Da considerare la possibilità di variazioni di pressione in zona collinare, che possono mettere in evidenza punti deboli degli impianti interni."
+        ]
+      },
+      {
+        heading: "Cosa controllare a casa a Capodimonte",
+        paragraphs: [
+          "Pannello consigliato: durezza, conducibilità, cloro residuo, microbiologica di base; nei palazzi pre-1980 anche piombo, rame e nichel; nei palazzi del dopoguerra ferro e zinco. Il prelievo va eseguito con metodi validati conformi a norme tecniche, da personale di un laboratorio qualificato.",
+          "In presenza di neonati o gravidanze, aggiungere nitrati e arsenico."
+        ]
+      },
+      {
+        heading: "Quando fare un'analisi a Capodimonte",
+        paragraphs: [
+          "Trigger tipici: acquisto o ristrutturazione, dubbi sull'età degli impianti condominiali, comparsa di intorbidamenti, arrivo di un neonato in casa."
+        ]
+      }
+    ],
+    faqs: [
+      { q: "Le tubazioni in piombo sono ancora presenti a Capodimonte?", a: "Nei palazzi pre-1960 è plausibile trovare tratti residui in piombo. Negli edifici del dopoguerra il piombo è raro." },
+      { q: "L'acqua di Capodimonte è dura?", a: "No, è un'acqua leggera, con durezza medio-bassa (15-25 °F), come tutta la rete napoletana alimentata dalle sorgenti appenniniche." },
+      { q: "Devo bollire l'acqua del rubinetto a Capodimonte?", a: "No, l'acqua di ABC Napoli è potabile e controllata. Bollire abbatte la microbiologia ma concentra eventuali metalli per evaporazione." },
+      { q: "Dove trovo i referti del gestore?", a: "ABC Napoli pubblica i dati di qualità sul proprio sito; ARPAC e ASL Napoli pubblicano i rispettivi controlli." }
+    ],
+    ctaVariant: "completa",
+    ctaContext: "Analisi acqua del rubinetto a Capodimonte (Napoli) con un laboratorio qualificato: durezza, microbiologica, metalli (piombo, rame, ferro, zinco) negli impianti misti del quartiere collinare nord.",
+    relatedNeighborhoods: ["napoli-arenella", "napoli-vomero", "napoli-secondigliano"],
+  },
 ];
 
 const NEIGHBORHOOD_INDEX: Map<string, NeighborhoodGuide> = new Map(

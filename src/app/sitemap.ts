@@ -7,6 +7,8 @@ import { BLOG_POSTS } from '@/lib/blog-posts';
 import { SECTOR_GUIDES } from '@/lib/sector-guides';
 import { REGIONAL_COMPARISONS } from '@/lib/regional-comparisons';
 import { NEIGHBORHOOD_GUIDES } from '@/lib/neighborhood-guides';
+import { MYTH_PAGES } from '@/lib/myth-pages';
+import { CALCULATORS_META } from '@/lib/calculators-meta';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://goccia.org').replace(
@@ -62,6 +64,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.75,
+  }));
+  const mythUrls: MetadataRoute.Sitemap = MYTH_PAGES.map((m) => ({
+    url: `${base}/miti/${m.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
+  }));
+  const calcUrls: MetadataRoute.Sitemap = CALCULATORS_META.map((c) => ({
+    url: `${base}/calcolatori/${c.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
   }));
 
   return [
@@ -143,6 +157,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily',
       priority: 0.85,
     },
+    {
+      url: `${base}/miti`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
+      url: `${base}/calcolatori`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
     ...parameterUrls,
     ...cityUrls,
     ...treatmentUrls,
@@ -151,6 +177,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...sectorUrls,
     ...comparisonUrls,
     ...neighborhoodUrls,
+    ...mythUrls,
+    ...calcUrls,
     {
       url: `${base}/`,
       lastModified: now,
