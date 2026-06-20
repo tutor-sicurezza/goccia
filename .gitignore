@@ -11,3 +11,5 @@ dist
 coverage
 .vitest
 tsconfig.tsbuildinfo
+
+.vercel
