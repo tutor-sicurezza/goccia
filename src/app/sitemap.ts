@@ -3,6 +3,7 @@ import { PARAMETER_GUIDES } from '@/lib/parameter-guides';
 import { CITY_GUIDES } from '@/lib/city-guides';
 import { TREATMENT_GUIDES } from '@/lib/treatment-guides';
 import { TOPIC_GUIDES } from '@/lib/topic-guides';
+import { BLOG_POSTS } from '@/lib/blog-posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://goccia.org').replace(
@@ -35,6 +36,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly' as const,
     priority: 0.85,
   }));
+  const blogUrls: MetadataRoute.Sitemap = BLOG_POSTS.map((p) => ({
+    url: `${base}/blog/${p.slug}`,
+    lastModified: new Date(p.publishedAt),
+    changeFrequency: 'yearly' as const,
+    priority: 0.7,
+  }));
 
   return [
     {
@@ -61,10 +68,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    {
+      url: `${base}/blog`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
     ...parameterUrls,
     ...cityUrls,
     ...treatmentUrls,
     ...topicUrls,
+    ...blogUrls,
     {
       url: `${base}/`,
       lastModified: now,
@@ -124,6 +138,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.85,
+    },
+    {
+      url: `${base}/metodo-scientifico`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${base}/chi-siamo`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.6,
     },
   ];
 }
