@@ -5,6 +5,7 @@ import { TREATMENT_GUIDES } from '@/lib/treatment-guides';
 import { TOPIC_GUIDES } from '@/lib/topic-guides';
 import { BLOG_POSTS } from '@/lib/blog-posts';
 import { SECTOR_GUIDES } from '@/lib/sector-guides';
+import { REGIONAL_COMPARISONS } from '@/lib/regional-comparisons';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://goccia.org').replace(
@@ -45,6 +46,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
   const sectorUrls: MetadataRoute.Sitemap = SECTOR_GUIDES.map((g) => ({
     url: `${base}/uso/${g.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
+  }));
+  const comparisonUrls: MetadataRoute.Sitemap = REGIONAL_COMPARISONS.map((c) => ({
+    url: `${base}/confronto/${c.slug}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.85,
@@ -93,12 +100,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.85,
     },
+    {
+      url: `${base}/confronto`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${base}/pfas-italia-mappa`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${base}/quiz`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
     ...parameterUrls,
     ...cityUrls,
     ...treatmentUrls,
     ...topicUrls,
     ...blogUrls,
     ...sectorUrls,
+    ...comparisonUrls,
     {
       url: `${base}/`,
       lastModified: now,
