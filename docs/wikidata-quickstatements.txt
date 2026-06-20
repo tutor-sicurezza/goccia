@@ -1,0 +1,18 @@
+CREATE
+LAST	Lit	"GoccIA"
+LAST	Len	"GoccIA"
+LAST	Dit	"strumento web gratuito e open source che assegna un punteggio 1-99 all'acqua del rubinetto a partire dai valori del referto"
+LAST	Den	"free open-source Italian web tool that assigns a 1-99 score to tap-water based on lab report values"
+LAST	Ait	"Goccia.org"
+LAST	Aen	"Goccia.org"
+LAST	P31	Q193424
+LAST	P31	Q341
+LAST	P275	Q334661
+LAST	P856	"https://goccia.org"
+LAST	P1324	"https://github.com/tutor-sicurezza/goccia"
+LAST	P407	Q652
+LAST	P277	Q978185
+LAST	P400	Q35476
+LAST	P571	+2026-06-20T00:00:00Z/11
+LAST	P17	Q38
+LAST	P306	Q466
