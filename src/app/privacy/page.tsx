@@ -8,9 +8,10 @@ export const metadata: Metadata = {
 };
 
 const TITOLARE = {
-  ragioneSociale: 'Labservice Analytica S.r.l.',
-  sede: '— da confermare —',
-  pIva: '— da confermare —',
+  ragioneSociale: 'Labservice S.r.l.',
+  sede: 'Via di Santo Stefano 6/B, 00061 Anguillara Sabazia (RM), Italia',
+  pIva: 'IT09433191005',
+  pec: 'labservicesrl@pec.it',
   email: 'privacy@goccia.org',
 };
 
@@ -45,12 +46,31 @@ export default function PrivacyPage() {
             <li>Sede legale: {TITOLARE.sede}</li>
             <li>P.IVA: {TITOLARE.pIva}</li>
             <li>
+              PEC:{' '}
+              <a href={`mailto:${TITOLARE.pec}`} className="text-gradient font-semibold hover:underline">
+                {TITOLARE.pec}
+              </a>
+            </li>
+            <li>
               Contatto privacy:{' '}
               <a href={`mailto:${TITOLARE.email}`} className="text-gradient font-semibold hover:underline">
                 {TITOLARE.email}
               </a>
             </li>
           </ul>
+          <p className="mt-4 text-sm text-slate-400">
+            <strong>GoccIA</strong> è un marchio commerciale di {TITOLARE.ragioneSociale},
+            anche noto come <strong>123Acqua</strong> (sito web{' '}
+            <a
+              href="https://123acqua.com"
+              target="_blank"
+              rel="noreferrer"
+              className="text-slate-200 underline-offset-2 hover:underline"
+            >
+              123acqua.com
+            </a>
+            ).
+          </p>
         </section>
 
         <section>

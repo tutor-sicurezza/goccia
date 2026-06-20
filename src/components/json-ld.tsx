@@ -48,8 +48,17 @@ export function organizationJsonLd(): object {
     '@type': 'Organization',
     '@id': 'https://123acqua.com#organization',
     name: '123Acqua',
-    legalName: 'Labservice Analytica S.r.l.',
+    legalName: 'Labservice S.r.l.',
     url: 'https://123acqua.com',
+    vatID: 'IT09433191005',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Via di Santo Stefano 6/B',
+      postalCode: '00061',
+      addressLocality: 'Anguillara Sabazia',
+      addressRegion: 'RM',
+      addressCountry: 'IT',
+    },
     logo: 'https://123acqua.com/logo.png',
     sameAs: [
       'https://goccia.org',

@@ -40,9 +40,10 @@ legal:
 maintenance:
   type: community
   contacts:
-    - name: 123Acqua / Labservice Analytica
+    - name: Labservice S.r.l. (123Acqua / GoccIA)
       email: privacy@goccia.org
       website: "https://123acqua.com"
+      affiliation: "Labservice S.r.l. — P.IVA IT09433191005, Anguillara Sabazia (RM), Italia"
 localisation:
   localisationReady: false
   availableLanguages:

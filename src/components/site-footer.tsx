@@ -11,9 +11,11 @@ export function SiteFooter() {
               Strumento informativo:
             </span>{' '}
             non sostituisce il rapporto di prova di laboratorio e non
-            costituisce parere medico o legale. GoccIA è un servizio di
-            123Acqua — laboratorio qualificato con metodi validati conformi a
-            norme tecniche.
+            costituisce parere medico o legale. <strong>GoccIA</strong> è un
+            marchio commerciale di <strong>Labservice S.r.l.</strong>{' '}
+            (anche noto come 123Acqua) — laboratorio qualificato con metodi
+            validati conformi a norme tecniche. Sede legale: Via di Santo
+            Stefano 6/B, 00061 Anguillara Sabazia (RM) · P.IVA IT09433191005.
           </p>
         </div>
 
