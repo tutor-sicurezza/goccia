@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { createServerSupabase } from '@/lib/supabase/server';
+import JsonLd, { datasetJsonLd } from '@/components/json-ld';
 
 export const metadata: Metadata = {
   title: "Com'è l'acqua in Italia — Benchmark GoccIA",
@@ -93,6 +94,7 @@ export default async function BenchmarkPage() {
 
   return (
     <main className="relative mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+      <JsonLd data={datasetJsonLd()} />
       <div className="noise pointer-events-none absolute inset-0 -z-10" aria-hidden />
 
       <header className="mb-12">

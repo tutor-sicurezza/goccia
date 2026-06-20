@@ -1,0 +1,54 @@
+# GoccIA — goccia.org
+
+> Strumento web gratuito e anonimo in italiano che assegna un punteggio 1–99 all'acqua del rubinetto a partire dai valori del referto. Motore di scoring deterministico open source basato sul D.Lgs. 18/2023 (limiti di legge) e sui range ideali WHO/EFSA.
+
+GoccIA è un servizio di **123Acqua** (Labservice Analytica S.r.l.), laboratorio italiano di analisi delle acque potabili. Funziona con i referti di **qualsiasi laboratorio**, non serve essere clienti di 123Acqua.
+
+## Come funziona in 4 step
+
+1. L'utente inserisce manualmente i valori del proprio referto (24 parametri possibili).
+2. Ogni valore è confrontato con il limite di legge italiano (D.Lgs. 18/2023) e con un range ideale (WHO/EFSA).
+3. Si calcolano tre subscore: **Salute (50%)**, **Estetica (25%)**, **Impianti (25%)**.
+4. Si ottiene un punteggio finale **1–99** con verdetto: ≥85 Eccellente, 70–84 Buona, 50–69 Discreta, 30–49 Da migliorare, <30 Critica.
+
+## Caratteristiche chiave
+
+- **Deterministico**: stesso input → stesso punteggio. Nessuna AI nel numero.
+- **Open source**: codice e algoritmo pubblici su [GitHub](https://github.com/tutor-sicurezza/goccia).
+- **Anonimo**: nessun login richiesto, nessun cookie di profilazione, IP solo hashato.
+- **Gratuito**: nessun pagamento, nessun freemium.
+- **24 parametri**: pH, durezza, conducibilità, cloro residuo, nitrati, nitriti, ammonio, sodio, solfati, cloruri, fluoruri, ferro, manganese, piombo, arsenico, rame, cadmio, nichel, cromo, torbidità, E.coli, coliformi totali, enterococchi, PFAS totali.
+
+## Pagine
+
+- [Home / calcola punteggio](https://goccia.org/) — il form di inserimento valori e il risultato
+- [Come funziona](https://goccia.org/come-funziona) — algoritmo, tabella dei 24 parametri con limiti di legge e range ideali
+- [Privacy](https://goccia.org/privacy) — informativa GDPR, modello di dati
+- [Benchmark](https://goccia.org/benchmark) — statistiche aggregate anonime delle submission
+
+## Contesto normativo
+
+- **D.Lgs. 18/2023**: recepimento italiano della direttiva UE 2020/2184 sulla qualità delle acque destinate al consumo umano. Definisce i limiti legali per parametri chimici, microbiologici e indicatori.
+- **WHO Drinking-water quality guidelines** e **EFSA**: fonti per i range ideali (più stringenti del limite legale, ottimali per salute e qualità organolettica).
+
+## FAQ
+
+**Devo essere cliente di 123Acqua?** No. Funziona con i valori di qualsiasi referto, qualunque sia il laboratorio.
+
+**Il punteggio sostituisce il rapporto di prova?** No. È uno strumento informativo, non sostituisce il rapporto di prova di laboratorio né costituisce parere medico o legale.
+
+**Come sono trattati i miei dati?** Le submission sono anonime. L'IP viene salvato solo come hash salato per anti-abuso. L'email è opzionale e richiesta solo dopo il risultato.
+
+**Perché il punteggio finisce a 99 e non a 100?** Per evitare il falso senso del "100% perfetto": nessuna acqua reale è perfetta. 99 è il massimo realistico raggiungibile.
+
+## Fornitore
+
+- **Organizzazione**: 123Acqua (laboratorio qualificato con metodi validati conformi a norme tecniche)
+- **Sito principale**: https://123acqua.com
+- **Repository**: https://github.com/tutor-sicurezza/goccia
+- **Licenza**: MIT
+
+## Contatti
+
+- Privacy: privacy@goccia.org
+- Repo issues: https://github.com/tutor-sicurezza/goccia/issues

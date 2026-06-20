@@ -1,0 +1,18 @@
+/* TEAM */
+Project: GoccIA
+Site: https://goccia.org
+Provider: 123Acqua — Labservice Analytica
+Contact: privacy@goccia.org
+Repo: https://github.com/tutor-sicurezza/goccia
+
+/* TECHNOLOGY */
+Framework: Next.js 15 (App Router)
+Language: TypeScript
+Database: Supabase (Postgres)
+Hosting: Vercel
+Style: Tailwind CSS
+
+/* THANKS */
+WHO Drinking-water guidelines
+EFSA scientific opinions
+D.Lgs. 18/2023 (Italy)

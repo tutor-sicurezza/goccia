@@ -92,6 +92,106 @@ export function faqJsonLd(items: { q: string; a: string }[]): object {
   };
 }
 
+export function datasetJsonLd(): object {
+  const url = siteUrl();
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: 'GoccIA — Benchmark anonimo qualità acqua del rubinetto in Italia',
+    description:
+      "Dataset aggregato e anonimo delle submission GoccIA: distribuzione dei verdetti (Eccellente/Buona/Discreta/Da migliorare/Critica) e punteggio medio 1–99 raggruppati per giorno.",
+    url: `${url}/benchmark`,
+    isAccessibleForFree: true,
+    creator: { '@id': 'https://123acqua.com#organization' },
+    license: 'https://opensource.org/licenses/MIT',
+    inLanguage: 'it-IT',
+    keywords: [
+      'acqua potabile',
+      'qualità acqua',
+      'D.Lgs. 18/2023',
+      'Italia',
+      'benchmark anonimo',
+      'open data',
+    ],
+    spatialCoverage: { '@type': 'Place', name: 'Italia' },
+    distribution: [
+      {
+        '@type': 'DataDownload',
+        contentUrl: `${url}/benchmark`,
+        encodingFormat: 'text/html',
+      },
+    ],
+  };
+}
+
+export function howToJsonLd(): object {
+  const url = siteUrl();
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: "Come calcolare il punteggio dell'acqua del rubinetto con GoccIA",
+    description:
+      "Procedura per ottenere un punteggio 1–99 deterministico sulla qualità della propria acqua del rubinetto a partire dai valori di un referto di laboratorio.",
+    totalTime: 'PT30S',
+    inLanguage: 'it-IT',
+    image: `${url}/opengraph-image`,
+    supply: [
+      { '@type': 'HowToSupply', name: 'Referto di analisi dell\'acqua del rubinetto' },
+    ],
+    tool: [{ '@type': 'HowToTool', name: 'Browser web' }],
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Recupera il referto',
+        text: 'Procurati il rapporto di prova dell\'analisi dell\'acqua del rubinetto. Funziona con qualsiasi laboratorio, non serve essere clienti di 123Acqua.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: 'Inserisci i valori',
+        text: 'Apri goccia.org e inserisci i valori dei parametri (pH, durezza, nitrati, piombo, E.coli, ecc.). Tutti i campi sono opzionali: compila solo quelli presenti sul tuo referto.',
+        url: `${url}/`,
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Ottieni il punteggio',
+        text: 'GoccIA confronta ogni valore col limite di legge (D.Lgs. 18/2023) e col range ideale (WHO/EFSA) e calcola un punteggio 1–99 ponderato su Salute (50%), Estetica (25%), Impianti (25%).',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 4,
+        name: 'Leggi il verdetto',
+        text: 'Verdetto a fasce: ≥85 Eccellente, 70–84 Buona, 50–69 Discreta, 30–49 Da migliorare, <30 Critica. Vedi i parametri oltre soglia evidenziati.',
+      },
+    ],
+  };
+}
+
+export function articleJsonLd(args: {
+  headline: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified?: string;
+}): object {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: args.headline,
+    description: args.description,
+    inLanguage: 'it-IT',
+    url: args.url,
+    datePublished: args.datePublished,
+    dateModified: args.dateModified ?? args.datePublished,
+    image: `${siteUrl()}/opengraph-image`,
+    author: { '@id': 'https://123acqua.com#organization' },
+    publisher: { '@id': 'https://123acqua.com#organization' },
+    mainEntityOfPage: args.url,
+  };
+}
+
 export function breadcrumbJsonLd(
   items: { name: string; url: string }[],
 ): object {

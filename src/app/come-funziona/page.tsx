@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { PARAMETER_CONFIGS } from '@aquascore/index';
 import type { SubscoreKey } from '@aquascore/index';
 import { formatRange, prettyParameterName } from '@/lib/format';
+import JsonLd, { howToJsonLd, articleJsonLd } from '@/components/json-ld';
 
 export const metadata: Metadata = {
   title: "Come funziona GoccIA — l'algoritmo del punteggio",
@@ -29,6 +30,16 @@ function dominantSubscore(weights: Record<SubscoreKey, number>): string {
 export default function ComeFunzionaPage() {
   return (
     <main className="relative mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+      <JsonLd data={howToJsonLd()} />
+      <JsonLd
+        data={articleJsonLd({
+          headline: "Come funziona GoccIA — l'algoritmo del punteggio acqua",
+          description:
+            "Spiegazione dell'algoritmo deterministico GoccIA per assegnare un punteggio 1–99 all'acqua del rubinetto secondo D.Lgs. 18/2023 e linee guida WHO/EFSA.",
+          url: 'https://goccia.org/come-funziona',
+          datePublished: '2026-06-20',
+        })}
+      />
       <div className="noise pointer-events-none absolute inset-0 -z-10" aria-hidden />
 
       <header className="mb-12">
