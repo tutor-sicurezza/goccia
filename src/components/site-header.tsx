@@ -42,7 +42,15 @@ export function SiteHeader() {
         </Link>
         <nav aria-label="Navigazione principale">
           <ul className="flex items-center gap-1 text-sm">
-            <li>
+            <li className="hidden sm:block">
+              <Link
+                href="/parametri"
+                className="rounded-full px-3 py-2 text-slate-300 transition hover:bg-white/5 hover:text-white"
+              >
+                Parametri
+              </Link>
+            </li>
+            <li className="hidden md:block">
               <Link
                 href="/come-funziona"
                 className="rounded-full px-3 py-2 text-slate-300 transition hover:bg-white/5 hover:text-white"
@@ -50,12 +58,12 @@ export function SiteHeader() {
                 Come funziona
               </Link>
             </li>
-            <li>
+            <li className="hidden md:block">
               <Link
-                href="/privacy"
+                href="/glossario"
                 className="rounded-full px-3 py-2 text-slate-300 transition hover:bg-white/5 hover:text-white"
               >
-                Privacy
+                Glossario
               </Link>
             </li>
             <li>

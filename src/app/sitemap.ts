@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { PARAMETER_GUIDES } from '@/lib/parameter-guides';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://goccia.org').replace(
@@ -7,7 +8,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
   const now = new Date();
 
+  const parameterUrls: MetadataRoute.Sitemap = PARAMETER_GUIDES.map((g) => ({
+    url: `${base}/parametri/${g.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
   return [
+    {
+      url: `${base}/parametri`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    ...parameterUrls,
     {
       url: `${base}/`,
       lastModified: now,
