@@ -1,0 +1,57 @@
+publiccodeYmlVersion: "0.4"
+name: GoccIA
+url: "https://github.com/tutor-sicurezza/goccia"
+landingURL: "https://goccia.org"
+softwareVersion: "0.1.0"
+releaseDate: "2026-06-20"
+logo: "https://goccia.org/og.png"
+platforms:
+  - web
+categories:
+  - data-analytics
+  - data-collection
+developmentStatus: beta
+softwareType: standalone/web
+description:
+  it:
+    localisedName: GoccIA
+    shortDescription: >-
+      Punteggio 1–99 deterministico per l'acqua del rubinetto, calcolato dai
+      valori del referto secondo D.Lgs. 18/2023.
+    longDescription: >-
+      GoccIA è uno strumento web gratuito e anonimo che, dato l'inserimento
+      manuale dei valori di un'analisi dell'acqua potabile (anche di laboratori
+      diversi), restituisce un punteggio sintetico 1–99 con verdetto, tre
+      subscore (Salute 50%, Estetica 25%, Impianti 25%), spiegazioni dei
+      parametri oltre soglia e azioni consigliate generiche. Il motore di
+      scoring è puro e deterministico (stesso input → stesso punteggio), open
+      source, basato sui limiti del D.Lgs. 18/2023 e sui range ideali WHO/EFSA.
+      Le submission sono salvate in forma anonima per alimentare un benchmark
+      pubblico aggregato.
+    features:
+      - Inserimento manuale dei valori del referto (24 parametri)
+      - Punteggio deterministico 1–99 con verdetto a fasce
+      - Tre subscore: Salute, Estetica, Impianti
+      - Spiegazione per parametro oltre soglia
+      - Benchmark aggregato anonimo nazionale
+      - Nessun login, nessun cookie di profilazione
+legal:
+  license: MIT
+maintenance:
+  type: community
+  contacts:
+    - name: 123Acqua / Labservice Analytica
+      email: privacy@goccia.org
+      website: "https://123acqua.com"
+localisation:
+  localisationReady: false
+  availableLanguages:
+    - it
+dependsOn:
+  open:
+    - name: Next.js
+      version: "15"
+      optional: false
+    - name: Supabase
+      version: ">=2"
+      optional: false
