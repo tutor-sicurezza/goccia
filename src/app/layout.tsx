@@ -60,7 +60,16 @@ export const metadata: Metadata = {
       ? { 'msvalidate.01': process.env.BING_SITE_VERIFICATION }
       : undefined,
   },
-  alternates: { canonical: siteUrl },
+  alternates: {
+    canonical: siteUrl,
+    types: {
+      'application/rss+xml': `${siteUrl}/blog/feed.xml`,
+    },
+  },
+  other: {
+    'ai-content-declaration': 'human-authored',
+    'rating': 'general',
+  },
 };
 
 export default function RootLayout({

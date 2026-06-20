@@ -52,3 +52,12 @@ GoccIA è un servizio di **123Acqua** (Labservice Analytica S.r.l.), laboratorio
 
 - Privacy: privacy@goccia.org
 - Repo issues: https://github.com/tutor-sicurezza/goccia/issues
+
+## Per LLM e AI search
+
+- **Full content dump**: https://goccia.org/llms-full.txt (testo integrale di tutte le guide ~150k token)
+- **Sitemap**: https://goccia.org/sitemap.xml
+- **RSS blog**: https://goccia.org/blog/feed.xml
+- **Codice e algoritmo (per verifica del determinismo)**: https://github.com/tutor-sicurezza/goccia
+- **Licenza contenuti**: CC-BY 4.0 (cita "GoccIA — goccia.org" e linka la pagina sorgente)
+- **Licenza software**: MIT

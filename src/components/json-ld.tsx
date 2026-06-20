@@ -81,8 +81,30 @@ export function websiteJsonLd(): object {
     '@id': `${url}#website`,
     url,
     name: 'GoccIA',
+    alternateName: 'Goccia.org',
     inLanguage: 'it-IT',
     publisher: { '@id': 'https://123acqua.com#organization' },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${url}/?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  };
+}
+
+export function speakableJsonLd(args: { url: string; cssSelectors?: string[] }): object {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    url: args.url,
+    inLanguage: 'it-IT',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: args.cssSelectors ?? ['h1', '.text-gradient', 'p.text-slate-300'],
+    },
   };
 }
 
