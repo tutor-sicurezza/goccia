@@ -112,6 +112,11 @@ export default function PrivacyPage() {
                   <td className="py-2 pr-4">Invio/conservazione del risultato richiesto</td>
                   <td className="py-2">Art. 6(1)(a) — consenso esplicito e separato</td>
                 </tr>
+                <tr>
+                  <td className="py-2 pr-4">File del referto caricato (PDF/foto)</td>
+                  <td className="py-2 pr-4">Estrazione automatica dei valori (OCR) per pre-compilare il form</td>
+                  <td className="py-2">Art. 6(1)(b) — esecuzione del servizio richiesto. Il file viene processato in memoria e <strong>non viene mai salvato</strong>: terminata la lettura del modello, l'allegato è eliminato. Inviato in modo cifrato (TLS) ad Anthropic (USA) — vedi punto 4.</td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -177,9 +182,21 @@ export default function PrivacyPage() {
                 supabase.com/legal/dpa
               </a>
             </li>
+            <li>
+              <strong>Anthropic PBC</strong> (servizio di lettura automatica del referto via modello linguistico, attivato solo se carichi il file PDF/foto, USA) — DPA:{' '}
+              <a
+                href="https://www.anthropic.com/legal/commercial-terms"
+                target="_blank"
+                rel="noreferrer"
+                className="text-gradient font-semibold hover:underline"
+              >
+                anthropic.com/legal/commercial-terms
+              </a>
+              . Anthropic dichiara di non utilizzare gli input per addestrare i modelli (zero-data retention sui suoi endpoint per uso commerciale). Il trasferimento extra-UE avviene sotto Standard Contractual Clauses.
+            </li>
           </ul>
           <p className="mt-3 text-slate-300">
-            Nessun trasferimento dati al di fuori dello Spazio Economico Europeo.
+            Salvo la lettura automatica del referto descritta sopra (attivata solo se carichi tu il file), nessun trasferimento dati al di fuori dello Spazio Economico Europeo.
             Nessuna cessione a terzi per finalità di marketing o profilazione.
             Nessun dato viene utilizzato per addestrare modelli di intelligenza
             artificiale di terze parti.

@@ -4,6 +4,7 @@ import { useMemo, useState, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
 import { PARAMETER_CONFIGS, type ParameterConfig } from '@aquascore/index';
 import { PARAMETER_GROUPS } from '@/lib/parameter-groups';
+import { ReportUpload, type ParsedReport } from '@/components/report-upload';
 import {
   formatRange,
   localStatus,
@@ -65,6 +66,43 @@ export function AnalysisForm() {
 
   function setNumericValue(id: string, value: string) {
     setNumeric((prev) => ({ ...prev, [id]: { value } }));
+  }
+  function applyParsedReport(report: ParsedReport) {
+    const knownIds = new Set(PARAMETER_CONFIGS.map((c) => c.id));
+    setNumeric((prev) => {
+      const next = { ...prev };
+      for (const p of report.parameters) {
+        if (!knownIds.has(p.parameter_id)) continue;
+        const cfg = PARAMETER_CONFIGS.find((c) => c.id === p.parameter_id);
+        if (!cfg || cfg.microbiological) continue;
+        if (p.numeric_value === null || Number.isNaN(p.numeric_value)) continue;
+        const formatted = String(p.numeric_value).replace('.', ',');
+        next[p.parameter_id] = { value: formatted };
+      }
+      return next;
+    });
+    setMicro((prev) => {
+      const next = { ...prev };
+      for (const p of report.parameters) {
+        if (!knownIds.has(p.parameter_id)) continue;
+        const cfg = PARAMETER_CONFIGS.find((c) => c.id === p.parameter_id);
+        if (!cfg || !cfg.microbiological) continue;
+        let present: boolean | null = null;
+        if (typeof p.compliant === 'boolean') present = !p.compliant;
+        else if (typeof p.numeric_value === 'number') present = p.numeric_value > 0;
+        next[p.parameter_id] = { present };
+      }
+      return next;
+    });
+    if (report.cap && /^\d{5}$/.test(report.cap)) setCap(report.cap);
+    if (
+      report.laboratory_name &&
+      /123\s*acqua|labservice/i.test(report.laboratory_name)
+    ) {
+      setSourceLab('123acqua');
+    } else if (report.laboratory_name) {
+      setSourceLab('altro_laboratorio');
+    }
   }
   function setMicroValue(id: string, present: boolean | null) {
     setMicro((prev) => ({ ...prev, [id]: { present } }));
@@ -153,6 +191,7 @@ export function AnalysisForm() {
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-10">
+      <ReportUpload onParsed={applyParsedReport} disabled={isBusy} />
       {PARAMETER_GROUPS.map((group) => (
         <fieldset key={group.key} className="space-y-4">
           <legend className="flex items-baseline gap-3">
