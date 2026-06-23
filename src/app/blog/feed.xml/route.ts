@@ -1,4 +1,4 @@
-import { BLOG_POSTS } from '@/lib/blog-posts';
+import { ALL_BLOG_POSTS as BLOG_POSTS } from '@/lib/blog-all';
 
 export const dynamic = 'force-static';
 

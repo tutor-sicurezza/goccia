@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { BLOG_POSTS } from '@/lib/blog-posts';
+import { ALL_BLOG_POSTS as BLOG_POSTS } from '@/lib/blog-all';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';

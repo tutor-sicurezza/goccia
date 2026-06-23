@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { REGIONAL_COMPARISONS } from '@/lib/regional-comparisons';
+import { ALL_COMPARISONS as REGIONAL_COMPARISONS } from '@/lib/comparisons-all';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';

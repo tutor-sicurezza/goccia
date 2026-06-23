@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { SECTOR_GUIDES, getSectorBySlug } from '@/lib/sector-guides';
+import { ALL_SECTORS as SECTOR_GUIDES, findSector as getSectorBySlug } from '@/lib/sectors-all';
 import { LeadCTA } from '@/components/lead-cta';
 import JsonLd, {
   articleJsonLd,

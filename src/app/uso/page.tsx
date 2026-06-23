@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { SECTOR_GUIDES } from '@/lib/sector-guides';
+import { ALL_SECTORS as SECTOR_GUIDES } from '@/lib/sectors-all';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';

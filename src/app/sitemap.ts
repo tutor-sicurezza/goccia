@@ -9,6 +9,11 @@ import { REGIONAL_COMPARISONS } from '@/lib/regional-comparisons';
 import { NEIGHBORHOOD_GUIDES } from '@/lib/neighborhood-guides';
 import { MYTH_PAGES } from '@/lib/myth-pages';
 import { CALCULATORS_META } from '@/lib/calculators-meta';
+import { ALL_NEIGHBORHOODS } from '@/lib/neighborhoods-all';
+import { ALL_SECTORS } from '@/lib/sectors-all';
+import { ALL_COMPARISONS } from '@/lib/comparisons-all';
+import { ALL_BLOG_POSTS } from '@/lib/blog-all';
+import { FAQ_CLUSTERS } from '@/lib/faq-clusters';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://goccia.org').replace(
@@ -41,25 +46,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly' as const,
     priority: 0.85,
   }));
-  const blogUrls: MetadataRoute.Sitemap = BLOG_POSTS.map((p) => ({
+  const blogUrls: MetadataRoute.Sitemap = ALL_BLOG_POSTS.map((p) => ({
     url: `${base}/blog/${p.slug}`,
     lastModified: new Date(p.publishedAt),
     changeFrequency: 'yearly' as const,
     priority: 0.7,
   }));
-  const sectorUrls: MetadataRoute.Sitemap = SECTOR_GUIDES.map((g) => ({
+  const faqUrls: MetadataRoute.Sitemap = FAQ_CLUSTERS.map((c) => ({
+    url: `${base}/faq/${c.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+  const sectorUrls: MetadataRoute.Sitemap = ALL_SECTORS.map((g) => ({
     url: `${base}/uso/${g.slug}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.85,
   }));
-  const comparisonUrls: MetadataRoute.Sitemap = REGIONAL_COMPARISONS.map((c) => ({
+  const comparisonUrls: MetadataRoute.Sitemap = ALL_COMPARISONS.map((c) => ({
     url: `${base}/confronto/${c.slug}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.85,
   }));
-  const neighborhoodUrls: MetadataRoute.Sitemap = NEIGHBORHOOD_GUIDES.map((n) => ({
+  const neighborhoodUrls: MetadataRoute.Sitemap = ALL_NEIGHBORHOODS.map((n) => ({
     url: `${base}/quartieri/${n.slug}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
@@ -163,6 +174,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.85,
     },
+    {
+      url: `${base}/faq`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    ...faqUrls,
     {
       url: `${base}/press-kit`,
       lastModified: now,

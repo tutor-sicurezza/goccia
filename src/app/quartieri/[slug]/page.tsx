@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { NEIGHBORHOOD_GUIDES, getNeighborhoodBySlug, getNeighborhoodsByCity } from '@/lib/neighborhood-guides';
+import { ALL_NEIGHBORHOODS as NEIGHBORHOOD_GUIDES, findNeighborhood as getNeighborhoodBySlug, neighborhoodsByCity as getNeighborhoodsByCity } from '@/lib/neighborhoods-all';
 import { LeadCTA } from '@/components/lead-cta';
 import JsonLd, { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from '@/components/json-ld';
 

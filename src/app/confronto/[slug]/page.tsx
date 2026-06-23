@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { REGIONAL_COMPARISONS, getComparisonBySlug } from '@/lib/regional-comparisons';
+import { ALL_COMPARISONS as REGIONAL_COMPARISONS, findComparison as getComparisonBySlug } from '@/lib/comparisons-all';
 import { LeadCTA } from '@/components/lead-cta';
 import JsonLd, {
   articleJsonLd,
