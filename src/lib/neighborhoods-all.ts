@@ -3,6 +3,7 @@ import { NEIGHBORHOODS_BARI } from './neighborhoods-bari';
 import { NEIGHBORHOODS_BOLOGNA } from './neighborhoods-bologna';
 import { NEIGHBORHOODS_FIRENZE } from './neighborhoods-firenze';
 import { NEIGHBORHOODS_GENOVA } from './neighborhoods-genova';
+import { NEIGHBORHOODS_PALERMO } from './neighborhoods-palermo';
 
 export const ALL_NEIGHBORHOODS: NeighborhoodGuide[] = [
   ...NEIGHBORHOOD_GUIDES,
@@ -10,6 +11,7 @@ export const ALL_NEIGHBORHOODS: NeighborhoodGuide[] = [
   ...NEIGHBORHOODS_BOLOGNA,
   ...NEIGHBORHOODS_FIRENZE,
   ...NEIGHBORHOODS_GENOVA,
+  ...NEIGHBORHOODS_PALERMO,
 ];
 
 const INDEX = new Map(ALL_NEIGHBORHOODS.map((g) => [g.slug, g]));
