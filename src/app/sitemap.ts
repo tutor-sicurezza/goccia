@@ -14,6 +14,8 @@ import { ALL_SECTORS } from '@/lib/sectors-all';
 import { ALL_COMPARISONS } from '@/lib/comparisons-all';
 import { ALL_BLOG_POSTS } from '@/lib/blog-all';
 import { FAQ_CLUSTERS } from '@/lib/faq-clusters';
+import { ATS_REGIONALI } from '@/lib/ats-regionali';
+import { KIT_EDU } from '@/lib/kit-educational';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://goccia.org').replace(
@@ -51,6 +53,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(p.publishedAt),
     changeFrequency: 'yearly' as const,
     priority: 0.7,
+  }));
+  const atsUrls: MetadataRoute.Sitemap = ATS_REGIONALI.map((a) => ({
+    url: `${base}/ats/${a.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+  const kitUrls: MetadataRoute.Sitemap = KIT_EDU.map((k) => ({
+    url: `${base}/kit/${k.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
   }));
   const faqUrls: MetadataRoute.Sitemap = FAQ_CLUSTERS.map((c) => ({
     url: `${base}/faq/${c.slug}`,
@@ -181,6 +195,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     ...faqUrls,
+    {
+      url: `${base}/ats`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    ...atsUrls,
+    {
+      url: `${base}/kit`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    ...kitUrls,
     {
       url: `${base}/press-kit`,
       lastModified: now,
