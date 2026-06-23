@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { BLOG_POSTS, getPostBySlug } from '@/lib/blog-posts';
 import { LeadCTA } from '@/components/lead-cta';
+import { SponsorBanner } from '@/components/sponsor-banner';
+import { renderText } from '@/lib/render-text';
 import JsonLd, {
   articleJsonLd,
   breadcrumbJsonLd,
@@ -111,7 +113,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             </h2>
             <div className="mt-3 space-y-4 text-slate-300">
               {section.paragraphs.map((para, pi) => (
-                <p key={pi}>{para}</p>
+                <p key={pi}>{renderText(para)}</p>
               ))}
               {section.bullets && section.bullets.length > 0 ? (
                 <ul className="list-disc space-y-1.5 pl-5">
@@ -124,6 +126,10 @@ export default async function BlogPostPage({ params }: PageProps) {
           </section>
         ))}
       </article>
+
+      <div className="mt-10">
+        <SponsorBanner variant="compact" />
+      </div>
 
       <LeadCTA
         variant="completa"

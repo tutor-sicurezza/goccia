@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { MYTH_PAGES } from '@/lib/myth-pages';
 import { LeadCTA } from '@/components/lead-cta';
+import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
 
 export const metadata: Metadata = {
@@ -60,6 +61,8 @@ export default function MythsIndexPage() {
           </li>
         ))}
       </ul>
+
+      <div className="mt-12"><SponsorBanner /></div>
       <LeadCTA
         variant="completa"
         context="Per andare oltre i miti e ottenere dati reali sulla TUA acqua, considera un'analisi con un laboratorio qualificato:"

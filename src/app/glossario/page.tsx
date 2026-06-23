@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
 import { LeadCTA } from '@/components/lead-cta';
+import { SponsorBanner } from '@/components/sponsor-banner';
 
 export const metadata: Metadata = {
   title: 'Glossario acqua potabile — termini tecnici spiegati | GoccIA',
@@ -535,6 +536,9 @@ export default function GlossarioPage() {
           })}
         </dl>
       </section>
+
+
+      <div className="mt-12"><SponsorBanner /></div>
 
       <LeadCTA
         variant="completa"

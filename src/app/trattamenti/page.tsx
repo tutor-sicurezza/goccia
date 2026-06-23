@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { TREATMENT_GUIDES } from '@/lib/treatment-guides';
 import { LeadCTA } from '@/components/lead-cta';
+import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
 
 export const metadata: Metadata = {
@@ -56,6 +57,9 @@ export default function TreatmentsIndexPage() {
           </li>
         ))}
       </ul>
+
+
+      <div className="mt-12"><SponsorBanner /></div>
 
       <LeadCTA
         variant="rapporto-prova"

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { CALCULATORS_META } from '@/lib/calculators-meta';
 import { LeadCTA } from '@/components/lead-cta';
+import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
 
 export const metadata: Metadata = {
@@ -40,6 +41,8 @@ export default function CalculatorsIndexPage() {
           </li>
         ))}
       </ul>
+
+      <div className="mt-12"><SponsorBanner /></div>
       <LeadCTA
         variant="completa"
         context="Per dati reali sulla tua acqua e non solo stime, prenota un'analisi con un laboratorio qualificato:"
