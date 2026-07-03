@@ -44,6 +44,14 @@ export function SiteHeader() {
           <ul className="flex items-center gap-1 text-sm">
             <li className="hidden sm:block">
               <Link
+                href="/analisi-ufficiali"
+                className="rounded-full px-3 py-2 text-slate-300 transition hover:bg-white/5 hover:text-white"
+              >
+                Analisi ufficiali
+              </Link>
+            </li>
+            <li className="hidden sm:block">
+              <Link
                 href="/parametri"
                 className="rounded-full px-3 py-2 text-slate-300 transition hover:bg-white/5 hover:text-white"
               >

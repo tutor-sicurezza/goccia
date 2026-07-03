@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { CITY_GUIDES, getCityBySlug } from '@/lib/city-guides';
+import { getOfficialSource } from '@/lib/official-sources';
 import { LeadCTA } from '@/components/lead-cta';
 import JsonLd, {
   articleJsonLd,
@@ -41,6 +42,7 @@ export default async function CityPage({ params }: PageProps) {
   const guide = getCityBySlug(citta);
   if (!guide) notFound();
 
+  const officialSource = getOfficialSource(guide.slug);
   const related = guide.relatedCities
     .map((slug) => CITY_GUIDES.find((g) => g.slug === slug))
     .filter((g): g is NonNullable<typeof g> => Boolean(g));
@@ -111,6 +113,37 @@ export default async function CityPage({ params }: PageProps) {
           )}
         </dl>
       </aside>
+
+      {officialSource ? (
+        <aside className="glass mb-10 rounded-2xl border-sky-400/20 p-5">
+          <p className="text-xs uppercase tracking-wide text-slate-400">
+            Analisi ufficiali di {guide.cityName}
+          </p>
+          <p className="mt-2 text-sm text-slate-300">{officialSource.note}</p>
+          {officialSource.pathHint ? (
+            <p className="mt-1.5 text-xs text-slate-400">
+              <span className="text-slate-300">Dove guardare:</span>{' '}
+              {officialSource.pathHint}
+            </p>
+          ) : null}
+          <div className="mt-4 flex flex-wrap items-center gap-2">
+            <a
+              href={officialSource.officialUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full border border-sky-400/30 bg-sky-400/10 px-3 py-1.5 text-xs font-semibold text-sky-200 transition hover:border-sky-400/60 hover:bg-sky-400/20"
+            >
+              Vedi le analisi del gestore ↗
+            </a>
+            <Link
+              href="/analisi-ufficiali"
+              className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-200 transition hover:border-white/30 hover:bg-white/10"
+            >
+              Tutte le città
+            </Link>
+          </div>
+        </aside>
+      ) : null}
 
       <article className="prose-invert space-y-10">
         {guide.sections.map((section, idx) => (

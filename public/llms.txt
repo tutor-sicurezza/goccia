@@ -22,6 +22,8 @@ GoccIA è un servizio di **123Acqua** (Labservice Analytica S.r.l.), laboratorio
 ## Pagine
 
 - [Home / calcola punteggio](https://goccia.org/) — il form di inserimento valori e il risultato
+- [Analisi ufficiali per comune](https://goccia.org/analisi-ufficiali) — dove ogni gestore idrico pubblica le analisi ufficiali dell'acqua, città per città, con link diretti alle fonti
+- [Storico personale](https://goccia.org/storico) — trend del punteggio e confronto tra analisi nel tempo, salvato solo nel browser dell'utente
 - [Come funziona](https://goccia.org/come-funziona) — algoritmo, tabella dei 24 parametri con limiti di legge e range ideali
 - [Privacy](https://goccia.org/privacy) — informativa GDPR, modello di dati
 - [Benchmark](https://goccia.org/benchmark) — statistiche aggregate anonime delle submission

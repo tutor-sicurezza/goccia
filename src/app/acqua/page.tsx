@@ -44,6 +44,21 @@ export default function CityIndexPage() {
         </p>
       </header>
 
+      <div className="mb-10 rounded-2xl border border-sky-400/20 bg-sky-400/5 p-5">
+        <p className="text-sm text-slate-300">
+          <span className="font-semibold text-slate-100">Novità:</span> cerchi
+          i valori pubblicati dal tuo gestore?{' '}
+          <Link
+            href="/analisi-ufficiali"
+            className="font-semibold text-sky-300 underline-offset-2 hover:underline"
+          >
+            Vai alle analisi ufficiali città per città
+          </Link>{' '}
+          — link diretti alle fonti dei gestori e guida per trasformare i
+          valori in un punteggio 1–99.
+        </p>
+      </div>
+
       <div className="space-y-10">
         {regions.map((region) => (
           <section key={region}>
