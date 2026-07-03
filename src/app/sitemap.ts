@@ -17,6 +17,7 @@ import { FAQ_CLUSTERS } from '@/lib/faq-clusters';
 import { ATS_REGIONALI } from '@/lib/ats-regionali';
 import { KIT_EDU } from '@/lib/kit-educational';
 import { MINERAL_WATERS } from '@/lib/mineral-waters';
+import { WATER_COMPARISONS } from '@/lib/mineral-water-comparisons';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://goccia.org').replace(
@@ -109,6 +110,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }));
+  const waterComparisonUrls: MetadataRoute.Sitemap = WATER_COMPARISONS.map((c) => ({
+    url: `${base}/acque-minerali/confronto/${c.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
 
   return [
     {
@@ -118,6 +125,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     ...mineralWaterUrls,
+    ...waterComparisonUrls,
     {
       url: `${base}/parametri`,
       lastModified: now,
