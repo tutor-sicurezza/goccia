@@ -6,6 +6,7 @@ import { ScoreGauge, type GaugeTone } from '@/components/score-gauge';
 import { SubscoreBar } from '@/components/subscore-bar';
 import { ShareButtons } from '@/components/share-buttons';
 import { EmailSaveForm } from '@/components/email-save-form';
+import { SaveToHistory } from '@/components/save-to-history';
 import {
   formatRange,
   formatValue,
@@ -345,6 +346,25 @@ export default async function ResultPage({
             </a>
           </div>
         </div>
+      </section>
+
+      {/* STORICO LOCALE */}
+      <section className="mt-10">
+        <SaveToHistory
+          submissionId={data.id}
+          analyzedAt={data.created_at}
+          overall={data.overall_score}
+          health={data.health_score}
+          aesthetic={data.aesthetic_score}
+          pipe={data.pipe_score}
+          verdictLabel={data.verdict.label}
+          verdictTone={data.verdict.tone}
+          parameters={data.parameters.map((p) => ({
+            id: p.parameter_id,
+            value: p.numeric_value,
+            status: p.status ?? 'unknown',
+          }))}
+        />
       </section>
 
       {/* SHARE + EMAIL */}

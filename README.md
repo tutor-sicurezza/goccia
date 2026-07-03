@@ -45,6 +45,23 @@ src/lib/supabase/     client server + browser
 supabase/migrations/  schema
 ```
 
+### Route con URL riscritti
+
+Le guide città vivono in `src/app/citta/[citta]/` ma l'URL pubblico è
+`/acqua-di-{slug}` (rewrite in `next.config.mjs`; `/citta/{slug}` fa redirect
+308 all'URL canonico). In Next un segmento è dinamico solo se è interamente
+`[param]`: una cartella `acqua-di-[citta]` verrebbe trattata come percorso
+letterale.
+
+### Sezioni dati
+
+- `src/lib/official-sources.ts` — dove ogni gestore pubblica le analisi
+  ufficiali (link individuati su fonti pubbliche, campo `confidence`).
+  Alimenta `/analisi-ufficiali` e il box nelle pagine città.
+- `src/lib/water-history.ts` — storico personale delle analisi in
+  `localStorage` (nessun dato lascia il browser). Alimenta `/storico` e il
+  salvataggio automatico dalla pagina risultato.
+
 ## Vincoli normativi
 
 - Non scrivere "accreditato", "Accredia" o "ISO 17025" riferiti al laboratorio. Wording ammesso: **"laboratorio qualificato"**, **"metodi validati conformi a norme tecniche"**, **"processi tecnici documentati"**.

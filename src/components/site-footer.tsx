@@ -23,6 +23,12 @@ export function SiteFooter() {
           aria-label="Approfondimenti"
           className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-400"
         >
+          <Link href="/analisi-ufficiali" className="hover:text-slate-100">
+            Analisi ufficiali per comune
+          </Link>
+          <Link href="/storico" className="hover:text-slate-100">
+            Il tuo storico
+          </Link>
           <Link href="/parametri" className="hover:text-slate-100">
             Parametri dell&apos;acqua
           </Link>
