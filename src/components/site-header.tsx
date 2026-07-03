@@ -50,7 +50,7 @@ export function SiteHeader() {
                 Parametri
               </Link>
             </li>
-            <li className="hidden lg:block">
+            <li className="hidden sm:block">
               <Link
                 href="/acque-minerali"
                 className="rounded-full px-3 py-2 text-slate-300 transition hover:bg-white/5 hover:text-white"
