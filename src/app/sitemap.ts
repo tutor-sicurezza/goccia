@@ -16,6 +16,7 @@ import { ALL_BLOG_POSTS } from '@/lib/blog-all';
 import { FAQ_CLUSTERS } from '@/lib/faq-clusters';
 import { ATS_REGIONALI } from '@/lib/ats-regionali';
 import { KIT_EDU } from '@/lib/kit-educational';
+import { MINERAL_WATERS } from '@/lib/mineral-waters';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://goccia.org').replace(
@@ -102,8 +103,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly' as const,
     priority: 0.85,
   }));
+  const mineralWaterUrls: MetadataRoute.Sitemap = MINERAL_WATERS.map((w) => ({
+    url: `${base}/acque-minerali/${w.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
 
   return [
+    {
+      url: `${base}/acque-minerali`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    ...mineralWaterUrls,
     {
       url: `${base}/parametri`,
       lastModified: now,

@@ -323,6 +323,17 @@ export default function RubinettoVsMineralePage() {
           rubinetto: i report del gestore raccontano la rete, un'analisi al
           punto di consumo racconta la tua casa.
         </p>
+        <p className="mt-3 text-slate-300">
+          Se stai valutando quale minerale comprare, puoi confrontare residuo
+          fisso, sodio, calcio e magnesio delle marche più diffuse nella{' '}
+          <Link
+            href="/acque-minerali"
+            className="font-semibold text-sky-300 underline-offset-2 hover:underline"
+          >
+            tabella delle acque minerali italiane
+          </Link>
+          , con la scheda analisi di ognuna.
+        </p>
       </section>
 
       <LeadCTA

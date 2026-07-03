@@ -19,6 +19,27 @@ export function SiteFooter() {
           </p>
         </div>
 
+        <nav
+          aria-label="Approfondimenti"
+          className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-400"
+        >
+          <Link href="/parametri" className="hover:text-slate-100">
+            Parametri dell&apos;acqua
+          </Link>
+          <Link href="/acque-minerali" className="hover:text-slate-100">
+            Acque minerali
+          </Link>
+          <Link href="/rubinetto-vs-minerale" className="hover:text-slate-100">
+            Rubinetto vs minerale
+          </Link>
+          <Link href="/glossario" className="hover:text-slate-100">
+            Glossario
+          </Link>
+          <Link href="/blog" className="hover:text-slate-100">
+            Blog
+          </Link>
+        </nav>
+
         <div className="mt-8 flex flex-col items-start justify-between gap-4 text-sm text-slate-400 sm:flex-row sm:items-center">
           <p>
             © {year} GoccIA · Servizio di{' '}
