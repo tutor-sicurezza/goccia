@@ -295,10 +295,12 @@ export function waterUseTags(w: MineralWater): UseCaseKey[] {
 // Le schede
 // ---------------------------------------------------------------------------
 
-// I dati vengono caricati da un modulo separato per tenere questo file leggibile.
+// I dati vengono caricati da moduli separati per tenere questo file leggibile.
 import { WATER_ENTRIES } from './mineral-waters-data';
+import { WATER_ENTRIES_2 } from './mineral-waters-data-2';
 
 for (const w of WATER_ENTRIES) register(w);
+for (const w of WATER_ENTRIES_2) register(w);
 
 // Ordinamento predefinito: per residuo fisso crescente (più leggere prima).
 MINERAL_WATERS.sort((x, y) => {
