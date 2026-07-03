@@ -11,6 +11,7 @@ import {
   MineralWaterTable,
   type ExplorerRow,
 } from '@/components/mineral-water-table';
+import { WATER_COMPARISONS } from '@/lib/mineral-water-comparisons';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd, faqJsonLd } from '@/components/json-ld';
@@ -182,6 +183,35 @@ export default function AcqueMineraliIndexPage() {
           medico: per neonati, diete iposodiche o esigenze cliniche segui il
           medico o il pediatra.
         </p>
+      </section>
+
+      {/* Confronti popolari */}
+      <section className="mb-14">
+        <h2 className="font-display text-2xl font-semibold text-slate-100">
+          Confronti diretti
+        </h2>
+        <p className="mt-1 max-w-3xl text-sm text-slate-400">
+          «Meglio l&apos;una o l&apos;altra?» Le domande più frequenti davanti
+          allo scaffale, con i numeri affiancati e una risposta chiara su quale
+          scegliere.
+        </p>
+        <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+          {WATER_COMPARISONS.map((c) => (
+            <li key={c.slug}>
+              <Link
+                href={`/acque-minerali/confronto/${c.slug}`}
+                className="glass group block rounded-2xl p-4 transition hover:-translate-y-0.5 hover:border-violet-400/40"
+              >
+                <p className="font-display text-base font-semibold text-slate-100 group-hover:text-white">
+                  {c.title}
+                </p>
+                <p className="mt-1 text-sm text-slate-400 line-clamp-2">
+                  {c.metaDescription}
+                </p>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </section>
 
       {/* Elenco per categoria */}
