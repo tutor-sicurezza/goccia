@@ -205,6 +205,93 @@ export function declaredParameters(a: MineralWaterAnalysis): number {
 }
 
 // ---------------------------------------------------------------------------
+// Esigenze d'uso ("trova l'acqua giusta per te")
+// ---------------------------------------------------------------------------
+// Le tag sono derivate dai valori dell'analisi con criteri espliciti, così il
+// filtro è verificabile e non arbitrario. Sono un orientamento, non un parere
+// medico: le scelte cliniche restano del medico o del pediatra.
+
+export type UseCaseKey =
+  | 'lattanti'
+  | 'iposodica'
+  | 'ricca-calcio'
+  | 'ricca-magnesio'
+  | 'digestione'
+  | 'effervescente-naturale'
+  | 'gusto-leggero';
+
+export interface UseCase {
+  key: UseCaseKey;
+  label: string;
+  criterion: string;
+}
+
+export const USE_CASES: UseCase[] = [
+  {
+    key: 'gusto-leggero',
+    label: 'Gusto leggero',
+    criterion: 'residuo fisso ≤ 50 mg/L',
+  },
+  {
+    key: 'lattanti',
+    label: 'Adatta ai lattanti',
+    criterion: 'residuo basso, nitrati ≤ 10 mg/L, sodio < 20 mg/L',
+  },
+  {
+    key: 'iposodica',
+    label: 'Povera di sodio',
+    criterion: 'sodio < 20 mg/L',
+  },
+  {
+    key: 'ricca-calcio',
+    label: 'Ricca di calcio',
+    criterion: 'calcio ≥ 150 mg/L',
+  },
+  {
+    key: 'ricca-magnesio',
+    label: 'Ricca di magnesio',
+    criterion: 'magnesio ≥ 50 mg/L',
+  },
+  {
+    key: 'digestione',
+    label: 'Digestiva (bicarbonata)',
+    criterion: 'bicarbonati ≥ 600 mg/L',
+  },
+  {
+    key: 'effervescente-naturale',
+    label: 'Effervescente naturale',
+    criterion: 'bollicine naturali dalla fonte',
+  },
+];
+
+export function waterUseTags(w: MineralWater): UseCaseKey[] {
+  const a = w.analysis;
+  const tags: UseCaseKey[] = [];
+  const num = (v: number | null): v is number => typeof v === 'number';
+
+  if (num(a.residuoFisso) && a.residuoFisso <= 50) tags.push('gusto-leggero');
+
+  // Lattanti: acqua poco mineralizzata, con nitrati bassi dichiarati e sodio contenuto.
+  if (
+    num(a.residuoFisso) &&
+    a.residuoFisso <= 100 &&
+    num(a.nitrati) &&
+    a.nitrati <= 10 &&
+    (a.sodio === null || a.sodio < 20)
+  ) {
+    tags.push('lattanti');
+  }
+
+  if (num(a.sodio) && a.sodio < 20) tags.push('iposodica');
+  if (num(a.calcio) && a.calcio >= 150) tags.push('ricca-calcio');
+  if (num(a.magnesio) && a.magnesio >= 50) tags.push('ricca-magnesio');
+  if (num(a.bicarbonato) && a.bicarbonato >= 600) tags.push('digestione');
+  if (w.type === 'effervescente-naturale') tags.push('effervescente-naturale');
+
+  return tags;
+}
+
+// ---------------------------------------------------------------------------
 // Le schede
 // ---------------------------------------------------------------------------
 

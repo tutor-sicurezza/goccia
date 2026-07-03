@@ -4,8 +4,13 @@ import {
   MINERAL_WATERS,
   CLASSIFICATIONS,
   classificationInfo,
+  USE_CASES,
+  waterUseTags,
 } from '@/lib/mineral-waters';
-import { MineralWaterTable } from '@/components/mineral-water-table';
+import {
+  MineralWaterTable,
+  type ExplorerRow,
+} from '@/components/mineral-water-table';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd, faqJsonLd } from '@/components/json-ld';
@@ -50,6 +55,20 @@ export default function AcqueMineraliIndexPage() {
     items: MINERAL_WATERS.filter((w) => w.classification === c.key),
   }));
 
+  const rows: ExplorerRow[] = MINERAL_WATERS.map((w) => ({
+    slug: w.slug,
+    brand: w.brand,
+    classLabel: classificationInfo(w.classification).label,
+    regione: w.regione,
+    residuoFisso: w.analysis.residuoFisso,
+    sodio: w.analysis.sodio,
+    calcio: w.analysis.calcio,
+    magnesio: w.analysis.magnesio,
+    ph: w.analysis.ph,
+    useTags: waterUseTags(w),
+  }));
+  const useCases = USE_CASES.map((u) => ({ key: u.key, label: u.label }));
+
   return (
     <main className="relative mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
       <JsonLd
@@ -59,6 +78,20 @@ export default function AcqueMineraliIndexPage() {
         ])}
       />
       <JsonLd data={faqJsonLd(INDEX_FAQS)} />
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'ItemList',
+          name: 'Acque minerali italiane: residuo fisso e analisi',
+          numberOfItems: MINERAL_WATERS.length,
+          itemListElement: MINERAL_WATERS.map((w, i) => ({
+            '@type': 'ListItem',
+            position: i + 1,
+            name: w.brand,
+            url: `https://goccia.org/acque-minerali/${w.slug}`,
+          })),
+        }}
+      />
       <div className="noise pointer-events-none absolute inset-0 -z-10" aria-hidden />
 
       <header className="mb-12">
@@ -129,20 +162,26 @@ export default function AcqueMineraliIndexPage() {
         </ul>
       </section>
 
-      {/* Tabella comparativa */}
+      {/* Tabella comparativa + filtro per esigenza */}
       <section className="mb-14">
         <h2 className="font-display text-2xl font-semibold text-slate-100">
-          Le acque minerali a confronto
+          Trova l&apos;acqua giusta per la tua esigenza
         </h2>
         <p className="mt-1 max-w-3xl text-sm text-slate-400">
-          Tocca un&apos;intestazione per ordinare la tabella: per residuo fisso,
-          per sodio (utile per le diete iposodiche), per calcio o magnesio (per
-          chi vuole integrarli) o per pH. Clicca sul nome per aprire la scheda
-          completa con tutti i valori dell&apos;etichetta.
+          Filtra le acque per ciò che ti serve — adatta ai lattanti, povera di
+          sodio, ricca di calcio o magnesio, digestiva — e ordina la tabella per
+          residuo fisso, sodio, calcio, magnesio o pH toccando l&apos;intestazione
+          della colonna. Ogni criterio è calcolato dai valori reali
+          dell&apos;etichetta. Clicca sul nome per aprire la scheda completa.
         </p>
         <div className="glass mt-5 rounded-2xl p-4 sm:p-5">
-          <MineralWaterTable waters={MINERAL_WATERS} />
+          <MineralWaterTable rows={rows} useCases={useCases} />
         </div>
+        <p className="mt-3 text-xs text-slate-500">
+          I criteri sono un orientamento basato sull&apos;analisi, non un parere
+          medico: per neonati, diete iposodiche o esigenze cliniche segui il
+          medico o il pediatra.
+        </p>
       </section>
 
       {/* Elenco per categoria */}
