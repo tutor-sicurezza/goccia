@@ -50,6 +50,14 @@ export function SiteHeader() {
                 Parametri
               </Link>
             </li>
+            <li className="hidden lg:block">
+              <Link
+                href="/acque-minerali"
+                className="rounded-full px-3 py-2 text-slate-300 transition hover:bg-white/5 hover:text-white"
+              >
+                Acque minerali
+              </Link>
+            </li>
             <li className="hidden md:block">
               <Link
                 href="/come-funziona"
