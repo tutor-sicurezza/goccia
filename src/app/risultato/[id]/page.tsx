@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { headers } from 'next/headers';
 import { notFound } from 'next/navigation';
-import { PARAMETER_CONFIGS } from '@aquascore/index';
+import { PARAMETER_CONFIGS, scoreVerdict } from '@aquascore/index';
 import { ScoreGauge, type GaugeTone } from '@/components/score-gauge';
 import { SubscoreBar } from '@/components/subscore-bar';
 import { ShareButtons } from '@/components/share-buttons';
@@ -34,11 +34,9 @@ interface SubmissionResponse {
   pipe_score: number | null;
   matched_count: number;
   parameters: SubmissionParameter[];
-  verdict: {
-    label: string;
-    tone: GaugeTone;
-    buona: boolean;
-  };
+  // Stored in the DB as a plain string (verdict label). The full verdict
+  // object (tone/buona) is derived from overall_score via scoreVerdict().
+  verdict: string;
 }
 
 async function buildBaseUrl(): Promise<string> {
@@ -79,7 +77,7 @@ export async function generateMetadata({
   }
   return {
     title: `Risultato ${data.overall_score}/99 — GoccIA`,
-    description: `La tua acqua ha ottenuto ${data.overall_score} su 99 (${data.verdict.label}). Punteggio calcolato in base ai valori del referto.`,
+    description: `La tua acqua ha ottenuto ${data.overall_score} su 99 (${scoreVerdict(data.overall_score).label}). Punteggio calcolato in base ai valori del referto.`,
     robots: { index: false, follow: false },
   };
 }
@@ -121,6 +119,8 @@ export default async function ResultPage({
   const data = await fetchSubmission(id);
   if (!data) notFound();
 
+  const verdict = scoreVerdict(data.overall_score);
+
   const baseUrl = await buildBaseUrl();
   const shareUrl = `${baseUrl}/risultato/${data.id}`;
 
@@ -144,29 +144,29 @@ export default async function ResultPage({
         <div className="relative grid grid-cols-1 gap-8 lg:grid-cols-[auto,1fr] lg:items-center">
           <ScoreGauge
             score={data.overall_score}
-            tone={data.verdict.tone}
-            label={data.verdict.label}
+            tone={verdict.tone}
+            label={verdict.label}
           />
           <div>
             <span
               className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium uppercase tracking-wider ${
-                data.verdict.buona
+                verdict.buona
                   ? 'bg-emerald-400/15 text-emerald-200 ring-1 ring-emerald-400/30'
                   : 'bg-rose-400/15 text-rose-200 ring-1 ring-rose-400/30'
               }`}
             >
               <span
                 className={`h-1.5 w-1.5 rounded-full ${
-                  data.verdict.buona ? 'bg-emerald-300' : 'bg-rose-300'
+                  verdict.buona ? 'bg-emerald-300' : 'bg-rose-300'
                 }`}
               />
-              {data.verdict.buona ? 'Acqua buona' : 'Acqua cattiva'}
+              {verdict.buona ? 'Acqua buona' : 'Acqua cattiva'}
             </span>
             <h1 className="mt-4 font-display text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-              {data.verdict.label}
+              {verdict.label}
             </h1>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-slate-300 sm:text-base">
-              {synthesisSentence(data.verdict.label)}
+              {synthesisSentence(verdict.label)}
             </p>
             <p className="mt-3 text-xs text-slate-500">
               {data.matched_count} parametr
@@ -357,8 +357,8 @@ export default async function ResultPage({
           health={data.health_score}
           aesthetic={data.aesthetic_score}
           pipe={data.pipe_score}
-          verdictLabel={data.verdict.label}
-          verdictTone={data.verdict.tone}
+          verdictLabel={verdict.label}
+          verdictTone={verdict.tone}
           parameters={data.parameters.map((p) => ({
             id: p.parameter_id,
             value: p.numeric_value,
@@ -380,7 +380,7 @@ export default async function ResultPage({
             <ShareButtons
               url={shareUrl}
               title={`Punteggio acqua ${data.overall_score}/99 — GoccIA`}
-              text={`Ho calcolato il punteggio della mia acqua del rubinetto: ${data.overall_score}/99 (${data.verdict.label}).`}
+              text={`Ho calcolato il punteggio della mia acqua del rubinetto: ${data.overall_score}/99 (${verdict.label}).`}
             />
           </div>
         </div>
