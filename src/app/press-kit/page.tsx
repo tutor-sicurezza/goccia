@@ -106,7 +106,7 @@ export default function PressKitPage() {
 
       <section className="mb-12">
         <h2 className="font-display text-2xl font-semibold text-slate-100">Asset visivi</h2>
-        <p className="mt-1 text-sm text-slate-400">Tutti gli asset sono distribuiti con licenza CC-BY 4.0. Cita "GoccIA" o "Labservice S.r.l." come fonte.</p>
+        <p className="mt-1 text-sm text-slate-400">Tutti gli asset sono distribuiti con licenza CC-BY 4.0. Cita "GoccIA" o "Labservice S.r.l." come fonte. Logo in PNG ad alta risoluzione, screenshot del tool e brand guidelines sono disponibili su richiesta a press@goccia.org.</p>
         <ul className="mt-5 grid gap-3 sm:grid-cols-2">
           {k.mediaAssets.map((m, i) => (
             <li key={i} className="glass rounded-2xl p-4">
