@@ -17,7 +17,15 @@ export const ScoreRequestSchema = z.object({
   cap: z
     .preprocess(emptyToNull, z.string().regex(/^\d{5}$/).nullable().optional())
     .optional(),
-  source_lab: z.enum(['123acqua', 'altro', 'gestore']).nullable().optional(),
+  source_lab: z
+    .enum([
+      '123acqua',
+      'altro_laboratorio',
+      'gestore_idrico',
+      'preferisco_non_dirlo',
+    ])
+    .nullable()
+    .optional(),
   email: z
     .preprocess(emptyToNull, z.string().email().nullable().optional())
     .optional(),
