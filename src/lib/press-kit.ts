@@ -60,9 +60,9 @@ export const PRESS_KIT: PressKitData = {
     "Il progetto è realizzato da Labservice S.r.l., laboratorio italiano qualificato con metodi validati conformi a norme tecniche, con sede ad Anguillara Sabazia (Roma), partita IVA IT09433191005. Labservice opera anche con il marchio commerciale 123Acqua, dedicato alle analisi dell'acqua per privati. GoccIA è la sua iniziativa di divulgazione: uno strumento educativo gratuito che non sostituisce un rapporto di prova firmato di laboratorio. " +
     "L'algoritmo valuta 24 parametri previsti dal D.Lgs. 18/2023 (in attuazione della Direttiva UE 2020/2184), confrontandoli sia con i limiti di legge sia con i range ideali indicati dalle WHO Guidelines for Drinking-water Quality e dalle Scientific Opinions dell'EFSA. Il punteggio finale è la media pesata di tre subscore: Salute (50%), Estetica (25%) e Impianti (25%). La logica completa, i pesi e le soglie sono visibili nel repository pubblico e modificabili tramite pull request. " +
     "L'obiettivo dichiarato è rendere accessibile la lettura del referto idrico al pubblico non specialista, fornire un riferimento neutrale per giornalisti e ricercatori, e contribuire a ridurre il consumo di acqua in bottiglia in Italia mostrando in modo trasparente la qualità di ciò che esce dal rubinetto. GoccIA non sostituisce in alcun modo il gestore idrico, l'ARPA regionale o un rapporto di prova firmato; è un livello di lettura aggiuntivo, gratuito e verificabile. " +
-    "Sul piano tecnico la piattaforma è costruita con Next.js 15, ospitata su Vercel (regione Francoforte, UE) e si appoggia a un database Supabase (Francoforte, UE). Non utilizza cookie di tracciamento: la sessione utente è gestita con localStorage del browser. Al momento del lancio il sito ospita oltre 245 pagine editoriali, copre 80 quartieri di Roma, Milano, Napoli e Torino, e include schede per 50 capoluoghi di provincia, oltre a guide tematiche su PFAS, calcare, nitrati e trattamenti domestici dell'acqua.",
+    "Sul piano tecnico la piattaforma è costruita con Next.js 15, ospitata su Vercel (regione Francoforte, UE) e si appoggia a un database Supabase (Francoforte, UE). Non utilizza cookie di tracciamento: la sessione utente è gestita con localStorage del browser. Al momento del lancio il sito ospita oltre 245 pagine editoriali, copre più di 180 quartieri di 9 grandi città (Roma, Milano, Napoli, Torino, Genova, Palermo, Bologna, Firenze e Bari), e include schede per oltre 50 capoluoghi di provincia, oltre a guide tematiche su PFAS, calcare, nitrati e trattamenti domestici dell'acqua.",
   facts: [
-    { label: "Lancio del progetto", value: "20 giugno 2026" },
+    { label: "Lancio del progetto", value: "8 luglio 2026" },
     { label: "Licenza codice", value: "MIT" },
     { label: "Licenza contenuti", value: "Creative Commons CC-BY 4.0" },
     { label: "Repository pubblico", value: "https://github.com/tutor-sicurezza/goccia" },
@@ -145,34 +145,10 @@ export const PRESS_KIT: PressKitData = {
         "Logo vettoriale ufficiale di GoccIA, gradient viola-azzurro-emerald, fondo trasparente compatibile con sfondi chiari e scuri.",
     },
     {
-      label: "Logo PNG 1024×1024",
-      url: "/press-kit/logo-1024.png",
-      format: "PNG",
-      description: "Versione rasterizzata ad alta risoluzione per anteprime social e copertine editoriali.",
-    },
-    {
       label: "OpenGraph image",
       url: "/opengraph-image",
       format: "PNG (dinamico)",
       description: "Card 1200×630 generata dinamicamente per la condivisione sui social network.",
-    },
-    {
-      label: "Screenshot tool",
-      url: "/press-kit/screenshot-tool.png",
-      format: "PNG",
-      description: "Screenshot della home con il form di inserimento dei parametri dell'analisi.",
-    },
-    {
-      label: "Screenshot risultato",
-      url: "/press-kit/screenshot-result.png",
-      format: "PNG",
-      description: "Screenshot di un esempio di pagina risultato con punteggio finale 1-99 e i tre subscore.",
-    },
-    {
-      label: "Brand guidelines PDF",
-      url: "/press-kit/brand-guidelines.pdf",
-      format: "PDF",
-      description: "Documento con palette colori, font, regole d'uso del logo ed esempi di applicazione corretta.",
     },
   ],
   embedSnippets: [
