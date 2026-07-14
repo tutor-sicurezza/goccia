@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { createServiceClient } from '@/lib/supabase/server';
-import { resultEmailHtml, sendEmail } from '@/lib/email';
+import { resultEmailHtml, sendEmail, sendAdminLeadNotification } from '@/lib/email';
 
 export const runtime = 'nodejs';
 
@@ -67,6 +67,11 @@ export async function POST(req: Request): Promise<Response> {
       subject: `Il tuo punteggio acqua GoccIA: ${score}/99 — ${verdict}`,
       html: resultEmailHtml({ score, verdict, resultUrl }),
     });
+
+        await sendAdminLeadNotification({
+                subject: `Nuovo lead GoccIA — punteggio ${score}/99`,
+                html: `<p>Nuovo lead: <strong>${parsed.data.email}</strong></p><p>Punteggio: ${score}/99 — ${verdict}</p><p>Risultato: ${resultUrl}</p>`,
+        });
 
     return new Response(null, { status: 204 });
   } catch (err) {
