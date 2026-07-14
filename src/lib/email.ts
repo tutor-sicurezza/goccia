@@ -1,11 +1,12 @@
-interface SendArgs {
-  to: string | string[];
-  subject: string;
-  html: string;
-  replyTo?: string;
-}
+const FROM = process.env.RESEND_FROM_EMAIL || 'GoccIA <info@goccia.org>';
 
-const FROM = 'GoccIA <noreply@goccia.org>';
+/** Indirizzi che devono sempre ricevere notifica dei nuovi lead (email raccolte). */
+const ADMIN_NOTIFICATION_EMAILS = ['tutorsicurezza@gmail.com', 'info@goccia.org'];
+
+/** Notifica interna al team quando un nuovo lead lascia la propria email. */
+export async function sendAdminLeadNotification(args: { subject: string; html: string }): Promise<void> {
+  await sendEmail({ to: ADMIN_NOTIFICATION_EMAILS, subject: args.subject, html: args.html });
+}
 
 export async function sendEmail(args: SendArgs): Promise<{ id: string } | null> {
   const key = process.env.RESEND_API_KEY;
