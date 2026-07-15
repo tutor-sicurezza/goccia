@@ -57,6 +57,16 @@ export default function CityIndexPage() {
           — link diretti alle fonti dei gestori e guida per trasformare i
           valori in un punteggio 1–99.
         </p>
+        <p className="mt-3 text-sm text-slate-300">
+          Vuoi sapere dove l&apos;acqua è più critica?{' '}
+          <Link
+            href="/comuni-a-rischio"
+            className="font-semibold text-sky-300 underline-offset-2 hover:underline"
+          >
+            Comuni più a rischio e rischio per tipo di inquinante
+          </Link>{' '}
+          — classifica dai referti ufficiali e contaminazioni documentate (PFAS, metalli, nitrati).
+        </p>
       </div>
 
       <div className="space-y-10">

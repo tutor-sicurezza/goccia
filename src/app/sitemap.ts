@@ -18,6 +18,7 @@ import { ATS_REGIONALI } from '@/lib/ats-regionali';
 import { KIT_EDU } from '@/lib/kit-educational';
 import { MINERAL_WATERS } from '@/lib/mineral-waters';
 import { WATER_COMPARISONS } from '@/lib/mineral-water-comparisons';
+import { getComuniWithData } from '@/lib/comune-analyses';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://goccia.org').replace(
@@ -32,12 +33,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }));
+  const guideSlugs = new Set(CITY_GUIDES.map((g) => g.slug));
   const cityUrls: MetadataRoute.Sitemap = CITY_GUIDES.map((g) => ({
     url: `${base}/acqua-di-${g.slug}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   }));
+  // Comuni con dati reali scrapati ma senza scheda editoriale: pubblicati appena
+  // la pipeline produce un referto (publishing "data-gated").
+  const dataComuneUrls: MetadataRoute.Sitemap = getComuniWithData()
+    .filter((slug) => !guideSlugs.has(slug))
+    .map((slug) => ({
+      url: `${base}/acqua-di-${slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    }));
   const treatmentUrls: MetadataRoute.Sitemap = TREATMENT_GUIDES.map((g) => ({
     url: `${base}/trattamenti/${g.slug}`,
     lastModified: now,
@@ -193,6 +205,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${base}/comuni-a-rischio`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${base}/quiz`,
       lastModified: now,
       changeFrequency: 'weekly',
@@ -263,6 +281,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...parameterUrls,
     ...cityUrls,
+    ...dataComuneUrls,
     ...treatmentUrls,
     ...topicUrls,
     ...blogUrls,
