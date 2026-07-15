@@ -44,9 +44,11 @@ DATA_PATH = os.path.join(os.path.dirname(__file__), '..', 'src', 'data', 'comuni
 _CA_BUNDLE = '/root/.ccr/ca-bundle.crt'
 
 
-def http_get(url: str, retries: int = 3, timeout: int = 30) -> str:
-    """GET con proxy dell'ambiente + CA bundle, backoff su 403/429/5xx.
+def http_get(url: str, retries: int = 3, timeout: int = 30, encoding: str = 'utf-8',
+             data: Optional[bytes] = None, headers: Optional[dict] = None) -> str:
+    """GET/POST con proxy dell'ambiente + CA bundle, backoff su 403/429/5xx.
 
+    `data` non-None => POST. `encoding` per fonti non-UTF8 (es. 'latin-1').
     Usato dagli adapter self-fetching. Solleva l'ultima eccezione se fallisce.
     """
     proxy = os.environ.get('HTTPS_PROXY') or os.environ.get('https_proxy')
@@ -58,12 +60,15 @@ def http_get(url: str, retries: int = 3, timeout: int = 30) -> str:
         ctx.load_verify_locations(_CA_BUNDLE)
         handlers.append(urllib.request.HTTPSHandler(context=ctx))
     opener = urllib.request.build_opener(*handlers)
+    hdrs = {'User-Agent': 'Mozilla/5.0 (goccia-scraper)'}
+    if headers:
+        hdrs.update(headers)
     last: Optional[Exception] = None
     for attempt in range(retries):
         try:
-            req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (goccia-scraper)'})
+            req = urllib.request.Request(url, data=data, headers=hdrs)
             with opener.open(req, timeout=timeout) as r:
-                return r.read().decode('utf-8', 'replace')
+                return r.read().decode(encoding, 'replace')
         except urllib.error.HTTPError as e:
             last = e
             if e.code in (403, 429, 500, 502, 503, 504) and attempt < retries - 1:
@@ -139,6 +144,27 @@ def _norm(s: str) -> str:
     s = ''.join(c for c in s if unicodedata.category(c) != 'Mn')
     s = re.sub(r'[^a-z0-9]+', ' ', s)
     return s.strip()
+
+
+def slugify(name: str) -> str:
+    """Nome comune -> slug URL (minuscolo, senza accenti, trattini)."""
+    s = unicodedata.normalize('NFD', name.lower())
+    s = ''.join(c for c in s if unicodedata.category(c) != 'Mn')
+    s = s.replace("'", ' ').replace('’', ' ')
+    return re.sub(r'[^a-z0-9]+', '-', s).strip('-')
+
+
+_TITLE_LOWER = {'di', 'del', 'della', 'dei', 'degli', 'delle', 'da', 'in', 'sul', 'sulla',
+                'a', 'al', 'con', 'e', 'ed', "d'", 'lo', 'la', 'il', "nell'", 'san', "sant'"}
+
+
+def title_comune(name: str) -> str:
+    """Capitalizza un nome comune tutto maiuscolo in modo ragionevole (Italiano)."""
+    words = name.strip().lower().split()
+    out = []
+    for i, w in enumerate(words):
+        out.append(w if (i > 0 and w in _TITLE_LOWER) else w[:1].upper() + w[1:])
+    return ' '.join(out)
 
 
 def match_parameter(name: str) -> Optional[str]:

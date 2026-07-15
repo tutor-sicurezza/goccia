@@ -16,12 +16,13 @@ riconosciuti o senza valore vengono scartati.
 from __future__ import annotations
 
 import html
+import json
 import re
 import sys
 import urllib.error
 from typing import Callable, Optional
 
-from scrape_comune import build_sample, http_get
+from scrape_comune import build_sample, http_get, slugify, title_comune
 
 # tipo di un adapter: () -> lista di record
 Adapter = Callable[[], list]
@@ -131,7 +132,70 @@ def adapter_publiacqua() -> list:
     return out
 
 
+# ————————————————————————————————————————————————————————————————
+# Ireti (Gruppo IREN) — API JSON pubblica /bin/acqua-quality
+# Enumerazione: province (inline) -> GetComuni -> GetZone -> GetAnalisiZona.
+# Il campo "data" della risposta è una STRINGA JSON (doppio parse).
+# ————————————————————————————————————————————————————————————————
+IRETI_BASE = 'https://www.gruppoiren.it/bin/acqua-quality'
+# (codice provincia usato dall'API, sigla provincia, regione)
+IRETI_PROVINCES = [
+    ('RE', 'RE', 'Emilia-Romagna'), ('PC', 'PC', 'Emilia-Romagna'), ('PR', 'PR', 'Emilia-Romagna'),
+    ('GE', 'GE', 'Liguria'), ('SP', 'SP', 'Liguria'), ('Sv', 'SV', 'Liguria'),
+    ('VC', 'VC', 'Piemonte'), ('AT', 'AT', 'Piemonte'),
+]
+# comuni il cui slug ufficiale sul sito differisce dal nome anagrafico
+IRETI_SLUG_OVERRIDES = {'reggio-nell-emilia': 'reggio-emilia'}
+
+
+def _iren_api(type_: str, code: str, value: str):
+    raw = http_get(f'{IRETI_BASE}?type={type_}&code={code}&value={value}')
+    obj = json.loads(raw)
+    data = obj.get('data')
+    return json.loads(data) if isinstance(data, str) else data
+
+
+def adapter_ireti() -> list:
+    out = []
+    for prov_code, prov_sigla, region in IRETI_PROVINCES:
+        try:
+            comuni = _iren_api('GetComuni', 'codiceProvincia', prov_code)
+        except Exception as e:  # noqa: BLE001
+            print(f'  [ireti] provincia {prov_code}: {type(e).__name__} — salto', file=sys.stderr)
+            continue
+        for c in comuni or []:
+            istat, nome = c.get('CodiceISTAT'), c.get('Nome')
+            if not istat or not nome:
+                continue
+            try:
+                zones = _iren_api('GetZone', 'codiceComune', istat)
+                if not zones:
+                    continue
+                zone = zones[0]  # zona rappresentativa
+                an = _iren_api('GetAnalisiZona', 'idZona', str(zone['idZona']))
+            except Exception as e:  # noqa: BLE001
+                print(f'  [ireti] {nome}: {type(e).__name__} — salto', file=sys.stderr)
+                continue
+            rows = [(r.get('Parametro', ''), r.get('ValoreTesto', ''), r.get('UdM', '')) for r in an or []]
+            date = ''
+            for r in an or []:
+                d = (r.get('DataFineEstrazione') or '')[:10]
+                if len(d) == 10:
+                    date = max(date, d)
+            slug = IRETI_SLUG_OVERRIDES.get(slugify(nome), slugify(nome))
+            rec = _record(
+                slug, title_comune(nome), prov_sigla, region, 'Ireti S.p.A. (Gruppo IREN)',
+                'https://www.gruppoiren.it/it/casa/acqua/la-qualita-dell-acqua',
+                'Gruppo IREN — Qualità dell\'acqua', rows,
+                sampling_date=date, punto=str(zone.get('Nome', '')).strip())
+            if rec:
+                out.append(rec)
+    print(f'  [ireti] {len(out)} comuni con dati', file=sys.stderr)
+    return out
+
+
 REGISTRY: dict[str, Adapter] = {
     'milano-opendata': adapter_milano_opendata,
     'publiacqua': adapter_publiacqua,
+    'ireti': adapter_ireti,
 }
