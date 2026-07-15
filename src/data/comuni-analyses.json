@@ -1,5 +1,301 @@
 [
   {
+    "comuneSlug": "barberino-di-mugello",
+    "comuneName": "Barberino di Mugello",
+    "province": "FI",
+    "region": "Toscana",
+    "gestore": "Publiacqua S.p.A.",
+    "sourcePdfUrl": "https://www.publiacqua.it/qualita/barberino-di-mugello",
+    "sourceLabel": "Publiacqua — Qualità dell'acqua di Barberino di Mugello",
+    "samples": [
+      {
+        "parameterId": "ph",
+        "label": "Concentrazione ioni idrogeno (pH)",
+        "value": 7.9,
+        "unit": "unità pH"
+      },
+      {
+        "parameterId": "conducibilita",
+        "label": "Conducibilità elettrica",
+        "value": 535.0,
+        "unit": "µS/cm"
+      },
+      {
+        "parameterId": "durezza_totale",
+        "label": "Durezza totale",
+        "value": 28.0,
+        "unit": "°F"
+      },
+      {
+        "parameterId": "sodio",
+        "label": "Ioni Sodio",
+        "value": 21.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitrati",
+        "label": "Ioni Nitrati",
+        "value": 3.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitriti",
+        "label": "Ioni Nitriti",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "ammonio",
+        "label": "Ioni Ammonio",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "cloruri",
+        "label": "Ioni Cloruri",
+        "value": 35.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "fluoruri",
+        "label": "Ioni Floruri",
+        "value": 0.1,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "solfati",
+        "label": "Ioni Solfati",
+        "value": 41.0,
+        "unit": "mg/L"
+      }
+    ],
+    "puntoPrelievo": "valori medi rete (carta d'identità)"
+  },
+  {
+    "comuneSlug": "calenzano",
+    "comuneName": "Calenzano",
+    "province": "FI",
+    "region": "Toscana",
+    "gestore": "Publiacqua S.p.A.",
+    "sourcePdfUrl": "https://www.publiacqua.it/qualita/calenzano",
+    "sourceLabel": "Publiacqua — Qualità dell'acqua di Calenzano",
+    "samples": [
+      {
+        "parameterId": "ph",
+        "label": "Concentrazione ioni idrogeno (pH)",
+        "value": 7.5,
+        "unit": "unità pH"
+      },
+      {
+        "parameterId": "conducibilita",
+        "label": "Conducibilità elettrica",
+        "value": 544.0,
+        "unit": "µS/cm"
+      },
+      {
+        "parameterId": "durezza_totale",
+        "label": "Durezza totale",
+        "value": 27.0,
+        "unit": "°F"
+      },
+      {
+        "parameterId": "sodio",
+        "label": "Ioni Sodio",
+        "value": 18.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitrati",
+        "label": "Ioni Nitrati",
+        "value": 38.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitriti",
+        "label": "Ioni Nitriti",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "ammonio",
+        "label": "Ioni Ammonio",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "cloruri",
+        "label": "Ioni Cloruri",
+        "value": 19.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "fluoruri",
+        "label": "Ioni Floruri",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "<0,1"
+      },
+      {
+        "parameterId": "solfati",
+        "label": "Ioni Solfati",
+        "value": 19.0,
+        "unit": "mg/L"
+      }
+    ],
+    "puntoPrelievo": "valori medi rete (carta d'identità)"
+  },
+  {
+    "comuneSlug": "campi-bisenzio",
+    "comuneName": "Campi Bisenzio",
+    "province": "FI",
+    "region": "Toscana",
+    "gestore": "Publiacqua S.p.A.",
+    "sourcePdfUrl": "https://www.publiacqua.it/qualita/campi-bisenzio",
+    "sourceLabel": "Publiacqua — Qualità dell'acqua di Campi Bisenzio",
+    "samples": [
+      {
+        "parameterId": "ph",
+        "label": "Concentrazione ioni idrogeno (pH)",
+        "value": 7.6,
+        "unit": "unità pH"
+      },
+      {
+        "parameterId": "conducibilita",
+        "label": "Conducibilità elettrica",
+        "value": 557.0,
+        "unit": "µS/cm"
+      },
+      {
+        "parameterId": "durezza_totale",
+        "label": "Durezza totale",
+        "value": 27.0,
+        "unit": "°F"
+      },
+      {
+        "parameterId": "sodio",
+        "label": "Ioni Sodio",
+        "value": 31.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitrati",
+        "label": "Ioni Nitrati",
+        "value": 4.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitriti",
+        "label": "Ioni Nitriti",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "ammonio",
+        "label": "Ioni Ammonio",
+        "value": 0.08,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "cloruri",
+        "label": "Ioni Cloruri",
+        "value": 38.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "fluoruri",
+        "label": "Ioni Floruri",
+        "value": 0.1,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "solfati",
+        "label": "Ioni Solfati",
+        "value": 51.0,
+        "unit": "mg/L"
+      }
+    ],
+    "puntoPrelievo": "valori medi rete (carta d'identità)"
+  },
+  {
+    "comuneSlug": "dicomano",
+    "comuneName": "Dicomano",
+    "province": "FI",
+    "region": "Toscana",
+    "gestore": "Publiacqua S.p.A.",
+    "sourcePdfUrl": "https://www.publiacqua.it/qualita/dicomano",
+    "sourceLabel": "Publiacqua — Qualità dell'acqua di Dicomano",
+    "samples": [
+      {
+        "parameterId": "ph",
+        "label": "Concentrazione ioni idrogeno (pH)",
+        "value": 7.6,
+        "unit": "unità pH"
+      },
+      {
+        "parameterId": "conducibilita",
+        "label": "Conducibilità elettrica",
+        "value": 559.0,
+        "unit": "µS/cm"
+      },
+      {
+        "parameterId": "durezza_totale",
+        "label": "Durezza totale",
+        "value": 30.0,
+        "unit": "°F"
+      },
+      {
+        "parameterId": "sodio",
+        "label": "Ioni Sodio",
+        "value": 16.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitrati",
+        "label": "Ioni Nitrati",
+        "value": 9.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitriti",
+        "label": "Ioni Nitriti",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "ammonio",
+        "label": "Ioni Ammonio",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "cloruri",
+        "label": "Ioni Cloruri",
+        "value": 21.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "fluoruri",
+        "label": "Ioni Floruri",
+        "value": 0.1,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "solfati",
+        "label": "Ioni Solfati",
+        "value": 45.0,
+        "unit": "mg/L"
+      }
+    ],
+    "puntoPrelievo": "valori medi rete (carta d'identità)"
+  },
+  {
     "comuneSlug": "firenze",
     "comuneName": "Firenze",
     "province": "FI",
@@ -10,7 +306,7 @@
     "samples": [
       {
         "parameterId": "ph",
-        "label": "pH",
+        "label": "Concentrazione ioni idrogeno (pH)",
         "value": 7.6,
         "unit": "unità pH"
       },
@@ -28,47 +324,121 @@
       },
       {
         "parameterId": "sodio",
-        "label": "Sodio",
+        "label": "Ioni Sodio",
         "value": 26.0,
         "unit": "mg/L"
       },
       {
         "parameterId": "nitrati",
-        "label": "Nitrati",
+        "label": "Ioni Nitrati",
         "value": 4.0,
         "unit": "mg/L"
       },
       {
         "parameterId": "nitriti",
-        "label": "Nitriti",
+        "label": "Ioni Nitriti",
         "value": 0.0,
         "unit": "mg/L",
         "display": "assente"
       },
       {
         "parameterId": "ammonio",
-        "label": "Ammonio",
+        "label": "Ioni Ammonio",
         "value": 0.0,
         "unit": "mg/L",
         "display": "assente"
       },
       {
         "parameterId": "cloruri",
-        "label": "Cloruri",
+        "label": "Ioni Cloruri",
         "value": 39.0,
         "unit": "mg/L"
       },
       {
         "parameterId": "fluoruri",
-        "label": "Fluoruri",
+        "label": "Ioni Floruri",
         "value": 0.0,
         "unit": "mg/L",
         "display": "<0,1"
       },
       {
         "parameterId": "solfati",
-        "label": "Solfati",
+        "label": "Ioni Solfati",
         "value": 50.0,
+        "unit": "mg/L"
+      }
+    ],
+    "puntoPrelievo": "valori medi rete (carta d'identità)"
+  },
+  {
+    "comuneSlug": "impruneta",
+    "comuneName": "Impruneta",
+    "province": "FI",
+    "region": "Toscana",
+    "gestore": "Publiacqua S.p.A.",
+    "sourcePdfUrl": "https://www.publiacqua.it/qualita/impruneta",
+    "sourceLabel": "Publiacqua — Qualità dell'acqua di Impruneta",
+    "samples": [
+      {
+        "parameterId": "ph",
+        "label": "Concentrazione ioni idrogeno (pH)",
+        "value": 7.6,
+        "unit": "unità pH"
+      },
+      {
+        "parameterId": "conducibilita",
+        "label": "Conducibilità elettrica",
+        "value": 630.0,
+        "unit": "µS/cm"
+      },
+      {
+        "parameterId": "durezza_totale",
+        "label": "Durezza totale",
+        "value": 29.0,
+        "unit": "°F"
+      },
+      {
+        "parameterId": "sodio",
+        "label": "Ioni Sodio",
+        "value": 35.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitrati",
+        "label": "Ioni Nitrati",
+        "value": 6.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitriti",
+        "label": "Ioni Nitriti",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "ammonio",
+        "label": "Ioni Ammonio",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "cloruri",
+        "label": "Ioni Cloruri",
+        "value": 55.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "fluoruri",
+        "label": "Ioni Floruri",
+        "value": 0.2,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "solfati",
+        "label": "Ioni Solfati",
+        "value": 53.0,
         "unit": "mg/L"
       }
     ],
@@ -87,13 +457,476 @@
         "parameterId": "ph",
         "label": "pH",
         "value": 7.5,
+        "unit": "pH"
+      },
+      {
+        "parameterId": "durezza_totale",
+        "label": "durezza",
+        "value": 29.0,
+        "unit": "°F"
+      },
+      {
+        "parameterId": "conducibilita",
+        "label": "conducibilita'",
+        "value": 556.0,
+        "unit": "µS/cm a 20°C"
+      },
+      {
+        "parameterId": "ammonio",
+        "label": "ammonio",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "<0,10"
+      },
+      {
+        "parameterId": "cloruri",
+        "label": "cloruri",
+        "value": 30.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "solfati",
+        "label": "solfati",
+        "value": 47.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "sodio",
+        "label": "sodio",
+        "value": 18.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "arsenico",
+        "label": "arsenico",
+        "value": 0.0,
+        "unit": "µg/L",
+        "display": "<2"
+      },
+      {
+        "parameterId": "cloro_residuo",
+        "label": "cloro residuo",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "<0,01"
+      },
+      {
+        "parameterId": "fluoruri",
+        "label": "fluoruri",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "<0,5"
+      },
+      {
+        "parameterId": "nitrati",
+        "label": "nitrati",
+        "value": 29.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitriti",
+        "label": "nitriti",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "<0,20"
+      },
+      {
+        "parameterId": "manganese",
+        "label": "manganese",
+        "value": 0.0,
+        "unit": "µg/L",
+        "display": "<1"
+      }
+    ],
+    "samplingDate": "2021-12-31",
+    "puntoPrelievo": "media città — carta d'identità (4° trim. 2021)"
+  },
+  {
+    "comuneSlug": "pelago",
+    "comuneName": "Pelago",
+    "province": "FI",
+    "region": "Toscana",
+    "gestore": "Publiacqua S.p.A.",
+    "sourcePdfUrl": "https://www.publiacqua.it/qualita/pelago",
+    "sourceLabel": "Publiacqua — Qualità dell'acqua di Pelago",
+    "samples": [
+      {
+        "parameterId": "ph",
+        "label": "Concentrazione ioni idrogeno (pH)",
+        "value": 8.0,
         "unit": "unità pH"
+      },
+      {
+        "parameterId": "conducibilita",
+        "label": "Conducibilità elettrica",
+        "value": 379.0,
+        "unit": "µS/cm"
       },
       {
         "parameterId": "durezza_totale",
         "label": "Durezza totale",
-        "value": 29.0,
+        "value": 20.0,
         "unit": "°F"
+      },
+      {
+        "parameterId": "sodio",
+        "label": "Ioni Sodio",
+        "value": 16.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitrati",
+        "label": "Ioni Nitrati",
+        "value": 3.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitriti",
+        "label": "Ioni Nitriti",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "ammonio",
+        "label": "Ioni Ammonio",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "cloruri",
+        "label": "Ioni Cloruri",
+        "value": 18.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "fluoruri",
+        "label": "Ioni Floruri",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "<0,1"
+      },
+      {
+        "parameterId": "solfati",
+        "label": "Ioni Solfati",
+        "value": 31.0,
+        "unit": "mg/L"
+      }
+    ],
+    "puntoPrelievo": "valori medi rete (carta d'identità)"
+  },
+  {
+    "comuneSlug": "pontassieve",
+    "comuneName": "Pontassieve",
+    "province": "FI",
+    "region": "Toscana",
+    "gestore": "Publiacqua S.p.A.",
+    "sourcePdfUrl": "https://www.publiacqua.it/qualita/pontassieve",
+    "sourceLabel": "Publiacqua — Qualità dell'acqua di Pontassieve",
+    "samples": [
+      {
+        "parameterId": "ph",
+        "label": "Concentrazione ioni idrogeno (pH)",
+        "value": 7.8,
+        "unit": "unità pH"
+      },
+      {
+        "parameterId": "conducibilita",
+        "label": "Conducibilità elettrica",
+        "value": 532.0,
+        "unit": "µS/cm"
+      },
+      {
+        "parameterId": "durezza_totale",
+        "label": "Durezza totale",
+        "value": 21.0,
+        "unit": "°F"
+      },
+      {
+        "parameterId": "sodio",
+        "label": "Ioni Sodio",
+        "value": 21.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitrati",
+        "label": "Ioni Nitrati",
+        "value": 5.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitriti",
+        "label": "Ioni Nitriti",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "ammonio",
+        "label": "Ioni Ammonio",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "cloruri",
+        "label": "Ioni Cloruri",
+        "value": 29.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "fluoruri",
+        "label": "Ioni Floruri",
+        "value": 0.1,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "solfati",
+        "label": "Ioni Solfati",
+        "value": 51.0,
+        "unit": "mg/L"
+      }
+    ],
+    "puntoPrelievo": "valori medi rete (carta d'identità)"
+  },
+  {
+    "comuneSlug": "reggello",
+    "comuneName": "Reggello",
+    "province": "FI",
+    "region": "Toscana",
+    "gestore": "Publiacqua S.p.A.",
+    "sourcePdfUrl": "https://www.publiacqua.it/qualita/reggello",
+    "sourceLabel": "Publiacqua — Qualità dell'acqua di Reggello",
+    "samples": [
+      {
+        "parameterId": "ph",
+        "label": "Concentrazione ioni idrogeno (pH)",
+        "value": 7.5,
+        "unit": "unità pH"
+      },
+      {
+        "parameterId": "conducibilita",
+        "label": "Conducibilità elettrica",
+        "value": 178.0,
+        "unit": "µS/cm"
+      },
+      {
+        "parameterId": "durezza_totale",
+        "label": "Durezza totale",
+        "value": 7.0,
+        "unit": "°F"
+      },
+      {
+        "parameterId": "sodio",
+        "label": "Ioni Sodio",
+        "value": 5.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitrati",
+        "label": "Ioni Nitrati",
+        "value": 1.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitriti",
+        "label": "Ioni Nitriti",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "ammonio",
+        "label": "Ioni Ammonio",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "cloruri",
+        "label": "Ioni Cloruri",
+        "value": 10.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "fluoruri",
+        "label": "Ioni Floruri",
+        "value": 0.1,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "solfati",
+        "label": "Ioni Solfati",
+        "value": 10.0,
+        "unit": "mg/L"
+      }
+    ],
+    "puntoPrelievo": "valori medi rete (carta d'identità)"
+  },
+  {
+    "comuneSlug": "scandicci",
+    "comuneName": "Scandicci",
+    "province": "FI",
+    "region": "Toscana",
+    "gestore": "Publiacqua S.p.A.",
+    "sourcePdfUrl": "https://www.publiacqua.it/qualita/scandicci",
+    "sourceLabel": "Publiacqua — Qualità dell'acqua di Scandicci",
+    "samples": [
+      {
+        "parameterId": "ph",
+        "label": "Concentrazione ioni idrogeno (pH)",
+        "value": 7.3,
+        "unit": "unità pH"
+      },
+      {
+        "parameterId": "conducibilita",
+        "label": "Conducibilità elettrica",
+        "value": 715.0,
+        "unit": "µS/cm"
+      },
+      {
+        "parameterId": "durezza_totale",
+        "label": "Durezza totale",
+        "value": 33.0,
+        "unit": "°F"
+      },
+      {
+        "parameterId": "sodio",
+        "label": "Ioni Sodio",
+        "value": 37.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitrati",
+        "label": "Ioni Nitrati",
+        "value": 15.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitriti",
+        "label": "Ioni Nitriti",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "ammonio",
+        "label": "Ioni Ammonio",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "cloruri",
+        "label": "Ioni Cloruri",
+        "value": 53.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "fluoruri",
+        "label": "Ioni Floruri",
+        "value": 0.1,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "solfati",
+        "label": "Ioni Solfati",
+        "value": 66.0,
+        "unit": "mg/L"
+      }
+    ],
+    "puntoPrelievo": "valori medi rete (carta d'identità)"
+  },
+  {
+    "comuneSlug": "sesto-fiorentino",
+    "comuneName": "Sesto Fiorentino",
+    "province": "FI",
+    "region": "Toscana",
+    "gestore": "Publiacqua S.p.A.",
+    "sourcePdfUrl": "https://www.publiacqua.it/qualita/sesto-fiorentino",
+    "sourceLabel": "Publiacqua — Qualità dell'acqua di Sesto Fiorentino",
+    "samples": [
+      {
+        "parameterId": "ph",
+        "label": "Concentrazione ioni idrogeno (pH)",
+        "value": 7.2,
+        "unit": "unità pH"
+      },
+      {
+        "parameterId": "conducibilita",
+        "label": "Conducibilità elettrica",
+        "value": 826.0,
+        "unit": "µS/cm"
+      },
+      {
+        "parameterId": "durezza_totale",
+        "label": "Durezza totale",
+        "value": 38.0,
+        "unit": "°F"
+      },
+      {
+        "parameterId": "sodio",
+        "label": "Ioni Sodio",
+        "value": 38.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitrati",
+        "label": "Ioni Nitrati",
+        "value": 15.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitriti",
+        "label": "Ioni Nitriti",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "ammonio",
+        "label": "Ioni Ammonio",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "cloruri",
+        "label": "Ioni Cloruri",
+        "value": 64.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "fluoruri",
+        "label": "Ioni Floruri",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "<0,1"
+      },
+      {
+        "parameterId": "solfati",
+        "label": "Ioni Solfati",
+        "value": 90.0,
+        "unit": "mg/L"
+      }
+    ],
+    "puntoPrelievo": "valori medi rete (carta d'identità)"
+  },
+  {
+    "comuneSlug": "signa",
+    "comuneName": "Signa",
+    "province": "FI",
+    "region": "Toscana",
+    "gestore": "Publiacqua S.p.A.",
+    "sourcePdfUrl": "https://www.publiacqua.it/qualita/signa",
+    "sourceLabel": "Publiacqua — Qualità dell'acqua di Signa",
+    "samples": [
+      {
+        "parameterId": "ph",
+        "label": "Concentrazione ioni idrogeno (pH)",
+        "value": 7.7,
+        "unit": "unità pH"
       },
       {
         "parameterId": "conducibilita",
@@ -102,73 +935,131 @@
         "unit": "µS/cm"
       },
       {
-        "parameterId": "ammonio",
-        "label": "Ammonio",
-        "value": 0.0,
-        "unit": "mg/L",
-        "display": "<0,10"
-      },
-      {
-        "parameterId": "cloruri",
-        "label": "Cloruri",
-        "value": 30.0,
-        "unit": "mg/L"
-      },
-      {
-        "parameterId": "solfati",
-        "label": "Solfati",
-        "value": 47.0,
-        "unit": "mg/L"
+        "parameterId": "durezza_totale",
+        "label": "Durezza totale",
+        "value": 23.0,
+        "unit": "°F"
       },
       {
         "parameterId": "sodio",
-        "label": "Sodio",
-        "value": 18.0,
+        "label": "Ioni Sodio",
+        "value": 28.0,
         "unit": "mg/L"
       },
       {
-        "parameterId": "arsenico",
-        "label": "Arsenico",
-        "value": 0.0,
-        "unit": "µg/L",
-        "display": "<2"
-      },
-      {
-        "parameterId": "cloro_residuo",
-        "label": "Cloro residuo",
-        "value": 0.0,
-        "unit": "mg/L",
-        "display": "<0,01"
-      },
-      {
-        "parameterId": "fluoruri",
-        "label": "Fluoruri",
-        "value": 0.0,
-        "unit": "mg/L",
-        "display": "<0,5"
-      },
-      {
         "parameterId": "nitrati",
-        "label": "Nitrati",
-        "value": 29.0,
+        "label": "Ioni Nitrati",
+        "value": 6.0,
         "unit": "mg/L"
       },
       {
         "parameterId": "nitriti",
-        "label": "Nitriti",
+        "label": "Ioni Nitriti",
         "value": 0.0,
         "unit": "mg/L",
-        "display": "<0,20"
+        "display": "assente"
       },
       {
-        "parameterId": "manganese",
-        "label": "Manganese",
+        "parameterId": "ammonio",
+        "label": "Ioni Ammonio",
         "value": 0.0,
-        "unit": "µg/L",
-        "display": "<1"
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "cloruri",
+        "label": "Ioni Cloruri",
+        "value": 43.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "fluoruri",
+        "label": "Ioni Floruri",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "<0,1"
+      },
+      {
+        "parameterId": "solfati",
+        "label": "Ioni Solfati",
+        "value": 57.0,
+        "unit": "mg/L"
       }
     ],
-    "samplingDate": "2021-12-31",
-    "puntoPrelievo": "media città — carta d'identità (4° trim. 2021)"
+    "puntoPrelievo": "valori medi rete (carta d'identità)"
+  },
+  {
+    "comuneSlug": "vicchio",
+    "comuneName": "Vicchio",
+    "province": "FI",
+    "region": "Toscana",
+    "gestore": "Publiacqua S.p.A.",
+    "sourcePdfUrl": "https://www.publiacqua.it/qualita/vicchio",
+    "sourceLabel": "Publiacqua — Qualità dell'acqua di Vicchio",
+    "samples": [
+      {
+        "parameterId": "ph",
+        "label": "Concentrazione ioni idrogeno (pH)",
+        "value": 7.8,
+        "unit": "unità pH"
+      },
+      {
+        "parameterId": "conducibilita",
+        "label": "Conducibilità elettrica",
+        "value": 389.0,
+        "unit": "µS/cm"
+      },
+      {
+        "parameterId": "durezza_totale",
+        "label": "Durezza totale",
+        "value": 18.0,
+        "unit": "°F"
+      },
+      {
+        "parameterId": "sodio",
+        "label": "Ioni Sodio",
+        "value": 12.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitrati",
+        "label": "Ioni Nitrati",
+        "value": 2.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitriti",
+        "label": "Ioni Nitriti",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "ammonio",
+        "label": "Ioni Ammonio",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "cloruri",
+        "label": "Ioni Cloruri",
+        "value": 13.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "fluoruri",
+        "label": "Ioni Floruri",
+        "value": 0.1,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "solfati",
+        "label": "Ioni Solfati",
+        "value": 35.0,
+        "unit": "mg/L"
+      }
+    ],
+    "puntoPrelievo": "valori medi rete (carta d'identità)"
   }
 ]

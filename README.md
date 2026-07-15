@@ -72,6 +72,23 @@ Flusso:
    quando esiste un report; `/comuni-a-rischio` aggrega la classifica e le
    contaminazioni documentate; `sitemap.ts` include automaticamente i comuni con dati.
 
+### Adapter self-fetching (multi-comune)
+
+Per le fonti che pubblicano molti comuni (open data, portali "qualità per comune"),
+`scripts/adapters.py` contiene adapter che **scaricano e mappano i dati da soli**,
+riusando il core di `scrape_comune.py`. Ogni adapter valida la fonte: gli slug non
+pubblicati (404/403) vengono saltati.
+
+```
+python3 scripts/run_adapters.py --list          # elenca gli adapter
+python3 scripts/run_adapters.py --all            # esegue tutti e aggiorna il JSON
+python3 scripts/run_adapters.py --adapter publiacqua --dry-run
+```
+
+Adapter attuali: `milano-opendata` (CKAN Comune di Milano) e `publiacqua`
+(schede "Qualità dell'acqua" per comune, Toscana centrale). Aggiungere un gestore =
+aggiungere una funzione all'`REGISTRY` con URL della fonte e mappatura colonne.
+
 Regola inderogabile: **nessun valore inventato**. Ogni record cita la fonte pubblica
 (`sourcePdfUrl`) e la data di campionamento.
 
