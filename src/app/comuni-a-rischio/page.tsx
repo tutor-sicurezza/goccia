@@ -107,7 +107,8 @@ export default function ComuniARischioPage() {
         {atRisk.length > 0 ? (
           <>
             <p className="mt-2 text-sm text-slate-400">
-              {dataCount} comuni con referto analizzato, dal punteggio più basso al più alto.
+              {dataCount} comuni con referto analizzato. Qui i {Math.min(50, atRisk.length)} col
+              punteggio più basso (i più critici); ogni comune ha la sua scheda con la tabella completa.
             </p>
             <div className="mt-5 overflow-x-auto">
               <table className="w-full min-w-[560px] border-collapse text-sm">
@@ -120,7 +121,7 @@ export default function ComuniARischioPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  {atRisk.map((row) => (
+                  {atRisk.slice(0, 50).map((row) => (
                     <tr key={row.slug} className="border-b border-white/5">
                       <td className="py-2.5 pr-3 text-slate-200">
                         {row.name} <span className="text-slate-500">({row.province})</span>
