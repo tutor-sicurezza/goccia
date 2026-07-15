@@ -26,9 +26,14 @@ export interface ComuneAnalysisSample {
   parameterId: string;
   /** etichetta originale come compare sul referto del gestore. */
   label: string;
-  /** valore numerico; null per parametri microbiologici espressi come "assente". */
+  /** valore numerico usato per lo scoring; null per microbiologici "assente". */
   value: number | null;
   unit: string;
+  /**
+   * valore da mostrare così com'è sul referto (es. "<2", "<0,10"), quando differisce
+   * dal numerico usato per il calcolo (sotto il limite di rilevabilità). Fedeltà alla fonte.
+   */
+  display?: string;
   /** per i microbiologici: true se conforme ("assente"/0), false se rilevato. */
   compliant?: boolean | null;
 }
@@ -41,8 +46,11 @@ export interface ComuneAnalysisReport {
   province: string;
   region: string;
   gestore: string;
-  /** data di campionamento in formato ISO (YYYY-MM-DD). */
-  samplingDate: string;
+  /**
+   * data/periodo di riferimento del dato in formato ISO (YYYY-MM-DD), se il gestore
+   * la dichiara. Assente per le "carte d'identità" con valori medi non datati.
+   */
+  samplingDate?: string;
   /** punto/zona di prelievo, se indicato sul referto. */
   puntoPrelievo?: string;
   /** URL del PDF/pagina ufficiale da cui provengono i dati. */
@@ -66,9 +74,9 @@ for (const r of COMUNE_ANALYSES) {
   list.push(r);
   BY_SLUG.set(r.comuneSlug, list);
 }
-// report più recente per primo
+// report più recente per primo (i report senza data vanno in fondo)
 for (const list of BY_SLUG.values()) {
-  list.sort((a, b) => (a.samplingDate < b.samplingDate ? 1 : -1));
+  list.sort((a, b) => (b.samplingDate ?? '').localeCompare(a.samplingDate ?? ''));
 }
 
 /** Tutti i report di un comune, dal più recente al più vecchio. */
@@ -129,7 +137,7 @@ export interface ComuneRiskRow {
   verdictLabel: string;
   /** parametri oltre il limite di legge nel report più recente. */
   overLimit: { parameterId: string; label: string; value: number | null; unit: string }[];
-  samplingDate: string;
+  samplingDate?: string;
 }
 
 /**

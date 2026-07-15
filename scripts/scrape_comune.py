@@ -148,29 +148,31 @@ def parse_value(raw: str) -> dict:
     """
     Interpreta la cella "valore" di un referto italiano.
 
-    Ritorna: { 'value': float|None, 'below_detection': bool, 'absent': bool }
-      - absent=True per "assente"/"non rilevato" (tipico microbiologici) -> value None
+    Ritorna: { 'value': float|None, 'below_detection', 'not_detected', 'missing' }
+      - missing=True per celle vuote / "n.d." (dato non disponibile) -> si scarta
+      - not_detected=True per "assente"/"non rilevato" (rilevato come non presente)
       - below_detection=True per "<X" / "≤X" -> value = soglia numerica
       - altrimenti value = numero (virgola decimale gestita)
     """
+    base = {'value': None, 'below_detection': False, 'not_detected': False, 'missing': False}
     if raw is None:
-        return {'value': None, 'below_detection': False, 'absent': True}
+        return {**base, 'missing': True}
     t = raw.strip().lower()
-    if t in ('', '-', '—', 'n.d.', 'nd', 'n.d', 'n/d', 'nr', 'n.r.'):
-        return {'value': None, 'below_detection': False, 'absent': True}
+    if t in ('', '-', '—', 'n.d.', 'nd', 'n.d', 'n/d', 'nr', 'n.r.', 'n.a.'):
+        return {**base, 'missing': True}
     if any(k in t for k in ('assente', 'non rilevat', 'non riscontrat', 'negativ')):
-        return {'value': None, 'below_detection': False, 'absent': True}
+        return {**base, 'not_detected': True}
 
     below = t.startswith('<') or t.startswith('≤') or 'minore di' in t or 'inferiore a' in t
     # rimuove spazi fra cifre (separatore migliaia "1 234") e i simboli di disuguaglianza
     t2 = re.sub(r'(?<=\d)\s+(?=\d)', '', t).replace('<', ' ').replace('≤', ' ')
     m = _NUM_RE.search(t2)
     if not m:
-        return {'value': None, 'below_detection': below, 'absent': not below}
+        return {**base, 'below_detection': below, 'missing': not below}
     value = _to_float(m.group(0))
     if value is None:
-        return {'value': None, 'below_detection': below, 'absent': not below}
-    return {'value': value, 'below_detection': below, 'absent': False}
+        return {**base, 'below_detection': below, 'missing': not below}
+    return {**base, 'value': value, 'below_detection': below}
 
 
 def build_sample(name: str, value_raw: str, unit_raw: str = '') -> Optional[dict]:
@@ -182,18 +184,28 @@ def build_sample(name: str, value_raw: str, unit_raw: str = '') -> Optional[dict
     unit = unit_raw.strip() or DEFAULT_UNIT.get(pid, '')
 
     if pid in MICROBIO:
-        if parsed['absent'] or parsed['below_detection'] or (parsed['value'] == 0):
+        if parsed['missing']:
+            return None  # non si puo' asserire conformita': si scarta
+        if parsed['not_detected'] or parsed['below_detection'] or parsed['value'] == 0:
             return {'parameterId': pid, 'label': name.strip(), 'value': None,
                     'unit': unit or DEFAULT_UNIT[pid], 'compliant': True}
         return {'parameterId': pid, 'label': name.strip(), 'value': parsed['value'],
                 'unit': unit or DEFAULT_UNIT[pid], 'compliant': False}
 
-    value = parsed['value']
-    if parsed['absent']:
+    if parsed['missing']:
         return None  # parametro chimico senza valore leggibile: si scarta
-    if parsed['below_detection'] and pid not in MIN_BOUND:
-        value = 0.0  # sotto il limite di rilevabilita' = praticamente assente
-    return {'parameterId': pid, 'label': name.strip(), 'value': value, 'unit': unit}
+    sample = {'parameterId': pid, 'label': name.strip(), 'value': parsed['value'],
+              'unit': unit or DEFAULT_UNIT.get(pid, '')}
+    if parsed['not_detected']:
+        # rilevato come non presente: value 0 ai fini del punteggio, mostra "assente"
+        sample['value'] = 0.0
+        sample['display'] = 'assente'
+    elif parsed['below_detection']:
+        # conserva il valore verbatim del referto (es. "<2") per la visualizzazione
+        sample['display'] = value_raw.strip()
+        if pid not in MIN_BOUND:
+            sample['value'] = 0.0  # sotto il limite di rilevabilita' = praticamente assente
+    return sample
 
 
 # ————————————————————————————————————————————————————————————————
@@ -261,7 +273,7 @@ def load_data() -> list[dict]:
 
 
 def save_data(records: list[dict]) -> None:
-    records.sort(key=lambda r: (r['comuneSlug'], r['samplingDate']))
+    records.sort(key=lambda r: (r['comuneSlug'], r.get('samplingDate', '')))
     with open(DATA_PATH, 'w', encoding='utf-8', newline='\n') as f:
         json.dump(records, f, ensure_ascii=False, indent=2)
         f.write('\n')
@@ -269,9 +281,9 @@ def save_data(records: list[dict]) -> None:
 
 def upsert(record: dict) -> None:
     data = load_data()
-    key = (record['comuneSlug'], record['samplingDate'], record.get('puntoPrelievo', ''))
+    key = (record['comuneSlug'], record.get('samplingDate', ''), record.get('puntoPrelievo', ''))
     data = [r for r in data
-            if (r['comuneSlug'], r['samplingDate'], r.get('puntoPrelievo', '')) != key]
+            if (r['comuneSlug'], r.get('samplingDate', ''), r.get('puntoPrelievo', '')) != key]
     data.append(record)
     save_data(data)
 
@@ -283,7 +295,7 @@ def main() -> None:
     ap.add_argument('--provincia', required=True)
     ap.add_argument('--regione', required=True)
     ap.add_argument('--gestore', required=True)
-    ap.add_argument('--data', required=True, help='data campionamento YYYY-MM-DD')
+    ap.add_argument('--data', default='', help='data/periodo riferimento YYYY-MM-DD (opzionale)')
     ap.add_argument('--source-url', required=True)
     ap.add_argument('--source-label', required=True)
     ap.add_argument('--punto', default='', help='punto/zona di prelievo (opzionale)')
@@ -319,11 +331,12 @@ def main() -> None:
         'province': args.provincia,
         'region': args.regione,
         'gestore': args.gestore,
-        'samplingDate': args.data,
         'sourcePdfUrl': args.source_url,
         'sourceLabel': args.source_label,
         'samples': samples,
     }
+    if args.data:
+        record['samplingDate'] = args.data
     if args.punto:
         record['puntoPrelievo'] = args.punto
 

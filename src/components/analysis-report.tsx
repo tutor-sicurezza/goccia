@@ -23,7 +23,13 @@ function formatLimit(range: ParameterRange, unit: string): string {
   return '—';
 }
 
-function formatValue(value: number | null, unit: string, status: ParameterStatus): string {
+function formatValue(
+  value: number | null,
+  unit: string,
+  status: ParameterStatus,
+  display?: string,
+): string {
+  if (display) return `${display} ${unit}`;
   if (value === null || value === undefined) {
     return status === 'ideal' ? 'assente' : 'n.d.';
   }
@@ -59,8 +65,13 @@ export function AnalysisReport({ scored }: { scored: ScoredReport }) {
           </p>
           <p className="mt-1 text-sm text-slate-300">
             Calcolato in modo deterministico dai valori pubblicati da{' '}
-            <span className="font-semibold text-slate-100">{report.gestore}</span>,
-            campionamento del <span className="text-slate-100">{formatDate(report.samplingDate)}</span>
+            <span className="font-semibold text-slate-100">{report.gestore}</span>
+            {report.samplingDate ? (
+              <>
+                , campionamento del{' '}
+                <span className="text-slate-100">{formatDate(report.samplingDate)}</span>
+              </>
+            ) : null}
             {report.puntoPrelievo ? ` · ${report.puntoPrelievo}` : ''}.
           </p>
           <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -102,7 +113,7 @@ export function AnalysisReport({ scored }: { scored: ScoredReport }) {
                 <tr key={sample.parameterId} className="border-b border-white/5">
                   <td className="py-2.5 pr-3 text-slate-200">{sample.label}</td>
                   <td className="py-2.5 pr-3 tabular-nums text-slate-100">
-                    {formatValue(sample.value, sample.unit, detail.status)}
+                    {formatValue(sample.value, sample.unit, detail.status, sample.display)}
                   </td>
                   <td className="py-2.5 pr-3 tabular-nums text-slate-400">
                     {formatLimit(detail.legal, sample.unit)}

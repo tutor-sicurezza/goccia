@@ -46,9 +46,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const title = guide
     ? guide.shortTitle
     : `Acqua del rubinetto a ${name}: analisi ufficiali e punteggio qualità`;
+  const when = report?.samplingDate ? ` (${formatDate(report.samplingDate)})` : '';
   const description = guide
     ? guide.metaDescription
-    : `Analisi dell'acqua del rubinetto a ${name}: valori reali dal referto di ${report!.gestore} (${formatDate(report!.samplingDate)}), tabella parametri, limiti di legge e punteggio qualità 1–99.`;
+    : `Analisi dell'acqua del rubinetto a ${name}: valori reali dal referto di ${report!.gestore}${when}, tabella parametri, limiti di legge e punteggio qualità 1–99.`;
 
   return {
     title,
@@ -181,11 +182,11 @@ export default async function CityPage({ params }: PageProps) {
           <ul className="mt-4 space-y-2">
             {scoredHistory.map((s) => (
               <li
-                key={`${s.report.samplingDate}-${s.report.puntoPrelievo ?? ''}`}
+                key={`${s.report.samplingDate ?? 'nodate'}-${s.report.puntoPrelievo ?? ''}`}
                 className="glass flex items-center justify-between gap-3 rounded-xl px-4 py-3 text-sm"
               >
                 <span className="text-slate-300">
-                  {formatDate(s.report.samplingDate)}
+                  {s.report.samplingDate ? formatDate(s.report.samplingDate) : 'valori medi pubblicati'}
                   {s.report.puntoPrelievo ? ` · ${s.report.puntoPrelievo}` : ''}
                 </span>
                 <span className="flex items-center gap-3">

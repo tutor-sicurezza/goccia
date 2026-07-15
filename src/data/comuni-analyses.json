@@ -1,1 +1,174 @@
-[]
+[
+  {
+    "comuneSlug": "firenze",
+    "comuneName": "Firenze",
+    "province": "FI",
+    "region": "Toscana",
+    "gestore": "Publiacqua S.p.A.",
+    "sourcePdfUrl": "https://www.publiacqua.it/qualita/firenze",
+    "sourceLabel": "Publiacqua — Qualità dell'acqua di Firenze",
+    "samples": [
+      {
+        "parameterId": "ph",
+        "label": "pH",
+        "value": 7.6,
+        "unit": "unità pH"
+      },
+      {
+        "parameterId": "conducibilita",
+        "label": "Conducibilità elettrica",
+        "value": 495.0,
+        "unit": "µS/cm"
+      },
+      {
+        "parameterId": "durezza_totale",
+        "label": "Durezza totale",
+        "value": 20.0,
+        "unit": "°F"
+      },
+      {
+        "parameterId": "sodio",
+        "label": "Sodio",
+        "value": 26.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitrati",
+        "label": "Nitrati",
+        "value": 4.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitriti",
+        "label": "Nitriti",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "ammonio",
+        "label": "Ammonio",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "assente"
+      },
+      {
+        "parameterId": "cloruri",
+        "label": "Cloruri",
+        "value": 39.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "fluoruri",
+        "label": "Fluoruri",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "<0,1"
+      },
+      {
+        "parameterId": "solfati",
+        "label": "Solfati",
+        "value": 50.0,
+        "unit": "mg/L"
+      }
+    ],
+    "puntoPrelievo": "valori medi rete (carta d'identità)"
+  },
+  {
+    "comuneSlug": "milano",
+    "comuneName": "Milano",
+    "province": "MI",
+    "region": "Lombardia",
+    "gestore": "MM S.p.A.",
+    "sourcePdfUrl": "https://dati.comune.milano.it/dataset/c4e847de-491c-4ce5-bcd4-f2927f68f5d6/resource/538d4ac2-9d84-48cd-ade1-803908011314/download/ds1670_qualita_acqua.csv",
+    "sourceLabel": "Comune di Milano (open data) — Analisi acqua 4° trim. 2021",
+    "samples": [
+      {
+        "parameterId": "ph",
+        "label": "pH",
+        "value": 7.5,
+        "unit": "unità pH"
+      },
+      {
+        "parameterId": "durezza_totale",
+        "label": "Durezza totale",
+        "value": 29.0,
+        "unit": "°F"
+      },
+      {
+        "parameterId": "conducibilita",
+        "label": "Conducibilità elettrica",
+        "value": 556.0,
+        "unit": "µS/cm"
+      },
+      {
+        "parameterId": "ammonio",
+        "label": "Ammonio",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "<0,10"
+      },
+      {
+        "parameterId": "cloruri",
+        "label": "Cloruri",
+        "value": 30.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "solfati",
+        "label": "Solfati",
+        "value": 47.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "sodio",
+        "label": "Sodio",
+        "value": 18.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "arsenico",
+        "label": "Arsenico",
+        "value": 0.0,
+        "unit": "µg/L",
+        "display": "<2"
+      },
+      {
+        "parameterId": "cloro_residuo",
+        "label": "Cloro residuo",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "<0,01"
+      },
+      {
+        "parameterId": "fluoruri",
+        "label": "Fluoruri",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "<0,5"
+      },
+      {
+        "parameterId": "nitrati",
+        "label": "Nitrati",
+        "value": 29.0,
+        "unit": "mg/L"
+      },
+      {
+        "parameterId": "nitriti",
+        "label": "Nitriti",
+        "value": 0.0,
+        "unit": "mg/L",
+        "display": "<0,20"
+      },
+      {
+        "parameterId": "manganese",
+        "label": "Manganese",
+        "value": 0.0,
+        "unit": "µg/L",
+        "display": "<1"
+      }
+    ],
+    "samplingDate": "2021-12-31",
+    "puntoPrelievo": "media città — carta d'identità (4° trim. 2021)"
+  }
+]

@@ -35,9 +35,11 @@ check('punto decimale', parse_value('0.05')['value'], 0.05)
 check('migliaia', parse_value('1.234')['value'], 1234.0)
 check('sotto soglia value', parse_value('<1')['value'], 1.0)
 check('sotto soglia flag', parse_value('<0,05')['below_detection'], True)
-check('assente', parse_value('assente')['absent'], True)
-check('non rilevato', parse_value('non rilevato')['absent'], True)
-check('nd', parse_value('n.d.')['absent'], True)
+check('assente not_detected', parse_value('assente')['not_detected'], True)
+check('assente non missing', parse_value('assente')['missing'], False)
+check('non rilevato', parse_value('non rilevato')['not_detected'], True)
+check('nd missing', parse_value('n.d.')['missing'], True)
+check('nd non not_detected', parse_value('n.d.')['not_detected'], False)
 
 # — build_sample end-to-end —
 s = build_sample('Nitrati', '12,3', 'mg/L')
@@ -51,11 +53,16 @@ s = build_sample('Escherichia coli', 'assente', 'UFC/100mL')
 check('microbio assente compliant', s['compliant'], True)
 check('microbio assente value', s['value'], None)
 
+# chimico "assente" -> mostrato come assente, value 0 per lo scoring
+s = build_sample('Nitriti', 'Assente', 'mg/L')
+check('chimico assente value', s['value'], 0.0)
+check('chimico assente display', s['display'], 'assente')
+
 s = build_sample('Escherichia coli', '5', 'UFC/100mL')
 check('microbio rilevato compliant', s['compliant'], False)
 check('microbio rilevato value', s['value'], 5.0)
 
-check('chimico senza valore scartato', build_sample('Piombo', 'n.d.', 'µg/L'), None)
+check('chimico n.d. scartato', build_sample('Piombo', 'n.d.', 'µg/L'), None)
 check('parametro ignoto scartato', build_sample('Temperatura', '15', '°C'), None)
 
 # pH: sotto-soglia NON azzerato (ha un minimo di legge)
