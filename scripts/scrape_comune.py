@@ -42,6 +42,24 @@ from typing import Optional
 DATA_PATH = os.path.join(os.path.dirname(__file__), '..', 'src', 'data', 'comuni-analyses.json')
 
 _CA_BUNDLE = '/root/.ccr/ca-bundle.crt'
+_OPENER = None
+
+
+def _build_opener():
+    global _OPENER
+    if _OPENER is not None:
+        return _OPENER
+    import http.cookiejar
+    proxy = os.environ.get('HTTPS_PROXY') or os.environ.get('https_proxy')
+    handlers = [urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar())]
+    if proxy:
+        handlers.append(urllib.request.ProxyHandler({'https': proxy, 'http': proxy}))
+    if os.path.exists(_CA_BUNDLE):
+        ctx = ssl.create_default_context()
+        ctx.load_verify_locations(_CA_BUNDLE)
+        handlers.append(urllib.request.HTTPSHandler(context=ctx))
+    _OPENER = urllib.request.build_opener(*handlers)
+    return _OPENER
 
 
 def http_get(url: str, retries: int = 3, timeout: int = 30, encoding: str = 'utf-8',
@@ -49,17 +67,9 @@ def http_get(url: str, retries: int = 3, timeout: int = 30, encoding: str = 'utf
     """GET/POST con proxy dell'ambiente + CA bundle, backoff su 403/429/5xx.
 
     `data` non-None => POST. `encoding` per fonti non-UTF8 (es. 'latin-1').
-    Usato dagli adapter self-fetching. Solleva l'ultima eccezione se fallisce.
+    I cookie persistono fra chiamate (sessioni JSP/PHP). Usato dagli adapter.
     """
-    proxy = os.environ.get('HTTPS_PROXY') or os.environ.get('https_proxy')
-    handlers = []
-    if proxy:
-        handlers.append(urllib.request.ProxyHandler({'https': proxy, 'http': proxy}))
-    if os.path.exists(_CA_BUNDLE):
-        ctx = ssl.create_default_context()
-        ctx.load_verify_locations(_CA_BUNDLE)
-        handlers.append(urllib.request.HTTPSHandler(context=ctx))
-    opener = urllib.request.build_opener(*handlers)
+    opener = _build_opener()
     hdrs = {'User-Agent': 'Mozilla/5.0 (goccia-scraper)'}
     if headers:
         hdrs.update(headers)
@@ -168,10 +178,18 @@ def title_comune(name: str) -> str:
     return ' '.join(out)
 
 
+# Composti che contengono il nome di uno ione base ma NON sono quel parametro
+# (evita falsi match tipo "Cloruro di Vinile" -> cloruri).
+_BLOCKLIST = {
+    'cloruro di vinile', 'clorito', 'clorato', 'epicloridrina', 'acrilammide',
+    'bromato', 'bromodiclorometano', 'dibromoclorometano',
+}
+
+
 def match_parameter(name: str) -> Optional[str]:
     """Ritorna l'id aquascore per il nome di un parametro, o None se non riconosciuto."""
     n = _norm(name)
-    if not n:
+    if not n or n in _BLOCKLIST:
         return None
     # match esatto sull'intera stringa
     for alias, pid in _ALIAS_INDEX:

@@ -366,6 +366,138 @@ def adapter_smat() -> list:
     return out
 
 
+# ————————————————————————————————————————————————————————————————
+# Padania Acque — provincia di Cremona (113 comuni). Form JSP con sessione.
+# ————————————————————————————————————————————————————————————————
+import time as _time
+
+PADANIA_INDEX = 'https://www.padania-acque.it/ControlliAnalitici.jsp'
+PADANIA_PODS = 'https://www.padania-acque.it/AJAXGetPuntoPrelievo.jsp'
+PADANIA_QUAL = 'https://www.padania-acque.it/AJAXQualitaAcqua.jsp'
+
+
+def _split_value_unit(cell: str) -> tuple[str, str]:
+    """"5\\xa0µg/L" / "< 0,1\\xa0mg/L NH4" -> (valore, unita)."""
+    txt = html.unescape(_TAG_RE.sub('', cell)).replace('\xa0', ' ').strip()
+    parts = txt.split()
+    if not parts:
+        return '', ''
+    if parts[0] in ('<', '≤', '>') and len(parts) > 1:  # "< 0,1 mg/L"
+        return parts[0] + parts[1], ' '.join(parts[2:])
+    return parts[0], ' '.join(parts[1:])
+
+
+def adapter_padania() -> list:
+    try:
+        idx = http_get(PADANIA_INDEX)  # apre la sessione (cookie JSESSIONID)
+    except Exception as e:  # noqa: BLE001
+        print(f'  [padania] indice non raggiungibile: {type(e).__name__}', file=sys.stderr)
+        return []
+    block = re.search(r'<select[^>]*id="comune"[^>]*>(.*?)</select>', idx, re.S)
+    comuni = [v for v, _ in re.findall(r'<option[^>]*value="([^"]*)"[^>]*>([^<]*)</option>',
+                                       block.group(1))] if block else []
+    comuni = [c for c in comuni if c.strip()]
+    out = []
+    for comune in comuni:
+        try:
+            pods = json.loads(http_get(f'{PADANIA_PODS}?comune={_urlparse.quote(comune)}&previewBatchId='))
+            real = [p['value'] for p in pods if p.get('value')]
+            if not real:
+                continue
+            body = _urlparse.urlencode({
+                'comune': comune, 'pod': real[0], 'previewBatchId': '',
+                '_ts': str(int(_time.time() * 1000)),
+            }).encode()
+            tab = http_get(PADANIA_QUAL, data=body, headers={
+                'Content-Type': 'application/x-www-form-urlencoded', 'Referer': PADANIA_INDEX})
+        except Exception as e:  # noqa: BLE001
+            print(f'  [padania] {comune}: {type(e).__name__} — salto', file=sys.stderr)
+            continue
+        rows = []
+        for tr in _TR_RE.findall(tab):
+            cells = _CELL_RE.findall(tr)
+            if len(cells) < 2:
+                continue
+            # il nome è la PRIMA riga della cella; il resto è il tooltip descrittivo
+            name = html.unescape(_TAG_RE.sub('', cells[0])).strip().split('\n')[0].strip()
+            value, unit = _split_value_unit(cells[1])
+            if name:
+                rows.append((name, value, unit))
+        rec = _record(
+            slugify(comune), title_comune(comune), 'CR', 'Lombardia', 'Padania Acque S.p.A.',
+            PADANIA_INDEX, 'Padania Acque — Controlli analitici per comune', rows,
+            punto=title_comune(real[0]))
+        if rec:
+            out.append(rec)
+    print(f'  [padania] {len(out)} comuni con dati', file=sys.stderr)
+    return out
+
+
+# ————————————————————————————————————————————————————————————————
+# Acquedotto Pugliese (AQP) — Puglia. Form Drupal (form_build_id) + POST per comune.
+# ————————————————————————————————————————————————————————————————
+AQP_URL = 'https://www.aqp.it/scopri-acquedotto/qualita-acqua'
+AQP_COMUNI = [
+    ('Bari', 'BA'), ('Altamura', 'BA'), ('Gravina in Puglia', 'BA'), ('Bitonto', 'BA'),
+    ('Corato', 'BA'), ('Monopoli', 'BA'), ('Mola di Bari', 'BA'), ('Putignano', 'BA'),
+    ('Conversano', 'BA'), ('Gioia del Colle', 'BA'), ('Santeramo in Colle', 'BA'),
+    ('Noicattaro', 'BA'), ('Polignano a Mare', 'BA'), ('Castellana Grotte', 'BA'),
+    ('Giovinazzo', 'BA'), ('Rutigliano', 'BA'), ('Triggiano', 'BA'), ('Casamassima', 'BA'),
+    ('Locorotondo', 'BA'), ('Cassano delle Murge', 'BA'), ('Sammichele di Bari', 'BA'),
+    ('Sannicandro di Bari', 'BA'), ('Palo del Colle', 'BA'), ('Toritto', 'BA'),
+    ('Barletta', 'BT'), ('Andria', 'BT'), ('Margherita di Savoia', 'BT'),
+    ('San Ferdinando di Puglia', 'BT'), ('Trinitapoli', 'BT'),
+    ('Brindisi', 'BR'), ('Fasano', 'BR'), ('Ostuni', 'BR'), ('Mesagne', 'BR'),
+    ('Francavilla Fontana', 'BR'), ('Ceglie Messapica', 'BR'), ('San Vito dei Normanni', 'BR'),
+    ('Carovigno', 'BR'), ('Oria', 'BR'), ('San Pancrazio Salentino', 'BR'),
+    ('Foggia', 'FG'), ('San Severo', 'FG'), ('Cerignola', 'FG'), ('Manfredonia', 'FG'),
+    ('Lucera', 'FG'), ('San Giovanni Rotondo', 'FG'), ('San Marco in Lamis', 'FG'),
+    ('Vieste', 'FG'), ('Torremaggiore', 'FG'), ("Monte Sant'Angelo", 'FG'),
+    ('Lecce', 'LE'), ('Nardò', 'LE'), ('Gallipoli', 'LE'), ('Galatina', 'LE'),
+    ('Copertino', 'LE'), ('Casarano', 'LE'), ('Maglie', 'LE'), ('Tricase', 'LE'),
+    ('Taranto', 'TA'), ('Martina Franca', 'TA'), ('Massafra', 'TA'), ('Manduria', 'TA'),
+]
+
+
+def _aqp_form_build_id() -> Optional[str]:
+    page = http_get(AQP_URL)
+    m = re.search(r'name="form_build_id"\s+value="([^"]+)"', page)
+    return m.group(1) if m else None
+
+
+def adapter_aqp() -> list:
+    fbid = _aqp_form_build_id()
+    if not fbid:
+        print('  [aqp] form_build_id non trovato', file=sys.stderr)
+        return []
+    out = []
+    for name, prov in AQP_COMUNI:
+        body = _urlparse.urlencode({
+            'query': name, 'form_id': 'xls_search_form', 'form_build_id': fbid, 'op': 'Cerca',
+        }).encode()
+        try:
+            resp = http_get(AQP_URL, data=body, headers={
+                'Content-Type': 'application/x-www-form-urlencoded', 'Referer': AQP_URL})
+        except Exception as e:  # noqa: BLE001
+            print(f'  [aqp] {name}: {type(e).__name__} — salto', file=sys.stderr)
+            continue
+        tbl = re.search(r'<table.*?</table>', resp, re.S)
+        if not tbl:
+            # form_build_id può scadere: rinfresca una volta
+            fbid = _aqp_form_build_id() or fbid
+            continue
+        # colonne: [0]=Parametro [1]=Valore [2]=Limite [3]=Unità [4]=Frequenza
+        rows = _table_rows(tbl.group(0), name_i=0, value_i=1, unit_i=3)
+        rec = _record(
+            slugify(name), name, prov, 'Puglia', 'Acquedotto Pugliese (AQP)', AQP_URL,
+            f'Acquedotto Pugliese — Qualità acqua di {name}', rows,
+            punto='valori medi comunali')
+        if rec:
+            out.append(rec)
+    print(f'  [aqp] {len(out)} comuni con dati', file=sys.stderr)
+    return out
+
+
 REGISTRY: dict[str, Adapter] = {
     'milano-opendata': adapter_milano_opendata,
     'publiacqua': adapter_publiacqua,
@@ -373,4 +505,6 @@ REGISTRY: dict[str, Adapter] = {
     'gaia': adapter_gaia,
     'uniacque': adapter_uniacque,
     'smat': adapter_smat,
+    'padania': adapter_padania,
+    'aqp': adapter_aqp,
 }
