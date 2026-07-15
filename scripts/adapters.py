@@ -16,13 +16,30 @@ riconosciuti o senza valore vengono scartati.
 from __future__ import annotations
 
 import html
+import io
 import json
 import re
 import sys
 import urllib.error
 from typing import Callable, Optional
 
-from scrape_comune import build_sample, http_get, slugify, title_comune
+from scrape_comune import build_sample, http_get, http_get_bytes, slugify, title_comune
+
+
+def _pdf_table_rows(pdf_bytes: bytes, name_i: int, value_i: int, unit_i: int,
+                    page_index: int = 0, table_index: int = 0) -> list[tuple[str, str, str]]:
+    """Estrae (nome, valore, unita) da una tabella di un PDF con layer di testo."""
+    import pdfplumber
+    rows = []
+    with pdfplumber.open(io.BytesIO(pdf_bytes)) as doc:
+        for pg in doc.pages:
+            for table in pg.extract_tables() or []:
+                for cells in table:
+                    cells = [(c or '').replace('\n', ' ').strip() for c in cells]
+                    if len(cells) <= max(name_i, value_i, unit_i) or not cells[name_i]:
+                        continue
+                    rows.append((cells[name_i], cells[value_i], cells[unit_i]))
+    return rows
 
 # tipo di un adapter: () -> lista di record
 Adapter = Callable[[], list]
@@ -498,6 +515,132 @@ def adapter_aqp() -> list:
     return out
 
 
+# ————————————————————————————————————————————————————————————————
+# ACEA ATO 2 — Roma e provincia. GeoJSON zone -> 1 PDF (testo) per zona.
+# ————————————————————————————————————————————————————————————————
+ACEA_GEOJSON = 'https://www.aceaato2.a-acqua.it/content/dam/acea-ato2/json/mappa-qualita-ato-2.json'
+ACEA_PDF = 'https://www.aceaato2.a-acqua.it/content/dam/acea-ato2/pdf/it/mappe-qualita/{slug}.pdf'
+
+
+def adapter_acea() -> list:
+    try:
+        gj = json.loads(http_get(ACEA_GEOJSON))
+    except Exception as e:  # noqa: BLE001
+        print(f'  [acea] geojson non raggiungibile: {type(e).__name__}', file=sys.stderr)
+        return []
+    # comune -> prima zona rappresentativa
+    comune_zone: dict[str, str] = {}
+    for f in gj.get('features', []):
+        p = f.get('properties', {})
+        comune, zona = p.get('comune'), p.get('name')
+        if comune and zona and comune not in comune_zone:
+            comune_zone[comune] = zona
+    out = []
+    for comune, zona in comune_zone.items():
+        try:
+            pdf = http_get_bytes(ACEA_PDF.format(slug=zona))
+            rows = _pdf_table_rows(pdf, name_i=0, value_i=3, unit_i=1)
+        except Exception as e:  # noqa: BLE001
+            print(f'  [acea] {comune}: {type(e).__name__} — salto', file=sys.stderr)
+            continue
+        rec = _record(
+            slugify(comune), comune, 'RM', 'Lazio', 'ACEA ATO 2 S.p.A.',
+            ACEA_PDF.format(slug=zona), f'ACEA ATO 2 — Valori mediani di {comune}', rows,
+            punto='valori mediani di zona')
+        if rec:
+            out.append(rec)
+    print(f'  [acea] {len(out)} comuni con dati', file=sys.stderr)
+    return out
+
+
+# ————————————————————————————————————————————————————————————————
+# Abbanoa — Sardegna. Unico XLSX semestrale con tutti i comuni (open data).
+# ————————————————————————————————————————————————————————————————
+ABBANOA_INDEX = 'https://www.abbanoa.it/Documenti-e-dati/Dataset/La-qualita-dell-acqua'
+# nome parametro (parte prima di '@', normalizzata) -> id GoccIA
+ABBANOA_MAP = {
+    'concionih': 'ph', 'durezza': 'durezza_totale', 'cond': 'conducibilita',
+    'clorolibero': 'cloro_residuo', 'nitrati': 'nitrati', 'nitriti': 'nitriti',
+    'ammonio': 'ammonio', 'sodio': 'sodio', 'solfati': 'solfati', 'cloruri': 'cloruri',
+    'fluoruri': 'fluoruri', 'ferro': 'ferro', 'manganese': 'manganese', 'piombo': 'piombo',
+    'arsenico': 'arsenico', 'rame': 'rame', 'cadmio': 'cadmio', 'nichel': 'nichel',
+    'cromo': 'cromo', 'torbidita': 'torbidita', 'escherichiacoli': 'e_coli',
+    'coliformitotali': 'coliformi_totali', 'enterococchi': 'enterococchi',
+}
+# provincia dalla zona "SIAN COMPETENTE"
+ABBANOA_SIAN_PROV = [
+    ('cagliari', 'CA'), ('carbonia', 'SU'), ('sanluri', 'SU'), ('gallura', 'SS'),
+    ('olbia', 'SS'), ('sassari', 'SS'), ('nuoro', 'NU'), ('lanusei', 'NU'), ('oristano', 'OR'),
+]
+
+
+def _abbanoa_prov(sian: str) -> str:
+    s = (sian or '').lower()
+    for key, prov in ABBANOA_SIAN_PROV:
+        if key in s:
+            return prov
+    return ''
+
+
+def _norm_key(s: str) -> str:
+    return re.sub(r'[^a-z0-9]+', '', (s or '').lower())
+
+
+def adapter_abbanoa() -> list:
+    import openpyxl
+    try:
+        idx = http_get(ABBANOA_INDEX)
+        links = re.findall(r'href="(/ocmultibinary/download/[^"]+\.xlsx[^"]*)"', idx)
+        if not links:
+            print('  [abbanoa] nessun XLSX trovato', file=sys.stderr)
+            return []
+        data = http_get_bytes('https://www.abbanoa.it' + links[-1])  # semestre più recente
+    except Exception as e:  # noqa: BLE001
+        print(f'  [abbanoa] download fallito: {type(e).__name__}', file=sys.stderr)
+        return []
+    src_url = 'https://www.abbanoa.it' + links[-1]
+    wb = openpyxl.load_workbook(io.BytesIO(data), read_only=True, data_only=True)
+    ws = wb[wb.sheetnames[0]]
+    it = ws.iter_rows(values_only=True)
+    header = next(it)
+    # colonna -> (parameterId, unita)
+    col_param: dict[int, tuple[str, str]] = {}
+    for i in range(6, len(header)):
+        parts = str(header[i] or '').split('@')
+        pid = ABBANOA_MAP.get(_norm_key(parts[0]))
+        if pid:
+            unit = parts[2].strip() if len(parts) > 2 else ''
+            col_param[i] = (pid, unit)
+    # raggruppa righe per comune, tiene la più completa
+    best: dict[str, tuple[int, tuple]] = {}
+    for row in it:
+        comune = row[4] if len(row) > 4 else None
+        if not comune:
+            continue
+        filled = sum(1 for i in col_param if i < len(row) and row[i] not in (None, ''))
+        if comune not in best or filled > best[comune][0]:
+            best[comune] = (filled, row)
+    out = []
+    for comune, (_, row) in best.items():
+        rows = []
+        for i, (pid, unit) in col_param.items():
+            if i >= len(row):
+                continue
+            val = row[i]
+            if val in (None, ''):
+                continue
+            rows.append((pid, str(val), unit))  # il "nome" è già l'id: build_sample lo riconosce
+        prov = _abbanoa_prov(row[5] if len(row) > 5 else '')
+        rec = _record(
+            slugify(str(comune)), title_comune(str(comune)), prov, 'Sardegna', 'Abbanoa S.p.A.',
+            src_url, f'Abbanoa (open data) — {ws.title}', rows,
+            punto=str(row[3] or '').strip()[:80])
+        if rec:
+            out.append(rec)
+    print(f'  [abbanoa] {len(out)} comuni con dati', file=sys.stderr)
+    return out
+
+
 REGISTRY: dict[str, Adapter] = {
     'milano-opendata': adapter_milano_opendata,
     'publiacqua': adapter_publiacqua,
@@ -507,4 +650,6 @@ REGISTRY: dict[str, Adapter] = {
     'smat': adapter_smat,
     'padania': adapter_padania,
     'aqp': adapter_aqp,
+    'acea': adapter_acea,
+    'abbanoa': adapter_abbanoa,
 }

@@ -94,14 +94,40 @@ def http_get(url: str, retries: int = 3, timeout: int = 30, encoding: str = 'utf
     assert last is not None
     raise last
 
+
+def http_get_bytes(url: str, retries: int = 3, timeout: int = 60) -> bytes:
+    """Come http_get ma ritorna i byte grezzi (PDF, XLSX, ...)."""
+    opener = _build_opener()
+    hdrs = {'User-Agent': 'Mozilla/5.0 (goccia-scraper)'}
+    last: Optional[Exception] = None
+    for attempt in range(retries):
+        try:
+            with opener.open(urllib.request.Request(url, headers=hdrs), timeout=timeout) as r:
+                return r.read()
+        except urllib.error.HTTPError as e:
+            last = e
+            if e.code in (403, 429, 500, 502, 503, 504) and attempt < retries - 1:
+                time.sleep(2 ** attempt)
+                continue
+            raise
+        except Exception as e:  # noqa: BLE001
+            last = e
+            if attempt < retries - 1:
+                time.sleep(2 ** attempt)
+                continue
+            raise
+    assert last is not None
+    raise last
+
 # ————————————————————————————————————————————————————————————————
 # Mappa nomi parametro -> id del motore aquascore.
 # Mantenere allineata a packages/aquascore/parameters.ts.
 # ————————————————————————————————————————————————————————————————
 PARAM_ALIASES: dict[str, list[str]] = {
-    'ph': ['ph', 'p.h.', 'concentrazione ioni idrogeno'],
+    'ph': ['ph', 'p.h.', 'concentrazione ioni idrogeno', 'ioni idrogeno'],
     'durezza_totale': ['durezza totale', 'durezza', 'hardness', 'durezza in gradi francesi'],
-    'conducibilita': ['conducibilita', 'conducibilita elettrica', 'conduttivita', 'conducibilita a 20 c'],
+    'conducibilita': ['conducibilita', 'conducibilita elettrica', 'conduttivita',
+                      'conducibilita a 20 c', 'cond elettrica', 'conduttivita elettrica'],
     'cloro_residuo': ['cloro residuo', 'cloro residuo libero', 'cloro libero', 'cloro attivo libero',
                       'disinfettante residuo', 'disinfettante'],
     'nitrati': ['nitrati', 'no3', 'nitrato'],
@@ -222,8 +248,9 @@ def _to_float(num: str) -> Optional[float]:
     elif has_comma:
         num = num.replace(',', '.')  # convenzione italiana: virgola decimale
     elif has_dot:
-        # solo punto: migliaia (1.234 / 1.234.567) oppure decimale (0.05, 12.5)
-        if re.fullmatch(r'\d{1,3}(\.\d{3})+', num):
+        # solo punto: migliaia (1.234 / 1.234.567) oppure decimale (0.05, 0.109, 12.5).
+        # Il pattern migliaia richiede lead non-zero: "0.109" resta decimale, "1.094"->1094.
+        if re.fullmatch(r'[1-9]\d{0,2}(\.\d{3})+', num):
             num = num.replace('.', '')
     try:
         return float(num)
