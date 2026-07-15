@@ -194,8 +194,183 @@ def adapter_ireti() -> list:
     return out
 
 
+# ————————————————————————————————————————————————————————————————
+# GAIA SpA — analisiweb (Toscana: Lucca, Massa-Carrara, Pistoia montana)
+# Pagina per codice-prelievo: /analisiweb_v2/campioni/{codice}/0, tabella HTML.
+# ————————————————————————————————————————————————————————————————
+# (codice prelievo rappresentativo, nome comune, provincia)
+GAIA_COMUNI = [
+    ('05A04K15', 'Barga', 'LU'), ('08A03K09', 'Camporgiano', 'LU'), ('09A19K11', 'Careggine', 'LU'),
+    ('12A03K06', 'Castelnuovo di Garfagnana', 'LU'), ('13A07K09', 'Castiglione di Garfagnana', 'LU'),
+    ('15A02K03', 'Coreglia Antelminelli', 'LU'), ('17A05K02', 'Fabbriche di Vallico', 'LU'),
+    ('21A01K03', 'Fosciandora', 'LU'), ('23A01K09', 'Gallicano', 'LU'), ('24A01K05', 'Giuncugnano', 'LU'),
+    ('29A03K22', 'Minucciano', 'LU'), ('30A07K04', 'Molazzana', 'LU'), ('34A04K02', 'Piazza al Serchio', 'LU'),
+    ('36A01K03', 'Pieve Fosciana', 'LU'), ('41A05K08', 'San Romano in Garfagnana', 'LU'),
+    ('43A05K05', 'Sillano', 'LU'), ('46A01K02', 'Vagli Sotto', 'LU'), ('48A07K09', 'Vergemoli', 'LU'),
+    ('50A03K01', 'Villa Collemandina', 'LU'), ('03A09K07', 'Bagni di Lucca', 'LU'),
+    ('06A02K09', 'Borgo a Mozzano', 'LU'), ('33A08K07', 'Pescaglia', 'LU'), ('07A01K01', 'Camaiore', 'LU'),
+    ('20A01K05', 'Forte dei Marmi', 'LU'), ('28A02K01', 'Massarosa', 'LU'), ('35A01K01', 'Pietrasanta', 'LU'),
+    ('42A05K11', 'Seravezza', 'LU'), ('44A15K01', 'Stazzema', 'LU'), ('49A01K03', 'Viareggio', 'LU'),
+    ('02A16K01', 'Aulla', 'MS'), ('04A04K02', 'Bagnone', 'MS'), ('11A05K16', 'Casola in Lunigiana', 'MS'),
+    ('14A12K01', 'Comano', 'MS'), ('18A08K08', 'Filattiera', 'MS'), ('19A21K05', 'Fivizzano', 'MS'),
+    ('22A07K18', 'Fosdinovo', 'MS'), ('25A13K23', 'Licciana Nardi', 'MS'), ('32A02K21', 'Mulazzo', 'MS'),
+    ('38A08K01', 'Podenzana', 'MS'), ('45A17K01', 'Tresana', 'MS'), ('51A04K01', 'Villafranca in Lunigiana', 'MS'),
+    ('39A02K01', 'Pontremoli', 'MS'), ('10A02K01', 'Carrara', 'MS'), ('27A01K01', 'Massa', 'MS'),
+    ('31A07K10', 'Montignoso', 'MS'), ('16A06K03', 'Cutigliano', 'PT'), ('37A01K04', 'Piteglio', 'PT'),
+    ('40A03K02', 'San Marcello Pistoiese', 'PT'), ('01A01K02', 'Abetone', 'PT'),
+]
+
+
+def adapter_gaia() -> list:
+    out = []
+    for codice, name, prov in GAIA_COMUNI:
+        url = f'https://www.gaia-spa.it/analisiweb_v2/campioni/{codice}/0'
+        try:
+            page = http_get(url)
+        except Exception as e:  # noqa: BLE001
+            print(f'  [gaia] {name}: {type(e).__name__} — salto', file=sys.stderr)
+            continue
+        tbl = re.search(r'<table.*?</table>', page, re.S)
+        if not tbl:
+            continue
+        # colonne GAIA: [0]=Parametro [1]=Unità [2]=Valore Medio [3]=Limite
+        rows = _table_rows(tbl.group(0), name_i=0, value_i=2, unit_i=1)
+        rec = _record(
+            slugify(name), name, prov, 'Toscana', 'GAIA S.p.A.', url,
+            f'GAIA — Analisi acqua di {name}', rows, punto='valore medio (prelievo rappresentativo)')
+        if rec:
+            out.append(rec)
+    print(f'  [gaia] {len(out)} comuni con dati', file=sys.stderr)
+    return out
+
+
+# ————————————————————————————————————————————————————————————————
+# Uniacque — provincia di Bergamo (216 comuni), pagina OpenCms server-rendered.
+# 3 GET: enumera comuni -> primo punto rete del comune -> tabella valori.
+# ————————————————————————————————————————————————————————————————
+import urllib.parse as _urlparse
+
+UNIACQUE_BASE = 'https://www.uniacque.bg.it/qualita-dellacqua/i-parametri-del-tuo-comune/'
+_TAG_RE = re.compile(r'<[^>]+>')
+_TR_RE = re.compile(r'<tr[^>]*>(.*?)</tr>', re.S)
+_CELL_RE = re.compile(r'<t[hd][^>]*>(.*?)</t[hd]>', re.S)
+
+
+def _cell_text(cell: str) -> str:
+    return html.unescape(_TAG_RE.sub('', cell)).strip()
+
+
+def _table_rows(table_html: str, name_i: int, value_i: int, unit_i: int) -> list[tuple[str, str, str]]:
+    """Estrae righe (nome, valore, unita) da una <table> parsando le celle IN ORDINE.
+
+    Robusto alle celle vuote (valore sotto-rilevabilita): non disallinea le colonne.
+    """
+    rows = []
+    for tr in _TR_RE.findall(table_html):
+        cells = [_cell_text(c) for c in _CELL_RE.findall(tr)]
+        if len(cells) <= max(name_i, value_i, unit_i):
+            continue
+        name = cells[name_i]
+        if not name:
+            continue
+        rows.append((name, cells[value_i], cells[unit_i]))
+    return rows
+
+
+def _select_options(page: str, name: str) -> list[tuple[str, str]]:
+    block = re.search(rf'<select[^>]*name="{name}"[^>]*>(.*?)</select>', page, re.S)
+    if not block:
+        return []
+    opts = re.findall(r'<option[^>]*value="([^"]*)"[^>]*>([^<]*)</option>', block.group(1))
+    return [(html.unescape(v), html.unescape(t).strip()) for v, t in opts if v.strip()]
+
+
+def adapter_uniacque() -> list:
+    try:
+        index = http_get(UNIACQUE_BASE)
+    except Exception as e:  # noqa: BLE001
+        print(f'  [uniacque] indice non raggiungibile: {type(e).__name__}', file=sys.stderr)
+        return []
+    comuni = _select_options(index, 'comuneId')
+    out = []
+    for name, _ in comuni:
+        try:
+            cpage = http_get(UNIACQUE_BASE + '?comuneId=' + _urlparse.quote(name))
+            punti = _select_options(cpage, 'comune')
+            if not punti:
+                continue
+            punto_val, punto_label = punti[0]  # punto rete rappresentativo
+            tpage = http_get(UNIACQUE_BASE + '?comune=' + _urlparse.quote(punto_val))
+        except Exception as e:  # noqa: BLE001
+            print(f'  [uniacque] {name}: {type(e).__name__} — salto', file=sys.stderr)
+            continue
+        tbl = re.search(r'id="tabellaValori".*?</table>', tpage, re.S)
+        if not tbl:
+            continue
+        # colonne: [0]=Parametro [1]=Valore rilevato [2]=Valore limite [3]=Unità
+        rows = _table_rows(tbl.group(0), name_i=0, value_i=1, unit_i=3)
+        rec = _record(
+            slugify(name), name, 'BG', 'Lombardia', 'Uniacque S.p.A.',
+            UNIACQUE_BASE + '?comuneId=' + _urlparse.quote(name),
+            f'Uniacque — Parametri di qualità di {name}', rows,
+            punto=punto_label)
+        if rec:
+            out.append(rec)
+    print(f'  [uniacque] {len(out)} comuni con dati', file=sys.stderr)
+    return out
+
+
+# ————————————————————————————————————————————————————————————————
+# SMAT — ATO 3 Torinese (299 comuni). admin-ajax WordPress con nonce.
+# ————————————————————————————————————————————————————————————————
+SMAT_PAGE = 'https://www.smatorino.it/monitoraggio-acque/'
+
+
+def adapter_smat() -> list:
+    try:
+        page = http_get(SMAT_PAGE)
+    except Exception as e:  # noqa: BLE001
+        print(f'  [smat] pagina non raggiungibile: {type(e).__name__}', file=sys.stderr)
+        return []
+    mnonce = re.search(r'ajax_url"\s*:\s*"[^"]*_wpnonce=([0-9a-fA-F]+)', page)
+    block = re.search(r'<select[^>]*name=["\']comune["\'][^>]*>(.*?)</select>', page, re.S)
+    if not mnonce or not block:
+        print('  [smat] nonce o select non trovati', file=sys.stderr)
+        return []
+    nonce = mnonce.group(1)
+    ajax = f'https://www.smatorino.it/wp-admin/admin-ajax.php?_wpnonce={nonce}'
+    comuni = re.findall(r'<option[^>]*value="(\d+)"[^>]*>([^<]+)</option>', block.group(1))
+    out = []
+    for code, raw_name in comuni:
+        name = title_comune(html.unescape(raw_name))
+        body = _urlparse.urlencode(
+            {'action': 'filtrocomune_request', 'comune': code, 'tipologia': 'chimico'}).encode()
+        try:
+            resp = http_get(ajax, data=body,
+                            headers={'Content-Type': 'application/x-www-form-urlencoded'})
+        except Exception as e:  # noqa: BLE001
+            print(f'  [smat] {name}: {type(e).__name__} — salto', file=sys.stderr)
+            continue
+        tbl = re.search(r'<table[^>]*tbchimico.*?</table>', resp, re.S)
+        if not tbl:
+            continue
+        # colonne: [0]=Parametro [1]=N rilevazioni [2]=Unità [3]=Valore medio [4]=Limite
+        rows = _table_rows(tbl.group(0), name_i=0, value_i=3, unit_i=2)
+        rec = _record(
+            slugify(name), name, 'TO', 'Piemonte', 'SMAT S.p.A.', SMAT_PAGE,
+            'SMAT — Qualità dell\'acqua del tuo comune', rows,
+            punto='valori medi comunali (parametri chimici)')
+        if rec:
+            out.append(rec)
+    print(f'  [smat] {len(out)} comuni con dati', file=sys.stderr)
+    return out
+
+
 REGISTRY: dict[str, Adapter] = {
     'milano-opendata': adapter_milano_opendata,
     'publiacqua': adapter_publiacqua,
     'ireti': adapter_ireti,
+    'gaia': adapter_gaia,
+    'uniacque': adapter_uniacque,
+    'smat': adapter_smat,
 }
