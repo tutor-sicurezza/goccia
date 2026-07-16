@@ -140,7 +140,8 @@ export default function AnalisiAcquaHub() {
                     href={`/acqua-di-${c.slug}`}
                     className="rounded-lg border border-white/10 bg-white/5 px-2.5 py-1.5 text-sm text-slate-200 transition hover:border-violet-400/40 hover:bg-white/10 hover:text-white"
                   >
-                    {c.name} <span className="text-slate-500">({c.province})</span>
+                    {c.name}
+                    {c.province ? <span className="text-slate-500"> ({c.province})</span> : null}
                   </Link>
                 ))}
               </div>
