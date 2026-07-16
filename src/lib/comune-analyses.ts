@@ -98,6 +98,44 @@ export function hasComuneData(slug: string): boolean {
   return BY_SLUG.has(slug);
 }
 
+export interface ComuneIndexEntry {
+  slug: string;
+  name: string;
+  province: string;
+  region: string;
+  gestore: string;
+}
+
+/** Indice di tutti i comuni con dati (dal report più recente), per l'hub. */
+export function getComuniIndex(): ComuneIndexEntry[] {
+  const entries: ComuneIndexEntry[] = [];
+  for (const slug of BY_SLUG.keys()) {
+    const r = getLatestReport(slug);
+    if (!r) continue;
+    entries.push({
+      slug,
+      name: r.comuneName,
+      province: r.province,
+      region: r.region,
+      gestore: r.gestore,
+    });
+  }
+  return entries.sort((a, b) => a.name.localeCompare(b.name, 'it'));
+}
+
+/** Elenco dei gestori con il numero di comuni coperti, dal più esteso. */
+export function getGestoriCoverage(): { gestore: string; count: number }[] {
+  const counts = new Map<string, number>();
+  for (const slug of BY_SLUG.keys()) {
+    const r = getLatestReport(slug);
+    if (!r) continue;
+    counts.set(r.gestore, (counts.get(r.gestore) ?? 0) + 1);
+  }
+  return [...counts.entries()]
+    .map(([gestore, count]) => ({ gestore, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
 // ————————————————————————————————————————————————————————————————
 // Scoring deterministico (stesso motore dello strumento pubblico)
 // ————————————————————————————————————————————————————————————————

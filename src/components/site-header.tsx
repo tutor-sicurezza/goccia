@@ -30,6 +30,7 @@ function DropletLogo() {
 }
 
 const NAV_LINKS = [
+  { href: '/analisi-acqua', label: 'Acqua per comune' },
   { href: '/analisi-ufficiali', label: 'Analisi ufficiali' },
   { href: '/parametri', label: 'Parametri' },
   { href: '/acque-minerali', label: 'Acque minerali' },
