@@ -211,6 +211,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${base}/analisi-acqua`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
       url: `${base}/quiz`,
       lastModified: now,
       changeFrequency: 'weekly',

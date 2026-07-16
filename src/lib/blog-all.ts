@@ -7,8 +7,10 @@ import { BLOG_STAGIONALI } from './blog-stagionali';
 import { BLOG_INTERVISTE } from './blog-interviste';
 import { BLOG_FUTURE } from './blog-future-tech';
 import { BLOG_RESEARCH } from './blog-research';
+import { BLOG_PROGETTO } from './blog-progetto';
 
 export const ALL_BLOG_POSTS: BlogPost[] = [
+  ...BLOG_PROGETTO,
   ...BLOG_POSTS,
   ...BLOG_NORMATIVA,
   ...BLOG_CASI,
