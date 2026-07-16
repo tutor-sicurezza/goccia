@@ -1,5 +1,12 @@
 const FROM = process.env.RESEND_FROM_EMAIL || 'GoccIA <info@goccia.org>';
 
+interface SendArgs {
+  to: string | string[];
+  subject: string;
+  html: string;
+  replyTo?: string;
+}
+
 /** Indirizzi che devono sempre ricevere notifica dei nuovi lead (email raccolte). */
 const ADMIN_NOTIFICATION_EMAILS = ['tutorsicurezza@gmail.com', 'info@goccia.org'];
 

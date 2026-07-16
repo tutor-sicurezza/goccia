@@ -16,3 +16,4 @@ supabase/.branches/
 
 .vercel
 .gemini.key
+__pycache__/
