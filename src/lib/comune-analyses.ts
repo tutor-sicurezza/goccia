@@ -123,6 +123,33 @@ export function getComuniIndex(): ComuneIndexEntry[] {
   return entries.sort((a, b) => a.name.localeCompare(b.name, 'it'));
 }
 
+export interface RegionStat {
+  region: string;
+  count: number;
+  avgScore: number;
+}
+
+/** Statistiche per regione: numero comuni e punteggio medio (per la mappa). */
+export function getRegionStats(): RegionStat[] {
+  const acc = new Map<string, { count: number; sum: number }>();
+  for (const slug of BY_SLUG.keys()) {
+    const latest = getLatestReport(slug);
+    if (!latest) continue;
+    const { result } = scoreReport(latest);
+    const cur = acc.get(latest.region) ?? { count: 0, sum: 0 };
+    cur.count += 1;
+    cur.sum += result.overall;
+    acc.set(latest.region, cur);
+  }
+  return [...acc.entries()]
+    .map(([region, { count, sum }]) => ({
+      region,
+      count,
+      avgScore: Math.round(sum / count),
+    }))
+    .sort((a, b) => b.count - a.count);
+}
+
 /** Elenco dei gestori con il numero di comuni coperti, dal più esteso. */
 export function getGestoriCoverage(): { gestore: string; count: number }[] {
   const counts = new Map<string, number>();
