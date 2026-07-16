@@ -35,6 +35,13 @@ function scoreTone(score: number): string {
   return 'bg-rose-500/25 text-rose-100 border-rose-400/40';
 }
 
+function dotColor(score: number): string {
+  if (score >= 70) return 'bg-emerald-400';
+  if (score >= 50) return 'bg-amber-400';
+  if (score >= 30) return 'bg-orange-400';
+  return 'bg-rose-400';
+}
+
 function norm(s: string): string {
   return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 }
@@ -53,6 +60,7 @@ export function ComuniBrowser({
   regionStats: RegionStat[];
 }) {
   const [region, setRegion] = useState<string | null>(null);
+  const [gestore, setGestore] = useState<string | null>(null);
   const [query, setQuery] = useState('');
 
   const statByRegion = useMemo(
@@ -60,14 +68,21 @@ export function ComuniBrowser({
     [regionStats],
   );
 
+  const gestori = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const c of comuni) counts.set(c.gestore, (counts.get(c.gestore) ?? 0) + 1);
+    return [...counts.entries()].sort((a, b) => b[1] - a[1]);
+  }, [comuni]);
+
   const filtered = useMemo(() => {
     const q = norm(query.trim());
     return comuni.filter(
       (c) =>
         (!region || c.region === region) &&
+        (!gestore || c.gestore === gestore) &&
         (!q || norm(c.name).includes(q)),
     );
-  }, [comuni, region, query]);
+  }, [comuni, region, gestore, query]);
 
   const byRegion = useMemo(() => {
     const acc: Record<string, ComuneIndexEntry[]> = {};
@@ -155,8 +170,31 @@ export function ComuniBrowser({
         <p className="mt-2 text-xs text-slate-500">
           {fmt(filtered.length)} comuni
           {region ? ` in ${region}` : ''}
+          {gestore ? ` · ${gestore}` : ''}
           {query ? ` per «${query}»` : ''}
         </p>
+
+        {/* Filtro gestore */}
+        <div className="mt-3 flex flex-wrap gap-1.5">
+          {gestori.map(([g, n]) => {
+            const active = gestore === g;
+            return (
+              <button
+                key={g}
+                type="button"
+                onClick={() => setGestore(active ? null : g)}
+                className={[
+                  'rounded-full border px-2.5 py-1 text-xs transition',
+                  active
+                    ? 'border-sky-400/50 bg-sky-400/15 text-sky-100'
+                    : 'border-white/10 bg-white/5 text-slate-300 hover:border-white/25 hover:bg-white/10',
+                ].join(' ')}
+              >
+                {g} <span className="text-slate-500">· {n}</span>
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       {/* Risultati */}
@@ -166,6 +204,13 @@ export function ComuniBrowser({
         </p>
       ) : (
         <div className="mt-6 space-y-8">
+          <p className="text-xs text-slate-500">
+            Il pallino indica il punteggio del comune:{' '}
+            <span className="inline-block h-2 w-2 rounded-full bg-emerald-400 align-middle" /> buono ·{' '}
+            <span className="inline-block h-2 w-2 rounded-full bg-amber-400 align-middle" /> discreto ·{' '}
+            <span className="inline-block h-2 w-2 rounded-full bg-orange-400 align-middle" /> da migliorare ·{' '}
+            <span className="inline-block h-2 w-2 rounded-full bg-rose-400 align-middle" /> critico
+          </p>
           {regionsSorted.map((r) => (
             <section key={r}>
               <h2 className="flex items-baseline gap-3 font-display text-xl font-semibold text-slate-100">
@@ -179,10 +224,15 @@ export function ComuniBrowser({
                   <Link
                     key={c.slug}
                     href={`/acqua-di-${c.slug}`}
-                    className="rounded-lg border border-white/10 bg-white/5 px-2.5 py-1.5 text-sm text-slate-200 transition hover:border-violet-400/40 hover:bg-white/10 hover:text-white"
+                    title={`Punteggio ${c.score}/99`}
+                    className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-2.5 py-1.5 text-sm text-slate-200 transition hover:border-violet-400/40 hover:bg-white/10 hover:text-white"
                   >
+                    <span
+                      className={`inline-block h-2 w-2 shrink-0 rounded-full ${dotColor(c.score)}`}
+                      aria-hidden
+                    />
                     {c.name}
-                    {c.province ? <span className="text-slate-500"> ({c.province})</span> : null}
+                    {c.province ? <span className="text-slate-500">({c.province})</span> : null}
                   </Link>
                 ))}
               </div>

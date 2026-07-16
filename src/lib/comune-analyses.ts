@@ -104,6 +104,7 @@ export interface ComuneIndexEntry {
   province: string;
   region: string;
   gestore: string;
+  score: number;
 }
 
 /** Indice di tutti i comuni con dati (dal report più recente), per l'hub. */
@@ -118,6 +119,7 @@ export function getComuniIndex(): ComuneIndexEntry[] {
       province: r.province,
       region: r.region,
       gestore: r.gestore,
+      score: scoreReport(r).result.overall,
     });
   }
   return entries.sort((a, b) => a.name.localeCompare(b.name, 'it'));
