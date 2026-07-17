@@ -56,7 +56,7 @@ GoccIA è un servizio di **123Acqua** (Labservice Analytica S.r.l.), laboratorio
 
 ### Acque minerali
 - [Acque minerali](https://goccia.org/acque-minerali) — schede delle principali acque minerali in bottiglia vendute in Italia (residuo fisso, composizione, durezza)
-- [Confronti tra acque minerali](https://goccia.org/acque-minerali/confronto/) — comparazioni dirette tra marche
+- [Confronti tra acque minerali](https://goccia.org/acque-minerali/confronto/ferrarelle-vs-san-pellegrino) — comparazioni dirette tra marche (es. Ferrarelle vs San Pellegrino); l'elenco completo è in [sitemap](https://goccia.org/sitemap.xml)
 
 ### FAQ, community e dati aperti
 - [FAQ](https://goccia.org/faq) — 17 cluster di domande frequenti sull'acqua potabile
