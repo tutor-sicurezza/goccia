@@ -108,6 +108,50 @@ export function speakableJsonLd(args: { url: string; cssSelectors?: string[] }):
   };
 }
 
+/**
+ * Elenco a macchina delle sezioni principali del sito. Serve a comunicare a
+ * crawler e motori AI che GoccIA non è una single-page app: le voci del footer
+ * puntano a hub reali e popolati. Reso lato server su ogni pagina.
+ */
+export function siteNavigationJsonLd(): object {
+  const url = siteUrl();
+  const items: { name: string; path: string }[] = [
+    { name: 'Calcola il punteggio', path: '/' },
+    { name: 'Come funziona', path: '/come-funziona' },
+    { name: 'Parametri dell\'acqua', path: '/parametri' },
+    { name: 'Calcolatori', path: '/calcolatori' },
+    { name: 'Analisi ufficiali per comune', path: '/analisi-ufficiali' },
+    { name: 'Acqua per città', path: '/acqua-di-roma' },
+    { name: 'ATS / ASL regionali', path: '/ats' },
+    { name: 'Comuni a rischio', path: '/comuni-a-rischio' },
+    { name: 'Mappa PFAS Italia', path: '/pfas-italia-mappa' },
+    { name: 'Guide', path: '/guide' },
+    { name: 'Trattamenti dell\'acqua', path: '/trattamenti' },
+    { name: 'Confronti', path: '/confronto' },
+    { name: 'Rubinetto vs minerale', path: '/rubinetto-vs-minerale' },
+    { name: 'Acque minerali', path: '/acque-minerali' },
+    { name: 'Miti sull\'acqua', path: '/miti' },
+    { name: 'Glossario', path: '/glossario' },
+    { name: 'FAQ', path: '/faq' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Benchmark dati aperti', path: '/benchmark' },
+    { name: 'Il tuo storico', path: '/storico' },
+    { name: 'Chi siamo', path: '/chi-siamo' },
+    { name: 'Documentazione API', path: '/api-docs' },
+  ];
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Sezioni di GoccIA',
+    itemListElement: items.map((item, idx) => ({
+      '@type': 'SiteNavigationElement',
+      position: idx + 1,
+      name: item.name,
+      url: `${url}${item.path}`,
+    })),
+  };
+}
+
 export function faqJsonLd(items: { q: string; a: string }[]): object {
   return {
     '@context': 'https://schema.org',

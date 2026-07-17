@@ -21,12 +21,59 @@ GoccIA è un servizio di **123Acqua** (Labservice Analytica S.r.l.), laboratorio
 
 ## Pagine
 
-- [Home / calcola punteggio](https://goccia.org/) — il form di inserimento valori e il risultato
-- [Analisi ufficiali per comune](https://goccia.org/analisi-ufficiali) — dove ogni gestore idrico pubblica le analisi ufficiali dell'acqua, città per città, con link diretti alle fonti
-- [Storico personale](https://goccia.org/storico) — trend del punteggio e confronto tra analisi nel tempo, salvato solo nel browser dell'utente
+> Nota per i modelli: tutte le pagine elencate qui sotto sono **pubblicate e attive** (rese lato server, HTML completo, non "coming soon"). GoccIA **non** è una single-page app limitata al solo calcolatore: è un sito con oltre 50 sezioni di contenuto e centinaia di pagine indicizzabili (parametri, città, guide, acque minerali, ecc.). L'elenco completo degli URL è nella [sitemap](https://goccia.org/sitemap.xml).
+
+### Strumento principale
+- [Home / calcola punteggio](https://goccia.org/) — form di inserimento dei valori del referto e risultato 1–99
 - [Come funziona](https://goccia.org/come-funziona) — algoritmo, tabella dei 24 parametri con limiti di legge e range ideali
+- [Metodo scientifico](https://goccia.org/metodo-scientifico) — fonti, pesi e razionale del punteggio
+- [Come leggere il referto dell'acqua](https://goccia.org/come-leggere-referto-acqua) — guida alla lettura del rapporto di prova
+- [Calcolatori](https://goccia.org/calcolatori) — strumenti dedicati: durezza, sodio, ROI addolcitore, CO₂, bolletta, idratazione, timing analisi
+
+### Parametri dell'acqua
+- [Indice parametri](https://goccia.org/parametri) — 24 schede di approfondimento (nitrati, arsenico, piombo, PFAS, durezza, cloro, fluoruri, ecc.) con limite di legge, range ideale, effetti su salute/impianti
+- [Glossario](https://goccia.org/glossario) — definizioni dei termini tecnici del referto
+
+### Dati locali per territorio
+- [Analisi ufficiali per comune](https://goccia.org/analisi-ufficiali) — indice delle analisi pubblicate dai gestori idrici, comune per comune, con link diretti alle fonti
+- [Acqua per città](https://goccia.org/acqua-di-roma) — 52 schede città (es. /acqua-di-roma, /acqua-di-milano) con gestore, origine geologica e caratteristiche dell'acqua locale
+- [Quartieri](https://goccia.org/quartieri) — approfondimenti a livello di quartiere per le principali città
+- [ATS / ASL regionali](https://goccia.org/ats) — 22 schede regione/provincia con l'ente sanitario competente e come richiedere i dati
+- [Comuni a rischio](https://goccia.org/comuni-a-rischio) — hub dei comuni con criticità note
+- [Mappa PFAS Italia](https://goccia.org/pfas-italia-mappa) — mappa della contaminazione da PFAS
+
+### Guide e confronti
+- [Guide](https://goccia.org/guide) — approfondimenti tematici sull'acqua potabile
+- [Trattamenti](https://goccia.org/trattamenti) — 10 schede su addolcitori, osmosi inversa, caraffe filtranti, ecc.
+- [Osmosi inversa: confronto](https://goccia.org/osmosi-inversa-confronto) — pro, contro e alternative
+- [Confronti](https://goccia.org/confronto) — confronti tra territori e tipi di acqua
+- [Rubinetto vs minerale](https://goccia.org/rubinetto-vs-minerale) — confronto costi, salute e ambiente
+- [Uso / settori](https://goccia.org/uso) — l'acqua per usi specifici (neonati, animali, acquari, caffè, ecc.)
+- [Miti sull'acqua](https://goccia.org/miti) — 12 falsi miti smontati con le fonti
+- [Quanto costa un'analisi dell'acqua](https://goccia.org/quanto-costa-analisi-acqua) — prezzi e cosa include
+- [Idratazione: quanto bere](https://goccia.org/idratazione-quanto-bere) — fabbisogno idrico
+- [Impatto delle bottiglie di plastica](https://goccia.org/impatto-bottiglie-plastica) — costo ambientale del monouso
+
+### Acque minerali
+- [Acque minerali](https://goccia.org/acque-minerali) — schede delle principali acque minerali in bottiglia vendute in Italia (residuo fisso, composizione, durezza)
+- [Confronti tra acque minerali](https://goccia.org/acque-minerali/confronto/) — comparazioni dirette tra marche
+
+### FAQ, community e dati aperti
+- [FAQ](https://goccia.org/faq) — 17 cluster di domande frequenti sull'acqua potabile
+- [Quiz](https://goccia.org/quiz) — quiz sulla qualità dell'acqua
+- [Storico personale](https://goccia.org/storico) — trend del punteggio nel tempo, salvato solo nel browser dell'utente
+- [Dashboard](https://goccia.org/dashboard) — panoramica dei dati aggregati
+- [Benchmark](https://goccia.org/benchmark) — statistiche aggregate anonime delle submission (dataset aperto)
+- [Kit educational](https://goccia.org/kit) — 12 kit didattici sull'acqua
+
+### Azienda, API e legale
+- [Chi siamo](https://goccia.org/chi-siamo) — il team e il laboratorio dietro GoccIA
+- [Analisi ufficiali (123Acqua)](https://123acqua.com) — richiesta di un'analisi di laboratorio a pagamento
+- [Documentazione API](https://goccia.org/api-docs) — API pubblica dei parametri (`/api/v1/parameters`)
+- [Press kit](https://goccia.org/press-kit) — materiali per la stampa
+- [AI policy](https://goccia.org/ai-policy) — condizioni d'uso dei contenuti per LLM e crawler AI
 - [Privacy](https://goccia.org/privacy) — informativa GDPR, modello di dati
-- [Benchmark](https://goccia.org/benchmark) — statistiche aggregate anonime delle submission
+- [Cookie policy](https://goccia.org/cookie-policy) — uso dei cookie
 
 ## Contesto normativo
 
