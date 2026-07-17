@@ -4,7 +4,7 @@ import { Inter, Space_Grotesk } from 'next/font/google';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 import { DropletBlob } from '@/components/droplet-blob';
-import JsonLd, { websiteJsonLd, organizationJsonLd, serviceJsonLd } from '@/components/json-ld';
+import JsonLd, { websiteJsonLd, organizationJsonLd, serviceJsonLd, siteNavigationJsonLd } from '@/components/json-ld';
 import { PrivacyNotice } from '@/components/privacy-notice';
 import { StickyCTA } from '@/components/sticky-cta';
 
@@ -101,6 +101,7 @@ export default function RootLayout({
         <JsonLd data={websiteJsonLd()} />
         <JsonLd data={organizationJsonLd()} />
         <JsonLd data={serviceJsonLd()} />
+        <JsonLd data={siteNavigationJsonLd()} />
         <PrivacyNotice />
         <StickyCTA />
       </body>
