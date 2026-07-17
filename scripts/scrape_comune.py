@@ -205,17 +205,22 @@ def title_comune(name: str) -> str:
 
 
 # Composti che contengono il nome di uno ione base ma NON sono quel parametro
-# (evita falsi match tipo "Cloruro di Vinile" -> cloruri).
+# (evita falsi match tipo "Cloruro di Vinile" -> cloruri). Confrontati come FRASE
+# contenuta nel nome (così valgono anche con l'unità in coda, es. "... µg/l").
 _BLOCKLIST = {
-    'cloruro di vinile', 'clorito', 'clorato', 'epicloridrina', 'acrilammide',
-    'bromato', 'bromodiclorometano', 'dibromoclorometano',
+    'cloruro di vinile', 'cloruro vinile', 'cromo esavalente', 'clorito', 'clorato',
+    'epicloridrina', 'acrilammide', 'bromato', 'bromodiclorometano', 'dibromoclorometano',
 }
+
+
+def _blocked(n: str) -> bool:
+    return any(re.search(rf'(^| ){re.escape(b)}( |$)', n) for b in _BLOCKLIST)
 
 
 def match_parameter(name: str) -> Optional[str]:
     """Ritorna l'id aquascore per il nome di un parametro, o None se non riconosciuto."""
     n = _norm(name)
-    if not n or n in _BLOCKLIST:
+    if not n or _blocked(n):
         return None
     # match esatto sull'intera stringa
     for alias, pid in _ALIAS_INDEX:

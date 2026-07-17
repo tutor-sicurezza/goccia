@@ -124,7 +124,7 @@ export default function ComuniARischioPage() {
                   {atRisk.slice(0, 50).map((row) => (
                     <tr key={row.slug} className="border-b border-white/5">
                       <td className="py-2.5 pr-3 text-slate-200">
-                        {row.name} <span className="text-slate-500">({row.province})</span>
+                        {row.name}{row.province ? <span className="text-slate-500"> ({row.province})</span> : null}
                       </td>
                       <td className={`py-2.5 pr-3 font-display tabular-nums ${scoreCls(row.score)}`}>
                         {row.score}
@@ -184,7 +184,7 @@ export default function ComuniARischioPage() {
                 <p className="mt-2 text-sm text-slate-300">
                   {row.comuni
                     .slice(0, 12)
-                    .map((c) => `${c.name} (${c.province})`)
+                    .map((c) => (c.province ? `${c.name} (${c.province})` : c.name))
                     .join(' · ')}
                   {row.comuni.length > 12 ? ` e altri ${row.comuni.length - 12}` : ''}
                 </p>

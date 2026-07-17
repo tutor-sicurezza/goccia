@@ -4,7 +4,9 @@ import {
   getComuniIndex,
   getGestoriCoverage,
   getComuniDataCount,
+  getRegionStats,
 } from '@/lib/comune-analyses';
+import { ComuniBrowser } from '@/components/comuni-browser';
 import { LeadCTA } from '@/components/lead-cta';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
 
@@ -21,12 +23,8 @@ export default function AnalisiAcquaHub() {
   const comuni = getComuniIndex();
   const gestori = getGestoriCoverage();
   const total = getComuniDataCount();
-
-  const byRegion = comuni.reduce<Record<string, typeof comuni>>((acc, c) => {
-    (acc[c.region] ??= [] as unknown as typeof comuni).push(c);
-    return acc;
-  }, {});
-  const regions = Object.keys(byRegion).sort((a, b) => a.localeCompare(b, 'it'));
+  const regionStats = getRegionStats();
+  const regions = regionStats.map((s) => s.region);
 
   return (
     <main className="relative mx-auto max-w-5xl px-4 py-14 sm:px-6 lg:px-8">
@@ -67,7 +65,7 @@ export default function AnalisiAcquaHub() {
       {/* Statistiche */}
       <div className="mb-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
         {[
-          { n: total.toLocaleString('it-IT'), l: 'Comuni con dati' },
+          { n: total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.'), l: 'Comuni con dati' },
           { n: regions.length, l: 'Regioni' },
           { n: gestori.length, l: 'Gestori idrici' },
           { n: '1–99', l: 'Punteggio per comune' },
@@ -123,31 +121,8 @@ export default function AnalisiAcquaHub() {
         </div>
       </section>
 
-      {/* Comuni per regione */}
-      <div className="space-y-10">
-        {regions.map((region) => {
-          const list = byRegion[region];
-          return (
-            <section key={region}>
-              <h2 className="flex items-baseline gap-3 font-display text-2xl font-semibold text-slate-100">
-                {region}
-                <span className="text-sm font-normal text-slate-500">{list.length} comuni</span>
-              </h2>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {list.map((c) => (
-                  <Link
-                    key={c.slug}
-                    href={`/acqua-di-${c.slug}`}
-                    className="rounded-lg border border-white/10 bg-white/5 px-2.5 py-1.5 text-sm text-slate-200 transition hover:border-violet-400/40 hover:bg-white/10 hover:text-white"
-                  >
-                    {c.name} <span className="text-slate-500">({c.province})</span>
-                  </Link>
-                ))}
-              </div>
-            </section>
-          );
-        })}
-      </div>
+      {/* Mappa interattiva + ricerca + comuni per regione */}
+      <ComuniBrowser comuni={comuni} regionStats={regionStats} />
 
       <LeadCTA
         variant="completa"

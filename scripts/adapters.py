@@ -15,15 +15,30 @@ riconosciuti o senza valore vengono scartati.
 """
 from __future__ import annotations
 
+import csv
 import html
 import io
 import json
 import re
 import sys
+import unicodedata
 import urllib.error
 from typing import Callable, Optional
 
 from scrape_comune import build_sample, http_get, http_get_bytes, slugify, title_comune
+
+
+def _nrm(s: str) -> str:
+    """minuscolo, senza accenti, spazi singoli — per match esatto di nomi colonna."""
+    s = unicodedata.normalize('NFD', (s or '').lower())
+    s = ''.join(c for c in s if unicodedata.category(c) != 'Mn')
+    return re.sub(r'[^a-z0-9]+', ' ', s).strip()
+
+
+def _iso_date(dmy: str) -> str:
+    """'05/02/2026' -> '2026-02-05' (vuoto se non riconosciuto)."""
+    m = re.match(r'(\d{1,2})[/-](\d{1,2})[/-](\d{4})', (dmy or '').strip())
+    return f'{m.group(3)}-{int(m.group(2)):02d}-{int(m.group(1)):02d}' if m else ''
 
 
 def _pdf_table_rows(pdf_bytes: bytes, name_i: int, value_i: int, unit_i: int,
@@ -50,10 +65,12 @@ def _record(slug: str, name: str, province: str, region: str, gestore: str,
             *, sampling_date: str = '', punto: str = '') -> Optional[dict]:
     """Costruisce un record dai (nome, valore, unita) grezzi, scartando l'ignoto."""
     samples = []
+    seen_ids: set[str] = set()
     for name_p, value_p, unit_p in rows:
         s = build_sample(name_p, value_p, unit_p)
-        if s:
+        if s and s['parameterId'] not in seen_ids:  # niente parametri duplicati
             samples.append(s)
+            seen_ids.add(s['parameterId'])
     if not samples:
         return None
     rec = {
@@ -641,6 +658,159 @@ def adapter_abbanoa() -> list:
     return out
 
 
+# ————————————————————————————————————————————————————————————————
+# Gruppo CAP — Città metropolitana di Milano. Unico CSV trimestrale (open data),
+# 178 colonne. Mappa ESPLICITA per nome esatto (evita falsi match su composti).
+# ————————————————————————————————————————————————————————————————
+CAP_INDEX = 'https://www.gruppocap.it/it/cosa-facciamo/qualita-acqua'
+CAP_MAP = {
+    'coliformi totali': 'coliformi_totali', 'escherichia coli e coli': 'e_coli',
+    'enterococchi': 'enterococchi', 'ph': 'ph', 'conduttivita a 20 c': 'conducibilita',
+    'fluoruro f': 'fluoruri', 'cloruro cl': 'cloruri', 'nitrato come no3': 'nitrati',
+    'nitrito come no2': 'nitriti', 'solfato so4': 'solfati', 'durezza totale': 'durezza_totale',
+    'sodio na': 'sodio', 'ferro fe': 'ferro', 'manganese mn': 'manganese',
+    'cromo totale cr': 'cromo', 'arsenico as': 'arsenico', 'cadmio cd': 'cadmio',
+    'nichel ni': 'nichel', 'piombo pb': 'piombo', 'rame cu': 'rame', 'ammonio nh4': 'ammonio',
+    'cloro residuo clorores': 'cloro_residuo', 'somma di pfas': 'pfas_totali',
+    'torbidita': 'torbidita',
+}
+
+
+def _cap_latest_csv() -> Optional[str]:
+    """Trova l'URL del CSV trimestrale più recente dalla pagina open data CAP."""
+    try:
+        page = http_get(CAP_INDEX)
+    except Exception:  # noqa: BLE001
+        return None
+    # solo link diretti al file (non i pulsanti di condivisione facebook/mail)
+    links = re.findall(r'href="(https://www\.gruppocap\.it/content/dam/[^"]+\.csv)"', page)
+    return links[0] if links else None  # il primo è il trimestre più recente
+
+
+def adapter_cap() -> list:
+    csv_url = _cap_latest_csv()
+    if not csv_url:
+        print('  [cap] CSV non trovato', file=sys.stderr)
+        return []
+    try:
+        text = http_get(csv_url, encoding='cp1252')
+    except Exception as e:  # noqa: BLE001
+        print(f'  [cap] download fallito: {type(e).__name__}', file=sys.stderr)
+        return []
+    rows = list(csv.reader(io.StringIO(text), delimiter=';'))
+    hidx = next((i for i, r in enumerate(rows) if r and r[0].strip().startswith('Data Camp')), None)
+    if hidx is None:
+        print('  [cap] header non trovato', file=sys.stderr)
+        return []
+    header = [c.replace('\n', ' ').strip() for c in rows[hidx]]
+    col_pid = {j: CAP_MAP[_nrm(header[j])] for j in range(4, len(header)) if _nrm(header[j]) in CAP_MAP}
+    # per comune tiene la riga (campione) con più parametri valorizzati
+    best: dict[str, tuple[int, list]] = {}
+    for r in rows[hidx + 1:]:
+        if len(r) < 2 or not r[1].strip():
+            continue
+        comune = r[1].strip()
+        filled = sum(1 for j in col_pid if j < len(r) and r[j].strip())
+        if comune not in best or filled > best[comune][0]:
+            best[comune] = (filled, r)
+    out = []
+    for comune, (_, r) in best.items():
+        samples = []
+        for j, pid in col_pid.items():
+            if j < len(r) and r[j].strip():
+                s = build_sample(pid, r[j].strip(), '')
+                if s:
+                    samples.append(s)
+        if not samples:
+            continue
+        rec = {
+            'comuneSlug': slugify(comune), 'comuneName': title_comune(comune),
+            'province': '', 'region': 'Lombardia', 'gestore': 'Gruppo CAP',
+            'sourcePdfUrl': csv_url, 'sourceLabel': 'Gruppo CAP (open data) — analisi acquedotto',
+            'samples': samples, 'puntoPrelievo': (r[2].strip()[:80] if len(r) > 2 else ''),
+        }
+        d = _iso_date(r[0])
+        if d:
+            rec['samplingDate'] = d
+        out.append(rec)
+    print(f'  [cap] {len(out)} comuni con dati', file=sys.stderr)
+    return out
+
+
+# ————————————————————————————————————————————————————————————————
+# Veritas — Venezia. Un PDF "valori mediati" per comune (testo, no tabelle rigate).
+# ————————————————————————————————————————————————————————————————
+VERITAS_INDEX = ('https://www.gruppoveritas.it/en/what-we-do/'
+                 'integrated-water-service/water-quality')
+VERITAS_HOST = 'https://www.gruppoveritas.it'
+_VER_MONTHS = {m: i for i, m in enumerate(
+    ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio',
+     'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'], start=1)}
+_VER_FREQ = (r'(?:Settimanale|Quindicinale|Bisettimanale|Giornaliera|Mensile|Bimestrale|'
+             r'Trimestrale|Quadrimestrale|Semestrale|Annuale|Continua|In continuo)')
+_VER_LINE = re.compile(r'([<>≤≥]?\s*[\d.,]+|[Aa]ssenti?|[Aa]ssente)\s+' + _VER_FREQ)
+
+
+def _veritas_period_score(folder: str) -> tuple[int, int]:
+    years = [int(y) for y in re.findall(r'(\d{4})', folder)]
+    month = 0
+    for name, idx in _VER_MONTHS.items():
+        if name in folder:
+            month = max(month, idx)
+    return (max(years) if years else 0, month)
+
+
+def _veritas_parse(pdf: bytes) -> list[tuple[str, str, str]]:
+    import pdfplumber
+    text = ''
+    with pdfplumber.open(io.BytesIO(pdf)) as doc:
+        for pg in doc.pages:
+            text += (pg.extract_text() or '') + '\n'
+    rows = []
+    for ln in text.splitlines():
+        m = _VER_LINE.search(ln)
+        if not m:
+            continue
+        name = ln[:m.start()].strip()
+        rows.append((name, m.group(1).replace(' ', ''), ''))
+    return rows
+
+
+def adapter_veritas() -> list:
+    try:
+        page = http_get(VERITAS_INDEX)
+    except Exception as e:  # noqa: BLE001
+        print(f'  [veritas] indice non raggiungibile: {type(e).__name__}', file=sys.stderr)
+        return []
+    links = re.findall(r'href="(/sites/default/files/allegati/dati_acqua/[^"]+_valori_mediati\.pdf)"', page)
+    if not links:
+        print('  [veritas] nessun PDF valori_mediati', file=sys.stderr)
+        return []
+    # tieni solo il periodo (cartella) più recente
+    best_folder = max({l.split('/')[6] for l in links}, key=_veritas_period_score)
+    period_links = sorted({l for l in links if f'/{best_folder}/' in l})
+    out = []
+    for l in period_links:
+        fname = l.split('/')[-1]
+        comune_raw = re.sub(r'^\d{4}_[a-z]+_-_\d{4}_[a-z]+_', '', fname)
+        comune_raw = comune_raw.replace('_rev00_valori_mediati.pdf', '').replace('_', ' ').strip()
+        if not comune_raw:
+            continue
+        try:
+            rows = _veritas_parse(http_get_bytes(VERITAS_HOST + l))
+        except Exception as e:  # noqa: BLE001
+            print(f'  [veritas] {comune_raw}: {type(e).__name__} — salto', file=sys.stderr)
+            continue
+        rec = _record(
+            slugify(comune_raw), title_comune(comune_raw), 'VE', 'Veneto', 'Veritas S.p.A.',
+            VERITAS_HOST + l, f'Veritas — Dati medi dell\'acqua ({best_folder})', rows,
+            punto='valori medi di rete')
+        if rec:
+            out.append(rec)
+    print(f'  [veritas] {len(out)} comuni con dati', file=sys.stderr)
+    return out
+
+
 REGISTRY: dict[str, Adapter] = {
     'milano-opendata': adapter_milano_opendata,
     'publiacqua': adapter_publiacqua,
@@ -652,4 +822,6 @@ REGISTRY: dict[str, Adapter] = {
     'aqp': adapter_aqp,
     'acea': adapter_acea,
     'abbanoa': adapter_abbanoa,
+    'cap': adapter_cap,
+    'veritas': adapter_veritas,
 }

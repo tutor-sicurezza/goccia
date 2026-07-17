@@ -120,7 +120,7 @@ export default async function CityPage({ params }: PageProps) {
 
       <header className="mb-8">
         <p className="mb-3 text-sm uppercase tracking-[0.2em] text-slate-400">
-          {region} · {province}
+          {province ? `${region} · ${province}` : region}
         </p>
         <h1 className="font-display text-3xl font-semibold leading-tight sm:text-4xl">
           <span className="text-gradient">Acqua del rubinetto a {name}</span>
