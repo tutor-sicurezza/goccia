@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { FAQ_CLUSTERS } from '@/lib/faq-clusters';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
-import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
+import JsonLd, { breadcrumbJsonLd, collectionListJsonLd } from '@/components/json-ld';
 
 export const metadata: Metadata = {
   title: "FAQ acqua del rubinetto: cluster di risposte per tema",
@@ -19,6 +19,19 @@ export default function FaqIndexPage() {
         { name: 'Home', url: 'https://goccia.org/' },
         { name: 'FAQ', url: 'https://goccia.org/faq' },
       ])} />
+      <JsonLd
+        data={collectionListJsonLd({
+          url: 'https://goccia.org/faq',
+          name: 'FAQ acqua del rubinetto: cluster di risposte per tema',
+          description:
+            "FAQ tematiche sull'acqua del rubinetto organizzate in cluster: neonati, gravidanza, animali, piombo, PFAS, analisi, osmosi, addolcitore, condominio, pozzo, HACCP, microbiologia.",
+          items: FAQ_CLUSTERS.map((c) => ({
+            name: c.title,
+            description: c.metaDescription,
+            url: `https://goccia.org/faq/${c.slug}`,
+          })),
+        })}
+      />
       <div className="noise pointer-events-none absolute inset-0 -z-10" aria-hidden />
       <header className="mb-12">
         <p className="mb-3 text-sm uppercase tracking-[0.2em] text-slate-400">FAQ tematiche</p>

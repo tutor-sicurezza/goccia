@@ -283,6 +283,34 @@ export function articleJsonLd(args: {
   };
 }
 
+export function collectionListJsonLd(args: {
+  url: string;
+  name: string;
+  description: string;
+  items: { name: string; url: string; description?: string }[];
+}): object {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    url: args.url,
+    name: args.name,
+    description: args.description,
+    inLanguage: 'it-IT',
+    isPartOf: { '@id': `${siteUrl()}#website` },
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: args.items.length,
+      itemListElement: args.items.map((item, idx) => ({
+        '@type': 'ListItem',
+        position: idx + 1,
+        name: item.name,
+        ...(item.description ? { description: item.description } : {}),
+        url: item.url,
+      })),
+    },
+  };
+}
+
 export function breadcrumbJsonLd(
   items: { name: string; url: string }[],
 ): object {
