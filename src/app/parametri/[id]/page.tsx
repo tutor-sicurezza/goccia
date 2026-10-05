@@ -5,6 +5,7 @@ import { PARAMETER_GUIDES, getGuideById } from '@/lib/parameter-guides';
 import { PARAMETER_CONFIGS } from '@aquascore/index';
 import { formatRange } from '@/lib/format';
 import { LeadCTA, type LeadCTAVariant } from '@/components/lead-cta';
+import { DEFAULT_OG_IMAGES, pageTitle } from '@/lib/seo';
 import JsonLd, {
   articleJsonLd,
   breadcrumbJsonLd,
@@ -25,10 +26,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!guide) return { title: 'Parametro non trovato' };
   const url = `https://goccia.org/parametri/${guide.slug}`;
   return {
-    title: guide.shortTitle,
+    title: pageTitle(guide.shortTitle),
     description: guide.metaDescription,
     alternates: { canonical: url },
     openGraph: {
+      images: DEFAULT_OG_IMAGES,
       type: 'article',
       url,
       title: guide.shortTitle,

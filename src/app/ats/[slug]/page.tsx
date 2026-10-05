@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ATS_REGIONALI, getATSBySlug } from '@/lib/ats-regionali';
 import { LeadCTA } from '@/components/lead-cta';
 import JsonLd, { breadcrumbJsonLd, faqJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 interface PageProps { params: Promise<{ slug: string }>; }
 
@@ -17,7 +18,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!a) return { title: 'ATS non trovata' };
   const url = `https://goccia.org/ats/${a.slug}`;
   return {
-    title: a.shortTitle,
+    title: pageTitle(a.shortTitle),
     description: a.metaDescription,
     alternates: { canonical: url },
   };

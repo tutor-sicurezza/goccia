@@ -4,9 +4,10 @@ import { CITY_GUIDES } from '@/lib/city-guides';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Acqua del rubinetto città per città — confronto e qualità in Italia',
+  title: pageTitle('Acqua del rubinetto città per città — confronto e qualità in Italia'),
   description:
     "Schede sulla qualità dell'acqua del rubinetto nei principali capoluoghi italiani: gestore, origine, parametri tipici, problematiche storiche e analisi.",
   alternates: { canonical: 'https://goccia.org/acqua' },

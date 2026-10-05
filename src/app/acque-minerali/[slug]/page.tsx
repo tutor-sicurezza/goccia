@@ -13,6 +13,7 @@ import {
 import { renderText } from '@/lib/render-text';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
+import { DEFAULT_OG_IMAGES, pageTitle } from '@/lib/seo';
 import JsonLd, {
   articleJsonLd,
   breadcrumbJsonLd,
@@ -34,11 +35,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const url = `https://goccia.org/acque-minerali/${w.slug}`;
   const title = `${w.brand}: residuo fisso, analisi e valori dell'etichetta`;
   return {
-    title,
+    title: pageTitle(title),
     description: w.metaDescription,
     keywords: w.searchKeywords,
     alternates: { canonical: url },
     openGraph: {
+      images: DEFAULT_OG_IMAGES,
       type: 'article',
       url,
       title,

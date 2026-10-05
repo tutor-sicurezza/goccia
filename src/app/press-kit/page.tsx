@@ -2,12 +2,14 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PRESS_KIT } from '@/lib/press-kit';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
+import { DEFAULT_OG_IMAGES, pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: PRESS_KIT.metaTitle,
+  title: pageTitle(PRESS_KIT.metaTitle),
   description: PRESS_KIT.metaDescription,
   alternates: { canonical: 'https://goccia.org/press-kit' },
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     type: 'website',
     url: 'https://goccia.org/press-kit',
     title: PRESS_KIT.metaTitle,

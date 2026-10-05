@@ -6,9 +6,10 @@ import JsonLd, {
   breadcrumbJsonLd,
 } from '@/components/json-ld';
 import { LeadCTA } from '@/components/lead-cta';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Acqua del rubinetto o minerale? Confronto onesto | GoccIA',
+  title: pageTitle('Acqua del rubinetto o minerale? Confronto onesto'),
   description:
     "Acqua del rubinetto vs acqua minerale: confronto su salute, costo, ambiente e controlli analitici. Dati verificabili e quando ha senso scegliere l'una o l'altra.",
   alternates: {

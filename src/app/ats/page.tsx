@@ -4,9 +4,10 @@ import { ATS_REGIONALI } from '@/lib/ats-regionali';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: "ATS, ASL, AUSL regionali — controlli acqua del rubinetto",
+  title: pageTitle("ATS, ASL, AUSL regionali — controlli acqua del rubinetto"),
   description:
     "Schede istituzionali delle ATS/ASL/AUSL regionali italiane: competenze sull'acqua del rubinetto, procedure cittadino, contatti ufficiali per ogni regione.",
   alternates: { canonical: 'https://goccia.org/ats' },

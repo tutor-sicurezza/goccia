@@ -6,9 +6,10 @@ import JsonLd, {
   breadcrumbJsonLd,
 } from '@/components/json-ld';
 import { LeadCTA } from '@/components/lead-cta';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: "Come leggere il referto di un'analisi dell'acqua | GoccIA",
+  title: pageTitle("Come leggere il referto di un'analisi dell'acqua"),
   description:
     "Guida passo-passo per interpretare un'analisi dell'acqua: unità di misura, parametri chiave, conformità al D.Lgs. 18/2023 e cosa fare in caso di valori fuori soglia.",
   alternates: {

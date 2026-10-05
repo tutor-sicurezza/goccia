@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { createServiceClient } from '@/lib/supabase/server';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Disiscrizione newsletter — GoccIA',
+  title: pageTitle('Disiscrizione newsletter — GoccIA'),
   description: 'Cancella la tua iscrizione dalla newsletter di GoccIA.',
   robots: { index: false, follow: false },
 };

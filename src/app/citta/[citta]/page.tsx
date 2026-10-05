@@ -11,6 +11,7 @@ import {
 } from '@/lib/comune-analyses';
 import { AnalysisReport } from '@/components/analysis-report';
 import { LeadCTA } from '@/components/lead-cta';
+import { DEFAULT_OG_IMAGES, pageTitle } from '@/lib/seo';
 import JsonLd, {
   articleJsonLd,
   breadcrumbJsonLd,
@@ -52,10 +53,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     : `Analisi dell'acqua del rubinetto a ${name}: valori reali dal referto di ${report!.gestore}${when}, tabella parametri, limiti di legge e punteggio qualità 1–99.`;
 
   return {
-    title,
+    title: pageTitle(title),
     description,
     alternates: { canonical: url },
     openGraph: {
+      images: DEFAULT_OG_IMAGES,
       type: 'article',
       url,
       title,

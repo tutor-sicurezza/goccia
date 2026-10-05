@@ -15,9 +15,10 @@ import { WATER_COMPARISONS } from '@/lib/mineral-water-comparisons';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd, faqJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Residuo fisso delle acque minerali: tabella e schede delle marche italiane',
+  title: pageTitle('Residuo fisso delle acque minerali: tabella e schede delle marche italiane'),
   description:
     "L'enciclopedia delle acque minerali italiane: residuo fisso, sodio, calcio e pH a confronto, con la scheda analisi di ogni marca. Dati dell'etichetta, spiegati in modo chiaro.",
   keywords: [

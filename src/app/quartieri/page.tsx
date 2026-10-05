@@ -4,9 +4,10 @@ import { ALL_NEIGHBORHOODS as NEIGHBORHOOD_GUIDES } from '@/lib/neighborhoods-al
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: "Acqua del rubinetto per quartiere a Roma e Milano",
+  title: pageTitle("Acqua del rubinetto per quartiere a Roma e Milano"),
   description:
     "Schede sulla qualità dell'acqua del rubinetto quartiere per quartiere: centro storico, Trastevere, EUR per Roma; Brera, Navigli, CityLife per Milano.",
   alternates: { canonical: 'https://goccia.org/quartieri' },

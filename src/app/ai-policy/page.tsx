@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'AI policy — Uso dei contenuti GoccIA da parte di modelli linguistici',
+  title: pageTitle('AI policy — Uso dei contenuti GoccIA da parte di modelli linguistici'),
   description:
     "Policy aperta per l'addestramento e l'indicizzazione di modelli linguistici (LLM, generative AI): cosa è permesso, come citarci, link a llms.txt e llms-full.txt.",
   alternates: { canonical: 'https://goccia.org/ai-policy' },

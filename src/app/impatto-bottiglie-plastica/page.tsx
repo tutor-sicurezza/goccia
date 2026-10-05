@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { CO2Calculator } from '@/components/co2-calculator';
 import { LeadCTA } from '@/components/lead-cta';
+import { DEFAULT_OG_IMAGES } from '@/lib/seo';
 import JsonLd, {
   articleJsonLd,
   breadcrumbJsonLd,
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
     "Quanto inquina l'acqua in bottiglia? Calcola in 30 secondi CO2, bottiglie PET e costo evitati passando all'acqua del rubinetto. Stime conservative da letteratura LCA.",
   alternates: { canonical: PAGE_URL },
   openGraph: {
+    images: DEFAULT_OG_IMAGES,
     type: 'article',
     url: PAGE_URL,
     title:

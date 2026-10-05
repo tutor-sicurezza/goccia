@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { headers } from 'next/headers';
 import { scoreVerdict } from '@aquascore/index';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Embed risultato GoccIA',
+  title: pageTitle('Embed risultato GoccIA'),
   description: 'Widget embed del risultato GoccIA per integrazione su blog e siti terzi.',
   robots: { index: false, follow: false },
 };

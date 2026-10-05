@@ -4,9 +4,10 @@ import { FAQ_CLUSTERS } from '@/lib/faq-clusters';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd, collectionListJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: "FAQ acqua del rubinetto: cluster di risposte per tema",
+  title: pageTitle("FAQ acqua del rubinetto: cluster di risposte per tema"),
   description:
     "FAQ tematiche sull'acqua del rubinetto: neonati, gravidanza, animali, piombo, PFAS, analisi, osmosi, addolcitore, condominio, pozzo, HACCP, microbiologia.",
   alternates: { canonical: 'https://goccia.org/faq' },

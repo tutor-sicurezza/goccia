@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Cookie policy — GoccIA',
+  title: pageTitle('Cookie policy — GoccIA'),
   description:
     "Questo sito non utilizza cookie di profilazione né di terze parti. Spiegazione tecnica completa.",
 };

@@ -4,11 +4,12 @@ import { LeadCTA } from '@/components/lead-cta';
 import { NewsletterSignup } from '@/components/newsletter-signup';
 import JsonLd, { articleJsonLd, breadcrumbJsonLd } from '@/components/json-ld';
 import { QUIZ_QUESTIONS } from '@/lib/quiz-questions';
+import { pageTitle } from '@/lib/seo';
 
 const URL = 'https://goccia.org/quiz';
 
 export const metadata: Metadata = {
-  title: 'Quiz acqua del rubinetto: quanto ne sai? Test in 5 minuti',
+  title: pageTitle('Quiz acqua del rubinetto: quanto ne sai? Test in 5 minuti'),
   description:
     "20 domande sull'acqua del rubinetto in Italia: normativa, salute, chimica, pratica e ambiente. Scopri il tuo profilo e cosa approfondire.",
   alternates: { canonical: URL },

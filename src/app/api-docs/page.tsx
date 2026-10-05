@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'API GoccIA — open data sui parametri dell\'acqua del rubinetto',
+  title: pageTitle('API GoccIA — open data sui parametri dell\'acqua del rubinetto'),
   description:
     "Documentazione API REST pubblica e gratuita per i 24 parametri dell'acqua potabile italiana (D.Lgs. 18/2023). Licenza CC-BY 4.0, niente chiave richiesta.",
   alternates: { canonical: 'https://goccia.org/api-docs' },

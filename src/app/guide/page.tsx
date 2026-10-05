@@ -4,9 +4,10 @@ import { TOPIC_GUIDES } from '@/lib/topic-guides';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: "Guide sull'acqua del rubinetto: famiglia, salute, costi, trattamenti",
+  title: pageTitle("Guide sull'acqua del rubinetto: famiglia, salute, costi, trattamenti"),
   description:
     "Guide pratiche e oneste sull'acqua del rubinetto: neonati, gravidanza, animali domestici, addolcitori, depuratori, caraffe filtranti, allenamento, cisterne.",
   alternates: { canonical: 'https://goccia.org/guide' },

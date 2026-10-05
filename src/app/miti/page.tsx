@@ -4,9 +4,10 @@ import { MYTH_PAGES } from '@/lib/myth-pages';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: "10 miti sull'acqua del rubinetto: la verità basata sulla scienza",
+  title: pageTitle("10 miti sull'acqua del rubinetto: la verità basata sulla scienza"),
   description:
     "Calcare e calcoli renali, microplastiche in bottiglia, fluoro e tiroide, residuo fisso e altri miti diffusi sull'acqua del rubinetto verificati su evidenze WHO/EFSA/ISS.",
   alternates: { canonical: 'https://goccia.org/miti' },

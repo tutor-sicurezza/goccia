@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { pageTitle } from '@/lib/seo';
 import JsonLd, {
   articleJsonLd,
   breadcrumbJsonLd,
@@ -7,7 +8,7 @@ import JsonLd, {
 } from '@/components/json-ld';
 
 export const metadata: Metadata = {
-  title: 'Metodo scientifico GoccIA — algoritmo, fonti e limiti',
+  title: pageTitle('Metodo scientifico GoccIA — algoritmo, fonti e limiti'),
   description:
     "Come funziona davvero il punteggio GoccIA: motore deterministico open source, fonti normative (D.Lgs. 18/2023, WHO, EFSA, ISS), limiti dichiarati e conflitto di interessi.",
   alternates: { canonical: 'https://goccia.org/metodo-scientifico' },

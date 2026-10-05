@@ -4,9 +4,10 @@ import { ALL_COMPARISONS as REGIONAL_COMPARISONS } from '@/lib/comparisons-all';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: "Confronti regionali sull'acqua del rubinetto in Italia",
+  title: pageTitle("Confronti regionali sull'acqua del rubinetto in Italia"),
   description:
     "Nord vs Sud, Lombardia vs Veneto, Lazio vs Campania: confronti su durezza, PFAS, nitrati, normativa e qualità dell'acqua del rubinetto regione per regione.",
   alternates: { canonical: 'https://goccia.org/confronto' },

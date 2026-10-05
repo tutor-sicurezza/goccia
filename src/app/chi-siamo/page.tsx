@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { pageTitle } from '@/lib/seo';
 import JsonLd, {
   breadcrumbJsonLd,
   organizationJsonLd,
 } from '@/components/json-ld';
 
 export const metadata: Metadata = {
-  title: 'Chi siamo — GoccIA e Labservice S.r.l.',
+  title: pageTitle('Chi siamo — GoccIA e Labservice S.r.l.'),
   description:
     "Chi c'è dietro GoccIA: Labservice S.r.l. (123Acqua), laboratorio italiano qualificato. Perché abbiamo fatto un tool gratuito sull'acqua del rubinetto e cosa offriamo a pagamento.",
   alternates: { canonical: 'https://goccia.org/chi-siamo' },

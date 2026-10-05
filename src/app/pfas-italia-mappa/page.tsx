@@ -4,11 +4,12 @@ import { PFAS_HOTSPOTS, PFAS_INFO } from '@/lib/pfas-hotspots';
 import { PFASMap } from '@/components/pfas-map';
 import { LeadCTA } from '@/components/lead-cta';
 import JsonLd, { articleJsonLd, breadcrumbJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 const URL = 'https://goccia.org/pfas-italia-mappa';
 
 export const metadata: Metadata = {
-  title: 'PFAS in Italia: mappa degli hotspot documentati pubblicamente',
+  title: pageTitle('PFAS in Italia: mappa degli hotspot documentati pubblicamente'),
   description:
     "Mappa interattiva delle aree italiane con presenza documentata di PFAS: Veneto Miteni, Spinetta Marengo, Brescia, Lombardia, e altri hotspot.",
   alternates: { canonical: URL },

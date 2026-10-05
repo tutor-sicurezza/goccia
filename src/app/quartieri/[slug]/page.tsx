@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ALL_NEIGHBORHOODS as NEIGHBORHOOD_GUIDES, findNeighborhood as getNeighborhoodBySlug, neighborhoodsByCity as getNeighborhoodsByCity } from '@/lib/neighborhoods-all';
 import { LeadCTA } from '@/components/lead-cta';
 import JsonLd, { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from '@/components/json-ld';
+import { DEFAULT_OG_IMAGES, pageTitle } from '@/lib/seo';
 
 interface PageProps { params: Promise<{ slug: string }>; }
 
@@ -17,10 +18,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!g) return { title: 'Quartiere non trovato' };
   const url = `https://goccia.org/quartieri/${g.slug}`;
   return {
-    title: g.shortTitle,
+    title: pageTitle(g.shortTitle),
     description: g.metaDescription,
     alternates: { canonical: url },
-    openGraph: { type: 'article', url, title: g.shortTitle, description: g.metaDescription, locale: 'it_IT' },
+    openGraph: { images: DEFAULT_OG_IMAGES, type: 'article', url, title: g.shortTitle, description: g.metaDescription, locale: 'it_IT' },
   };
 }
 

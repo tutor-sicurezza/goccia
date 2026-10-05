@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ALL_COMPARISONS as REGIONAL_COMPARISONS, findComparison as getComparisonBySlug } from '@/lib/comparisons-all';
 import { LeadCTA } from '@/components/lead-cta';
+import { DEFAULT_OG_IMAGES, pageTitle } from '@/lib/seo';
 import JsonLd, {
   articleJsonLd,
   breadcrumbJsonLd,
@@ -23,10 +24,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!c) return { title: 'Confronto non trovato' };
   const url = `https://goccia.org/confronto/${c.slug}`;
   return {
-    title: c.shortTitle,
+    title: pageTitle(c.shortTitle),
     description: c.metaDescription,
     alternates: { canonical: url },
-    openGraph: { type: 'article', url, title: c.shortTitle, description: c.metaDescription, locale: 'it_IT' },
+    openGraph: { images: DEFAULT_OG_IMAGES, type: 'article', url, title: c.shortTitle, description: c.metaDescription, locale: 'it_IT' },
   };
 }
 

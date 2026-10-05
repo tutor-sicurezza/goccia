@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { TREATMENT_GUIDES, getTreatmentBySlug } from '@/lib/treatment-guides';
 import { LeadCTA } from '@/components/lead-cta';
+import { DEFAULT_OG_IMAGES, pageTitle } from '@/lib/seo';
 import JsonLd, {
   articleJsonLd,
   breadcrumbJsonLd,
@@ -23,10 +24,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!g) return { title: 'Trattamento non trovato' };
   const url = `https://goccia.org/trattamenti/${g.slug}`;
   return {
-    title: g.shortTitle,
+    title: pageTitle(g.shortTitle),
     description: g.metaDescription,
     alternates: { canonical: url },
-    openGraph: { type: 'article', url, title: g.shortTitle, description: g.metaDescription, locale: 'it_IT' },
+    openGraph: { images: DEFAULT_OG_IMAGES, type: 'article', url, title: g.shortTitle, description: g.metaDescription, locale: 'it_IT' },
   };
 }
 

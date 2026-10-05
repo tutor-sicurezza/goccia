@@ -3,9 +3,10 @@ import { createServerSupabase } from '@/lib/supabase/server';
 import { DASHBOARD_COPY, REGION_INSIGHTS } from '@/lib/dashboard-copy';
 import { LeadCTA } from '@/components/lead-cta';
 import JsonLd, { breadcrumbJsonLd, datasetJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: DASHBOARD_COPY.metaTitle,
+  title: pageTitle(DASHBOARD_COPY.metaTitle),
   description: DASHBOARD_COPY.metaDescription,
   alternates: { canonical: 'https://goccia.org/dashboard' },
 };

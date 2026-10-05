@@ -15,6 +15,7 @@ import {
   type StatusKey,
 } from '@/lib/format';
 import { RISK_NOTES, GENERIC_RISK_NOTE } from '@/lib/parameter-groups';
+import { pageTitle } from '@/lib/seo';
 
 interface SubmissionParameter {
   parameter_id: string;
@@ -76,7 +77,7 @@ export async function generateMetadata({
     return { title: 'Risultato non trovato' };
   }
   return {
-    title: `Risultato ${data.overall_score}/99 — GoccIA`,
+    title: pageTitle(`Risultato ${data.overall_score}/99 — GoccIA`),
     description: `La tua acqua ha ottenuto ${data.overall_score} su 99 (${scoreVerdict(data.overall_score).label}). Punteggio calcolato in base ai valori del referto.`,
     robots: { index: false, follow: false },
   };

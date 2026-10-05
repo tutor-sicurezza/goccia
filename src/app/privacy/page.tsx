@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Privacy — GoccIA',
+  title: pageTitle('Privacy — GoccIA'),
   description:
     "Informativa privacy ai sensi dell'art. 13 del Regolamento (UE) 2016/679. Cosa salviamo, base giuridica, periodo di conservazione e diritti.",
 };

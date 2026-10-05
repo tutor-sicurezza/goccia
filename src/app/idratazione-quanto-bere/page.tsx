@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { HydrationCalculator } from '@/components/hydration-calculator';
 import { LeadCTA } from '@/components/lead-cta';
+import { pageTitle } from '@/lib/seo';
 import JsonLd, {
   articleJsonLd,
   breadcrumbJsonLd,
@@ -11,7 +12,7 @@ import JsonLd, {
 const URL = 'https://goccia.org/idratazione-quanto-bere';
 
 export const metadata: Metadata = {
-  title: "Quanta acqua bere al giorno? Calcolatore in base a peso e attività",
+  title: pageTitle("Quanta acqua bere al giorno? Calcolatore in base a peso e attività"),
   description:
     "Calcolatore del fabbisogno idrico quotidiano in litri, secondo le linee guida EFSA/SINU. Comprende attività fisica, clima e gravidanza. Stima costo annuo.",
   alternates: { canonical: URL },

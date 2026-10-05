@@ -4,9 +4,10 @@ import { PARAMETER_GUIDES } from '@/lib/parameter-guides';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: "Tutti i parametri dell'acqua del rubinetto: guide e limiti di legge",
+  title: pageTitle("Tutti i parametri dell'acqua del rubinetto: guide e limiti di legge"),
   description:
     "Schede informative dei 24 parametri analizzati nell'acqua potabile: cos'è ogni parametro, limiti del D.Lgs. 18/2023, rischi e soluzioni. Guida completa in italiano.",
   alternates: { canonical: 'https://goccia.org/parametri' },

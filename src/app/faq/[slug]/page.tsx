@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { FAQ_CLUSTERS, getFAQClusterBySlug } from '@/lib/faq-clusters';
 import { LeadCTA } from '@/components/lead-cta';
 import JsonLd, { breadcrumbJsonLd, faqJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 interface PageProps { params: Promise<{ slug: string }>; }
 
@@ -17,7 +18,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!c) return { title: 'FAQ non trovate' };
   const url = `https://goccia.org/faq/${c.slug}`;
   return {
-    title: c.shortTitle,
+    title: pageTitle(c.shortTitle),
     description: c.metaDescription,
     alternates: { canonical: url },
   };

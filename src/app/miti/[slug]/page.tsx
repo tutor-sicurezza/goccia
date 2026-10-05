@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { MYTH_PAGES, getMythBySlug } from '@/lib/myth-pages';
 import { LeadCTA } from '@/components/lead-cta';
 import JsonLd, { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from '@/components/json-ld';
+import { DEFAULT_OG_IMAGES, pageTitle } from '@/lib/seo';
 
 interface PageProps { params: Promise<{ slug: string }>; }
 
@@ -17,10 +18,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!m) return { title: 'Mito non trovato' };
   const url = `https://goccia.org/miti/${m.slug}`;
   return {
-    title: m.shortTitle,
+    title: pageTitle(m.shortTitle),
     description: m.metaDescription,
     alternates: { canonical: url },
-    openGraph: { type: 'article', url, title: m.shortTitle, description: m.metaDescription, locale: 'it_IT' },
+    openGraph: { images: DEFAULT_OG_IMAGES, type: 'article', url, title: m.shortTitle, description: m.metaDescription, locale: 'it_IT' },
   };
 }
 

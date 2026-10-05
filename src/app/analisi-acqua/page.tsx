@@ -9,11 +9,12 @@ import {
 import { ComuniBrowser } from '@/components/comuni-browser';
 import { LeadCTA } from '@/components/lead-cta';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 const URL = 'https://goccia.org/analisi-acqua';
 
 export const metadata: Metadata = {
-  title: "Analisi dell'acqua del rubinetto comune per comune in Italia",
+  title: pageTitle("Analisi dell'acqua del rubinetto comune per comune in Italia"),
   description:
     "Valori reali delle analisi dell'acqua del rubinetto per ogni comune coperto, estratti dai referti pubblici dei gestori: tabella parametri, punteggio 1–99 e link alla fonte ufficiale.",
   alternates: { canonical: URL },

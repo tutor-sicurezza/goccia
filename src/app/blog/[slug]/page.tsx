@@ -5,6 +5,7 @@ import { ALL_BLOG_POSTS as BLOG_POSTS, findBlogPost as getPostBySlug } from '@/l
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
 import { renderText } from '@/lib/render-text';
+import { DEFAULT_OG_IMAGES, pageTitle } from '@/lib/seo';
 import JsonLd, {
   articleJsonLd,
   breadcrumbJsonLd,
@@ -25,10 +26,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!p) return { title: 'Articolo non trovato' };
   const url = `https://goccia.org/blog/${p.slug}`;
   return {
-    title: p.shortTitle,
+    title: pageTitle(p.shortTitle),
     description: p.metaDescription,
     alternates: { canonical: url },
     openGraph: {
+      images: DEFAULT_OG_IMAGES,
       type: 'article',
       url,
       title: p.shortTitle,

@@ -14,6 +14,7 @@ import {
 } from '@/lib/mineral-waters';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
+import { DEFAULT_OG_IMAGES, pageTitle } from '@/lib/seo';
 import JsonLd, {
   articleJsonLd,
   breadcrumbJsonLd,
@@ -34,11 +35,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!cmp) return { title: 'Confronto non trovato' };
   const url = `https://goccia.org/acque-minerali/confronto/${cmp.slug}`;
   return {
-    title: cmp.title,
+    title: pageTitle(cmp.title),
     description: cmp.metaDescription,
     keywords: cmp.searchKeywords,
     alternates: { canonical: url },
     openGraph: {
+      images: DEFAULT_OG_IMAGES,
       type: 'article',
       url,
       title: cmp.title,

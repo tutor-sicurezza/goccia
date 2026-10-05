@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { TOPIC_GUIDES, getTopicBySlug } from '@/lib/topic-guides';
 import { PARAMETER_GUIDES } from '@/lib/parameter-guides';
 import { LeadCTA } from '@/components/lead-cta';
+import { DEFAULT_OG_IMAGES, pageTitle } from '@/lib/seo';
 import JsonLd, {
   articleJsonLd,
   breadcrumbJsonLd,
@@ -24,10 +25,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!g) return { title: 'Guida non trovata' };
   const url = `https://goccia.org/guide/${g.slug}`;
   return {
-    title: g.shortTitle,
+    title: pageTitle(g.shortTitle),
     description: g.metaDescription,
     alternates: { canonical: url },
-    openGraph: { type: 'article', url, title: g.shortTitle, description: g.metaDescription, locale: 'it_IT' },
+    openGraph: { images: DEFAULT_OG_IMAGES, type: 'article', url, title: g.shortTitle, description: g.metaDescription, locale: 'it_IT' },
   };
 }
 

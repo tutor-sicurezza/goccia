@@ -7,11 +7,12 @@ import {
 } from '@/lib/osmosis-comparison';
 import { LeadCTA } from '@/components/lead-cta';
 import JsonLd, { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 const URL = 'https://goccia.org/osmosi-inversa-confronto';
 
 export const metadata: Metadata = {
-  title: 'Confronto sistemi osmosi inversa: 5 categorie a confronto onesto',
+  title: pageTitle('Confronto sistemi osmosi inversa: 5 categorie a confronto onesto'),
   description:
     "Sottolavello classico, senza serbatoio, portatile, zero-waste, commerciale: pro, contro, costi e quando ciascuno conviene davvero. Confronto neutro.",
   alternates: { canonical: URL },

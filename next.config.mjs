@@ -18,6 +18,13 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Host canonico senza www: www.goccia.org → goccia.org (308).
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.goccia.org' }],
+        destination: 'https://goccia.org/:path*',
+        permanent: true,
+      },
       {
         source: '/citta/:citta',
         destination: '/acqua-di-:citta',

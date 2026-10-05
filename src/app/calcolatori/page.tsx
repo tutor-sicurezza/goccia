@@ -4,9 +4,10 @@ import { CALCULATORS_META } from '@/lib/calculators-meta';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: "Calcolatori acqua del rubinetto: durezza, ROI, bolletta, sodio",
+  title: pageTitle("Calcolatori acqua del rubinetto: durezza, ROI, bolletta, sodio"),
   description:
     "Convertitore durezza °F/°dH/ppm, ROI addolcitore a 10 anni, simulatore bolletta, calcolo sodio dieta, prossima analisi consigliata: 5 strumenti gratuiti.",
   alternates: { canonical: 'https://goccia.org/calcolatori' },

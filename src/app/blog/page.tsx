@@ -4,9 +4,10 @@ import { ALL_BLOG_POSTS as BLOG_POSTS } from '@/lib/blog-all';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: "Blog GoccIA: articoli, approfondimenti, scienza dell'acqua del rubinetto",
+  title: pageTitle("Blog GoccIA: articoli, approfondimenti, scienza dell'acqua del rubinetto"),
   description:
     "Articoli evergreen sulla qualità dell'acqua del rubinetto in Italia: PFAS, piombo, microplastiche, durezza, normativa D.Lgs. 18/2023 e direttiva UE 2020/2184.",
   alternates: { canonical: 'https://goccia.org/blog' },

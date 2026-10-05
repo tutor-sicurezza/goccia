@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { createServerSupabase } from '@/lib/supabase/server';
 import JsonLd, { datasetJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: "Com'è l'acqua in Italia — Benchmark GoccIA",
+  title: pageTitle("Com'è l'acqua in Italia — Benchmark GoccIA"),
   description:
     "Statistiche aggregate e anonime delle submission GoccIA: distribuzione dei verdetti, punteggio medio nazionale e andamento degli ultimi 30 giorni.",
 };

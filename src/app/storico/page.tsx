@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { HistoryDashboard } from '@/components/history-dashboard';
 import JsonLd, { breadcrumbJsonLd, faqJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Il tuo storico analisi acqua — trend e confronto nel tempo | GoccIA',
+  title: pageTitle('Il tuo storico analisi acqua — trend e confronto nel tempo'),
   description:
     'Lo storico personale delle tue analisi dell\'acqua del rubinetto: trend del punteggio 1–99, parametri nel tempo e confronto tra due referti. Salvato solo nel tuo browser, senza account.',
   alternates: { canonical: 'https://goccia.org/storico' },

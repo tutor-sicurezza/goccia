@@ -3,9 +3,10 @@ import Link from 'next/link';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Glossario acqua potabile — termini tecnici spiegati | GoccIA',
+  title: pageTitle('Glossario acqua potabile — termini tecnici spiegati'),
   description:
     "Oltre 70 termini tecnici sull'acqua del rubinetto, analisi di laboratorio e normativa italiana spiegati in italiano semplice: pH, PFAS, ICP-MS, D.Lgs. 18/2023 e altro.",
   alternates: {

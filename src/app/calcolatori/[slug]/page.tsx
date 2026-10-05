@@ -8,6 +8,7 @@ import { SodioCalc } from '@/components/calculators/sodio-calc';
 import { AnalisiTimingCalc } from '@/components/calculators/analisi-timing';
 import { LeadCTA } from '@/components/lead-cta';
 import JsonLd, { articleJsonLd, breadcrumbJsonLd } from '@/components/json-ld';
+import { DEFAULT_OG_IMAGES, pageTitle } from '@/lib/seo';
 
 interface PageProps { params: Promise<{ slug: string }>; }
 
@@ -21,10 +22,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!c) return { title: 'Calcolatore non trovato' };
   const url = `https://goccia.org/calcolatori/${c.slug}`;
   return {
-    title: c.shortTitle,
+    title: pageTitle(c.shortTitle),
     description: c.metaDescription,
     alternates: { canonical: url },
-    openGraph: { type: 'website', url, title: c.shortTitle, description: c.metaDescription, locale: 'it_IT' },
+    openGraph: { images: DEFAULT_OG_IMAGES, type: 'website', url, title: c.shortTitle, description: c.metaDescription, locale: 'it_IT' },
   };
 }
 

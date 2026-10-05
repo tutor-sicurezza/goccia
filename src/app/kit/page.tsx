@@ -4,9 +4,10 @@ import { KIT_EDU } from '@/lib/kit-educational';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: "Kit di prelievo acqua: 10 schede educational",
+  title: pageTitle("Kit di prelievo acqua: 10 schede educational"),
   description:
     "Cosa contiene un kit di prelievo per analisi acqua: microbiologia, chimico-fisico, metalli, PFAS, legionella, condominio, pozzo, HACCP. Schede neutrali.",
   alternates: { canonical: 'https://goccia.org/kit' },

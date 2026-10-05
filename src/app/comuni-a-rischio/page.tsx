@@ -8,11 +8,12 @@ import {
 import { PFAS_COMUNI } from '@/lib/pfas-comuni-veneto';
 import { LeadCTA } from '@/components/lead-cta';
 import JsonLd, { articleJsonLd, breadcrumbJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 const URL = 'https://goccia.org/comuni-a-rischio';
 
 export const metadata: Metadata = {
-  title: "Comuni più a rischio per la qualità dell'acqua in Italia",
+  title: pageTitle("Comuni più a rischio per la qualità dell'acqua in Italia"),
   description:
     "Classifica dei comuni italiani più a rischio per la qualità dell'acqua del rubinetto, in base ai referti pubblici dei gestori e alle contaminazioni documentate (PFAS, metalli, nitrati). Fonti ufficiali.",
   alternates: { canonical: URL },

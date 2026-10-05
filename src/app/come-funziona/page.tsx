@@ -3,9 +3,10 @@ import { PARAMETER_CONFIGS } from '@aquascore/index';
 import type { SubscoreKey } from '@aquascore/index';
 import { formatRange, prettyParameterName } from '@/lib/format';
 import JsonLd, { howToJsonLd, articleJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: "Come funziona GoccIA — l'algoritmo del punteggio",
+  title: pageTitle("Come funziona GoccIA — l'algoritmo del punteggio"),
   description:
     "Spiegazione passo-passo dell'algoritmo deterministico GoccIA: dal riconoscimento dei parametri al punteggio finale 1–99 ponderato su salute, estetica e impianti.",
 };

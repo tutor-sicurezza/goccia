@@ -4,9 +4,10 @@ import { TREATMENT_GUIDES } from '@/lib/treatment-guides';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: "Sistemi di trattamento dell'acqua del rubinetto: guida completa",
+  title: pageTitle("Sistemi di trattamento dell'acqua del rubinetto: guida completa"),
   description:
     "Confronto tra osmosi inversa, addolcitore, carbone attivo, UV, ultrafiltrazione e altri sistemi: come funzionano, costi, casi d'uso, quando non servono.",
   alternates: { canonical: 'https://goccia.org/trattamenti' },

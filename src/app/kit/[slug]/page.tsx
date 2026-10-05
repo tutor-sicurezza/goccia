@@ -5,6 +5,7 @@ import { KIT_EDU, getKitBySlug } from '@/lib/kit-educational';
 import { LeadCTA } from '@/components/lead-cta';
 import { renderText } from '@/lib/render-text';
 import JsonLd, { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 interface PageProps { params: Promise<{ slug: string }>; }
 
@@ -18,7 +19,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!k) return { title: 'Kit non trovato' };
   const url = `https://goccia.org/kit/${k.slug}`;
   return {
-    title: k.shortTitle,
+    title: pageTitle(k.shortTitle),
     description: k.metaDescription,
     alternates: { canonical: url },
   };

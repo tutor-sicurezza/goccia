@@ -4,9 +4,10 @@ import { ALL_SECTORS as SECTOR_GUIDES } from '@/lib/sectors-all';
 import { LeadCTA } from '@/components/lead-cta';
 import { SponsorBanner } from '@/components/sponsor-banner';
 import JsonLd, { breadcrumbJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: "Analisi acqua per professionisti: ristoranti, hotel, scuole, studi medici",
+  title: pageTitle("Analisi acqua per professionisti: ristoranti, hotel, scuole, studi medici"),
   description:
     "Guide settoriali per ristoranti, hotel, dentisti, condomini, parrucchieri, palestre, panificatori, scuole: normativa, parametri, frequenza analisi acqua.",
   alternates: { canonical: 'https://goccia.org/uso' },

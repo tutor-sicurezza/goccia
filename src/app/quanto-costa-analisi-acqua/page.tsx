@@ -5,9 +5,10 @@ import JsonLd, {
   breadcrumbJsonLd,
 } from '@/components/json-ld';
 import { LeadCTA } from '@/components/lead-cta';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: "Quanto costa un'analisi dell'acqua del rubinetto? Prezzi 2026 | GoccIA",
+  title: pageTitle("Quanto costa un'analisi dell'acqua del rubinetto? Prezzi 2026"),
   description:
     "Prezzi indicativi per analisi dell'acqua del rubinetto: strisce reattive, kit casalinghi e laboratorio qualificato (chimico-fisico, microbiologico, metalli, PFAS, completa).",
   alternates: {

@@ -7,9 +7,10 @@ import {
   type OfficialSource,
 } from '@/lib/official-sources';
 import JsonLd, { breadcrumbJsonLd, faqJsonLd } from '@/components/json-ld';
+import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Analisi ufficiali dell\'acqua del tuo comune: dove trovarle | GoccIA',
+  title: pageTitle('Analisi ufficiali dell\'acqua del tuo comune: dove trovarle'),
   description:
     'Dove ogni gestore idrico italiano pubblica le analisi ufficiali dell\'acqua potabile, città per città: link diretti, come leggere i valori e come trasformarli in un punteggio 1–99.',
   alternates: { canonical: 'https://goccia.org/analisi-ufficiali' },
