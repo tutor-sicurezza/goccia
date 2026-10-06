@@ -363,6 +363,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${base}/contatti`,
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
+    {
       url: `${base}/chi-siamo`,
       lastModified: now,
       changeFrequency: 'monthly',

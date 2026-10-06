@@ -114,6 +114,11 @@ export default function PrivacyPage() {
                   <td className="py-2">Art. 6(1)(a) — consenso esplicito e separato</td>
                 </tr>
                 <tr>
+                  <td className="py-2 pr-4">Nome, email, eventuali telefono e azienda, testo del messaggio (modulo <Link href="/contatti" className="underline underline-offset-2">contatti</Link>)</td>
+                  <td className="py-2 pr-4">Rispondere alla richiesta inviata con il modulo</td>
+                  <td className="py-2">Art. 6(1)(b) — misure richieste dall&apos;interessato. Il messaggio è recapitato per email (servizio Resend) e non è salvato nel database del sito.</td>
+                </tr>
+                <tr>
                   <td className="py-2 pr-4">File del referto caricato (PDF/foto)</td>
                   <td className="py-2 pr-4">Estrazione automatica dei valori (OCR) per pre-compilare il form</td>
                   <td className="py-2">Art. 6(1)(b) — esecuzione del servizio richiesto. Il file viene processato in memoria e <strong>non viene mai salvato</strong>: terminata la lettura del modello, l'allegato è eliminato. Inviato in modo cifrato (TLS) ad Anthropic (USA) — vedi punto 4.</td>
@@ -195,9 +200,21 @@ export default function PrivacyPage() {
               </a>
               . Anthropic dichiara di non utilizzare gli input per addestrare i modelli (zero-data retention sui suoi endpoint per uso commerciale). Il trasferimento extra-UE avviene sotto Standard Contractual Clauses.
             </li>
+            <li>
+              <strong>Resend Inc.</strong> (invio email, USA): recapita al titolare i messaggi inviati con il modulo contatti — DPA:{' '}
+              <a
+                href="https://resend.com/legal/dpa"
+                target="_blank"
+                rel="noreferrer"
+                className="text-gradient font-semibold hover:underline"
+              >
+                resend.com/legal/dpa
+              </a>
+              .
+            </li>
           </ul>
           <p className="mt-3 text-slate-300">
-            Salvo la lettura automatica del referto descritta sopra (attivata solo se carichi tu il file), nessun trasferimento dati al di fuori dello Spazio Economico Europeo.
+            Salvo la lettura automatica del referto descritta sopra (attivata solo se carichi tu il file) e il recapito via email dei messaggi del modulo contatti, nessun trasferimento dati al di fuori dello Spazio Economico Europeo.
             Nessuna cessione a terzi per finalità di marketing o profilazione.
             Nessun dato viene utilizzato per addestrare modelli di intelligenza
             artificiale di terze parti.

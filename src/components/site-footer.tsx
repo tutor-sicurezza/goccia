@@ -71,6 +71,11 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
+                <Link href="/contatti" className="hover:text-slate-100">
+                  Contatti
+                </Link>
+              </li>
+              <li>
                 <Link
                   href="/come-funziona"
                   className="hover:text-slate-100"
