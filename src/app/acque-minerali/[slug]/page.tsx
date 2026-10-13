@@ -33,7 +33,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const w = getWaterBySlug(slug);
   if (!w) return { title: 'Acqua minerale non trovata' };
   const url = `https://goccia.org/acque-minerali/${w.slug}`;
-  const title = `${w.brand}: residuo fisso, analisi e valori dell'etichetta`;
+  const title =
+    w.metaTitle ?? `${w.brand}: residuo fisso, analisi e valori dell'etichetta`;
   return {
     title: pageTitle(title),
     description: w.metaDescription,
