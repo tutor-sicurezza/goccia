@@ -65,6 +65,12 @@ export interface MineralWater {
   /** Anno o data dell'analisi riportata in etichetta, se dichiarata. */
   analysisRef: string | null;
   tagline: string;
+  /**
+   * `<title>` della scheda, quando serve sovrascrivere quello generato dal
+   * template (`<marca>: residuo fisso, analisi e valori dell'etichetta`).
+   * Usato sulle schede lavorate a mano per il CTR. Max 60 caratteri.
+   */
+  metaTitle?: string;
   metaDescription: string;
   searchKeywords: string[];
   intro: string;

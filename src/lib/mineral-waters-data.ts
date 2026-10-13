@@ -1055,8 +1055,9 @@ export const WATER_ENTRIES: MineralWater[] = [
       silice: 9,
     },
     tagline: "Effervescente naturale ricca di calcio ma con pochissimo sodio.",
+    metaTitle: 'Acqua Lete: residuo fisso 890 mg/L e calcio 300 mg/L',
     metaDescription:
-      "Acqua Lete: residuo fisso 890 mg/L, effervescente naturale calcica (300 mg/L di calcio) e a basso sodio. Analisi dell'etichetta e usi.",
+      "Acqua Lete ha residuo fisso 890 mg/L: effervescente naturale mediominerale (D.Lgs. 176/2011) con 300 mg/L di calcio e 5,1 di sodio. Leggi tutta l'etichetta.",
     searchKeywords: [
       'lete residuo fisso',
       'acqua lete analisi',
@@ -1336,8 +1337,9 @@ export const WATER_ENTRIES: MineralWater[] = [
       silice: 85,
     },
     tagline: "«Liscia, gassata o Ferrarelle?»: l'effervescente naturale per antonomasia.",
+    metaTitle: 'Ferrarelle: residuo fisso 1323 mg/L e analisi etichetta',
     metaDescription:
-      "Ferrarelle: residuo fisso 1323 mg/L, effervescente naturale bicarbonato-calcica di Riardo. Analisi dell'etichetta, calcio, bollicine naturali e usi.",
+      "Ferrarelle ha residuo fisso 1323 mg/L: effervescente naturale mediominerale (D.Lgs. 176/2011), calcio 400 e sodio 50 mg/L. Leggi l'analisi dell'etichetta.",
     searchKeywords: [
       'ferrarelle residuo fisso',
       'ferrarelle analisi',

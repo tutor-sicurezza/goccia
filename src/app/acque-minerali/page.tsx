@@ -18,9 +18,10 @@ import JsonLd, { breadcrumbJsonLd, faqJsonLd } from '@/components/json-ld';
 import { pageTitle } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: pageTitle('Residuo fisso delle acque minerali: tabella e schede delle marche italiane'),
-  description:
-    "L'enciclopedia delle acque minerali italiane: residuo fisso, sodio, calcio e pH a confronto, con la scheda analisi di ogni marca. Dati dell'etichetta, spiegati in modo chiaro.",
+  title: pageTitle(
+    `Residuo fisso acque minerali: tabella di ${MINERAL_WATERS.length} marche italiane`,
+  ),
+  description: `Residuo fisso, sodio, calcio e pH di ${MINERAL_WATERS.length} acque minerali italiane in tabella ordinabile: le 4 classi del D.Lgs. 176/2011 e la scheda di ogni marca.`,
   keywords: [
     'residuo fisso acque minerali',
     'tabella residuo fisso',
