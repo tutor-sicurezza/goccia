@@ -2,6 +2,9 @@ import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 
+/** Schema del sito nel progetto Supabase condiviso "siti-vetrina". */
+const SUPABASE_SCHEMA = "goccia";
+
 export function createServiceClient(): SupabaseClient {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -9,6 +12,7 @@ export function createServiceClient(): SupabaseClient {
     throw new Error('Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY');
   }
   return createClient(url, serviceKey, {
+    db: { schema: SUPABASE_SCHEMA as "public" },
     auth: { persistSession: false, autoRefreshToken: false },
   });
 }
@@ -21,6 +25,7 @@ export async function createServerSupabase(): Promise<SupabaseClient> {
   }
   const cookieStore = await cookies();
   return createServerClient(url, anonKey, {
+    db: { schema: SUPABASE_SCHEMA as "public" },
     cookies: {
       getAll() {
         return cookieStore.getAll().map((c) => ({ name: c.name, value: c.value }));
